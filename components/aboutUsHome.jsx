@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import styles from '../styles/componentStyles/AboutUsHome.module.scss'
+import styles from '../styles/componentStyles/aboutUsHome.module.scss'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 
