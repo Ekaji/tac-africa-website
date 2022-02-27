@@ -1,0 +1,52 @@
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans',
+'Helvetica Neue Light',
+'Helvetica Neue',
+'Helvetica',
+'Arial',
+sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New',
+'DejaVu Sans Mono',
+'Bitstream Vera Sans Mono',
+'Monaco',
+monospace !default;
+
+
+
+
+
+/// @type Color
+$main-blue: #17466C !default; //Blue
+$light-blue: #27557A !default; //Light-Blue
+$lighter-blue: #17466C !default; //Lighter-Blue
+$lightest-blue: #477E8F !default; //Lightest-Blue
+$transparent-blue: #6E9AA8 !default; //Transperent-Blue
+
+$dark-blue: #0B3658 !default; //Dark-Blue
+
+///Grey
+/// @type Color
+$main-grey: #E8F0F6 !default; //Grey
+$light-grey: #C1C1C1 !default; //Light-Grey
+$lighter-grey: #F2F6FA !default; //Lighter-Grey
+
+///White
+/// @type Color
+$main-white: #FFFFFF !default; //Grey
+
+///Yellow
+/// @type Color
+$main-yellow: #FFC34E !default; //Yellow
+
+/// @type Break-Points
+$base-url: '../assets/' !default;
+$breakpoint-xxsm: 371px;
+$breakpoint-xsm: 455px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px
