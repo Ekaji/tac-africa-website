@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-key */
-import Image from 'next/image'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
@@ -8,7 +7,7 @@ import Button from 'react-bootstrap/Button'
 import { useRouter } from 'next/router'
 
 
-export default function NavBar( {href}){
+export default function NavBar(){
 
 const router = useRouter()
   return(
