@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-key */
+import useEffect from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
@@ -8,6 +9,30 @@ import { useRouter } from 'next/router'
 
 
 export default function NavBar(){
+
+    const about = [
+        {href: '/about_us', name: 'About Us'},
+        {href: '/founder', name: 'Founder'},
+        {href: '/our_team', name: 'Our Team'},
+        {href: '/partners-and-supporters', name: 'partners and supporters'}
+    ];
+
+    const labs = [
+        {href: '/drone_and_counter_drone', name: 'Drone And Counter Drone'},
+        {href: '/cyber_security_and_cyber_defence', name: 'Cyber Security And Cyber Defence'},
+        {href: '/ai_and_robotics_lab', name: 'AI And Robotics Lab'},
+        {href: '/blockchain_and_crypto_lab', name: 'Blockchain And Crypto Lab'},
+        {href: '/satellite_and_remote_sensing_lab', name: 'Satellite And Remote Sensing Lab'}
+    ];
+
+    const resources = [
+        {href: '/blog', name: 'Blog' },
+        {href: '/gallery', name: 'Gallery'}
+    ];
+
+    const handleRouteChange = (router) => {
+        
+    }
 
 const router = useRouter()
   return(
@@ -30,25 +55,70 @@ const router = useRouter()
                 } 
                 id="navbarScroll" >
             <Nav className="my-2 my-lg-0"  navbarScroll >
-             <Nav.Link href={'/'} className={router.pathname == "/" ? 'activeLink text-warning' : ""} >Home</Nav.Link>
-                <NavDropdown title="About" className={router.pathname == "/about-us" || "/founder" || "/our-team" || '/partners-and-supporters' ? 'activeLink text-warning' : ""} id="nav-dropdown">
-                    <NavDropdown.Item href={'/about-us'} eventKey="4.1">About Us</NavDropdown.Item>
-                    <NavDropdown.Item href={'/founder'} eventKey="4.2">Founder</NavDropdown.Item>
-                    <NavDropdown.Item href={'/our-team'} eventKey="4.2">Our Team</NavDropdown.Item>
-                    <NavDropdown.Item href={'/partners-and-supporters'} eventKey="4.3">Partners And Supporters</NavDropdown.Item>
+             <Nav.Link href={'/'} 
+                       className={router.pathname == "/" ? 'activeLink text-warning' : ""} >
+                           Home
+             </Nav.Link>
+
+                <NavDropdown title="About"
+                             className={
+                                 router.pathname == '/about_us' ? 'activeLink text-warning' : 
+                                                    '/founder' ? 'activeLink text-warning' :
+                                                    '/our_team' ? 'activeLink text-warning' :
+                                                    '/partners_and_supporters' ? 'activeLink text-warning' :
+                                                    console.log('checked')
+                                 } 
+                                 id="nav-dropdown" >
+                                    {
+                                        about.map(({name, href}, i) => (
+                                            <NavDropdown.Item key={i} href={href} className={
+                                                router.pathname == href ? 'activeLink text-warning' : "" 
+                                                } 
+                                                eventKey={i}>{name}
+                                            </NavDropdown.Item>
+                                            ) 
+                                        )
+                                    }
+
                 </NavDropdown>
-                <NavDropdown title="Labs" className={router.pathname == "/drone-lab" || "/cyber-lab" ? 'activeLink text-warning' : ""} id="nav-dropdown">
-                    <NavDropdown.Item href={'/drone-lab'}  eventKey="4.1">Drone Lab</NavDropdown.Item>
-                    <NavDropdown.Item href={'/cyber-lab'} className={router.pathname == "/cyber-lab" ? 'activeLink text-warning' : ""} eventKey="4.2">Cyber Lab</NavDropdown.Item>
+                <NavDropdown title="Labs" 
+                             className={
+                                 router.pathname == 
+                                 "/drone_and_counter_drone" || "/cyber_security_and_cyber_defence" || "/ai_and_robotics_lab" || 
+                                 "/blockchain_and_crypto_lab" || "/satellite_and_remote_sensing_lab" 
+                                 ? 
+                                 'activeLink text-warning' : ""
+                                 } 
+                                 id="nav-dropdown"> 
+                                    {
+                                    labs.map(({name, href}, i) => (
+                                        <NavDropdown.Item key={i} href={href} className={
+                                            router.pathname == href ? 'activeLink text-warning' : "" 
+                                            } 
+                                            eventKey={i}>{name}
+                                        </NavDropdown.Item>
+                                        ) 
+                                    )
+                                }
                 </NavDropdown>
-                <NavDropdown title="Resources" className={router.pathname == "/blog" || "/gallery" ? 'activeLink text-warning' : ""} id="nav-dropdown">
-                    <NavDropdown.Item className={router.pathname == "/blog" ? 'activeLink text-warning' : ""} eventKey="4.1">Blog</NavDropdown.Item>
-                    <NavDropdown.Item className={router.pathname == "/gallery" ? 'activeLink text-warning' : ""} eventKey="4.2">Gallery</NavDropdown.Item>
+                <NavDropdown title="Resources" className={router.pathname == "/blog" || "/gallery" ? 'activeLink text-warning' : ""} 
+                             id="nav-dropdown">
+                                {
+                                    resources.map(({name, href}, i) => (
+                                        <NavDropdown.Item key={i} href={href} className={
+                                            router.pathname == href ? 'activeLink text-warning' : "" 
+                                            } 
+                                            eventKey={i}>{name}
+                                        </NavDropdown.Item>
+                                        ) 
+                                    )
+                                }
+
                 </NavDropdown>
              <Nav.Link href={'/contact'}  className={router.pathname == "/contact" ? 'activeLink text-warning' : ""} >Contact</Nav.Link>
 
             <Nav.Item>
-                <Button variant="primary">Donate</Button>{' '}
+                <Button variant="outline-primary">Donate</Button>{' '}
             </Nav.Item>
             </Nav>
             </Navbar.Collapse>
