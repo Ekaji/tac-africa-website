@@ -75,6 +75,7 @@
     &__quicklinks {
         ul {
             font-size: 1.03rem;
+            color: $lightest-blue;
 
             li {
                 margin-top: 1em;
@@ -101,5 +102,6 @@
 }
 
 .footer_justify {
+    display: flex;
     justify-content: center !important;
 }
