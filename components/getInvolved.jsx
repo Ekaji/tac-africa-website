@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
-import styles from '../styles/componentStyles/getInvolved.module.scss'
+import styles from '../styles/component.styles/getInvolved.module.scss'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 
@@ -25,7 +25,7 @@ export default function GetInvolved() {
                             <button className="btn-sw btn-sw-primary">Join</button>
                         </a> */}
                         <Nav.Item className={ styles.button_comp } >
-                            <Button variant="primary">Learn More</Button>
+                            <Button variant="outline-primary" >Learn More</Button>
                         </Nav.Item>
                       </div>
                     </div>
@@ -45,7 +45,7 @@ export default function GetInvolved() {
                             <button className="btn-sw btn-sw-primary">Join</button>
                         </a> */}
                         <Nav.Item className={ styles.button_comp }>
-                            <Button  variant="primary">Learn More</Button>
+                            <Button  variant="outline-primary">Learn More</Button>
                         </Nav.Item>
                       </div>
                     </div>

@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import styles from '../styles/componentStyles/aboutUsHome.module.scss'
+import styles from '../styles/component.styles/aboutUsHome.module.scss'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 
@@ -29,7 +29,7 @@ export default function AboutUsHome() {
                           </div>
 
                           <Nav.Item className={ styles.button_comp } >
-                            <Button variant="primary">Learn More</Button>
+                            <Button variant="outline-primary">Learn More</Button>
                           </Nav.Item>
                       </div>
 

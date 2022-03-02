@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import Image from 'next/image';
-import styles from '../styles/componentStyles/landingPage.module.scss'
+import styles from '../styles/component.styles/landingPage.module.scss'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 
@@ -28,7 +28,7 @@ export default function LandingPage(){
                         </p>
 
                         <Nav.Item>
-                            <Button variant="primary">Learn More</Button>
+                            <Button variant="outline-primary" >Learn More</Button>
                         </Nav.Item>
                     </div>
 
