@@ -4,13 +4,13 @@ import styles from '../../../styles/layout/footer.module.scss'
 export default function Footer() {
 
   return(
-    <>
-        <div className={styles.footer_support}>
-      <div className={styles.footer_support__detail, styles.container_fluid}>
+    <div style={{display: ''}}>
+      <div className={styles.footer_support}>
+      <div className={[styles.footer_support__detail, styles.container_fluid].join(' ')}>
         <div className="row">
           <div className="col-sm-6">
             <div className="d-flex justify-content-end r-m-1  footer-justify">
-              <i className=" 	fas fa-hand-holding-heart"></i>
+              <i className=" 	fas fa-hand-holding-heart"> </i>
               <p>Care about people and Africa wellbeing in bringing peace and positive co-elastance</p>
             </div>
           </div>
@@ -26,12 +26,13 @@ export default function Footer() {
 
 
       </div>
-    </div><div className={styles.footer_main}>
+    </div>
+    <div className={styles.footer_main}>
         <div className="container-fluid">
 
           <div className="row">
             <div className="col-md-4">
-              <div className={'d-flex', styles.footer_justify}>
+              <div className={ styles.footer_justify}>
                 <div className={styles.footer_main__about}>
                   <h3>About <em>TAC</em></h3>
                   <p>TAC An NGO Obliged to bringing together Law Enforcement Agents, Academia and Subject Matter
@@ -46,8 +47,8 @@ export default function Footer() {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="d-flex footer-justify">
-                <div className={styles.footer_main__quicklinks, 'r_m_1f' }>
+              <div className={"d-flex", styles.footer_justify }>
+                <div className={ "r_m_1f", styles.footer_main__quicklinks }>
                   <h3>Quicklinks</h3>
                   <ul>
                     <li><a>HomePage</a></li>
@@ -61,7 +62,7 @@ export default function Footer() {
             </div>
             <div className="col-md-4">
               <div className={"d-flex", styles.footer_justify}>
-                <div className={styles.footer_main__socials, "r-m-1f"} >
+                <div className={"r_m_1f", styles.footer_main__socials} >
                   <h3>Socials</h3>
                   <div>
                     <a className="fab fa-facebook" href="https://web.facebook.com/tacafrica.org/"></a>
@@ -83,6 +84,6 @@ export default function Footer() {
           <p>Copyright © 2020 Technology Against Crime. All Rights Reserved</p>
         </div>
       </div>
-    </>
+    </div>
   )
 }

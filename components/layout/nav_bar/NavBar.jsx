@@ -14,7 +14,7 @@ export default function NavBar(){
         {href: '/about_us', name: 'About Us'},
         {href: '/founder', name: 'Founder'},
         {href: '/our_team', name: 'Our Team'},
-        {href: '/partners-and-supporters', name: 'partners and supporters'}
+        {href: '/partners_and_supporters', name: 'partners and supporters'}
     ];
 
     const labs = [
@@ -31,7 +31,7 @@ export default function NavBar(){
     ];
 
     const handleRouteChange = (router) => {
-        
+
     }
 
 const router = useRouter()

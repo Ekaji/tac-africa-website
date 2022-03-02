@@ -3,10 +3,12 @@ import NavBar from '../layout/nav_bar/NavBar'
 import Footer from '../layout/footer/Footer'
 export default function Layout({children}) {
   return(
-    <main>
+    <>
       <NavBar />
-        {children}
+        <div style={{minHeight: '90vh'}} >
+          {children}
+        </div>
       <Footer />
-    </main>
+    </>
   )
 }
