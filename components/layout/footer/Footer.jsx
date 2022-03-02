@@ -4,9 +4,9 @@ import styles from '../../../styles/layout/footer.module.scss'
 export default function Footer() {
 
   return(
-    <div style={{display: ''}}>
+    <div>
       <div className={styles.footer_support}>
-      <div className={[styles.footer_support__detail, styles.container_fluid].join(' ')}>
+      <div className={styles.footer_support__detail}>
         <div className="row">
           <div className="col-sm-6">
             <div className="d-flex justify-content-end r-m-1  footer-justify">
