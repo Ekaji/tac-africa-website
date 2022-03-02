@@ -6,7 +6,7 @@ export default function Footer() {
   return(
     <div>
       <div className={styles.footer_support}>
-      <div className={styles.footer_support__detail}>
+      <div >
         <div className="row">
           <div className="col-sm-6">
             <div className="d-flex justify-content-end r-m-1  footer-justify">
