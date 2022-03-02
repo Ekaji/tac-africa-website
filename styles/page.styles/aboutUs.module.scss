@@ -1,0 +1,30 @@
+@import '../abstracts/variables';
+
+.page_container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  
+  .page_child {
+    // flex: 1 1 auto;
+    width: 75vw;
+    margin: 3em auto;
+    
+    &__heading {
+      margin-bottom: 1em;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+    .page_hero_image{
+      width: 100%;
+      height: 180%;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden
+    }
+  }
+
+}
