@@ -1,10 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
-import useEffect from 'react'
+import { useEffect, useState } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-import Button from 'react-bootstrap/Button'
+import styles from '../../../styles/layout/navbar.module.scss'
+import Button_ from '../../button.jsx'
 import { useRouter } from 'next/router'
 
 
@@ -30,50 +32,49 @@ export default function NavBar(){
         {href: '/gallery', name: 'Gallery'}
     ];
 
-    const handleRouteChange = (router) => {
+    const [currentPath, setCurrentPath] = useState('')
 
+    useEffect(() => {
+        setCurrentPath(() => router.pathname)
+    },[])
+
+
+    const getHref = (hrefArray, pathName) => {
+        const hrefs = hrefArray.map(href =>  href.href)
+            if (hrefs.includes(pathName)) {
+                return true
+            } else {
+                return false
+            }
     }
+
 
 const router = useRouter()
   return(
-    <div className="text-primary" >
-        <Navbar bg="light" expand="lg">
-        <Container fluid >
-            <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+    <div className={styles.nav_container} >
+        <Navbar  className={styles.nav_inner__container} expand="lg">
+        <Container fluid  >
+            <Navbar.Brand href="#">
+                <img src='/TAC_LOGO.png' alt='logo' style={{maxWidth: '100px'}} />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse className='justify-content-end' style={
-                    { 
-                        maxHeight: '300px',
-                        padding: '20px',
-                        fontSize: '1.2em',
-                        paddingLeft: '2.2rem',
-                        paddingRight: '2.2rem',
-                        transition: 'all 0.5s ease 0s',
-                        boxShadow: 'none',
-                        background: 'transparent none repeat scroll 0% 0%'
-                    }
-                } 
+            <Navbar.Collapse className={['justify-content-end', styles.navbar_collapse].join(' ')}
                 id="navbarScroll" >
-            <Nav className="my-2 my-lg-0"  navbarScroll >
+            <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]}  navbarScroll >
              <Nav.Link href={'/'} 
-                       className={router.pathname == "/" ? 'activeLink text-warning' : ""} >
+                       className={ router.pathname == "/" ? 'activeLink text-warning' : "text-primary"}  >
                            Home
              </Nav.Link>
 
-                <NavDropdown title="About"
-                             className={
-                                 router.pathname == '/about_us' ? 'activeLink text-warning' : 
-                                                    '/founder' ? 'activeLink text-warning' :
-                                                    '/our_team' ? 'activeLink text-warning' :
-                                                    '/partners_and_supporters' ? 'activeLink text-warning' :
-                                                    console.log('checked')
-                                 } 
-                                 id="nav-dropdown" >
+                <NavDropdown title={<span className={getHref(about, currentPath ) ? 'text-warning' : 'text-primary' }>About</span> }
+                             className='text-primary active'
+                             style={{zIndex: 40}}
+                             id="nav-dropdown" >
                                     {
                                         about.map(({name, href}, i) => (
                                             <NavDropdown.Item key={i} href={href} className={
-                                                router.pathname == href ? 'activeLink text-warning' : "" 
-                                                } 
+                                                router.pathname == href ? 'text-warning' : "text-primary" 
+                                                }
                                                 eventKey={i}>{name}
                                             </NavDropdown.Item>
                                             ) 
@@ -81,19 +82,13 @@ const router = useRouter()
                                     }
 
                 </NavDropdown>
-                <NavDropdown title="Labs" 
-                             className={
-                                 router.pathname == 
-                                 "/drone_and_counter_drone" || "/cyber_security_and_cyber_defence" || "/ai_and_robotics_lab" || 
-                                 "/blockchain_and_crypto_lab" || "/satellite_and_remote_sensing_lab" 
-                                 ? 
-                                 'activeLink text-warning' : ""
-                                 } 
+                <NavDropdown title={<span className={getHref(labs, currentPath ) ? 'text-warning' : 'text-primary' }>Labs</span> }
+                             className="text-primary" 
                                  id="nav-dropdown"> 
                                     {
                                     labs.map(({name, href}, i) => (
                                         <NavDropdown.Item key={i} href={href} className={
-                                            router.pathname == href ? 'activeLink text-warning' : "" 
+                                            router.pathname == href ? 'activeLink text-warning' : "text-primary" 
                                             } 
                                             eventKey={i}>{name}
                                         </NavDropdown.Item>
@@ -101,12 +96,13 @@ const router = useRouter()
                                     )
                                 }
                 </NavDropdown>
-                <NavDropdown title="Resources" className={router.pathname == "/blog" || "/gallery" ? 'activeLink text-warning' : ""} 
+                <NavDropdown title={<span className={getHref(resources, currentPath ) ? 'text-warning' : 'text-primary' }>Resources</span> }
+                             className="text-primary" 
                              id="nav-dropdown">
                                 {
                                     resources.map(({name, href}, i) => (
                                         <NavDropdown.Item key={i} href={href} className={
-                                            router.pathname == href ? 'activeLink text-warning' : "" 
+                                            router.pathname == href ? 'activeLink text-warning' : "text-primary" 
                                             } 
                                             eventKey={i}>{name}
                                         </NavDropdown.Item>
@@ -115,10 +111,10 @@ const router = useRouter()
                                 }
 
                 </NavDropdown>
-             <Nav.Link href={'/contact'}  className={router.pathname == "/contact" ? 'activeLink text-warning' : ""} >Contact</Nav.Link>
+             <Nav.Link href={'/contact'}  className={router.pathname == "/contact" ? 'activeLink text-warning' : "text-primary"} >Contact</Nav.Link>
 
             <Nav.Item>
-                <Button variant="outline-primary">Donate</Button>{' '}
+                <Button_ title={'Donate'} variant={'outline-primary'} />
             </Nav.Item>
             </Nav>
             </Navbar.Collapse>
