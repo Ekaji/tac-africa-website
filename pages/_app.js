@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/globals.scss'
+import '../styles/component.styles/contact.css'
 import Layout from '../components/layout/Layout'
 
 function MyApp({ Component, pageProps }) {
