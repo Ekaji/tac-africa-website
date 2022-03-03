@@ -1,15 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import styles from '../styles/page.styles/aboutUs.module.scss'
 import Image from 'next/image'
 
 export default function AboutUs() {
   return(
-    <section className={styles.page_container} >
+    <div className={styles.page_container} >
       <div className={styles.page_child}>
-        <div className={styles.page_hero_image}>
-          <Image layout='fill' src='/tac-ngo-africa.jpg' alt='tac-ngo-africa.jpg' />
-        </div>
-        <h3 className={styles.page_child__heading}>about us</h3>
+        {/* <div className={styles.page_hero_image}> */}
+          <img src='/tac-ngo-africa.jpg' className={styles.page_hero_image} alt='tac-ngo-africa.jpg' />
+        {/* </div> */}
+        
+        <h3 className={['text-primary', styles.page_child__heading].join(' ')}>About us</h3>
         <div>
           <p>
           Technology Against Crime (TAC) is an NGO born out of an International Forum on Technologies, a high level meeting dedicated to `&quot` Technology for a Safer world `&quot`. The first two editions were held in Lyon, in April 2013 and April 2016 respectively under the patronage of the Ministry of Interior and INTERPOL. (www.forum-tac.org).
@@ -22,6 +24,6 @@ export default function AboutUs() {
           </p>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
