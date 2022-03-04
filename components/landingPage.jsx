@@ -11,8 +11,8 @@ export default function LandingPage(){
   return(
     <section className="container-fluid">
     <div className={styles.top_container, styles.container_pd }>
-        <div className="row">
-            <div className="col-md-5">
+        <div className="row ">
+            <div className="col-md-5" styles={{paddingTop: '60px'}}>
                 <div className={styles.tac_header_detail}>
                     <div className={styles.tac_header_detail__items}>
                         <h2>Combating Crime in
