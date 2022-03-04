@@ -1,12 +1,13 @@
 /* eslint-disable react/jsx-key */
 import styles from '../../../styles/layout/footer.module.scss'
+import Button_ from '../../button.jsx'
 
 export default function Footer() {
 
   return(
     <div>
       <div className={styles.footer_support}>
-      <div >
+      <div className={styles.footer_support__detail}>
         <div className="row">
           <div className="col-sm-6">
             <div className="d-flex justify-content-end r-m-1  footer-justify">
@@ -17,9 +18,10 @@ export default function Footer() {
 
 
           <div className="col-sm-6">
-            <div className="d-flex justify-content-start r-m-1 footer-justify footer-support__detail-button-container">
-              <button className="btn-nsw btn-nsw-primary">Donate</button>
-              <a><button className="btn-nsw btn-nsw-primary">Support</button></a>
+            <div className={"d-flex", "justify-content-start", "r-m-1", "footer-justify", styles.footer_support__detail_button_container}>
+              <Button_ title={'Donate'} variant={'outline-primary'} />
+              <Button_ title={'Support'} variant={'outline-primary'} />
+              {/* <a><button className="btn-nsw btn-nsw-primary">Support</button></a> */}
             </div>
           </div>
         </div>
