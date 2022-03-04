@@ -11,7 +11,7 @@ export default function AboutUs() {
           <img src='/tac-ngo-africa.jpg' className={styles.page_hero_image} alt='tac-ngo-africa.jpg' />
         {/* </div> */}
         
-        <h3 className={['text-primary', styles.page_child__heading].join(' ')}>About us</h3>
+        <h3 className={['text-primary', styles.page_child__heading].join(' ')} >About us</h3>
         <div>
           <p>
           Technology Against Crime (TAC) is an NGO born out of an International Forum on Technologies, a high level meeting dedicated to `&quot` Technology for a Safer world `&quot`. The first two editions were held in Lyon, in April 2013 and April 2016 respectively under the patronage of the Ministry of Interior and INTERPOL. (www.forum-tac.org).
