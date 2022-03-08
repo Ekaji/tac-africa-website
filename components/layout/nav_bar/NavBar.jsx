@@ -31,7 +31,8 @@ export default function NavBar(){
         {href: '/about_us', name: 'About Us'},
         {href: '/founder', name: 'Founder'},
         {href: '/our_team', name: 'Our Team'},
-        {href: '/partners_and_supporters', name: 'partners and supporters'}
+        {href: '/partners_and_supporters', name: 'partners and supporters'},
+        {href: '/gallery', name: 'Gallery'}
     ];
 
     const labs = [
@@ -44,7 +45,6 @@ export default function NavBar(){
 
     const projects = [
         {href: '/blog', name: 'Blog' },
-        {href: '/gallery', name: 'Gallery'}
     ];
 
     const [currentPath, setCurrentPath] = useState('')
@@ -112,7 +112,7 @@ const router = useRouter()
                                     )
                                 }
                 </NavDropdown>
-                <NavDropdown title={<span className={getHref(projects, currentPath ) ? 'text-warning' : 'text-primary' }>Resources</span> }
+                <NavDropdown title={<span className={getHref(projects, currentPath ) ? 'text-warning' : 'text-primary' }>Projects</span> }
                              
                              className="text-primary" 
                              id="nav-dropdown">
