@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
+
 import Image from 'next/image';
 import styles from '../styles/component.styles/landingPage.module.scss'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 
 export default function LandingPage(){
-
 
   return(
     <section className="container-fluid">

@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 
 export default function GetInvolved() {
   return(
-    <section >
+    <section className='section_margin' >
     <div className={'container-fluid', styles.top_section}>
         <div>
             <h2 className={ styles.homepage_title } >How you can get <em>Involved</em></h2>
@@ -21,9 +21,7 @@ export default function GetInvolved() {
                         <h3>Drone and Counter-Drone Lab</h3>
                         <p>A Virtual knowledge platform that will raise critical issues to promote the institutionalization
                             of drone and counter drone best practices within the African Sub-region. </p>
-                        {/* <a>
-                            <button className="btn-sw btn-sw-primary">Join</button>
-                        </a> */}
+
                         <Nav.Item className={ styles.button_comp } >
                             <Button variant="outline-primary" >Learn More</Button>
                         </Nav.Item>

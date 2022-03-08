@@ -8,9 +8,24 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import styles from '../../../styles/layout/navbar.module.scss'
 import Button_ from '../../button.jsx'
 import { useRouter } from 'next/router'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 
 export default function NavBar(){
+
+    const [animateNavBar, setAnimateNavBar] = useState({backgroundColor: 'transparent', height: '20vh' })
+
+    useScrollPosition(({ currPos }) => {
+        // console.log(currPos.y)
+        if (currPos.y < -47) {
+            setAnimateNavBar( {backgroundColor: 'white', height: '15vh' })
+        } else {
+            setAnimateNavBar({backgroundColor: 'transparent', height: '20vh'})
+        }
+    } ) 
+
+    console.log(animateNavBar)
+    
 
     const about = [
         {href: '/about_us', name: 'About Us'},
@@ -27,7 +42,7 @@ export default function NavBar(){
         {href: '/satellite_and_remote_sensing_lab', name: 'Satellite And Remote Sensing Lab'}
     ];
 
-    const resources = [
+    const projects = [
         {href: '/blog', name: 'Blog' },
         {href: '/gallery', name: 'Gallery'}
     ];
@@ -51,8 +66,8 @@ export default function NavBar(){
 
 const router = useRouter()
   return(
-    <div className={styles.nav_container} >
-        <Navbar  className={styles.nav_inner__container} expand="lg">
+    <div className={styles.nav_container} style={{ backgroundColor: animateNavBar.backgroundColor }} >
+        <Navbar  className={styles.nav_inner__container} style={{ height: animateNavBar.height }} expand="lg">
         <Container fluid  >
             <Navbar.Brand href="#">
                 <img src='/TAC_LOGO.png' alt='logo' style={{maxWidth: '100px'}} />
@@ -60,13 +75,13 @@ const router = useRouter()
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse className={['justify-content-end', styles.navbar_collapse].join(' ')}
                 id="navbarScroll" >
-            <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]}  navbarScroll >
+            <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]} style={{paddingTop: '20px'}}  navbarScroll >
              <Nav.Link href={'/'} 
                        className={ router.pathname == "/" ? 'activeLink text-warning' : "text-primary"}  >
                            Home
              </Nav.Link>
 
-                <NavDropdown title={<span className={getHref(about, currentPath ) ? 'text-warning' : 'text-primary' }>About</span> }
+                <NavDropdown title={<span className={getHref(about, currentPath ) ? 'text-warning' : 'text-primary' } >About</span> }
                              className='text-primary active'
                              style={{zIndex: 40}}
                              id="nav-dropdown" >
@@ -83,6 +98,7 @@ const router = useRouter()
 
                 </NavDropdown>
                 <NavDropdown title={<span className={getHref(labs, currentPath ) ? 'text-warning' : 'text-primary' }>Labs</span> }
+                            
                              className="text-primary" 
                                  id="nav-dropdown"> 
                                     {
@@ -96,11 +112,12 @@ const router = useRouter()
                                     )
                                 }
                 </NavDropdown>
-                <NavDropdown title={<span className={getHref(resources, currentPath ) ? 'text-warning' : 'text-primary' }>Resources</span> }
+                <NavDropdown title={<span className={getHref(projects, currentPath ) ? 'text-warning' : 'text-primary' }>Resources</span> }
+                             
                              className="text-primary" 
                              id="nav-dropdown">
                                 {
-                                    resources.map(({name, href}, i) => (
+                                    projects.map(({name, href}, i) => (
                                         <NavDropdown.Item key={i} href={href} className={
                                             router.pathname == href ? 'activeLink text-warning' : "text-primary" 
                                             } 
@@ -111,10 +128,14 @@ const router = useRouter()
                                 }
 
                 </NavDropdown>
-             <Nav.Link href={'/contact'}  className={router.pathname == "/contact" ? 'activeLink text-warning' : "text-primary"} >Contact</Nav.Link>
+            <Nav.Link href={'/contact'}  className={router.pathname == "/contact" ? 'activeLink text-warning' : "text-primary"}  >Contact</Nav.Link>
+            
+            <Nav.Item>
+                <Button_ title={' Blog '} variant={'primary'}   />
+            </Nav.Item>
 
             <Nav.Item>
-                <Button_ title={'Donate'} variant={'outline-primary'} />
+                <Button_ title={'Donate'} variant={'outline-primary'}   />
             </Nav.Item>
             </Nav>
             </Navbar.Collapse>

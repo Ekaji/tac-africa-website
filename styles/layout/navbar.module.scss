@@ -6,21 +6,17 @@
   width: 100%;
   z-index: 40;
 
-  .nav_inner__container {
-    height: 20vh;
-  }
+  // .nav_inner__container {
+  //   height: 20vh;
+  // }
 }
 
-.navbar_collapse { 
-  // max-height: 300px;
-  // padding: 20px;
+.navbar_collapse {
   font-size: 1em;
-  // padding-left: 2.2rem;
-  // padding-right: 2.2rem;
   transition: all 0.5s ease 0s;
   box-shadow: none;
-  background: transparent none repeat scroll 0% 0%;
-  // height: 20vh;
+  // background: transparent none repeat scroll 0% 0%;
+  background-color: white;
 
   &__nav {
     font-size: 1.2em;

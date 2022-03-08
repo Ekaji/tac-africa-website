@@ -3,6 +3,7 @@ import Head from 'next/head'
 import LandingPage from '../components/landingPage.jsx'
 import GetInvolved from '../components/getInvolved.jsx'
 import AboutUsHome from '../components/aboutUsHome.jsx'
+import Carousel from '../components/carouselComp.jsx'
 
 
 export default function Home() {
@@ -14,7 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LandingPage />
-      <GetInvolved />
+      {/* <GetInvolved /> */}
+      <Carousel />
       <AboutUsHome />
     </div>
   )
