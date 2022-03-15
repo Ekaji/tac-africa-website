@@ -9,22 +9,19 @@ import styles from '../../../styles/layout/navbar.module.scss'
 import Button_ from '../../button.jsx'
 import { useRouter } from 'next/router'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
-
+import Link from 'next/link'
 
 export default function NavBar(){
 
     const [animateNavBar, setAnimateNavBar] = useState({backgroundColor: 'transparent', height: '20vh' })
 
     useScrollPosition(({ currPos }) => {
-        // console.log(currPos.y)
         if (currPos.y < -47) {
             setAnimateNavBar( {backgroundColor: 'white', height: '15vh' })
         } else {
             setAnimateNavBar({backgroundColor: 'transparent', height: '20vh'})
         }
     } ) 
-
-    console.log(animateNavBar)
     
 
     const about = [
@@ -50,8 +47,8 @@ export default function NavBar(){
     const [currentPath, setCurrentPath] = useState('')
 
     useEffect(() => {
-        setCurrentPath(() => router.pathname)
-    },[])
+        setCurrentPath(() => router.asPath)
+    })
 
 
     const getHref = (hrefArray, pathName) => {
@@ -63,39 +60,57 @@ export default function NavBar(){
             }
     }
 
+    const [menuState, setMenuState] = useState(false)
+
+    const handleMenuState = () => {
+        setMenuState(() => !menuState)
+        console.log(menuState)
+    }
+ 
 
 const router = useRouter()
   return(
-    <div className={styles.nav_container} style={{ backgroundColor: animateNavBar.backgroundColor }} >
-        <Navbar  className={styles.nav_inner__container} style={{ height: animateNavBar.height }} expand="lg">
-        <Container fluid  >
-            <Navbar.Brand href="#">
-                <img src='/TAC_LOGO.png' alt='logo' style={{maxWidth: '100px'}} />
+    <div className={styles.nav_container}  >
+        <Navbar  className={styles.nav_inner__container} style={{padding: '0px', marginTop: '-14px' }} expand="lg">
+        {/* <Container fluid  > */}
+            <Navbar.Brand >
+                <Link href={'/'} >
+                  <a>
+                    <img src='/TAC_LOGO.png' alt='logo' style={{maxWidth: '100px', marginLeft: '19px'}} />
+                  </a>
+                </Link> 
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse className={['justify-content-end', styles.navbar_collapse].join(' ')}
                 id="navbarScroll" >
             <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]} style={{paddingTop: '20px'}}  navbarScroll >
-             <Nav.Link href={'/'} 
-                       className={ router.pathname == "/" ? 'activeLink text-warning' : "text-primary"}  >
-                           Home
-             </Nav.Link>
+                <Nav.Link as='div' >
+                    <Link href={'/'}>
+                        <a className={ router.pathname == '/' ? 'text-warning' : "text-primary"}>
+                        Home                                   
+                        </a>
+                    </Link>
+                </Nav.Link>
 
                 <NavDropdown title={<span className={getHref(about, currentPath ) ? 'text-warning' : 'text-primary' } >About</span> }
-                             className='text-primary active'
+                             className={ [menuState ? 'show' : '', 'text-danger ']}
                              style={{zIndex: 40}}
-                             id="nav-dropdown" >
+                             id="nav-dropdown" eventkey={1} >
                                     {
                                         about.map(({name, href}, i) => (
-                                            <NavDropdown.Item key={i} href={href} className={
-                                                router.pathname == href ? 'text-warning' : "text-primary" 
+                                            <NavDropdown.Item as='div' key={i} className={
+                                                router.pathname == href ? 'activeLink dropdown-item text-warning' : "activeLink dropdown-item text-primary"
                                                 }
-                                                eventKey={i}>{name}
+                                                eventkey={i}>
+                                                 <Link href={href} >
+                                                    <a>
+                                                      {name}
+                                                    </a>
+                                                  </Link>  
                                             </NavDropdown.Item>
                                             ) 
                                         )
                                     }
-
                 </NavDropdown>
                 <NavDropdown title={<span className={getHref(labs, currentPath ) ? 'text-warning' : 'text-primary' }>Labs</span> }
                             
@@ -103,10 +118,15 @@ const router = useRouter()
                                  id="nav-dropdown"> 
                                     {
                                     labs.map(({name, href}, i) => (
-                                        <NavDropdown.Item key={i} href={href} className={
+                                        <NavDropdown.Item as='div' key={i} href={href} className={
                                             router.pathname == href ? 'activeLink text-warning' : "text-primary" 
                                             } 
-                                            eventKey={i}>{name}
+                                            eventKey={i}>
+                                                <Link href={href} >
+                                                  <a>
+                                                    {name}
+                                                  </a>
+                                                </Link> 
                                         </NavDropdown.Item>
                                         ) 
                                     )
@@ -118,17 +138,29 @@ const router = useRouter()
                              id="nav-dropdown">
                                 {
                                     projects.map(({name, href}, i) => (
-                                        <NavDropdown.Item key={i} href={href} className={
+                                        <NavDropdown.Item as='div' key={i} href={href} className={
                                             router.pathname == href ? 'activeLink text-warning' : "text-primary" 
                                             } 
-                                            eventKey={i}>{name}
+                                            eventKey={i}>
+                                                <Link href={href} >
+                                                  <a>                                  
+                                                    {name}
+                                                  </a>
+                                                </Link> 
                                         </NavDropdown.Item>
                                         ) 
                                     )
                                 }
 
                 </NavDropdown>
-            <Nav.Link href={'/contact'}  className={router.pathname == "/contact" ? 'activeLink text-warning' : "text-primary"}  >Contact</Nav.Link>
+            
+                    <Nav.Link as='div' >
+                        <Link href={'/contact'}>
+                            <a className={ router.pathname == '/contact' ? 'activeLink text-warning' : "text-primary" }>                                  
+                                Contact
+                            </a>
+                        </Link>
+                    </Nav.Link>
             
             <Nav.Item>
                 <Button_ title={' Blog '} variant={'primary'}   />
@@ -137,11 +169,12 @@ const router = useRouter()
             <Nav.Item>
                 <Button_ title={'Donate'} variant={'outline-primary'}   />
             </Nav.Item>
+
             </Nav>
             </Navbar.Collapse>
-        </Container>
+        {/* </Container> */}
         </Navbar>
-</div>
+    </div>
 
   )
 }
