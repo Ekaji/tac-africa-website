@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button'
 export default function GetInvolved() {
   return(
     <section className='section_margin' >
-    <div className={'container-fluid', styles.top_section}>
+    <div className={['container-fluid', styles.top_section]}>
         <div>
             <h2 className={ styles.homepage_title } >How you can get <em>Involved</em></h2>
         </div>
