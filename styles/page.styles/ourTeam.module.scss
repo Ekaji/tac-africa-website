@@ -1,0 +1,26 @@
+@import '../abstracts/variables';
+
+.container {
+  padding-top: 8em;
+}
+
+.card_container__outer {
+  margin-top: 0;
+  margin-bottom: 4em;
+
+  .card_container__inner {
+    border: none;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    &__image{
+      margin: 0.5em auto;
+      border-radius: 4px;
+    }
+  }
+
+  
+  .card_container__inner__colored__text {
+    margin-top: 4px;
+  }
+
+}
