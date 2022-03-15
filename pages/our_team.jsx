@@ -215,14 +215,14 @@ export default function OurTeam() {
       <Container className={styles.container} >
     <div className='' >
         {data.map(({name, description, members}) => (
-          <div>
+          <>
+            <div className='pl-md-5 ml-md-5' key={name} >
               <h2 className='text-primary'>{name}</h2>
               <p className='col-md-8 p-0'>{description}</p>
-            {/* </Container> */}
-            <div style={{margin: '0 auto', width: '100%'}}>
-              <Row xs={1} md={2} xl={4} className={['g-4', 'd-flex', 'justify-content-cente', styles.card_container__outer].join(' ')} >
-              {members.map(({image, name, title, description, location}) => (
-                <Card className={['m-4', styles.card_container__inner ].join(' ')}  >
+            </div>
+              <Row xs={1} md={2} xl={4} className={['g-4', 'd-flex', 'justify-content-center', styles.card_container__outer].join(' ')} >
+              {members.map(({image, name, title, description, location}, i) => (
+                <Card key={i} className={['m-4', styles.card_container__inner ].join(' ')}  >
                   <Card.Img variant="top" src={image} className={styles.card_container__inner__image} />
                   <div>
                     <Card.Title className='text-primary' >{name}</Card.Title>
@@ -237,8 +237,7 @@ export default function OurTeam() {
               )
               )}
               </Row>
-            </div>
-          </div>
+          </>
         )
         )
       }
