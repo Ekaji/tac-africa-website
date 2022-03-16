@@ -181,6 +181,34 @@ export default function OurTeam() {
         description: '',
         location: 'Abuja – Nigeria'
       },
+      {
+        image: '/img/sunday.jpg',
+        name : 'Akubo Sunday Ojonugwa',
+        title : '',
+        description: '',
+        location: 'Abuja – Nigeria'
+      },
+      {
+        image: '/img/blessing.png',
+        name : 'Blessing',
+        title : '',
+        description: '',
+        location: 'Abuja – Nigeria'
+      },
+      {
+        image: '/img/paul.jpg',
+        name : 'Paul',
+        title : '',
+        description: '',
+        location: 'Abuja – Nigeria'
+      },
+      {
+        image: '',
+        name : 'JahsWill',
+        title : '',
+        description: '',
+        location: 'Abuja – Nigeria'
+      },
     ]
   },
   {
@@ -216,27 +244,27 @@ export default function OurTeam() {
     <div className='' >
         {data.map(({name, description, members}) => (
           <>
-            <div className='pl-md-5 ml-md-5' key={name} >
+            <div className='pl-md-3' key={name} >
               <h2 className='text-primary'>{name}</h2>
               <p className='col-md-8 p-0'>{description}</p>
             </div>
-              <Row xs={1} md={2} xl={4} className={['g-4', 'd-flex', 'justify-content-center', styles.card_container__outer].join(' ')} >
-              {members.map(({image, name, title, description, location}, i) => (
-                <Card key={i} className={['m-4', styles.card_container__inner ].join(' ')}  >
-                  <Card.Img variant="top" src={image} className={styles.card_container__inner__image} />
-                  <div>
-                    <Card.Title className='text-primary' >{name}</Card.Title>
-                    <div className={['text-primary',  styles.card_container__inner__colored__text].join(' ')}>
-                      {title}
+                <Row xs={1} md={2} xl={4} className={['d-flex',  styles.card_container__outer].join(' ')} >
+                {members.map(({image, name, title, description, location}, i) => (
+                  <Card key={i} className={['m-4', styles.card_container__inner ].join(' ')}  >
+                    <Card.Img variant="top" src={image} className={styles.card_container__inner__image} />
+                    <div>
+                      <Card.Title className='text-primary' >{name}</Card.Title>
+                      <div className={['text-primary',  styles.card_container__inner__colored__text].join(' ')}>
+                        {title}
+                      </div>
+                      <div className={styles.card_container__inner__colored__text}>
+                        {description}
+                      </div>
                     </div>
-                    <div className={styles.card_container__inner__colored__text}>
-                      {description}
-                    </div>
-                  </div>
-                </Card>
-              )
-              )}
-              </Row>
+                  </Card>
+                )
+                )}
+                </Row>
           </>
         )
         )
