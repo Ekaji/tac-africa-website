@@ -18,10 +18,9 @@ export default function Footer() {
 
 
           <div className="col-sm-6">
-            <div className={"d-flex", "justify-content-start", "r-m-1", "footer-justify", styles.footer_support__detail_button_container}>
-              <Button_ title={'Donate'} variant={'outline-primary'} />
-              <Button_ title={'Support'} variant={'outline-primary'} />
-              {/* <a><button className="btn-nsw btn-nsw-primary">Support</button></a> */}
+            <div className={["d-flex", "justify-content-start", "r-m-1", "footer-justify", styles.footer_support__detail_button_container].join(' ')}>
+              <Button_ title={'Donate'} />
+              <Button_ title={'Support'} />
             </div>
           </div>
         </div>
@@ -49,8 +48,8 @@ export default function Footer() {
               </div>
             </div>
             <div className="col-md-4">
-              <div className={"d-flex", styles.footer_justify }>
-                <div className={ "r_m_1f", styles.footer_main__quicklinks }>
+              <div className={["d-flex", styles.footer_justify].join(' ') }>
+                <div className={ ["r_m_1f", styles.footer_main__quicklinks].join(' ') }>
                   <h3>Quicklinks</h3>
                   <ul>
                     <li><a>HomePage</a></li>
@@ -63,8 +62,8 @@ export default function Footer() {
               </div>
             </div>
             <div className="col-md-4">
-              <div className={"d-flex", styles.footer_justify}>
-                <div className={"r_m_1f", styles.footer_main__socials} >
+              <div className={["d-flex", styles.footer_justify].join(' ')}>
+                <div className={["r_m_1f", styles.footer_main__socials].join(' ')} >
                   <h3>Socials</h3>
                   <div>
                     <a className="fab fa-facebook" href="https://web.facebook.com/tacafrica.org/"></a>
@@ -72,8 +71,6 @@ export default function Footer() {
                     <a className="fab fa-instagram" href="https://www.instagram.com/technologyagainstcrime/"></a>
                     <a className="fab fa-linkedin" href="https://www.linkedin.com/company/29341224/"></a>
                   </div>
-
-                  {/* <img src="" alt=""  /> */}
                   </div>
 
               </div>
