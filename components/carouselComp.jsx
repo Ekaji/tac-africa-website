@@ -54,7 +54,7 @@ export default function CarouselComp() {
               <div className='col-md-6' >
                 <div className={ styles.labs_card } >
                   <div>
-                    <img className="img-fluid" src="/syber-lab-icon.png" alt="" />
+                    <img className="img-fluid" src="/Cyber-Security.jpg" alt="" />
                   </div>
                 </div>
               </div>

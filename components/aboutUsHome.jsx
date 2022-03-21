@@ -5,12 +5,12 @@ import Button from 'react-bootstrap/Button'
 
 export default function AboutUsHome() {
   return(
-      <section className={styles.inline_about, 'top-section'}>
-          <div className="row">
+      <section className={ styles.inline_about }>
+          <div className={['row', styles.inline_about__inner].join(' ')}>
               <div className="col-md-6">
                   <div className={ styles.about_details } >
-                      <div >
-                          <h2 className={styles.homepage_title} >About Us</h2>
+                      <div className=''  >
+                          <h2 className={[ styles.homepage_title, 'pl-md-4'].join(' ')} >About Us</h2>
                           <div className={ styles.about_details__p } >
                               <p>TAC AFRICA was born out of an International Forum on Technologies, a high level
                                   meeting dedicated to <em>Technology for a Safer world</em>. The first two editions were held

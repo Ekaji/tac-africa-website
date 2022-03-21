@@ -7,11 +7,15 @@
 .card_container__outer {
   margin-top: 0;
   margin-bottom: 4em;
-  justify-self: center;
-  width: 100vw;
+
+  .card__conditional_link {
+    cursor: pointer;
+  }
 
   .card_container__inner {
     border: none;
+    padding: 20px;
+    min-width: 300px;
     font-size: 14px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
     &__image{

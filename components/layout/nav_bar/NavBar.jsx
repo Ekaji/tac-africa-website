@@ -41,7 +41,16 @@ export default function NavBar(){
     ];
 
     const projects = [
-        {href: '/blog', name: 'Blog' },
+        {href: '/Policing_the_Cyberspace', name: 'Policing the Cyberspace' },
+        {href: '/Innovation_in_Policing', name: 'Innovation in Policing' },
+        {href: '/Drone_Alliance_Africa', name: 'Drone Alliance Africa' },
+        {href: '/Artificial_Intelligence', name: 'Artificial Intelligence' },
+        {href: '/AfriAgriTech_Project', name: 'AfriAgriTech project' },
+        {href: '/Crawler', name: 'Crawler' },
+        {href: '/Volunteer_Management', name: 'Volunteer Management' },
+        {href: '/CyberPeace_Dialogue_2020', name: 'CyberPeace Dialogue 2020' },
+        {href: '/Research_on_Cyber_Security', name: 'Research on Cyber Security' }
+       
     ];
 
     const [currentPath, setCurrentPath] = useState('')

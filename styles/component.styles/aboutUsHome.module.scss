@@ -4,6 +4,10 @@
     background: $main-grey;
     width: 100%; 
     overflow-x: hidden;
+
+    &__inner {
+        // margin: 0px 10px;
+    }
 }
 
 .homepage_title {
@@ -19,6 +23,8 @@
     align-items: center;
     padding-top: 5em;
     padding-bottom: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
     max-width: 35em;
     margin-left: auto;
 
