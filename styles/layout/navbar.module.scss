@@ -31,3 +31,34 @@
   }
 
 }
+
+//mobile
+@media (max-width: 480px) {
+  .navbar_collapse {
+    position: absolute;
+    padding-top: 12vh;
+    padding-right: 30vw;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -20;
+
+    &__nav {
+      display: flex;
+      justify-content: center;
+      align-content: flex-end;
+      width: 100vw;
+    }
+  }
+  .nav_link {
+    text-align: center;
+  }
+  }
+
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .navbar_collapse{
+    background-color: white;
+  }
+}

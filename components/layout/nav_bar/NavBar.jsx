@@ -90,20 +90,19 @@ const router = useRouter()
                 </Link> 
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse className={['justify-content-end', styles.navbar_collapse].join(' ')}
+            <Navbar.Collapse className={[' justify-content-end', styles.navbar_collapse].join(' ')}
                 id="navbarScroll" >
             <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]} style={{paddingTop: '20px'}}  navbarScroll >
-                <Nav.Link as='div' >
+                <Nav.Link as='div' className={ styles.nav_link } style={{textAlign: 'center'}}>
                     <Link href={'/'}>
-                        <a className={ router.pathname == '/' ? 'text-warning' : "text-primary"}>
+                        <a className={ router.pathname == '/' ? 'text-warning' : "text-primary"}  >
                         Home                                   
                         </a>
                     </Link>
                 </Nav.Link>
 
-                <NavDropdown title={<span className={getHref(about, currentPath ) ? 'text-warning' : 'text-primary' } >About</span> }
-                             className={ [menuState ? 'show' : '', 'text-danger ']}
-                             style={{zIndex: 40}}
+                <NavDropdown title={<span className={ getHref(about, currentPath ) ? 'text-warning' : 'text-primary' } >About</span> }
+                             className={  styles.nav_link }
                              id="nav-dropdown" eventkey={1} >
                                     {
                                         about.map(({name, href}, i) => (
@@ -112,7 +111,7 @@ const router = useRouter()
                                                 }
                                                 eventkey={i}>
                                                  <Link href={href} >
-                                                    <a>
+                                                    <a className={styles.nav_links}>
                                                       {name}
                                                     </a>
                                                   </Link>  
@@ -122,8 +121,7 @@ const router = useRouter()
                                     }
                 </NavDropdown>
                 <NavDropdown title={<span className={getHref(labs, currentPath ) ? 'text-warning' : 'text-primary' }>Labs</span> }
-                            
-                             className="text-primary" 
+                             className={  styles.nav_link }
                                  id="nav-dropdown"> 
                                     {
                                     labs.map(({name, href}, i) => (
@@ -132,7 +130,7 @@ const router = useRouter()
                                             } 
                                             eventKey={i}>
                                                 <Link href={href} >
-                                                  <a>
+                                                  <a >
                                                     {name}
                                                   </a>
                                                 </Link> 
@@ -142,8 +140,7 @@ const router = useRouter()
                                 }
                 </NavDropdown>
                 <NavDropdown title={<span className={getHref(projects, currentPath ) ? 'text-warning' : 'text-primary' }>Projects</span> }
-                             
-                             className="text-primary" 
+                             className={  styles.nav_link }
                              id="nav-dropdown">
                                 {
                                     projects.map(({name, href}, i) => (
@@ -163,7 +160,7 @@ const router = useRouter()
 
                 </NavDropdown>
             
-                    <Nav.Link as='div' >
+                    <Nav.Link as='div' className={  styles.nav_link } >
                         <Link href={'/contact'}>
                             <a className={ router.pathname == '/contact' ? 'activeLink text-warning' : "text-primary" }>                                  
                                 Contact
@@ -171,11 +168,11 @@ const router = useRouter()
                         </Link>
                     </Nav.Link>
             
-            <Nav.Item>
+            <Nav.Item className={  styles.nav_link }>
                 <Button_ title={' Blog '} variant={'primary'}   />
             </Nav.Item>
 
-            <Nav.Item>
+            <Nav.Item className={  styles.nav_link }>
                 <Button_ title={'Donate'} variant={'outline-primary'}   />
             </Nav.Item>
 
