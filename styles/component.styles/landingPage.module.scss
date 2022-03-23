@@ -122,3 +122,9 @@
     }
 }
 
+@media (max-width: $breakpoint-sm) {
+    .container_pd  {
+        margin-top: 20vh;
+    }
+}
+

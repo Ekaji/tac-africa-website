@@ -10,7 +10,7 @@ export default function LandingPage(){
 
   return(
     <section className="container-fluid">
-    <div className={[styles.top_container, styles.container_pd]}>
+    <div className={[styles.top_container, styles.container_pd].join(' ')}>
         <div className="row ">
             <div className="col-md-5" styles={{paddingTop: '60px'}}>
                 <div className={styles.tac_header_detail}>
