@@ -81,7 +81,7 @@ const router = useRouter()
             <Navbar.Brand >
                 <Link href={'/'} >
                   <a>
-                    <img src='/TAC_LOGO.png' alt='logo' style={{maxWidth: '100px', marginLeft: '19px'}} />
+                    <img src='/TAC_LOGO.webp' alt='logo' style={{maxWidth: '100px', marginLeft: '19px'}} />
                   </a>
                 </Link> 
             </Navbar.Brand>
@@ -102,7 +102,7 @@ const router = useRouter()
                                     {
                                     about.map(({name, href}, i) => (
                                         <NavDropdown.Item as='div' key={i} href={href} className={
-                                            router.pathname == href ? 'activeLink text-warning' : "text-primary" 
+                                            router.pathname == href ? ' text-warning' : "text-primary" 
                                             } 
                                             eventKey={i}>
                                                 <Link href={href} >
@@ -121,7 +121,7 @@ const router = useRouter()
                                     {
                                     labs.map(({name, href}, i) => (
                                         <NavDropdown.Item as='div' key={i} href={href} className={
-                                            router.pathname == href ? 'activeLink text-warning' : "text-primary" 
+                                            router.pathname == href ? ' text-warning' : "text-primary" 
                                             } 
                                             eventKey={i}>
                                                 <Link href={href} >
@@ -140,7 +140,7 @@ const router = useRouter()
                                 {
                                     projects.map(({name, href}, i) => (
                                         <NavDropdown.Item as='div' key={i} href={href} className={
-                                            router.pathname == href ? 'activeLink text-warning' : "text-primary" 
+                                            router.pathname == href ? ' text-warning' : "text-primary" 
                                             } 
                                             eventKey={i}>
                                                 <Link href={href} >

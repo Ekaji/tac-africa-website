@@ -10,7 +10,7 @@ export default function LandingPage(){
 
   return(
     <section className="container-fluid">
-    <div className={[styles.top_container, styles.container_pd].join(' ')}>
+    <div className={['mb-md-5',styles.top_container, styles.container_pd].join(' ')}>
         <div className="row ">
             <div className="col-md-5" styles={{paddingTop: '60px'}}>
                 <div className={styles.tac_header_detail}>
@@ -43,7 +43,7 @@ export default function LandingPage(){
             </div>
         </div>
 
-        <div className={styles.header_partners_icon}>
+        <div className={['mt-md-5 mb-md-5', styles.header_partners_icon].join(' ')}>
             <div className={styles.header_partners_icon__item}>
                 <img className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/CyberPeaceFoundation.png"
                     alt="Technology Against Crime ideology" />

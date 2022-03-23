@@ -53,6 +53,7 @@
 
 
 .homepage_title {
+    margin-top: 2em;
       font-size: 2.35em;
       color: #17466C;
       font-weight: 500;
@@ -71,6 +72,7 @@
       background: transparent;
       font-style: normal;
       z-index: 0;
+      color: $main-blue;
   }
 //   ::before {
 //       position: absolute;
@@ -88,29 +90,17 @@
 @media (max-width: $breakpoint-sm) {
     .carousel_container {
         margin: 5em 2em 0em;
-        a {
-            visibility: hidden;
-        }
     }
 
-//   .labs_card {
-//       margin: 5em;
+    .carousel_container {
+        padding: 0;
+    }
 
-//       &:not(:first-child) {
-//           margin-top: 5em;
-//       }
-//   }
-
-//   .top_section {
-//       margin-top: 5em;
-//   }
 }
 
 
-//margin-top component
-
-
 @media (max-width: $breakpoint-md) {
+
     .labs_card {
         margin-top: 5em;
 
