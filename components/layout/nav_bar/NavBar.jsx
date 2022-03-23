@@ -69,19 +69,15 @@ export default function NavBar(){
             }
     }
 
-    const [menuState, setMenuState] = useState(false)
+    const [open, setOpen] = useState(false)
 
-    const handleMenuState = () => {
-        setMenuState(() => !menuState)
-        console.log(menuState)
-    }
  
 
 const router = useRouter()
   return(
     <div className={styles.nav_container}  >
-        <Navbar  className={styles.nav_inner__container} style={{padding: '0px', marginTop: '-14px' }} expand="lg">
-        {/* <Container fluid  > */}
+        <Navbar collapseOnSelect className={styles.nav_inner__container} style={{padding: '0px', marginTop: '-14px' }} expand="lg">
+        <Container fluid  >
             <Navbar.Brand >
                 <Link href={'/'} >
                   <a>
@@ -89,11 +85,10 @@ const router = useRouter()
                   </a>
                 </Link> 
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse className={[' justify-content-end', styles.navbar_collapse].join(' ')}
-                id="navbarScroll" >
-            <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]} style={{paddingTop: '20px'}}  navbarScroll >
-                <Nav.Link as='div' className={ styles.nav_link } style={{textAlign: 'center'}}>
+            <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+            <Navbar.Collapse id='responsive-navbar-nav' className={[' justify-content-end ', styles.navbar_collapse].join(' ')} >
+            <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]} style={{paddingTop: '20px'}} >
+                <Nav.Link eventKey='1' className={ styles.nav_link } >
                     <Link href={'/'}>
                         <a className={ router.pathname == '/' ? 'text-warning' : "text-primary"}  >
                         Home                                   
@@ -101,24 +96,24 @@ const router = useRouter()
                     </Link>
                 </Nav.Link>
 
-                <NavDropdown title={<span className={ getHref(about, currentPath ) ? 'text-warning' : 'text-primary' } >About</span> }
+                <NavDropdown title={<span className={getHref(about, currentPath ) ? 'text-warning' : 'text-primary' }>About</span> }
                              className={  styles.nav_link }
-                             id="nav-dropdown" eventkey={1} >
+                                 id="nav-dropdown"> 
                                     {
-                                        about.map(({name, href}, i) => (
-                                            <NavDropdown.Item as='div' key={i} className={
-                                                router.pathname == href ? 'activeLink dropdown-item text-warning' : "activeLink dropdown-item text-primary"
-                                                }
-                                                eventkey={i}>
-                                                 <Link href={href} >
-                                                    <a className={styles.nav_links}>
-                                                      {name}
-                                                    </a>
-                                                  </Link>  
-                                            </NavDropdown.Item>
-                                            ) 
-                                        )
-                                    }
+                                    about.map(({name, href}, i) => (
+                                        <NavDropdown.Item as='div' key={i} href={href} className={
+                                            router.pathname == href ? 'activeLink text-warning' : "text-primary" 
+                                            } 
+                                            eventKey={i}>
+                                                <Link href={href} >
+                                                  <a >
+                                                    {name}
+                                                  </a>
+                                                </Link> 
+                                        </NavDropdown.Item>
+                                        ) 
+                                    )
+                                }
                 </NavDropdown>
                 <NavDropdown title={<span className={getHref(labs, currentPath ) ? 'text-warning' : 'text-primary' }>Labs</span> }
                              className={  styles.nav_link }
@@ -178,7 +173,7 @@ const router = useRouter()
 
             </Nav>
             </Navbar.Collapse>
-        {/* </Container> */}
+        </Container>
         </Navbar>
     </div>
 
