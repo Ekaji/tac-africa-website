@@ -3,16 +3,17 @@
 
 import Image from 'next/image';
 import styles from '../styles/component.styles/landingPage.module.scss'
-import Nav from 'react-bootstrap/Nav'
-import Button from 'react-bootstrap/Button'
+// import Nav from 'react-bootstrap/Nav'
+// import Button from 'react-bootstrap/Button'
+import {Button, Nav, Row, Col} from 'react-bootstrap'
 
 export default function LandingPage(){
 
   return(
     <section className="container-fluid">
     <div className={['mb-md-5',styles.top_container, styles.container_pd].join(' ')}>
-        <div className="row ">
-            <div className="col-md-5" styles={{paddingTop: '60px'}}>
+        <Row className={ styles.tac_header_background}>
+            <Col md={5} styles={{paddingTop: '60px'}}>
                 <div className={styles.tac_header_detail}>
                     <div className={styles.tac_header_detail__items}>
                         <h2>Combating Crime in
@@ -34,16 +35,21 @@ export default function LandingPage(){
 
                 </div>
 
-            </div>
+            </Col>
 
-            <div className="col-md-7">
+            <Col md={7} xs={{order: 'first'}} md={{order: 'last'}} >
                 <div className={styles.header_icon}>
-                    <Image src="/tac-icon.svg" width='700' height='700' alt="Technology Against Crime ideology" />
+                    <Image  src="/tac-icon.svg" 
+                            // width='700' 
+                            // height='700' 
+                            layout='fill'
+                            className={'image'}
+                            alt="Technology Against Crime ideology" />
                 </div>
-            </div>
-        </div>
+            </Col>
+        </Row>
 
-        <div className={['mt-md-5 mb-md-5', styles.header_partners_icon].join(' ')}>
+        <Row className={['mt-md-5 mb-md-5', styles.header_partners_icon].join(' ')}>
             <div className={styles.header_partners_icon__item}>
                 <img className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/CyberPeaceFoundation.png"
                     alt="Technology Against Crime ideology" />
@@ -57,7 +63,7 @@ export default function LandingPage(){
                     alt="Technology Against Crime ideology" />
             </div>
 
-        </div>
+        </Row>
 
     </div>
 </section>
