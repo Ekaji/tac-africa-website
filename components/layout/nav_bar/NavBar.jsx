@@ -88,7 +88,7 @@ const router = useRouter()
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse id='responsive-navbar-nav' className={[' justify-content-end ', styles.navbar_collapse].join(' ')} >
             <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]} style={{paddingTop: '20px'}} >
-                <Nav.Link eventKey='1' className={ styles.nav_link } >
+                <Nav.Link as='div' eventKey='1' className={ styles.nav_link } >
                     <Link href={'/'}>
                         <a className={ router.pathname == '/' ? 'text-warning' : "text-primary"}  >
                         Home                                   

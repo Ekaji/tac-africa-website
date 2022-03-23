@@ -37,11 +37,9 @@ export default function LandingPage(){
 
             </Col>
 
-            <Col md={7} xs={{order: 'first'}} md={{order: 'last'}} >
+            <Col  xs={{order: 'first'}} md={{span: 7, order: 'last'}} >
                 <div className={styles.header_icon}>
-                    <Image  src="/tac-icon.svg" 
-                            // width='700' 
-                            // height='700' 
+                    <Image  src="/tac-icon.svg"
                             layout='fill'
                             className={'image'}
                             alt="Technology Against Crime ideology" />
