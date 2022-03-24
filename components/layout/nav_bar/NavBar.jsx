@@ -41,15 +41,15 @@ export default function NavBar(){
     ];
 
     const projects = [
-        {href: '/Policing_the_Cyberspace', name: 'Policing the Cyberspace' },
-        {href: '/Innovation_in_Policing', name: 'Innovation in Policing' },
-        {href: '/Drone_Alliance_Africa', name: 'Drone Alliance Africa' },
-        {href: '/Artificial_Intelligence', name: 'Artificial Intelligence' },
-        {href: '/AfriAgriTech_Project', name: 'AfriAgriTech project' },
-        {href: '/Crawler', name: 'Crawler' },
-        {href: '/Volunteer_Management', name: 'Volunteer Management' },
-        {href: '/CyberPeace_Dialogue_2020', name: 'CyberPeace Dialogue 2020' },
-        {href: '/Research_on_Cyber_Security', name: 'Research on Cyber Security' }
+        {href: '/policing_the_cyberspace', name: 'Policing the Cyberspace' },
+        {href: '/innovation_in_policing', name: 'Innovation in Policing' },
+        {href: '/drone_alliance_africa', name: 'Drone Alliance Africa' },
+        {href: '/artificial_intelligence', name: 'Artificial Intelligence' },
+        {href: '/afri_agri_tech_project', name: 'AfriAgriTech project' },
+        {href: '/crawler', name: 'Crawler' },
+        {href: '/volunteer_management', name: 'Volunteer Management' },
+        {href: '/cyberPeace_dialogue_2020', name: 'CyberPeace Dialogue 2020' },
+        {href: '/research_on_cyber_security', name: 'Research on Cyber Security' }
        
     ];
 
@@ -86,7 +86,7 @@ const router = useRouter()
                 </Link> 
             </Navbar.Brand>
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-            <Navbar.Collapse id='responsive-navbar-nav' className={[' justify-content-end ', styles.navbar_collapse].join(' ')} >
+            <Navbar.Collapse id='responsive-navbar-nav' className={['justify-content-end' , styles.navbar_collapse].join(' ')} >
             <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]} style={{paddingTop: '20px'}} >
                 <Nav.Link as='div' eventKey='1' className={ styles.nav_link } >
                     <Link href={'/'}>
@@ -96,11 +96,11 @@ const router = useRouter()
                     </Link>
                 </Nav.Link>
 
-                <NavDropdown title={<span className={getHref(about, currentPath ) ? 'text-warning' : 'text-primary' }>About</span> }
+                <NavDropdown title={<span className={getHref(labs, currentPath ) ? 'text-warning' : 'text-primary' }>Labs</span> }
                              className={  styles.nav_link }
                                  id="nav-dropdown"> 
                                     {
-                                    about.map(({name, href}, i) => (
+                                    labs.map(({name, href}, i) => (
                                         <NavDropdown.Item as='div' key={i} href={href} className={
                                             router.pathname == href ? ' text-warning' : "text-primary" 
                                             } 
@@ -115,11 +115,12 @@ const router = useRouter()
                                     )
                                 }
                 </NavDropdown>
-                <NavDropdown title={<span className={getHref(labs, currentPath ) ? 'text-warning' : 'text-primary' }>Labs</span> }
+
+                <NavDropdown title={<span className={getHref(about, currentPath ) ? 'text-warning' : 'text-primary' }>About</span> }
                              className={  styles.nav_link }
                                  id="nav-dropdown"> 
                                     {
-                                    labs.map(({name, href}, i) => (
+                                    about.map(({name, href}, i) => (
                                         <NavDropdown.Item as='div' key={i} href={href} className={
                                             router.pathname == href ? ' text-warning' : "text-primary" 
                                             } 

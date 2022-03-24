@@ -51,7 +51,6 @@
     border-bottom-right-radius: 1.5rem;
     padding: 0 3rem;
     height: calc(100vh - 20vh);
-    // min-height: 40em;
     display: flex;
     align-items: flex-end;
 
@@ -65,13 +64,6 @@
         position: relative !important;
         height: unset !important;
     }
-
-    // img {
-    //     width: 100%;
-    //     height: auto;
-    //     user-select: none;
-    //     -moz-user-select: none;
-    // }
 }
 
 .header_partners_icon {

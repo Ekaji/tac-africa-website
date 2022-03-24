@@ -1,5 +1,29 @@
 @import '../abstracts/variables';
 
+// .page_hero_image {
+//   margin-top: 50px;
+//   width: 100%;
+//   background: #E8F0F6;
+//   border-bottom-left-radius: 1.5rem;
+//   border-bottom-right-radius: 1.5rem;
+//   padding: 0 3rem;
+//   height: calc(100vh - 20vh);
+//   // min-height: 40em;
+//   display: flex;
+//   align-items: flex-end;
+
+//   > div {
+//       position: unset !important;
+//   }
+
+//   .image {
+//       object-fit: contain;
+//       width: 100%;
+//       position: relative !important;
+//       height: unset !important;
+//   }
+// }
+
 .page_container {
   display: flex;
   justify-content: center;
