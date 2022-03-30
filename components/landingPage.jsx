@@ -49,15 +49,15 @@ export default function LandingPage(){
 
         <Row className={['mt-md-5 mb-md-5', styles.header_partners_icon].join(' ')}>
             <div className={styles.header_partners_icon__item}>
-                <img className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/CyberPeaceFoundation.png"
+                <Image width='150' height='50' className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/CyberPeaceFoundation.png"
                     alt="Technology Against Crime ideology" />
-                <img className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/greyHareMedia.png" alt="Technology Against Crime ideology" />
+                <Image width='150' height='50' className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/greyHareMedia.png" alt="Technology Against Crime ideology" />
             </div>
 
             <div className={styles.header_partners_icon__item}>
-                <img className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/instituteOfDroneTechnologyAustralia.png"
+                <Image width='150' height='50' className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/instituteOfDroneTechnologyAustralia.png"
                     alt="Technology Against Crime ideology"  />
-                <img className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/logoDroneAlert.png" 
+                <Image width='150' height='50' className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/logoDroneAlert.png" 
                     alt="Technology Against Crime ideology" />
             </div>
 

@@ -3,11 +3,11 @@ export default function ArtificialIntelligence() {
   return(
     <div className='container' >
     <div className='row' style={{marginTop: '8em', width: '100%'}}>
-      <div className='col-md-6' >
-       {/* <img src='/jerry.jpg' style={{width: '70%'}}alt='tac-ngo-africa.jpg' /> */}
+      <div  >
+       <img src='/ai-programs.jpg' style={{width: '100%'}}alt='tac-ngo-africa.jpg' />
       </div>
 
-      <div className='col-md-6' >
+      <div  >
         <p>
           The changing nature of crime has long been
           an important aspect and challenge for the law

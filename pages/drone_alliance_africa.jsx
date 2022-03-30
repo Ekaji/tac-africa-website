@@ -5,11 +5,11 @@ export default function DroneAllianceAfrica() {
   return(
     <div className='container' >
       <div className='row' style={{marginTop: '8em', width: '100%'}}>
-        <div className='col-md-6' >
-         {/* <img src='/jerry.jpg' style={{width: '70%'}}alt='tac-ngo-africa.jpg' /> */}
+        <div  >
+         <img src='/Drone-and-Counter-Drone.jpg' style={{width: '100%'}}alt='tac-ngo-africa.jpg' />
         </div>
 
-        <div className='col-md-6' >
+        <div  >
           <p>
             Drone Alliance Africa (DAA) is a coalition of leading technology companies representing
             the commercial drone industry before African political leaders, regulators, and other

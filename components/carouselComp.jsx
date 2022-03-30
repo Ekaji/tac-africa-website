@@ -88,10 +88,8 @@ export default function CarouselComp() {
                 <div className={ styles.labs_card } >
                   <div>
                     <h3>AI and Robotics Lab</h3>
-                    <p>Lorem ipsum dorlo Lorem ipsum dorlo Lorem ipsum
-                      dorlo Lorem i psum dorlo Lorem ipsum dorlo Lorem
-                      ipsum dorlo Lorem ipsum dorlo Lorem ipsum
-                      dorlo Lorem i psum dorlo Lorem ipsum dorlo 
+                    <p>
+                    artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems. Due to the increased capacity to analyse large amounts of data, AI may be a powerful tool to enhance the effectiveness of law enforcement agencies’ daily operations, as well as optimizing public resources through, for instance, crime hotspot analytics, forecasting where and what type of crimes are likely to occur. 
                     </p>
                     <Nav.Item className={ styles.button_comp } >
                       <Button variant="outline-primary" >Learn More</Button>

@@ -1,13 +1,15 @@
 /* eslint-disable react/jsx-key */
+import styles from '../styles/page.styles/aboutUs.module.scss'
+
 export default function InnovationInPolicing() {
   return(
     <div className='container' >
     <div className='row' style={{marginTop: '8em', width: '100%'}}>
-      <div className='col-md-6' >
-       {/* <img src='/jerry.jpg' style={{width: '70%'}}alt='tac-ngo-africa.jpg' /> */}
+      <div style={{width: '100%', height: '20%'}} >
+       <img src='/innovation-in-Policy.jpg' style={{width: '100%', height: '20%'}} alt='tac-ngo-africa.jpg' />
       </div>
 
-      <div className='col-md-6' >
+      <div >
         <p>
         Police brutality cases are rising in Africa, and citizens are outraged and feel abandoned.
         Police brutality has become a hot topic globally, with activists and organizations regularly

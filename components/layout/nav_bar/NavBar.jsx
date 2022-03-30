@@ -10,18 +10,19 @@ import Button_ from '../../button.jsx'
 import { useRouter } from 'next/router'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function NavBar(){
 
-    const [animateNavBar, setAnimateNavBar] = useState({backgroundColor: 'transparent', height: '20vh' })
+    // const [animateNavBar, setAnimateNavBar] = useState({backgroundColor: 'transparent', height: '20vh' })
 
-    useScrollPosition(({ currPos }) => {
-        if (currPos.y < -47) {
-            setAnimateNavBar( {backgroundColor: 'white', height: '15vh' })
-        } else {
-            setAnimateNavBar({backgroundColor: 'transparent', height: '20vh'})
-        }
-    } ) 
+    // useScrollPosition(({ currPos }) => {
+    //     if (currPos.y < -47) {
+    //         setAnimateNavBar( {backgroundColor: 'white', height: '15vh' })
+    //     } else {
+    //         setAnimateNavBar({backgroundColor: 'transparent', height: '20vh'})
+    //     }
+    // } ) 
     
 
     const about = [
@@ -69,10 +70,6 @@ export default function NavBar(){
             }
     }
 
-    const [open, setOpen] = useState(false)
-
- 
-
 const router = useRouter()
   return(
     <div className={styles.nav_container}  >
@@ -81,7 +78,7 @@ const router = useRouter()
             <Navbar.Brand >
                 <Link href={'/'} >
                   <a>
-                    <img src='/TAC_LOGO.webp' alt='logo' style={{maxWidth: '100px', marginLeft: '19px'}} />
+                    <Image width='100' height='100' src='/TAC_LOGO.webp' alt='logo' style={{maxWidth: '100px', marginLeft: '19px'}} />
                   </a>
                 </Link> 
             </Navbar.Brand>
