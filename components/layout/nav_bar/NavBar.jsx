@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import { useEffect, useState } from 'react'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
-import NavDropdown from 'react-bootstrap/NavDropdown'
+import { Badge, Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 import styles from '../../../styles/layout/navbar.module.scss'
 import Button_ from '../../button.jsx'
 import { useRouter } from 'next/router'
@@ -14,16 +11,6 @@ import Image from 'next/image'
 
 export default function NavBar(){
 
-    // const [animateNavBar, setAnimateNavBar] = useState({backgroundColor: 'transparent', height: '20vh' })
-
-    // useScrollPosition(({ currPos }) => {
-    //     if (currPos.y < -47) {
-    //         setAnimateNavBar( {backgroundColor: 'white', height: '15vh' })
-    //     } else {
-    //         setAnimateNavBar({backgroundColor: 'transparent', height: '20vh'})
-    //     }
-    // } ) 
-    
 
     const about = [
         {href: '/about_us', name: 'About Us'},
@@ -69,6 +56,7 @@ export default function NavBar(){
                 return false
             }
     }
+
 
 const router = useRouter()
   return(
@@ -162,11 +150,11 @@ const router = useRouter()
                     </Nav.Link>
             
             <Nav.Item className={  styles.nav_link }>
-                <Button_ title={' Blog '} variant={'primary'}   />
+                <Button_ title={' Blog '} pill variant={'primary'}   />
             </Nav.Item>
 
             <Nav.Item className={  styles.nav_link }>
-                <Button_ title={'Donate'} variant={'outline-primary'}   />
+                <Button_ title={' Donate '} pill variant={'outline-primary'}  />
             </Nav.Item>
 
             </Nav>
