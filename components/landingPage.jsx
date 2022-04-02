@@ -3,10 +3,8 @@
 
 import Image from 'next/image';
 import styles from '../styles/component.styles/landingPage.module.scss'
-// import Nav from 'react-bootstrap/Nav'
-// import Button from 'react-bootstrap/Button'
-
 import {Button, Nav, Row, Col} from 'react-bootstrap'
+import Button_ from '../components/button'
 
 export default function LandingPage(){
 
@@ -29,9 +27,8 @@ export default function LandingPage(){
                             crime
                         </p>
 
-                        <Nav.Item>
-                            <Button variant="outline-primary" >Learn More</Button>
-                        </Nav.Item>
+                            <Button_ variant="outline-primary" title="Learn More" />
+                            <Button_ title="Discover" />
                     </div>
 
                 </div>
