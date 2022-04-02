@@ -38,13 +38,13 @@ export default function LandingPage(){
 
             </Col>
 
-            <Col  xs={{order: 'first'}} md={{span: 7, order: 'last'}} >
-                <div className={styles.header_icon}>
-                    <Image  src="/tac-icon.svg"
-                            layout='fill'
-                            className={'image'}
-                            alt="Technology Against Crime ideology" />
-                </div>
+            <Col  xs={{order: 'first'}} md={{span: 7, order: 'last'}} className={styles.header_icon__container} >
+                <Col md={10} className={styles.header_icon} >
+                        <Image  src="/tac-icon.svg"
+                                layout='fill'
+                                className={'image'}
+                                alt="Technology Against Crime ideology" />
+                </Col>
             </Col>
         </Row>
 
