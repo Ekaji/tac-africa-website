@@ -1,0 +1,55 @@
+@import '../abstracts/variables';
+
+.carousel_container {
+  background-color: $lighter-grey;
+  &__title {
+    color: $main-blue;
+  }
+}
+
+.carousel_item_padding_40_px {
+  padding : 40px;
+}
+
+.our_labs_head {
+  display: inline-flex;
+  justify-content: space-between;
+
+}
+
+
+
+.carousel_component_inner {
+  margin: 2px;
+  text-align: center;
+
+  .carousel_details {
+    width: 80%;
+    margin : 1em auto;
+  }
+
+  .carousel_image {
+    max-width: 25vw;
+    margin: 2px;
+  }
+
+  .carousel_title {
+    margin: 2em auto;
+    font-size: 14px !important;
+    color: $main-blue;
+    font-weight: 900;
+  }
+
+  .carousel_text {
+    color: $light-grey;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: $breakpoint-sm) {
+    .carousel_image {
+      max-width: 95vw;
+    }
+
+  }

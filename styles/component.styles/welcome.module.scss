@@ -1,0 +1,20 @@
+@import '../abstracts/variables';
+
+.welcome_component {
+  background-color: #ffff;
+}
+
+.welcome_header {
+  color: $main-blue;
+  font-size: 2.5em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.welcome_text {
+  font-size: 1.5em;
+  text-align: center;
+  width: 80vw;
+  margin: 1em auto;
+}

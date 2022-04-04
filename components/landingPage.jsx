@@ -10,7 +10,7 @@ export default function LandingPage(){
 
   return(
     <section className="container-fluid">
-    <div className={['mb-md-5',styles.top_container, styles.container_pd].join(' ')}>
+    <div className={[ styles.top_container, styles.container_pd].join(' ')}>
         <Row className={ styles.tac_header_background}>
             <Col md={5} styles={{paddingTop: '60px'}}>
                 <div className={styles.tac_header_detail}>
@@ -45,7 +45,7 @@ export default function LandingPage(){
             </Col>
         </Row>
 
-        <Row className={['mt-md-5 mb-md-5', styles.header_partners_icon].join(' ')}>
+        {/* <Row className={['mt-md-5 mb-md-5', styles.header_partners_icon].join(' ')}>
             <div className={styles.header_partners_icon__item}>
                 <Image width='150' height='50' className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/CyberPeaceFoundation.png"
                     alt="Technology Against Crime ideology" />
@@ -59,7 +59,7 @@ export default function LandingPage(){
                     alt="Technology Against Crime ideology" />
             </div>
 
-        </Row>
+        </Row> */}
 
     </div>
 </section>
