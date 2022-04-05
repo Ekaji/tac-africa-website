@@ -68,13 +68,13 @@ const OurLabs = () => {
 
 
   return(
-    <Container fluid className={styles.carousel_container} >
+    <Container fluid className={ [ styles.carousel_container ].join(' ')} >
 
-      <Container >
+      <Container style={{paddingTop: '3em', paddingBottom: '5em'}} >
 
-        <div className={'d-flex justify-content-between text-uppercase py-5'} >
+        <div className={ ['d-flex justify-content-between text-uppercase ', styles.carousel_header__component].join(' ')} >
           <h2 className={ styles.carousel_container__title } > Our <span className='text-primary ' >Labs</span></h2>
-          <Button_ title={'All Labs'} variant={'outline-primary'} />
+          <Button_ title={'ALL LABS'} variant={'outline-primary'} />
         </div>
 
         <Carousel responsive={responsive} 
@@ -82,14 +82,19 @@ const OurLabs = () => {
                 itemClass="carousel_item_padding_40_px"
                 >
             { data.map((edge, i) => (
-                  <div key={i} className={styles.carousel_component_inner} style={{margin:'2px'}}>
-                    <div className=''>                   
-                      <img className={ styles.carousel_image } src={ edge?.image } alt={ edge.image } />
+                  <div key={i} className={styles.carousel_component_inner}  >
+                      <div className={ styles.carousel_image }>
+                        <img className={ styles.carousel_image } src={ edge?.image } alt={ edge.image } />
+                        <div className={ styles.carousel_mask } >
+                          <div className={ styles.carousel_button__container } >
+                            <Button_ title={'Learn More'} variant={'outline-light' } style={{border: '2px solid white'}} />
+                          </div>
+                        </div>
+                      </div>
                       <div className={ styles.carousel_details } >
                         <h2 className={ styles.carousel_title } >{ edge?.title }</h2>
                         <p className={ styles.carousel_text } >{ edge?.text }</p>
                       </div>
-                    </div>
                   </div>
             )) }
           </Carousel>
