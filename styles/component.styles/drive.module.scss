@@ -1,0 +1,79 @@
+@import '../abstracts/variables';
+
+.drive_container_main {
+  margin: 6em 0em;
+
+  .drive_header {
+    text-transform: uppercase;
+    text-align: center;
+    color: $dark-blue;
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+
+}
+
+
+.drive_cards_container_outer {
+  display: flex;
+  flex-direction: column;
+
+  .drive_cards_container_inner {
+    display: flex;
+    
+  }
+  .drive_card_image {
+    
+    > img {
+      border-radius: 4px;
+      margin: 0 2em  0em;
+
+    }
+  }
+
+  .drive_content {
+    width: 35% !important;
+
+    .drive_header_inner {
+      font-size: 16px;
+      text-align: left;
+      font-weight: 600;
+      color: $dark-blue;
+    }
+
+    .drive_text {
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+  }
+
+}
+
+.drive_details_container {
+
+  .drive_details {
+
+    .drive_details_header {
+      text-transform: capitalize;
+      color: #007bff;
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .drive_details_text {
+      font-size: 13px;
+    }
+
+    > ul {
+      font-size: 13px;
+    }
+
+    > ul li::before {
+      color: #007bff;
+      content: '✓'
+    }
+
+  }
+
+}
