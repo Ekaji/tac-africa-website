@@ -6,6 +6,7 @@ import OurLabs from '../components/ourLabs.jsx'
 import AboutUsHome from '../components/aboutUsHome.jsx'
 import Carousel from '../components/carouselComp.jsx'
 import Drive from '../components/drive.jsx'
+import LatestProjects from '../components/latestProjects.jsx'
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <Welcome />
       <OurLabs />
       <Drive />
+      <LatestProjects />
       {/* <AboutUsHome /> */}
     </div>
   )

@@ -1,0 +1,49 @@
+@import '../abstracts/variables';
+
+.project_heading {
+  text-align: center;
+  color: $main-blue;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.project_component_inner {
+  max-width: 25vw;
+  text-align: center;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 1em;
+
+  .project_image {
+    position: relative;
+    max-width: 25vw;
+  }
+
+  .project_mask {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    background-color: rgba(23, 70, 108, 0.802);
+    opacity: 0;
+    height: 100%;
+    width: 25vw;
+  
+    &:hover {
+      opacity: 1;
+    }
+  
+    .project_button__container {
+      height: 100%;
+      margin-top: 6em;
+    }
+
+    .project_title {
+      position: absolute;
+      left: 5px;
+      bottom: 0;
+      margin-bottom: 0px;
+    }
+  }
+}
