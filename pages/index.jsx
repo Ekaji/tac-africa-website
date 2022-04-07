@@ -7,6 +7,7 @@ import AboutUsHome from '../components/aboutUsHome.jsx'
 import Carousel from '../components/carouselComp.jsx'
 import Drive from '../components/drive.jsx'
 import LatestProjects from '../components/latestProjects.jsx'
+import JoinUs from '../components/joinUs.jsx'
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <OurLabs />
       <Drive />
       <LatestProjects />
+      <JoinUs />
       {/* <AboutUsHome /> */}
     </div>
   )

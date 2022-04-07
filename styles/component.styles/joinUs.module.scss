@@ -1,0 +1,43 @@
+@import '../abstracts/variables';
+
+.joinUs_main {
+  height: 60vh;
+  background: url('https://cdn.pixabay.com/photo/2022/03/07/18/41/forest-7054278_960_720.jpg');
+  display: flex;
+  margin-top: 7em;
+
+
+  .joinUs_card__large {
+
+    .card_large__title {
+      color: $main-blue;
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .card_large__text {
+      font-size: 13px;
+    }
+  }
+  
+  
+  .joinUs_card__small {
+  background: rgba(13, 12, 12, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.8px);
+  -webkit-backdrop-filter: blur(9.8px);
+  border: 1px solid rgba(13, 12, 12, 0.3);
+  color: white !important;
+
+  height: 90%;
+  padding-left: 6em;
+  padding-top: 2em;
+
+  .card_small__text {
+    font-size: 13px;
+  }
+  
+  }
+}
