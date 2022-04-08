@@ -62,6 +62,7 @@ const router = useRouter()
   return(
     <div className={styles.nav_container}  >
         <Navbar collapseOnSelect className={styles.nav_inner__container} style={{padding: '0px', marginTop: '-14px' }} expand="lg">
+            
         <Container fluid  >
             <Navbar.Brand >
                 <Link href={'/'} >
