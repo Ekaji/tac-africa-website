@@ -82,7 +82,7 @@ const router = useRouter()
                     </Link>
                 </Nav.Link>
 
-                <NavDropdown  title={<span className={getHref(labs, currentPath ) ? 'text-primary' : styles.nav_text }>Labs</span> }
+                <NavDropdown title={<span className={getHref(labs, currentPath ) ? 'text-primary' : styles.nav_text }>Labs</span> }
                              className={  styles.nav_link }
                                  id="nav-dropdown"> 
                                     {

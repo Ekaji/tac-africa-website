@@ -14,7 +14,7 @@ const Drive = () => {
             <div className={ styles.drive_cards_container_outer } >
               <div className={ styles.drive_cards_container_inner } >
                 <div className={ styles.drive_card_image } >
-                  <img src='https://cdn.pixabay.com/photo/2022/03/07/18/41/forest-7054278_960_720.jpg' alt='placeholder' />
+                  <img src='/pexels-dids-3657268.jpg' alt='placeholder' />
                 </div>
                 <div className={ styles.drive_content} >
                   <h2 className={ styles.drive_header_inner }>what we do</h2>
@@ -24,7 +24,7 @@ const Drive = () => {
 
               <div className={ styles.drive_cards_container_inner }>
                 <div className={ styles.drive_card_image }>
-                  <img src='https://cdn.pixabay.com/photo/2022/03/07/18/41/forest-7054278_960_720.jpg' alt='placeholder' />
+                  <img src='/pexels-shalom-de-león-6165167.jpg' alt='placeholder' />
                 </div>
                 <div className={ styles.drive_content } >
                   <h2 className={ styles.drive_header_inner } >How we work</h2>

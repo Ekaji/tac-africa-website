@@ -12,17 +12,17 @@ const OurLabs = () => {
   const data =  [
     {
       title: 'Cyber Security & Cyber Defense',
-      image: 'https://cdn.pixabay.com/photo/2022/03/24/08/52/bird-7088667__340.jpg',
+      image: 'pexels-shalom-de-león-6165167.jpg',
       text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.'
     },
     {
       title: 'Artificial Intelligence And Robotics',
-      image: 'https://cdn.pixabay.com/photo/2022/03/24/14/42/animal-7089224_960_720.jpg',
+      image: 'retinal-biometrics-technology-with-man-s-eye-digital-remix.jpg',
       text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.'
     },
     {
       title: 'Blockchain And Payment Gateways',
-      image: 'https://cdn.pixabay.com/photo/2022/03/07/18/41/forest-7054278_960_720.jpg',
+      image: 'pexels-dids-3657268.jpg',
       text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.'
     },
     {
