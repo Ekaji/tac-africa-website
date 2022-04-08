@@ -44,8 +44,12 @@
     }
 }
 
+.header_icon__container{
+    background: #E8F0F6;
+}
+
 .header_icon {
-    margin-top: 50px;
+    margin: 50px auto 0;
     width: 100%;
     background: #E8F0F6;
     border-bottom-left-radius: 1.5rem;
@@ -61,7 +65,7 @@
 
     .image {
         object-fit: contain;
-        width: 100%;
+        width: 60% !important;
         position: relative !important;
         height: unset !important;
     }

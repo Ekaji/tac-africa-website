@@ -3,10 +3,8 @@
 
 import Image from 'next/image';
 import styles from '../styles/component.styles/landingPage.module.scss'
-// import Nav from 'react-bootstrap/Nav'
-// import Button from 'react-bootstrap/Button'
-
 import {Button, Nav, Row, Col} from 'react-bootstrap'
+import Button_ from '../components/button'
 
 export default function LandingPage(){
 
@@ -29,22 +27,21 @@ export default function LandingPage(){
                             crime
                         </p>
 
-                        <Nav.Item>
-                            <Button variant="outline-primary" >Learn More</Button>
-                        </Nav.Item>
+                            <Button_ variant="outline-primary" title="Learn More" />
+                            <Button_ title="Discover" />
                     </div>
 
                 </div>
 
             </Col>
 
-            <Col  xs={{order: 'first'}} md={{span: 7, order: 'last'}} >
-                <div className={styles.header_icon}>
-                    <Image  src="/tac-icon.svg"
-                            layout='fill'
-                            className={'image'}
-                            alt="Technology Against Crime ideology" />
-                </div>
+            <Col  xs={{order: 'first'}} md={{span: 7, order: 'last'}} className={styles.header_icon__container} >
+                <Col md={10} className={styles.header_icon} >
+                        <Image  src="/tac-icon.svg"
+                                layout='fill'
+                                className={'image'}
+                                alt="Technology Against Crime ideology" />
+                </Col>
             </Col>
         </Row>
 
