@@ -3,8 +3,6 @@ import Head from 'next/head'
 import LandingPage from '../components/landingPage.jsx'
 import Welcome from '../components/Welcome.jsx'
 import OurLabs from '../components/ourLabs.jsx'
-import AboutUsHome from '../components/aboutUsHome.jsx'
-import Carousel from '../components/carouselComp.jsx'
 import Drive from '../components/drive.jsx'
 import LatestProjects from '../components/latestProjects.jsx'
 import JoinUs from '../components/joinUs.jsx'
@@ -24,7 +22,6 @@ export default function Home() {
       <Drive />
       <LatestProjects />
       <JoinUs />
-      {/* <AboutUsHome /> */}
     </div>
   )
 }
