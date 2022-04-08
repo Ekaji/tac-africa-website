@@ -2,7 +2,7 @@
 // import 'flowbite';
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/globals.scss'
-import '../styles/component.styles/contact.css'
+import '../styles/component.styles/contact.scss'
 import Layout from '../components/layout/Layout'
 
 

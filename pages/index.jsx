@@ -1,9 +1,13 @@
 /* eslint-disable react/jsx-key */
 import Head from 'next/head'
 import LandingPage from '../components/landingPage.jsx'
-import GetInvolved from '../components/getInvolved.jsx'
+import Welcome from '../components/Welcome.jsx'
+import OurLabs from '../components/ourLabs.jsx'
 import AboutUsHome from '../components/aboutUsHome.jsx'
 import Carousel from '../components/carouselComp.jsx'
+import Drive from '../components/drive.jsx'
+import LatestProjects from '../components/latestProjects.jsx'
+import JoinUs from '../components/joinUs.jsx'
 
 
 export default function Home() {
@@ -15,9 +19,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LandingPage />
-      {/* <GetInvolved /> */}
-      <Carousel />
-      <AboutUsHome />
+      <Welcome />
+      <OurLabs />
+      <Drive />
+      <LatestProjects />
+      <JoinUs />
+      {/* <AboutUsHome /> */}
     </div>
   )
 }

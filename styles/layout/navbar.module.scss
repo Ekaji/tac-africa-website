@@ -9,21 +9,33 @@
   background-color: white;
 }
 
+.nav_text {
+  color: $main-blue;
+  font-weight: 600;
+  // font-size: 1.1em;
+
+}
+
 .navbar_collapse {
   font-size: 1em;
   box-shadow: none;
   background-color: white;
 
   &__nav {
-    font-size: 1.2em;
+    // font-size: 1.1em;
+  font-weight: 600;
+
 
     :not(:last-child) {
       display: block;
       margin-right: 20px; 
  }
-  // :last-child {
-  //   // padding-right: 1em;
-  // }
+
+ .nav_link {
+   margin-right: 3em;
+  text-transform: uppercase;
+ }
+ 
   }
 
 }

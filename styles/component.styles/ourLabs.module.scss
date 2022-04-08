@@ -1,0 +1,85 @@
+@import '../abstracts/variables';
+
+.carousel_container {
+  background-color: $lighter-grey;
+  &__title {
+    color: $main-blue;
+  }
+}
+
+.our_labs_head {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+
+.carousel_header__component {
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
+.carousel_component_inner {
+  max-width: 25vw;
+  text-align: center;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 4px;
+  padding-bottom: 2em;
+  margin-bottom: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  .carousel_details {
+    width: 80%;
+    margin : 0em auto;
+  }
+
+  .carousel_image {
+    position: relative;
+    max-width: 25vw;
+  }
+
+  .carousel_mask {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    background-color: rgba(23, 70, 108, 0.802);
+    opacity: 0;
+    height: 100%;
+    width: 25vw;
+  
+    &:hover {
+      opacity: 1;
+    }
+  
+    .carousel_button__container {
+      height: 100%;
+      margin-top: 6em;
+    }
+  }
+
+  .carousel_title {
+    margin: 2em auto;
+    font-size: 14px !important;
+    color: $main-blue;
+    font-weight: 900;
+  }
+
+  .carousel_text {
+    color: $light-grey;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: $breakpoint-sm) {
+  .carousel_component_inner {
+    max-width: 95vw;
+    .carousel_image {
+      max-width: 95vw;
+    }
+
+    .carousel_mask {
+      width: 100%;
+    }
+  }
+}
