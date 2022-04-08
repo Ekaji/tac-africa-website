@@ -10,11 +10,11 @@ const Drive = () => {
 
         <h2 className={ styles.drive_header }>about out <span className='text-primary '>drive</span></h2>
         <Row>
-          <Col md={6} >
+          <Col  md={6} >
             <div className={ styles.drive_cards_container_outer } >
               <div className={ styles.drive_cards_container_inner } >
                 <div className={ styles.drive_card_image } >
-                  <img style={{width: '15vw'}} src='https://cdn.pixabay.com/photo/2022/03/07/18/41/forest-7054278_960_720.jpg' alt='placeholder' />
+                  <img src='https://cdn.pixabay.com/photo/2022/03/07/18/41/forest-7054278_960_720.jpg' alt='placeholder' />
                 </div>
                 <div className={ styles.drive_content} >
                   <h2 className={ styles.drive_header_inner }>what we do</h2>
@@ -24,7 +24,7 @@ const Drive = () => {
 
               <div className={ styles.drive_cards_container_inner }>
                 <div className={ styles.drive_card_image }>
-                  <img style={{width: '15vw'}} src='https://cdn.pixabay.com/photo/2022/03/07/18/41/forest-7054278_960_720.jpg' alt='placeholder' />
+                  <img src='https://cdn.pixabay.com/photo/2022/03/07/18/41/forest-7054278_960_720.jpg' alt='placeholder' />
                 </div>
                 <div className={ styles.drive_content } >
                   <h2 className={ styles.drive_header_inner } >How we work</h2>

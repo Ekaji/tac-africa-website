@@ -20,11 +20,11 @@
 
   .drive_cards_container_inner {
     display: flex;
-    
   }
   .drive_card_image {
     
     > img {
+      width: 15vw;
       border-radius: 4px;
       margin: 0 2em  0em;
 
@@ -32,7 +32,7 @@
   }
 
   .drive_content {
-    width: 35% !important;
+    width: 35%;
 
     .drive_header_inner {
       font-size: 16px;
@@ -74,6 +74,30 @@
       content: '✓'
     }
 
+  }
+
+}
+
+
+@media (max-width: $breakpoint-sm) {
+
+  .drive_cards_container_inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .drive_cards_container_outer {
+
+    .drive_card_image {
+      > img {
+        width: 90vw;
+        margin: 0em;
+      }
+    } 
+
+    .drive_content {
+      width: 100% ;
+    }
   }
 
 }

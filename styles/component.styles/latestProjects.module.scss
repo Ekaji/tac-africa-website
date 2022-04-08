@@ -7,8 +7,12 @@
   font-weight: 600;
 }
 
+.project_component_outer {
+  display: flex;
+}
+
 .project_component_inner {
-  max-width: 25vw;
+  width: 25vw;
   text-align: center;
   background-color: #fff;
   overflow: hidden;
@@ -18,7 +22,7 @@
 
   .project_image {
     position: relative;
-    max-width: 25vw;
+    width: 25vw;
   }
 
   .project_mask {
@@ -44,6 +48,24 @@
       left: 5px;
       bottom: 0;
       margin-bottom: 0px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .project_component_outer {
+    flex-direction: column;
+  }
+
+  .project_component_inner {
+    width: 90vw;
+
+    .project_image {
+      width: 90vw;
+    }
+  
+    .project_mask {
+      width: 90vw;
     }
   }
 }

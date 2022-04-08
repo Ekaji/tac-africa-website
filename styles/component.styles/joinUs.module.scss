@@ -20,7 +20,10 @@
       font-size: 13px;
     }
   }
-  
+
+ .joinUs_card__small_container {
+  display: flex;
+  align-content: space-between;
   
   .joinUs_card__small {
   background: rgba(13, 12, 12, 0.1);
@@ -32,12 +35,39 @@
   color: white !important;
 
   height: 90%;
-  padding-left: 6em;
+  // padding-left: 6em;
   padding-top: 2em;
 
-  .card_small__text {
+   &__text {
     font-size: 13px;
   }
   
   }
 }
+}
+
+@media (max-width: $breakpoint-sm) {
+
+  .joinUs_main {
+    height: 100%;
+  }
+
+  .joinUs_card__large_container {
+    margin: 1em 0em 0em;
+  }
+
+  .joinUs_card__small_container {
+     
+    margin: 1em 0;
+
+  .joinUs_card__small {
+  
+    height: 90%;
+    padding-left: 1em;
+    padding-top: 2em;
+  }
+
+}
+  
+}
+

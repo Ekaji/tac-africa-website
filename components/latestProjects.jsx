@@ -33,7 +33,7 @@ const LatestProjects = () => {
   return(
     <Container >
       <h2 className={ styles.project_heading }> Latest <span className='text-primary '> Projects </span></h2>
-      <div className='d-flex'> 
+      <div className={ styles.project_component_outer }> 
         { data.map((edge, i) => (
                 <div key={i} className={styles.project_component_inner}  >
                     <div className={ styles.project_image }>
