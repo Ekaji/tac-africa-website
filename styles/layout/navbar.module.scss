@@ -13,13 +13,25 @@
   color: $main-blue;
   font-weight: 600;
   // font-size: 1.1em;
+  text-transform: capitalize;
+
+  .dropdown_divider{
+    display: none;
+    }
+}
+
+.nav_dropdown_link_text {
+  margin: 0;
+  padding-top: 0px;
 
 }
+
 
 .navbar_collapse {
   font-size: 1em;
   box-shadow: none;
   background-color: white;
+  margin-right: 0px;
 
   &__nav {
     // font-size: 1.1em;
