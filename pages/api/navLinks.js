@@ -2,7 +2,7 @@ export const data = [
     {
         label: 'Home',
         content: [
-            {href: '/'}
+            {href: ''}
         ],
         type: 'nav link'
     },

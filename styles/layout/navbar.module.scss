@@ -1,12 +1,19 @@
 @import '../abstracts/variables';
 
+.background_blur {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.8px);
+  -webkit-backdrop-filter: blur(9.8px);
+  margin: 0;
+  padding: 0;
+}
+
 .nav_container {
   position: fixed;
   max-height: 5vh;
   top: 0;
   width: 100%;
   z-index: 40;
-  background-color: white;
 }
 
 .nav_text {
@@ -26,11 +33,18 @@
 
 }
 
+.nav_dropdown_link_text
+.nav_link__button
+.nav_link {
+  line-height: 2px;
+  padding: 0px;
+  margin: auto 40px;
+}
+
 
 .navbar_collapse {
   font-size: 1em;
   box-shadow: none;
-  background-color: white;
   margin-right: 0px;
 
   &__nav {
@@ -59,6 +73,8 @@
 //mobile
 @media (max-width: 480px) {
   .navbar_collapse {
+
+    
     position: absolute;
     padding-top: 12vh;
     padding-right: 30vw;

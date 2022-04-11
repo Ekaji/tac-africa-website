@@ -6,6 +6,7 @@ import { Dropdown, NavDropdown, Nav } from "react-bootstrap";
 import { data } from '../pages/api/navLinks.js'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import styles from '../styles/component.styles/customDropdown.module.scss'
 
 
 // The forwardRef is important!!
@@ -59,13 +60,13 @@ export default function CustomDropdown({ dropDownPosition }) {
           <Dropdown drop={dropDownPosition} >
     
                 { content.length > 1 ? 
-                  <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
+                  <Dropdown.Toggle key={label} as={CustomToggle} id="dropdown-custom-components">
                     { label }
                   </Dropdown.Toggle> 
 
                 :
 
-                  <Nav.Link as='span' eventKey='1'  >
+                  <Nav.Link key={label} as='span' eventKey='1'  >
                     <Link href={`/${content[0].href}`} >
                       <a>
                       {label}                                  
@@ -77,12 +78,13 @@ export default function CustomDropdown({ dropDownPosition }) {
                 <Dropdown.Menu as={CustomMenu}>
                 {
                     content?.map(({href, name}, i) => (
-                        <NavDropdown.Item as='div' key={i} href={href} eventKey={i}>
+                        <NavDropdown.Item key={name} as='div' href={href} eventKey={i}>
                                 <Link href={href} >
                                     <a >
                                     {name}
                                     </a>
                                 </Link> 
+                          <Dropdown.Divider  className={i === content.length -1 && styles.dropdown_divider} />
                         </NavDropdown.Item>
                         ) 
                     )

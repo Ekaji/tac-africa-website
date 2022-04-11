@@ -32,10 +32,10 @@ export default function NavBar(){
 
 const router = useRouter()
   return(
-    <div className={styles.nav_container}  >
+    <div className={[styles.nav_container, ].join(' ')}  >
         <Navbar collapseOnSelect className={styles.nav_inner__container} style={{padding: '0px', marginTop: '-14px' }} expand="lg">
             
-        <Container fluid  >
+        <Container fluid  className={styles.background_blur }  >
             <Navbar.Brand >
                 <Link href={'/'} >
                   <a>
@@ -49,7 +49,7 @@ const router = useRouter()
             <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]} style={{paddingTop: '20px'}} >
                 
 
-                {data?.map(({label, content, type, details}) => (
+                {data?.map(({label, content, type, details}, i) => (
                     <>
                          { content.length > 1 ?  ( //displays navlink with dropdown
                         <NavDropdown title={<span className={getHref(content, currentPath ) ? 'text-primary' : styles.nav_text }>{ label }</span> }
@@ -75,14 +75,14 @@ const router = useRouter()
                        </NavDropdown>   
                         ) : 
                         type == 'button' ? ( //displays button
-                            <Nav.Item className={  styles.nav_link__button }>
+                            <Nav.Item key={i} className={  styles.nav_link__button }>
                                 <Button_ title={ label } pill variant={details.variant}  />
                             </Nav.Item>  
                         )
                         :
                         
                         ( // displays navlink without dropdown
-                            <Nav.Link as='span' eventKey='1' className={ styles.nav_link } >
+                            <Nav.Link key={i} as='span' eventKey='1' className={ styles.nav_link } >
                                 <Link href={`/${content[0].href}`}>
                                     <a className={ router.pathname == `/${content[0].href}` ? 'text-primary' : styles.nav_text }  >
                                     { label }                                   
