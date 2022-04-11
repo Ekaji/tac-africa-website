@@ -2,6 +2,7 @@
 import styles from '../../../styles/layout/footer.module.scss'
 import Button_ from '../../button.jsx'
 import CustomDropdown from '../../../components/customDropdown.jsx'
+import { data } from '../../../pages/api/navLinks.js'
 
 
 
@@ -29,12 +30,7 @@ export default function Footer() {
                 <div className={ [ styles.footer_main__quicklinks].join(' ') }>
                   <h3>Quicklinks</h3>
                   <ul>
-                    <CustomDropdown title='labs' />
-                    <li><a>HomePage</a></li>
-                    <li><a>Drone Lab</a></li>
-                    <li><a>Cyber Lab</a></li>
-                    <li><a>Contact</a></li>
-                    <li><a>About</a> </li>
+                    <CustomDropdown dropDownPosition={'end'} />
                   </ul>
                 </div>
               </div>

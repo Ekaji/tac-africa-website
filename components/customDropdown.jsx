@@ -1,9 +1,13 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/display-name */
 
-import React, { useState } from "react";
-import Dropdown from "react-bootstrap/Dropdown";
+import React, { useState, forwardRef, Children } from "react";
+import { Dropdown, NavDropdown, Nav } from "react-bootstrap";
 import FormControl from "react-bootstrap/FormControl";
+import { data } from '../pages/api/navLinks.js'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 
 
 const fruits = [
@@ -18,7 +22,7 @@ const fruits = [
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
-const CustomToggle = React.forwardRef(
+const CustomToggle = forwardRef(
   (props, ref) => (
     <a
       href=""
@@ -37,7 +41,7 @@ const CustomToggle = React.forwardRef(
 
 // forwardRef again here!
 // Dropdown needs access to the DOM of the Menu to measure it
-const CustomMenu = React.forwardRef(
+const CustomMenu = forwardRef(
   (props, ref) => {
     const [value, setValue] = useState("");
 
@@ -48,15 +52,8 @@ const CustomMenu = React.forwardRef(
         className={props.className}
         aria-labelledby={props.labeledBy}
       >
-        <FormControl
-          autoFocus
-          className="mx-3 my-2 w-auto"
-          placeholder="Type to filter..."
-          onChange={e => setValue(e.target.value)}
-          value={value}
-        />
         <ul className="list-unstyled">
-          {React.Children.toArray(props.children).filter(
+          { Children.toArray(props.children).filter(
             (child) =>
               !value || child.props.children.toLowerCase().startsWith(value)
           )}
@@ -66,31 +63,56 @@ const CustomMenu = React.forwardRef(
   }
 );
 
-export default function CustomDropdown({ title }) {
-  const [selectedFruit, setSelectedFruit] = useState(0);
+export default function CustomDropdown({ dropDownPosition }) {
+  const router = useRouter()
 
-  const theChosenFruit = () => {
-    const chosenFruit = fruits.find(f => f.id === selectedFruit);
-    return chosenFruit
-      ? chosenFruit.prefix + chosenFruit.fruit + (chosenFruit.suffix || "")
-      : title
-  };
+  return ( 
+    <>
+            <Nav.Link as='span' eventKey='1'  >
+                <Link href={'/'}>
+                    <a>
+                    Home                                   
+                    </a>
+                </Link>
+            </Nav.Link>
+    {
+      data.map(({ label, content }, i) => (
+      <Dropdown drop={dropDownPosition} >
 
-  return (
-    <Dropdown drop={'end'} onSelect={(e) => setSelectedFruit(Number(e))}>
-      <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
-        {theChosenFruit()}
-      </Dropdown.Toggle>
 
-      <Dropdown.Menu as={CustomMenu}>
-        {fruits.map(fruit => {
-          return (
-            <Dropdown.Item key={fruit.id} eventKey={fruit.id.toString()}>
-              {fruit.fruit}
-            </Dropdown.Item>
-          );
-        })}
-      </Dropdown.Menu>
-    </Dropdown>
+            <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
+              { label }
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu as={CustomMenu}>
+            {
+                            content?.map(({href, name}, i) => (
+                                <NavDropdown.Item as='div' key={i} href={href} eventKey={i}>
+                                        <Link href={href} >
+                                            <a >
+                                            {name}
+                                            </a>
+                                        </Link> 
+                                </NavDropdown.Item>
+                                ) 
+                            )
+                        }
+            </Dropdown.Menu>
+          </Dropdown>
+      ))
+    }
+          {
+          ['contact', 'blog', 'donate'].map(items => (
+            <Nav.Link as='div' >
+              <Link href={`/${items}`}>
+                  <a >                                  
+                      {items}
+                  </a>
+              </Link>
+          </Nav.Link>
+          ))
+}
+    </>
+   
   );
 };
