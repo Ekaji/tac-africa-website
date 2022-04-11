@@ -33,20 +33,20 @@ export default function NavBar(){
 const router = useRouter()
   return(
     <div className={[styles.nav_container, ].join(' ')}  >
-        <Navbar collapseOnSelect className={styles.nav_inner__container} style={{padding: '0px', marginTop: '-14px' }} expand="lg">
+        <Navbar collapseOnSelect className={styles.nav_inner__container} style={{padding: '0px', }} expand="lg">
             
         <Container fluid  className={styles.background_blur }  >
             <Navbar.Brand >
                 <Link href={'/'} >
                   <a>
-                    <Image width='100' height='100' src='/TAC_LOGO.webp' alt='logo' style={{maxWidth: '100px', marginLeft: '19px'}} />
+                    <img src='/TAC_LOGO.webp' alt='logo' style={{maxWidth: '100px', marginLeft: '19px', marginTop: '20px'}} />
                   </a>
                 </Link> 
             </Navbar.Brand>
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
 
-            <Navbar.Collapse id='responsive-navbar-nav' className={['justify-content-end' , styles.navbar_collapse].join(' ')} >
-            <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]} style={{paddingTop: '20px'}} >
+            <Navbar.Collapse id='responsive-navbar-nav' className={['justify-content-end ' , styles.navbar_collapse].join(' ')} >
+            <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]}  >
                 
 
                 {data?.map(({label, content, type, details}, i) => (

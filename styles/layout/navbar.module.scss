@@ -9,8 +9,8 @@
 }
 
 .nav_container {
+  margin-top: -30px;
   position: fixed;
-  max-height: 5vh;
   top: 0;
   width: 100%;
   z-index: 40;
@@ -36,13 +36,15 @@
 .nav_dropdown_link_text
 .nav_link__button
 .nav_link {
-  line-height: 2px;
-  padding: 0px;
-  margin: auto 40px;
+  line-height: 2px !important;
+  padding: 0px !important;
+  margin: auto 40px !important;
 }
 
 
 .navbar_collapse {
+  // margin-top : -30px;
+  margin-bottom: -40px;
   font-size: 1em;
   box-shadow: none;
   margin-right: 0px;
