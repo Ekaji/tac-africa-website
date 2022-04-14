@@ -3,48 +3,6 @@
 .aboutUs_container {
   margin : 0px;
   padding: 0px;
-
-  .aboutUs_hero {
-    background: url('/Rectangle 70.jpg');
-    height: 45vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    > h2 {
-      margin-top : 3em;
-      text-transform: uppercase;
-      color: white;
-      font-weight: 600;
-    }
-  }
-}
-
-.aboutUs_nav_container {
-  // width: 100vw;
-
-  .aboutUs_nav {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    // font-weight: 400;
-    font-size: 12px;
-    margin-top: 2em;
-    
-    > div > span {
-      color: $dark-blue !important;
-      margin-left: 1em;
-      font-weight: 600;
-    }
-  }
-
-  
-}
-
- .hr {
-  width: 100%;
-  height: 1px;
-  color : gray;
 }
 
 .background_container {

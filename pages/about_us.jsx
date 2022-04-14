@@ -5,6 +5,7 @@ import { Accordion, Container, Form, Row, Col} from 'react-bootstrap'
 import styles from '../styles/page.styles/newAbout.module.scss'
 import Button_ from '../components/button.jsx'
 import Link from 'next/link'
+import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
 
 const NewAbout = () => {
 
@@ -27,59 +28,13 @@ const NewAbout = () => {
   ]
 
 
-
+  const backgroundImg =  "url('/Rectangle 70.jpg')"
 
   return(
     <>
       <Container fluid className={ styles.aboutUs_container } >
-        <div className={ styles.aboutUs_hero }>
-          <h2>about us</h2>
-        </div>
-      
+        <HeroBanner text={'About us'} backgroundImg={ backgroundImg } />
 
-      <Container >
-      <div className={ styles.aboutUs_nav_container }> 
-        <div className={ styles.aboutUs_nav }>
-          <div>
-            <span>
-              <Link href='/'>
-                <a>
-                 Home
-                </a>
-              </Link>
-            </span>
-            <span>
-              <Link href='/about_us'>
-                <a>
-                 About us
-                </a>
-              </Link>
-            </span>
-            <span>
-              <Link href='/about_us'>
-                <a>
-                 About us
-                </a>
-              </Link>
-            </span>
-          </div>
-          <div>
-            <span>
-              <Link href='/'>
-                <a>
-                  become a volunteer
-                </a>
-              </Link>
-            </span>
-          </div>
-        </div>
-      </div>
-      </Container >
-
-      <Container fluid >
-
-        <hr className={styles.hr} />
-      </Container>
         <Container className={ styles.background_container }  >
           <h2 className={ styles.background_header }>our background </h2> 
           <p className={ styles.background_text }>

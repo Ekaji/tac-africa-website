@@ -37,7 +37,7 @@ export const data = [
             {href: '/artificial_intelligence', name: 'Artificial Intelligence' },
             {href: '/afri_agri_tech_project', name: 'AfriAgriTech project' },
             {href: '/crawler', name: 'Crawler' },
-            {href: '/volunteer_management', name: 'Volunteer Management' },
+            {href: '/volunteer', name: 'Volunteer Management' },
             {href: '/cyberPeace_dialogue_2020', name: 'CyberPeace Dialogue 2020' },
             {href: '/research_on_cyber_security', name: 'Research on Cyber Security' }       
         ],

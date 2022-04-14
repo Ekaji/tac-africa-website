@@ -28,7 +28,7 @@ export const data = [
    
  },
  {
-   name: 'Drone & Counter Drone Scientific Committee',
+   name: 'Scientific Committee',
    description: 'The Scientific Committee will be the coordinating head of the ideation platform in the different co-creation groups. They will enhance the dialogue on the actualization of drone compendium in their different subject domain which will focus to promote Standard Operational Procedure (SOP) and international best practices to be drawn out of this virtual co-creation hub.',
    members : [
      {

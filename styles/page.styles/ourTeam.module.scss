@@ -1,7 +1,18 @@
-@import '../abstracts/variables';
 
-.container {
+
+.ourTeam_container_main {
+  margin : 0px;
+  padding: 0px;
+}
+
+.ourTeam_container {
   padding-top: 8em;
+}
+
+.ourTeam_advisoryBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card_container__outer {
