@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import Link from 'next/link'
 import { data } from '../api/teamData'
@@ -21,6 +22,7 @@ export default function OurTeam() {
       </span>
     </h2> )
   }
+  console.log(data[0].name)
 
   const backgroundImg = "url('/Rectangle 70.jpg')"
   
@@ -28,43 +30,49 @@ export default function OurTeam() {
     <Container fluid className={ styles.ourTeam_container_main }>
       <HeroBanner text={'meet our team'} backgroundImg={backgroundImg} />
       <Container className={ styles.ourTeam_container } >
-        {data.map(( { name, description, members } ) => (
+        {data.map(( { NAME, description, members } ) => (
           <>
-            <div className={ styles.ourTeam_advisoryBoard } key={name} >
-             <SplitPhrase name={ name } />
+            <div className={ styles.ourTeam_advisoryBoard } key={ NAME } >
+             <SplitPhrase name={ NAME } />
               {/* <p className='col-md-8 p-0'>{description}</p> */}
             </div>
             <div className='d-flex, justify-content-center'  >
 
             <Row className={['d-flex', 'justify-content-start',  styles.card_container__outer].join(' ')} >
             {members.map(({image, name, title, description, link}, i) =>  (
-              <Col md={4}>
-                  <Card key={i} className={['m-4', styles.card_container__inner ].join(' ')}  >
-                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'stretch'}} > {/* delete this line*/}
+               <Col md={4}>
+                  <Card  key={i} className={['m-4', styles.card_container__inner ].join(' ')}  >
 
                     <ConditionalLinks //adds an optional <Link href={...}> tag around cards with a link
                           condition={link} 
                           wrapper={ children => <Link href={link} key={name} ><a>{children}</a></Link> } >
-                      <Card.Img variant="top" src={image} className={styles.card_container__inner__image} />
+                      {/* <Card.Img variant="top" src={image} className={styles.card_container__inner__image} /> */}
 
-                      <Card.Title className='text-primary' >
+                      {/* <div style={{width: 'auto', display: 'inline-block'}} > */}
+                        <img src={image} alt={image} style={{width: '100%', height: '261px' }} />
+                      {/* </div> */}
+
+                      <Card.Title className='text-primary' style={{height: '60px'}} >
                         {name}
                       </Card.Title>
 
-                      <div className={['text-primary',  styles.card_container__inner__colored__text].join(' ')}>
-                        {title}
-                      </div>
+                        <div className={['text-primary',  styles.card_container__inner__colored__text].join(' ')} >
+                          {title}
+                        </div>
+                      {
+                      
+                      NAME == 'Advisory Board' &&
+                      <>
 
-                      <div className={['text-dark', styles.card_container__inner__colored__text].join(' ')}>
-                        {description}
-                      </div>
+                        <div className={['text-dark', styles.card_container__inner__colored__text__d].join(' ')}>
+                          {description}
+                        </div>
+                      </>
+                      }
                     </ConditionalLinks>
-                </div>  {/* delete this line*/}
                   </Card>
-              </Col>
-
-              
-            ) 
+            </Col>
+              ) 
             )}
             </Row>
             </div>
