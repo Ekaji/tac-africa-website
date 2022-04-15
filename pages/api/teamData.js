@@ -165,13 +165,13 @@ export const data = [
        description: '',
        location: 'Abuja – Nigeria'
      },
-     {
-       image: '',
-       name : 'JahsWill',
-       title : '',
-       description: '',
-       location: 'Abuja – Nigeria'
-     },
+    //  {
+    //    image: '',
+    //    name : 'JahsWill',
+    //    title : '',
+    //    description: '',
+    //    location: 'Abuja – Nigeria'
+    //  },
    ]
  },
 //  {

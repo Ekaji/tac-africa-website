@@ -1,4 +1,4 @@
-
+@import '../abstracts/variables';
 
 .ourTeam_container_main {
   margin : 0px;
@@ -33,12 +33,24 @@
       margin: 0.5em auto;
       border-radius: 4px;
     }
+
+ 
+  }
+
+  .card_title {
+    color: $dark-blue;
+  }
+
+  .card_title_m {
+    height: 60px;
+    margin-top: 8px;
   }
 
   
   .card_container__inner__colored__text {
     margin-top: 4px;
     height: 51px !important;
+    color: $light-grey;
 
     &__d {
       margin-top: 4px;

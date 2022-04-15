@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styles from '../../../styles/layout/miniNav.module.scss'
 
 
-const MiniNav = () => {
+const MiniNav = ({activeLink}) => {
   return (
     <Container fluid >
       <Container >
@@ -28,7 +28,7 @@ const MiniNav = () => {
             <span>
               <Link href='/about_us'>
                 <a>
-                About us
+                {activeLink}
                 </a>
               </Link>
             </span>

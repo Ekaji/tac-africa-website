@@ -22,13 +22,12 @@ export default function OurTeam() {
       </span>
     </h2> )
   }
-  console.log(data[0].name)
 
   const backgroundImg = "url('/Rectangle 70.jpg')"
   
   return(
     <Container fluid className={ styles.ourTeam_container_main }>
-      <HeroBanner text={'meet our team'} backgroundImg={backgroundImg} />
+      <HeroBanner activeLink={'meet our team'} text={'meet our team'} backgroundImg={backgroundImg} />
       <Container className={ styles.ourTeam_container } >
         {data.map(( { NAME, description, members } ) => (
           <>
@@ -52,11 +51,11 @@ export default function OurTeam() {
                         <img src={image} alt={image} style={{width: '100%', height: '261px' }} />
                       {/* </div> */}
 
-                      <Card.Title className='text-primary' style={{height: '60px'}} >
+                      <Card.Title className={[ styles.card_title, NAME == 'Advisory Board' && styles.card_title_m  ].join(' ')} >
                         {name}
                       </Card.Title>
 
-                        <div className={['text-primary',  styles.card_container__inner__colored__text].join(' ')} >
+                        <div className={['text-primary', NAME == 'Advisory Board' && styles.card_container__inner__colored__text].join(' ')} >
                           {title}
                         </div>
                       {
@@ -64,7 +63,7 @@ export default function OurTeam() {
                       NAME == 'Advisory Board' &&
                       <>
 
-                        <div className={['text-dark', styles.card_container__inner__colored__text__d].join(' ')}>
+                        <div className={['text-dark', NAME == 'Advisory Board' && styles.card_container__inner__colored__text__d].join(' ')}>
                           {description}
                         </div>
                       </>
