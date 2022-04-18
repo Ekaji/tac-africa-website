@@ -26,9 +26,15 @@
   color: $main-blue;
   font-weight: 600;
   // font-size: 1.1em;
+  padding: 0 !important;
+  margin-left: 1rem ;
   text-transform: capitalize !important;
 
-  .dropdown_divider{
+  .dropdown_divider {
+    color: black;
+    }
+
+  .dropdown_divider_last{
     display: none;
     }
 }

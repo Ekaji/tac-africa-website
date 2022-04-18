@@ -46,8 +46,8 @@ const NewAbout = () => {
           <div className={ styles.aboutUs_specialty_mask } >
             <Container className={ styles.aboutUs_specialty_container } >
               {
-                data.map(({ imgUrl, title, text }) => (
-                  <div className={ styles.aboutUs_specialty } >
+                data.map(({ imgUrl, title, text }, i) => (
+                  <div key={i} className={ styles.aboutUs_specialty } >
                     <img className={ styles.aboutUs_specialty__image } src={ imgUrl } alt={title} />
                     <h3 className={ styles.aboutUs_specialty__title } >{ title }</h3>
                     <p className={ styles.aboutUs_specialty__text }>{ text }</p>

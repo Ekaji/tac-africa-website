@@ -29,11 +29,13 @@ export default function NavBar(){
             }
     }
 
-    const [dropdownTarget, setDropDownTarget] = useState()
+    const [dropdownTarget, setDropDownTarget] = useState(null)
     const handleDropdown = (e, label) => {
+        if (dropdownTarget !== null) {
+            setDropDownTarget(null)
+        }
         e.preventDefault()
         setDropDownTarget(label)
-        console.log(label)
     }
 
 
@@ -55,7 +57,7 @@ const router = useRouter()
             </Navbar.Brand>
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
 
-            <Navbar.Collapse id='responsive-navbar-nav' className={['justify-content-end ' , styles.navbar_collapse].join(' ')} >
+            <Navbar.Collapse id='responsive-navbar-nav' className={['justify-content-end' , styles.navbar_collapse].join(' ')} >
             <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]}  >
                 
 
@@ -66,15 +68,15 @@ const router = useRouter()
                         <ul className="navbar-nav">
                             
                             
-                            <li className={["nav-item dropdown", dropdownTarget == label && 'show'  ].join(' ')}  >
-                                <a className="nav-link dropdown-toggle" href="#" role='button' onClick={(e) => handleDropdown(e,  label)} tabIndex="0" data-bs-toggle="dropdown">
+                            <li className={["nav-item dropdown", dropdownTarget !== label && 'show'  ].join(' ')}  >
+                                <a className="nav-link dropdown-toggle" href="#" onClick={(e) => handleDropdown(e,  label)} tabIndex="0" data-bs-toggle="dropdown">
                                     <span className={getHref(content, currentPath ) ? ['text-primary', styles.nav_text_label ].join(' ') : styles.nav_text_label }>{ label }</span> 
                                 </a>
                                 <ul className={["dropdown-menu ", dropdownTarget == label && 'dropdown-menu-right fade-down show' ].join(' ')}>
                          {
                             content?.map(({href, name}, i) => ( //displays dropdown menu items
 
-                                <li  key={i} href={href} className={
+                                <Nav.Link key={i} as='li' eventKey={i} href={href} onClick={() => setDropDownTarget(null)} className={
                                     router.pathname == content.href ? [ styles.nav_dropdown_link_text].join(' ') : styles.nav_text
                                     } >
                                     <Link href={href} >
@@ -82,8 +84,8 @@ const router = useRouter()
                                         {name}
                                         </a>
                                     </Link> 
-                                    <Dropdown.Divider  className={i === content.length -1 && styles.dropdown_divider} />
-                                </li>
+                                    <Dropdown.Divider  className={[ i !== content.length -1 ? styles.dropdown_divider : styles.dropdown_divider_last].join(' ')} />
+                                </Nav.Link>
                                 ) 
                             )
                         }
