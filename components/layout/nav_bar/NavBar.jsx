@@ -29,6 +29,16 @@ export default function NavBar(){
             }
     }
 
+    const [dropdownTarget, setDropDownTarget] = useState()
+    const handleDropdown = (e, label) => {
+        e.preventDefault()
+        setDropDownTarget(label)
+        console.log(label)
+    }
+
+
+  
+
 
 const router = useRouter()
   return(
@@ -51,29 +61,36 @@ const router = useRouter()
 
                 {data?.map(({label, content, type, details}, i) => (
                     <>
-                         { content.length > 1 ?  ( //displays navlink with dropdown
-                        <NavDropdown title={<span className={getHref(content, currentPath ) ? 'text-primary' : styles.nav_text }>{ label }</span> }
-                        className={  styles.nav_link }
-                            id="nav-dropdown"> 
-                            {
-                            content?.map(({href, name}, i) => (
-                                 
-                                <NavDropdown.Item as='div' key={i} href={href} className={
-                                    router.pathname == content.href ? [' text-warning', styles.nav_dropdown_link_text].join(' ') : styles.nav_text
-                                    } 
-                                    eventKey={i}>
-                                        <Link href={href} >
-                                            <a >
-                                            {name}
-                                            </a>
-                                        </Link> 
+                        { content.length > 1 ?  ( //displays dropdown menu items
+
+                        <ul className="navbar-nav">
+                            
+                            
+                            <li className={["nav-item dropdown", dropdownTarget == label && 'show'  ].join(' ')}  >
+                                <a className="nav-link dropdown-toggle" href="#" role='button' onClick={(e) => handleDropdown(e,  label)} tabIndex="0" data-bs-toggle="dropdown">
+                                    <span className={getHref(content, currentPath ) ? ['text-primary', styles.nav_text_label ].join(' ') : styles.nav_text_label }>{ label }</span> 
+                                </a>
+                                <ul className={["dropdown-menu ", dropdownTarget == label && 'dropdown-menu-right fade-down show' ].join(' ')}>
+                         {
+                            content?.map(({href, name}, i) => ( //displays dropdown menu items
+
+                                <li  key={i} href={href} className={
+                                    router.pathname == content.href ? [ styles.nav_dropdown_link_text].join(' ') : styles.nav_text
+                                    } >
+                                    <Link href={href} >
+                                        <a className="dropdown-item" >
+                                        {name}
+                                        </a>
+                                    </Link> 
                                     <Dropdown.Divider  className={i === content.length -1 && styles.dropdown_divider} />
-                                </NavDropdown.Item>
+                                </li>
                                 ) 
                             )
                         }
-                       </NavDropdown>   
-                        ) : 
+                                </ul>
+                            </li>
+                        </ul>
+                        ) :
                         type == 'button' ? ( //displays button
                             <Nav.Item key={i} className={  styles.nav_link__button }>
                                 <Button_ title={ label } pill variant={details.variant}  />

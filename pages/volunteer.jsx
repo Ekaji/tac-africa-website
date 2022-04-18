@@ -1,16 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 
 /* eslint-disable react/jsx-key */
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Form, Row, Col, InputGroup, FormControl } from 'react-bootstrap'
 import HeroBanner from '../components/layout/nav_bar/heroBanner'
 import styles from '../styles/page.styles/volunteer.module.scss'
+import Button_ from '../components/button.jsx'
 
 const Volunteer = () => {
   const backgroundImg = "url('')"
   return(
     <>
       <Container fluid>
-        <HeroBanner text={'volunteer'} backgroundImg={ backgroundImg }/>
+        <HeroBanner activeLink={'VOLUNTEER'} text={'volunteer'} backgroundImg={ backgroundImg }/>
       </Container>
       <Container className={ styles.volunteer_about_container_main } >
         <Row>
@@ -25,22 +26,100 @@ const Volunteer = () => {
 
             <div className={ styles.volunteer_content_container } >
               <div className={ styles.volunteer_content_container_inner } >
-                <h4 className={ styles.volunteer_content_header }  >WAYS TO VOLUNTEER : </h4>
+                <h4 className={ styles.volunteer_content_header }  > research & development : </h4>
                 <p className={ styles.volunteer_content_text }  >Essentially, we are a non-governmental, bipartisan organization, Essentially, we are a non-governmental, bipartisan organisation, connecting law enforcement.</p>
               </div>
 
               <div className={ styles.volunteer_content_container_inner } >
-                <h4 className={ styles.volunteer_content_header }   >WAYS TO VOLUNTEER : </h4>
+                <h4 className={ styles.volunteer_content_header }   > research & development : </h4>
                 <p className={ styles.volunteer_content_text }  >Essentially, we are a non-governmental, bipartisan organization, Essentially, we are a non-governmental, bipartisan organisation, connecting law enforcement.</p>
               </div>
 
               <div className={ styles.volunteer_content_container_inner } >
-                <h4 className={ styles.volunteer_content_header }   >WAYS TO VOLUNTEER : </h4>
+                <h4 className={ styles.volunteer_content_header }   > research & development : </h4>
                 <p className={ styles.volunteer_content_text }  >Essentially, we are a non-governmental, bipartisan organization, Essentially, we are a non-governmental, bipartisan organisation, connecting law enforcement.</p>
               </div>
           </div>
           </Col>
         </Row>
+      </Container>
+      <Container>
+        <h2 className={ styles.volunteer_member_header } >become a <span className='text-primary' >member</span></h2>
+        <Row>
+          <Col >
+            <Row>
+
+              <Col md={6}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control type="name" placeholder="Your Name" />
+                </Form.Group>
+              </Col>
+
+              <Col md={6}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control type="name" placeholder="Your Nationality" />
+                </Form.Group>
+              </Col>
+
+            </Row>
+          </Col>
+          <Col md={6}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control type="name" placeholder="Your Availability" />
+            </Form.Group>
+          </Col>
+          
+          <Col md={6}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control type="name" placeholder="Your Address (including postcode)" />
+            </Form.Group>
+          </Col>
+          <Col md={6}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control type="name" placeholder="What Would You Like To Do?" />
+            </Form.Group>
+          </Col>
+
+          <Col md={6}>
+            <Row>
+
+              <Col md={6} >
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control type="name" placeholder="Phone Number " />
+                </Form.Group>
+              </Col>
+
+              <Col md={6}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control type="name" placeholder="Email" />
+                </Form.Group>
+              </Col>
+
+              <Col md={6}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control type="name" placeholder="Gender" />
+                </Form.Group>
+              </Col>
+
+              <Col md={6}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control type="name" placeholder="Age" />
+                </Form.Group>
+              </Col>
+
+            </Row>
+          </Col>
+
+          <Col md={6}>
+            <InputGroup>
+              <FormControl style={{height: '120px !important',}} placeholder="Experience learning and skills"  as="textarea" aria-label="With textarea" />
+            </InputGroup>
+          </Col>
+          
+        </Row>
+        <div className={ styles.volunteer_submitButton }>
+          <Button_  title={"submit now"}  variant="primary" type="submit"/>
+        </div>
       </Container>
     </>
   )

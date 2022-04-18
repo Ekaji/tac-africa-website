@@ -16,11 +16,17 @@
   z-index: 40;
 }
 
+.nav_text_label {
+  text-transform: uppercase !important;
+  color: $main-blue;
+  font-weight: 600;
+}
+
 .nav_text {
   color: $main-blue;
   font-weight: 600;
   // font-size: 1.1em;
-  text-transform: capitalize;
+  text-transform: capitalize !important;
 
   .dropdown_divider{
     display: none;
