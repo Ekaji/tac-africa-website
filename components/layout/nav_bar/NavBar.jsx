@@ -9,6 +9,7 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Link from 'next/link'
 import Image from 'next/image'
 import { data } from '../../../pages/api/navLinks.js'
+import DonateButton from '../../../components/donateButton'
 
 
 export default function NavBar(){
@@ -37,10 +38,6 @@ export default function NavBar(){
         e.preventDefault()
         setDropDownTarget(label)
     }
-
-
-  
-
 
 const router = useRouter()
   return(
@@ -93,9 +90,15 @@ const router = useRouter()
                             </li>
                         </ul>
                         ) :
-                        type == 'button' ? ( //displays button
-                            <Nav.Item key={i} className={  styles.nav_link__button }>
+                        label == 'blog' ? ( //displays button
+                            <Nav.Item key={i} className={ styles.nav_link__button }>
                                 <Button_ title={ label } pill variant={details.variant}  />
+                            </Nav.Item>  
+                        )
+                        : 
+                        label == 'donate' ? (
+                            <Nav.Item key={i} className={ styles.nav_link__button }>
+                                <DonateButton title={ label } pill variant={details.variant}  />
                             </Nav.Item>  
                         )
                         :
