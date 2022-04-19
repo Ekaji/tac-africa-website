@@ -15,7 +15,7 @@ const Cyber_Security_And_Cyber_Defense = () => {
   return(
     <>
       <Container fluid className={ styles.aboutUs_container } >
-        <HeroBanner text={'Cyber Security And Cyber Defence'} backgroundImg={ backgroundImg } />
+        <HeroBanner text={'Cyber Security And Cyber Defence'}  backgroundImg={ backgroundImg } />
 
         <Container className={ styles.background_container }  >
           <div>
