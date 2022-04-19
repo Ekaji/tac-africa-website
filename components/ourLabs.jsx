@@ -80,9 +80,27 @@ const OurLabs = () => {
         <Carousel responsive={responsive} 
                 swipeable
                 itemClass="carousel_item_padding_40_px"
+                className="card-deck"
                 >
+                    {/* <div className="card-deck"> */}
             { data.map((edge, i) => (
-                  <div key={i} className={styles.carousel_component_inner}  >
+
+<>
+                    {/* <div key={i} className="card">
+                      <img src="..." className={["card-img-top", styles.carousel_image ].join(' ')} src={ edge?.image } alt={ edge.image }/>
+                      <div className="card-body">
+                        <h5 className="card-title">Card title</h5>
+                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                      <div className={ styles.carousel_details } >
+                        <h2 className={ styles.carousel_title } >{ edge?.title }</h2>
+                        <p className={ styles.carousel_text } >{ edge?.text }</p>
+                      </div>
+                    </div> */}
+
+
+
+                  <div key={i} className={['card', styles.carousel_component_inner].join(' ')}  >
                       <div className={ styles.carousel_image }>
                         <img className={ styles.carousel_image } src={ edge?.image } alt={ edge.image } />
                         <div className={ styles.carousel_mask } >
@@ -96,7 +114,11 @@ const OurLabs = () => {
                         <p className={ styles.carousel_text } >{ edge?.text }</p>
                       </div>
                   </div>
+
+                  </>
             )) }
+                    {/* </div> */}
+
           </Carousel>
       </Container>
 
