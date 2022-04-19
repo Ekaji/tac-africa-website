@@ -9,10 +9,22 @@
   margin-top: 8em;
   margin-bottom: 5em;
 
+  > div {
+    margin-bottom: 5em;
+  }
+
+  .background_header_main {
+    font-size: 16px;
+    color: #1089FF;
+    font-weight: 600;
+  }
+
   .background_header {
     text-transform: uppercase;
     font-weight: 600;
     color: #144388;
+    font-size: 30px;
+    margin-bottom: 1em;
   }
   .background_text {
     font-size: 16px;

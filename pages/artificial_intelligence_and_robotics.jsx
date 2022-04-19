@@ -7,19 +7,18 @@ import Button_ from '../components/button.jsx'
 import Link from 'next/link'
 import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
 
-const Drone_And_Counter_Drone = () => {
-
+const Artificial_Intelligence_and_Robotics = () => {
 
   const backgroundImg =  "url('/Rectangle 70.jpg')"
 
   return(
     <>
       <Container fluid className={ styles.aboutUs_container } >
-        <HeroBanner text={'Cyber Security And Cyber Defence'} backgroundImg={ backgroundImg } />
+        <HeroBanner text={'Artificial Intelligence & Robotics'} backgroundImg={ backgroundImg } />
 
         <Container className={ styles.background_container }  >
           <div>
-          <h1 className={ styles.background_header_main } >Drone And Counter Drone</h1>
+          <h1 className={ styles.background_header_main } >Artificial Intelligence & Robotics</h1>
           <h2 className={ styles.background_header } >A Phenomenal Stratedy </h2> 
           <p className={ styles.background_text }>
             The changing nature of crime has long been an important aspect and challenge for the law enforcement agencies to fight against the above phenomenon. This is evermore the case in this modern era characterized by data, the Internet and new technologies. As a result, law enforcement agencies world-wide are increasingly being tasked with combating a mix of both entirely new forms of crime and traditional crimes that are carried out in new and innovative ways.</p>
@@ -60,4 +59,4 @@ const Drone_And_Counter_Drone = () => {
   )
 }
 
-export default Drone_And_Counter_Drone ;
+export default Artificial_Intelligence_and_Robotics;

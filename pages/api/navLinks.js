@@ -21,7 +21,7 @@ export const data = [
         label: 'labs',
         content : [
             {href: '/drone_and_counter_drone', name: 'Drone And Counter Drone'},
-            {href: '/cyber_security_and_cyber_defence', name: 'Cyber Security And Cyber Defence'},
+            {href: '/cyber_security_and_cyber_defense', name: 'Cyber Security And Cyber Defense'},
             {href: '/ai_and_robotics_lab', name: 'AI And Robotics Lab'},
             {href: '/blockchain_and_crypto_lab', name: 'Blockchain And Crypto Lab'},
             {href: '/satellite_and_remote_sensing_lab', name: 'Satellite And Remote Sensing Lab'}
@@ -34,7 +34,7 @@ export const data = [
             {href: '/policing_the_cyberspace', name: 'Policing the Cyberspace' },
             {href: '/innovation_in_policing', name: 'Innovation in Policing' },
             {href: '/drone_alliance_africa', name: 'Drone Alliance Africa' },
-            {href: '/artificial_intelligence', name: 'Artificial Intelligence' },
+            {href: '/artificial_intelligence_and_robotics', name: 'Artificial Intelligence' },
             {href: '/afri_agri_tech_project', name: 'AfriAgriTech project' },
             {href: '/crawler', name: 'Crawler' },
             {href: '/volunteer', name: 'Volunteer Management' },
