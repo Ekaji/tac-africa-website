@@ -16,7 +16,7 @@ export default function LandingPage(){
                 <div className={styles.tac_header_detail}>
                     <div className={styles.tac_header_detail__items}>
                         <h2>Combating Crime in
-                            <em>Africa</em> with emerging
+                            <em> Africa</em> with emerging
                             technology
                         </h2>
 

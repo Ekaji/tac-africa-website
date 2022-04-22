@@ -79,7 +79,7 @@ const OurLabs = () => {
 
         <div className={ ['d-flex justify-content-between text-uppercase ', styles.carousel_header__component].join(' ')} >
           <h2 className={ styles.carousel_container__title } > Our <span className='text-primary ' >Labs</span></h2>
-          <Button_ title={'ALL LABS'} variant={'outline-primary'} />
+          <Button_ title={<span className={ styles.carousel_container_button__title }  >ALL LABS</span>} variant={'outline-primary'} />
         </div>
 
         <Carousel responsive={responsive} 

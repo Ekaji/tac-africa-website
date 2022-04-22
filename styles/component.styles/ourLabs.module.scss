@@ -18,6 +18,15 @@
   padding-bottom: 3em;
 }
 
+.carousel_container__title {
+  font-weight: 600 !important;
+  color: $sweet-blue !important;
+}
+
+.carousel_container_button__title {
+  font-weight: 600 !important;
+}
+
 .carousel_component_inner {
   max-width: 25vw;
   text-align: center;
@@ -25,8 +34,8 @@
   overflow: hidden;
   border-radius: 4px;
   padding-bottom: 2em;
-  margin-bottom: 5px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 4em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
   .carousel_details {
     width: 80%;
@@ -59,10 +68,11 @@
     }
   }
 
+
   .carousel_title {
     margin: 2em auto;
     font-size: 14px !important;
-    color: $main-blue;
+    color: $sweet-blue;
     font-weight: 900;
   }
 

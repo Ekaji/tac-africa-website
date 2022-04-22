@@ -28,7 +28,7 @@ const JoinUs = () => {
             <Row  >
               <Col xs={6} >
                 <Card className={['mb-3', styles.joinUs_card__small].join(' ')} >
-                  <Card.Title className='text-light m-0'  as='h2' >25</Card.Title>
+                  <Card.Title className='text-light m-0'  as='h2' >55+</Card.Title>
                   <Card.Text className={ styles.card_small__text } >
                     community members 
                   </Card.Text>
@@ -46,7 +46,7 @@ const JoinUs = () => {
 
               <Col xs={6} >
                 <Card className={['mt-3', styles.joinUs_card__small].join(' ')} >
-                  <Card.Title className='text-light m-0' as='h2' >23</Card.Title>
+                  <Card.Title className='text-light m-0' as='h2' >23+</Card.Title>
                   <Card.Text className={ styles.card_small__text } >
                     Trainings and hackathons 
                   </Card.Text>
