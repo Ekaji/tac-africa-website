@@ -20,7 +20,7 @@ export default function Prof_Boniface_K_Alese() {
             </div>
             <div className={ styles.founder_about_info }>
               <h1 className={ styles.founder_header_main }>ADVISORY BOARD</h1>
-              <h2 className={ styles.founder_header } >Prof_Boniface_K_Alese</h2>
+              <h2 className={ styles.founder_header } >Prof Boniface K Alese</h2>
               <p>
                 Prof B. K. Alese is a Professor of Information and Cyber Security with over two decades
                 of teaching, research and community service experience. He holds a PhD degree in

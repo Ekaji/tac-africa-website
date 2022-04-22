@@ -19,7 +19,7 @@ export default function Abdul_Hakeem_Ajijola () {
             </div>
             <div className={ styles.founder_about_info }>
               <h1 className={ styles.founder_header_main }>ADVISORY BOARD</h1>
-              <h2 className={ styles.founder_header } >Abdul-Hakeem Ajijola</h2>
+              <h2 className={ styles.founder_header } >Abdul Hakeem Ajijola</h2>
               <p>Abdul-Hakeem Ajijola (AhA), a global Cybersecurity resource is ranked #1 IFSEC 2020
                 Global Cybersecurity professionals’ influencers and thought leaders list.
               </p>

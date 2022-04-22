@@ -19,7 +19,7 @@ export default function ProfessorGambari() {
             </div>
             <div className={ styles.founder_about_info }>
               <h1 className={ styles.founder_header_main }>ADVISORY BOARD</h1>
-              <h2 className={ styles.founder_header } >Prof_Gabi_Siboni</h2>
+              <h2 className={ styles.founder_header } >Prof Gabi Siboni</h2>
               <p>
                   Prof. Gabi Siboni is a National Security Specialist and the Director of the Military and
                   Strategic Affairs Program as well as of the Cyber Security Program at the Tel Aviv {"University's"}
