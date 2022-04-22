@@ -1,16 +1,21 @@
 @import '../abstracts/variables';
 
-
-.ourTeam_hero {
+.heroBanner_img {
   height: 45vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  object-fit: cover;
 
-  > h2 {
-    margin-top : 3em;
-    text-transform: uppercase;
-    color: white;
-    font-weight: 600;
-  }
 }
+
+
+// .ourTeam_hero {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+  //  h2 {
+  //   margin-top : 3em;
+  //   text-transform: uppercase;
+  //   color: white;
+  //   font-weight: 600;
+  // }
+// }

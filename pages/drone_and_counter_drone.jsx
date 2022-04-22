@@ -10,7 +10,7 @@ import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
 const Drone_And_Counter_Drone = () => {
 
 
-  const backgroundImg =  "url('/Rectangle 70.jpg')"
+  const backgroundImg =  "/drone and counter drone.png"
 
   return(
     <>

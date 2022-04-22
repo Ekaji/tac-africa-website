@@ -9,12 +9,12 @@ import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
 
 const Artificial_Intelligence_and_Robotics = () => {
 
-  const backgroundImg =  "url('/Rectangle 70.jpg')"
+  const backgroundImg =  '/ai and robotics.png'
 
   return(
     <>
       <Container fluid className={ styles.aboutUs_container } >
-        <HeroBanner text={'Artificial Intelligence & Robotics'} backgroundImg={ backgroundImg } />
+        <HeroBanner text={'Artificial Intelligence & Robotics'} activeLink={'our lab'} backgroundImg={ backgroundImg } />
 
         <Container className={ styles.background_container }  >
           <div>

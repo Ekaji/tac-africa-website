@@ -22,7 +22,7 @@ export const data = [
         content : [
             {href: '/drone_and_counter_drone', name: 'Drone And Counter Drone'},
             {href: '/cyber_security_and_cyber_defense', name: 'Cyber Security And Cyber Defense'},
-            {href: '/ai_and_robotics_lab', name: 'AI And Robotics Lab'},
+            {href: '/artificial_intelligence_and_robotics', name: 'AI And Robotics Lab'},
             {href: '/blockchain_and_crypto_lab', name: 'Blockchain And Crypto Lab'},
             {href: '/satellite_and_remote_sensing_lab', name: 'Satellite And Remote Sensing Lab'}
         ],

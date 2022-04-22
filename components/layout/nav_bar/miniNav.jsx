@@ -6,22 +6,22 @@ import styles from '../../../styles/layout/miniNav.module.scss'
 
 const MiniNav = ({activeLink}) => {
   return (
-    <Container fluid >
+    <Container fluid  >
       <Container >
       <div className={ styles.aboutUs_nav_container }> 
         <div className={ styles.aboutUs_nav }>
           <div>
             <span>
               <Link href='/'>
-                <a>
-                Home
+                <a style={{color: '#144388'}} >
+                {'Home  ' }&nbsp; &#x003E;
                 </a>
               </Link>
             </span>
             <span>
               <Link href='/about_us'>
-                <a>
-                About us
+                <a style={{color: '#144388'}} >
+                {"About us"} &nbsp; &#x003E;
                 </a>
               </Link>
             </span>
@@ -36,8 +36,8 @@ const MiniNav = ({activeLink}) => {
           <div>
             <span>
               <Link href='/'>
-                <a>
-                  become a volunteer
+                <a >
+                  {'become a volunteer ' + '  '}&nbsp; <span style={{fontWeight: 'bold'}}> &#x29C1; </span> 
                 </a>
               </Link>
             </span>

@@ -41,14 +41,14 @@ export default function NavBar(){
 
 const router = useRouter()
   return(
-    <div className={[styles.nav_container, ].join(' ')}  >
+    <div className={ styles.nav_container }  >
         <Navbar collapseOnSelect className={styles.nav_inner__container} style={{padding: '0px', }} expand="lg">
             
         <Container fluid  className={styles.background_blur }  >
             <Navbar.Brand >
                 <Link href={'/'} >
                   <a>
-                    <img src='/TAC_LOGO.webp' alt='logo' style={{maxWidth: '100px', marginLeft: '19px', marginTop: '20px'}} />
+                    <img src='/TAC_LOGO.webp' alt='logo' style={{maxWidth: '70px', marginLeft: '19px', marginTop: '25px'}} />
                   </a>
                 </Link> 
             </Navbar.Brand>

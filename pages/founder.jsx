@@ -9,7 +9,7 @@ import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
 
 const Founder = () => {
 
-  const backgroundImg =  "url('/Rectangle 70.jpg')"
+  const backgroundImg =  "/advisory board.png";
 
   return(
     <>
