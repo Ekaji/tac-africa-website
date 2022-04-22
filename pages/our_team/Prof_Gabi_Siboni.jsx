@@ -22,7 +22,7 @@ export default function ProfessorGambari() {
               <h2 className={ styles.founder_header } >Prof_Gabi_Siboni</h2>
               <p>
                   Prof. Gabi Siboni is a National Security Specialist and the Director of the Military and
-                  Strategic Affairs Program as well as of the Cyber Security Program at the Tel Aviv University's
+                  Strategic Affairs Program as well as of the Cyber Security Program at the Tel Aviv {"University's"}
                   Institute for National Security Studies (INSS). Prof. Siboni is also the editor of
                   Cyber: Intelligence and Security Journal. He serves as a senior consultant to the IDF
                   and other Israeli security organizations. Siboni is a Professor for cybersecurity at the
@@ -31,7 +31,7 @@ export default function ProfessorGambari() {
               </p>
 
               <p> 
-                  In addition, Siboni is the chief methodologist of the IDF's Research Center for Force
+                  In addition, Siboni is the chief methodologist of the {"IDF's"} Research Center for Force
                   Deployment and Buildup. In this scope, he develops Strategic & Operational concepts
                   for various domains including: Integrated Combat in complex and densely populated
                   areas, Cyber defense and Cyber warfare, Cognitive and Influence operations and

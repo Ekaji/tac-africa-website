@@ -16,11 +16,11 @@ const BlockchainAndCryptoLab = () => {
   return(
     <>
       <Container fluid className={ styles.aboutUs_container } >
-        <HeroBanner text={'Cyber Security And Cyber Defense'} activeLink={'our lab'} backgroundImg={ backgroundImg } />
+        <HeroBanner text={'Blockchain And Crypto Lab'} activeLink={'our lab'} backgroundImg={ backgroundImg } />
 
         <Container className={ styles.background_container }  >
           <div>
-          <h1 className={ styles.background_header_main } >Cyber Security And Cyber Defense</h1>
+          <h1 className={ styles.background_header_main } >Blockchain And Crypto Lab</h1>
           <h2 className={ styles.background_header } >A Phenomenal Strategy </h2> 
           <p className={ styles.background_text }>
             The changing nature of crime has long been an important aspect and challenge for the law enforcement agencies to fight against the above phenomenon. This is evermore the case in this modern era characterized by data, the Internet and new technologies. As a result, law enforcement agencies world-wide are increasingly being tasked with combating a mix of both entirely new forms of crime and traditional crimes that are carried out in new and innovative ways.</p>

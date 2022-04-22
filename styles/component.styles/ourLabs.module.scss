@@ -36,6 +36,8 @@
   .carousel_image {
     position: relative;
     max-width: 25vw;
+    min-height: 14.204rem;
+    object-fit: cover;
   }
 
   .carousel_mask {

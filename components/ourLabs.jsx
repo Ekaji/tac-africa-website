@@ -11,24 +11,28 @@ const OurLabs = () => {
 
   const data =  [
     {
-      title: 'Cyber Security & Cyber Defense',
-      image: 'pexels-shalom-de-león-6165167.jpg',
-      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.'
+      title: 'Cyber Security & Cyber Defense',  //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
+      image: '/cyber defence.jpg',
+      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.',
+      link: '/cyber_security_and_cyber_defense',
     },
     {
       title: 'Artificial Intelligence And Robotics',
-      image: 'retinal-biometrics-technology-with-man-s-eye-digital-remix.jpg',
-      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.'
+      image: '/ai and robotics.jpg',
+      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.',
+      link: '/artificial_intelligence_and_robotics',
     },
     {
       title: 'Blockchain And Payment Gateways',
-      image: 'pexels-dids-3657268.jpg',
-      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.'
+      image: 'piles-coins-with-plant-front-graph.jpg',
+      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.',
+      link: '/blockchain_and_crypto_lab',
     },
     {
       title: 'Drone & Counter Drone',
-      image: 'https://cdn.pixabay.com/photo/2021/12/09/11/47/river-6858013_960_720.jpg',
-      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.'
+      image: 'pexels-dids-3657268.jpg',
+      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.',
+      link: '/drone_and_counter_drone',
     },
     
 
@@ -84,12 +88,16 @@ const OurLabs = () => {
                 >
             { data.map((edge, i) => (
 
-                  <div key={i} className={['card', styles.carousel_component_inner].join(' ')}  >
+                  <div key={i} className={[, styles.carousel_component_inner].join(' ')}  >
                       <div className={ styles.carousel_image }>
                         <img className={ styles.carousel_image } src={ edge?.image } alt={ edge.image } />
                         <div className={ styles.carousel_mask } >
                           <div className={ styles.carousel_button__container } >
-                            <Button_ title={'Learn More'} variant={'outline-light' } style={{border: '2px solid white'}} />
+                            <Link href={edge.link}>
+                              <a>
+                                <Button_ title={'Learn More'} variant={'outline-light' } style={{border: '2px solid white'}} />
+                              </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
