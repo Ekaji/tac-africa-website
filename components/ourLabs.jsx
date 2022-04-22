@@ -1,3 +1,4 @@
+
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import styles from '../styles/component.styles/ourLabs.module.scss'
@@ -84,10 +85,8 @@ const OurLabs = () => {
         <Carousel responsive={responsive} 
                 swipeable
                 itemClass="carousel_item_padding_40_px"
-                className="card-deck"
                 >
             { data.map((edge, i) => (
-
                   <div key={i} className={[, styles.carousel_component_inner].join(' ')}  >
                       <div className={ styles.carousel_image }>
                         <img className={ styles.carousel_image } src={ edge?.image } alt={ edge.image } />
@@ -106,9 +105,7 @@ const OurLabs = () => {
                         <p className={ styles.carousel_text } >{ edge?.text }</p>
                       </div>
                   </div>
-
             )) }
-
           </Carousel>
       </Container>
 
