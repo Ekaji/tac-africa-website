@@ -1,5 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
+// /* eslint-disable @next/next/no-img-element */
+// /* eslint-disable react/jsx-key */
 import { useEffect, useState, useCallback } from 'react'
 import { Badge, Dropdown, Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 import styles from '../../../styles/layout/navbar.module.scss'
@@ -87,15 +88,15 @@ const router = useRouter()
                         <ul className="navbar-nav">
                             
                             
-                            <li className={["nav-item dropdown", dropdownTarget !== label && 'show'  ].join(' ')}  >
+                            <li className={["nav-item dropdown", dropdownTarget !== label ? 'show' : 'hide' ].join(' ')}  >
                                 <a className="nav-link dropdown-toggle" href="#" onClick={(e) => handleDropdown(e,  label)} tabIndex="0" data-bs-toggle="dropdown">
-                                    <span className={getHref(content, currentPath ) ? ['text-primary', styles.nav_label_text ].join(' ') : styles.nav_label_text }>{ label }</span> 
+                                    <span eventKey={i} className={getHref(content, currentPath ) ? ['text-primary', styles.nav_label_text ].join(' ') : styles.nav_label_text } >{ label }</span> 
                                 </a>
                                 <ul className={["dropdown-menu ", dropdownTarget == label && 'dropdown-menu-right fade-down show' ].join(' ')}>
                          {
                             content?.map(({href, name}, i) => ( //displays dropdown menu items
 
-                                <Nav.Link key={i} as='li' eventKey={Date.now()} href={href} onClick={() => setDropDownTarget(null)} className={
+                                <Nav.Link key={i} as='li'  href={href} onClick={() => setDropDownTarget(null)} className={
                                     router.pathname == content.href ? [ styles.nav_dropdown_link_text].join(' ') : styles.nav_text
                                     } >
                                     <Link href={href} >

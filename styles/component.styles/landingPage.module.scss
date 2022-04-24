@@ -139,6 +139,17 @@
 }
 
 @media (max-width: $breakpoint-sm) {
+
+    .tac_header_detail {
+        &__items { 
+            h2 {
+                margin-top: 5px;
+            }
+            p {
+             margin: 0px;   
+            }
+        }
+    }
     .tac_header_background {
         background-color: $main-grey;
     }
@@ -153,12 +164,13 @@
     }
 
     .header_icon {
+        margin-top: 0px !important;
     
         > div {
             z-index: -950 !important;
         }
     
-        height: 40vh !important;
+        height: 30vh !important;
     }
 
     .header_partners_icon {

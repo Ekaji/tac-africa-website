@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-key */
+import '../styles/layout/hamburger.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/globals.scss'
 import '../styles/component.styles/contact.scss'
-import '../styles/layout/hamburger.css'
+import '../styles/layout/navbarHover.css'
 import Layout from '../components/layout/Layout'
 
 
