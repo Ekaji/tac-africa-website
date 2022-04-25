@@ -1,4 +1,3 @@
-
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import styles from '../styles/component.styles/ourLabs.module.scss'
@@ -14,27 +13,33 @@ const OurLabs = () => {
     {
       title: 'Cyber Security & Cyber Defense',  //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
       image: '/cyber defence.jpg',
-      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.',
+      text: 'Leading Cloud-Delivered Endpoint Protection Platform. Powered by Artificial Intelligence. Independently Tested and ...',
       link: '/cyber_security_and_cyber_defense',
     },
     {
       title: 'Artificial Intelligence And Robotics',
       image: '/ai and robotics.jpg',
-      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.',
+      text: 'Major technological disruptions, like artificial intelligence and machine learning, are their way to the industrial robotics industry.',
       link: '/artificial_intelligence_and_robotics',
     },
     {
       title: 'Blockchain And Payment Gateways',
       image: 'piles-coins-with-plant-front-graph.jpg',
-      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.',
+      text: 'Major technological disruptions, like artificial intelligence and machine learning, are their way to the industrial robotics industry.',
       link: '/blockchain_and_crypto_lab',
     },
     {
       title: 'Drone & Counter Drone',
-      image: 'pexels-dids-3657268.jpg',
-      text: 'artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems.',
+      image: 'Blog_Drones.jpg',
+      text: 'Learn advanced methods involved in sending new signals, communicating with GPS satellites for easy navigation.',
       link: '/drone_and_counter_drone',
     },
+    {
+      title: 'satellite and remote sensing',
+      image: 'satellite.jpg',
+      text: 'Advanced satellite systems for locating, tracking and monitoring remote assets. Simple, flexible and affordable solutions.',
+      link: '/satellite_and_remote_sensing'
+    }
     
 
   ]
@@ -108,7 +113,7 @@ const OurLabs = () => {
                         </div>
                       </div>
                       <div className={ styles.carousel_details } >
-                        <h2 className={ styles.carousel_title } >{ edge?.title }</h2>
+                        <h2 className={ styles.carousel_title } style={{fontSize: '3em !important'}} >{ edge?.title }</h2>
                         <p className={ styles.carousel_text } >{ edge?.text }</p>
                       </div>
                   </div>
