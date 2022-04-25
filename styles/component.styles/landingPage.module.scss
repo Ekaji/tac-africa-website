@@ -140,10 +140,11 @@
 @media (max-width: $breakpoint-sm) {
 
     .tac_header_detail {
+        margin: 0px 1em;
         &__items { 
             h2 {
                 margin-top: 5px;
-                // font-size: 2.1em;
+                font-size: 2.1em;
             }
             p {
              margin: 0px;   
@@ -166,7 +167,7 @@
             z-index: -950 !important;
         }
     
-        height: 35vh !important;
+        height: 40vh !important;
     }
 
     .header_partners_icon {

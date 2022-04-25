@@ -9,7 +9,7 @@ import HeroBanner from '../../components/layout/nav_bar/heroBanner.jsx'
 
 const Afri_Agric_Tech_Project = () => {
 
-  const backgroundImg =  '/ai and robotics.png'
+  const backgroundImg =  '/agrictech.png'
 
   return(
     <>
@@ -21,35 +21,46 @@ const Afri_Agric_Tech_Project = () => {
           <h1 className={ styles.background_header_main } >Artificial Intelligence & Robotics</h1>
           <h2 className={ styles.background_header } >A Phenomenal Stratedy </h2> 
           <p className={ styles.background_text }>
-            The changing nature of crime has long been an important aspect and challenge for the law enforcement agencies to fight against the above phenomenon. This is evermore the case in this modern era characterized by data, the Internet and new technologies. As a result, law enforcement agencies world-wide are increasingly being tasked with combating a mix of both entirely new forms of crime and traditional crimes that are carried out in new and innovative ways.</p>
+          Nigeria is the most populous and largest economy in Africa. Agriculture is its economic
+          base and source of livelihood for the majority of Nigerians, employing two-thirds of the
+          labour-force with 88% smallholder farmers, 72% living below the poverty-line and
+          {`70–80%`} of smallholder labour-force women. Nigeria is listed by DAC as an ODA Recipient.</p>
             
             <p>
-             At the same time, artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems. Due to the increased capacity to analyse large amounts of data, AI may be a powerful tool to enhance the effectiveness of law enforcement agencies’ daily operations, as well as optimizing public resources through, for instance, crime hotspot analytics, forecasting where and what type of crimes are likely to occur.
+            Challenges for smallholder farmers are numerous, including constraints to land access;
+            obsolete production methodology; supply chain inefficiencies; corruption; informal markets
+            (100%), cash-economics and non-existent global- trade keeping productivity low and
+            waste high. The government, FAO, UNDP, CBN and WEF concur constraints include poor
+            access to credit {`(<7%)`} and adoption of technologies.
              </p>
 
             <p>
-             The United Nations Interregional Crime and Justice Research Institute (UNICRI), through its Centre for Artificial Intelligence and Robotics, and Technology Against Crime (TAC) Africa have partnered in order to explore the challenges that African law enforcement agencies may face and to better understand how AI-related technologies can provide assistance.
+            {`<6%`} of farmers benefit from extension services from knowledge and information transfer,
+            compounded by the decision-making power disproportionately being held by men
+            and women ownership at {`<13%.`} Women smallholders account for 70% of food production
+            and their lack of autonomous decision-making and agency stifles improvements from
+            knowledge-intensive agriculture.
              </p>
              </div>
 
             <h2 className={ styles.background_header } >Steps Taken In The Right Direction</h2>
-            <p>
-            Through this virtual technical workshop, UNICRI and TAC Africa, in collaboration with key representatives from African countries, seek to explore, new and emerging threats associated with AI and crime, as well as the role or possible role of AI in crime prevention in Africa and the state of AI-readiness of law enforcement communities in Africa. In doing so UNICRI and TAC Africa will endeavour to identify local priorities and concerns in this regard.
+            <p>This research{`’`}s primary purpose is to enable autonomous decision-making for smallholder
+              farmers in Nigeria, so they have equitable access to opportunities from frontier technology
+              and financial ecosystems with increased digital skills to participate in global B2B trade
+              and final stage distribution.
             </p>
             
             <p>
-            Additionally, the workshop will seek to build a local community in the region in terms of AI and crime prevention. This network will also serve to facilitate engagement of representatives from the region in the Third INTERPOL-UNICRI Global Meeting on AI for Law Enforcement to be held virtually in November. The Global Meeting will have a specific regional component, which will include Africa, Latin America, Central Asia, and South and South East Asia. </p>
+            Authenticated data assists the agricultural sector{`’`}s efficiency and enable services in related
+            sectors such as insure Tech, EdTech, and Government Technology services. The availability
+            of datasets to third-parties accelerates innovation, creates new revenue sources
+            from the digital-economy and promotes indirect job creation of 15% (IMF). </p>
             
             <p>
-            As the meeting was held virtually, there was no limit on participation, although in the interests of fostering an active discussion a smaller group is to be preferred. The number of participants were 200+. In addition to UNICRI and TAC Africa, participants from the law enforcement community in Nigeria and neighboring countries, as well as: </p>
-            <ul>
-             <li>Relevant regional organizations;</li> 
-             <li>Local civil society organizations;</li> 
-             <li>Academia; and Industry.</li> 
-            </ul>
-            <p>
-             A reliable information exchange network and feedback mechanism on AI for Law Enforcement in Africa between UNICRI and TAC Africa; and Actionable suggestions and follow-up priorities from participants was envisioned.
-          </p>
+            This underpins economic development for Nigeria with growth of at least 1% in GDP, improved
+              and sustained incomes, and positive impact on food-security and better nutrition.
+              Our research directly addresses the required data to enable decision-making from a farm
+              to trade and beyond perspective.</p>
         </Container>
 
        
