@@ -55,6 +55,13 @@ const OurLabs = () => {
         },
         items: 3
     },
+       widescreen: {
+      breakpoint: {
+          max: 1024,
+          min: 577
+      },
+      items: 2
+  },
     tablet: {
         breakpoint: {
             max: 1024,

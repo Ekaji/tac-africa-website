@@ -19,12 +19,19 @@ const Crawler = () => {
         <Container className={ styles.background_container }  >
           <div>
           <h1 className={ styles.background_header_main } >crawler</h1>
-          <h2 className={ styles.background_header } >A Phenomenal Stratedy </h2> 
+          {/* <h2 className={ styles.background_header } >A Phenomenal Stratedy </h2>  */}
           <p className={ styles.background_text }>
-            The changing nature of crime has long been an important aspect and challenge for the law enforcement agencies to fight against the above phenomenon. This is evermore the case in this modern era characterized by data, the Internet and new technologies. As a result, law enforcement agencies world-wide are increasingly being tasked with combating a mix of both entirely new forms of crime and traditional crimes that are carried out in new and innovative ways.</p>
+          Development of web crawlers that can automatically collect websites and virtual communities
+          such as online forums. These crawlers would collect the seed URL, automatically
+          parse through the hyperlink off the collected webpages. These crawlers will not only
+          gather webpages belonging to the forum{`’`}s domain or originating Internet Protocol address
+          but also hyperlink to websites of hacker forums.</p>
             
             <p>
-             At the same time, artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems. Due to the increased capacity to analyse large amounts of data, AI may be a powerful tool to enhance the effectiveness of law enforcement agencies’ daily operations, as well as optimizing public resources through, for instance, crime hotspot analytics, forecasting where and what type of crimes are likely to occur.
+            The technical difficulty of parking the hacker forum that employs the anti-crawling mechanism
+            is a scope of research. Also, many of these forums intend to use devices to prevent
+            surveillance by law enforcement and to safeguard server resources from being abused by
+            rival hacker communities.
              </p>
 
             <p>

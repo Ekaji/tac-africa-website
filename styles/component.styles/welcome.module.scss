@@ -28,3 +28,15 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
+@media (max-width: $breakpoint-sm) {
+  .welcome_header {
+    font-size: 1.5em;
+  }
+  .welcome_component { 
+    display: block;
+    margin-top: 4em;
+    min-height: 40vh;
+
+  }
+}
