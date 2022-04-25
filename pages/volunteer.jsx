@@ -7,7 +7,7 @@ import styles from '../styles/page.styles/volunteer.module.scss'
 import Button_ from '../components/button.jsx'
 
 const Volunteer = () => {
-  const backgroundImg = "url('')"
+  const backgroundImg = '/volunteer rect.png'
   return(
     <>
       <Container fluid>
@@ -16,7 +16,7 @@ const Volunteer = () => {
       <Container className={ styles.volunteer_about_container_main } >
         <Row>
           <Col md={5}  > 
-            <img src='/' alt='volunteer' />
+            <img className={ styles.volunteer_img } src='/volunteer.jpg' alt='volunteer' />
           </Col>
           <Col md={7}  > 
             <div className={ styles.volunteer_about_container } >
@@ -26,18 +26,18 @@ const Volunteer = () => {
 
             <div className={ styles.volunteer_content_container } >
               <div className={ styles.volunteer_content_container_inner } >
-                <h4 className={ styles.volunteer_content_header }  > research & development : </h4>
-                <p className={ styles.volunteer_content_text }  >Essentially, we are a non-governmental, bipartisan organization, Essentially, we are a non-governmental, bipartisan organisation, connecting law enforcement.</p>
+                <h4 className={ styles.volunteer_content_header }  > work on site : </h4>
+                <p className={ styles.volunteer_content_text }  >individuals can voluntarily visit our head office and get engaged with various activities.</p>
               </div>
 
               <div className={ styles.volunteer_content_container_inner } >
-                <h4 className={ styles.volunteer_content_header }   > research & development : </h4>
-                <p className={ styles.volunteer_content_text }  >Essentially, we are a non-governmental, bipartisan organization, Essentially, we are a non-governmental, bipartisan organisation, connecting law enforcement.</p>
+                <h4 className={ styles.volunteer_content_header }   > work part time : </h4>
+                <p className={ styles.volunteer_content_text }  >You can choose to get flexible by getting engages with activities only on specific days of the week.</p>
               </div>
 
               <div className={ styles.volunteer_content_container_inner } >
-                <h4 className={ styles.volunteer_content_header }   > research & development : </h4>
-                <p className={ styles.volunteer_content_text }  >Essentially, we are a non-governmental, bipartisan organization, Essentially, we are a non-governmental, bipartisan organisation, connecting law enforcement.</p>
+                <h4 className={ styles.volunteer_content_header }   > volunteer{`'`}s : </h4>
+                <p className={ styles.volunteer_content_text }  >Users can explore creative opportunities by working remotely and get connected through video calls and webinars</p>
               </div>
           </div>
           </Col>

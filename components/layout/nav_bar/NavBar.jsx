@@ -32,10 +32,10 @@ export default function NavBar(){
             }
     }
 
-    const [dropdownTarget, setDropDownTarget] = useState(null)
+    const [dropdownTarget, setDropDownTarget] = useState('')
     const handleDropdown = (e, label) => {
-        if (dropdownTarget !== null) {
-            setDropDownTarget(null)
+        if (dropdownTarget !== '') {
+            setDropDownTarget('')
         }
         e.preventDefault()
         setDropDownTarget(label)
@@ -88,7 +88,7 @@ const router = useRouter()
                         <ul className="navbar-nav">
                             
                             
-                            <li className={["nav-item dropdown", dropdownTarget !== label ? 'show' : 'hide' ].join(' ')}  >
+                            <li className={["nav-item dropdown", dropdownTarget != label ? 'show' : 'hide' ].join(' ')}  >
                                 <a className="nav-link dropdown-toggle" href="#" onClick={(e) => handleDropdown(e,  label)} tabIndex="0" data-bs-toggle="dropdown">
                                     <span eventKey={i} className={getHref(content, currentPath ) ? ['text-primary', styles.nav_label_text ].join(' ') : styles.nav_label_text } >{ label }</span> 
                                 </a>
@@ -97,10 +97,13 @@ const router = useRouter()
                             content?.map(({href, name}, i) => ( //displays dropdown menu items
 
                                 <Nav.Link key={i} as='li'  href={href} onClick={() => setDropDownTarget(null)} className={
-                                    router.pathname == content.href ? [ styles.nav_dropdown_link_text].join(' ') : styles.nav_text
+                                    [
+                                        router.pathname == content.href ? [styles.nav_dropdown_link_text, 'show'].join(' '): styles.nav_text , 'show'
+                                    
+                                    ].join(' ')
                                     } >
                                     <Link href={href} >
-                                        <a className="dropdown-item" onClick={ toggleButton } >
+                                        <a className="dropdown-item show-menu" onClick={ toggleButton } >
                                         {name}
                                         </a>
                                     </Link> 
