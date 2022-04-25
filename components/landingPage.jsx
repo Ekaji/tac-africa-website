@@ -15,7 +15,7 @@ export default function LandingPage(){
             <Col md={5} >
                 <div className={styles.tac_header_detail}>
                     <div className={styles.tac_header_detail__items}>
-                        <h2>Combating Crime in
+                        <h2>{'Combating Crime in '}
                             <em> Africa</em> with emerging
                             technology
                         </h2>

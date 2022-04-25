@@ -27,7 +27,6 @@
             font-size: 2.5em;
             font-weight: 600;
             line-height: 1.27em;
-            // max-width: 10em;
             color: #144388;
         }
 
@@ -107,7 +106,7 @@
 
         &__items {
             h2 {
-                font-size: 2.28em;
+                font-size: 2.5em;
             }
 
             button {
@@ -144,6 +143,7 @@
         &__items { 
             h2 {
                 margin-top: 5px;
+                // font-size: 2.1em;
             }
             p {
              margin: 0px;   
@@ -159,10 +159,6 @@
         padding-top: 0px;
     }
 
-    .container_pd  {
-        // margin-top: -15vh;
-    }
-
     .header_icon {
         margin-top: 0px !important;
     
@@ -170,7 +166,7 @@
             z-index: -950 !important;
         }
     
-        height: 30vh !important;
+        height: 35vh !important;
     }
 
     .header_partners_icon {

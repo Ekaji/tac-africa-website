@@ -50,12 +50,8 @@ export default function Footer() {
             </Col>
             <Col md={6}  >
               {/* <div className={["d-flex", styles.footer_justify].join(' ')}> */}
-                <div className={ styles.footer_main__socials } >
-                  <h3 className={ styles.footer_main__socials_header } style={{textAlign: 'right'}}>get in touch</h3>
-                </div>
-              {/* </div> */}
-              <div className='row'>
-                <div className='col-md-6'>
+                <Row>
+                  <Col md={6} className={ styles.events__first} >
                   <div className=''>
                     <p className={styles.contact_text_medium}>drone show event photos</p>
                     <p className={styles.contact_text_small}>12/07/22</p>
@@ -72,9 +68,12 @@ export default function Footer() {
                     <p className={styles.contact_text_medium }>drone show event photos</p>
                     <p className={styles.contact_text_small}>12/07/22</p>
                   </div>
-                </div>
+                  </Col>
 
-                <div className='col-md-6'>
+                  <Col md={6}>
+                {/* <div className={ styles.footer_main__socials } > */}
+                  <h3 className={ styles.footer_main__socials_header } >get in touch</h3>
+                {/* </div> */}
                 <div className=''>
                     <p className={styles.contact_text_medium }>address: Abuja, Nigeria. 900112</p>
                     <p className={styles.contact_text_small}>Abuja, Nigeria. 900112</p>
@@ -90,9 +89,52 @@ export default function Footer() {
                     <p className={styles.contact_text_medium}>email: Secretariat@tacafrica.org</p>
                     <hr className={ styles.line_style } />
                   </div>
-                </div>
+                </Col>
 
-              </div>
+                </Row>
+              {/* </div> */}
+              {/* <div className='row' style={{marginTop: '3em'}}> */}
+                {/* <div className='col-md-6'>
+                  <div className=''>
+                    <p className={styles.contact_text_medium}>drone show event photos</p>
+                    <p className={styles.contact_text_small}>12/07/22</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium}>drone show event photos</p>
+                    <p className={styles.contact_text_small}>12/07/22</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium }>drone show event photos</p>
+                    <p className={styles.contact_text_small}>12/07/22</p>
+                  </div>
+                </div> */}
+
+                {/* <div className='col-md-6'>
+                <div className={ styles.footer_main__socials } >
+                  <h3 className={ styles.footer_main__socials_header } style={{textAlign: 'right'}}>get in touch</h3>
+                </div>
+                <div className=''>
+                    <p className={styles.contact_text_medium }>address: Abuja, Nigeria. 900112</p>
+                    <p className={styles.contact_text_small}>Abuja, Nigeria. 900112</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium }>phone: +234 706 224 7581</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium}>email: Secretariat@tacafrica.org</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+                </div> */}
+
+              {/* </div> */}
             </Col>
           </Row>
           </div>

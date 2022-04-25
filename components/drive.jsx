@@ -18,7 +18,7 @@ const Drive = () => {
                 </div>
                 <div className={ styles.drive_content} >
                   <h2 className={ styles.drive_header_inner }>what we do</h2>
-                  <p className={ styles.drive_text } >TAC AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to Technology for a Safer world </p>
+                  <p className={ styles.drive_text } >We work on independent multi-disciplinary academic research and evidence-based policy making around emerging technologies. </p>
                 </div>
               </div>
 

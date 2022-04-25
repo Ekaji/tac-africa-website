@@ -81,7 +81,7 @@ const router = useRouter()
             <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]}  >
                 
 
-                {data?.map(({label, content, type, details}, i) => (
+            {data?.map(({label, content, type, details}, i) => (
                     <>
                         { content.length > 1 ?  ( //displays dropdown menu items
 
