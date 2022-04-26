@@ -143,10 +143,11 @@
     top: 0;
     right: 0;
     height: 120vh;
-    width: 100vw;
+    width: 110vw;
     z-index: 99;
     background-color: #22272a;
-    overflow: auto;
+    // overflow: auto;
+    overflow-x: hidden !important;
 
     &__nav {
       display: flex;
@@ -174,23 +175,8 @@
 
   .toggle_container {
     visibility: visible;
-    // position: fixed;
-    right: 0;
+    right: 1;
   }
-
-//   .menu__toggle,
-//   .menu__body {
-//     display: block;
-//     position: absolute;
-//     right: 10;
-//     // display: none !important;
-//   }
-// /* The trick,display the item when the menu label is on */
-//   .menu__toggle:checked ~ .menu__body {
-//     display: block !important;
-//   }
-// /* other styling */
-
     .menu__toggle,
     .menu__body {
       display: none;

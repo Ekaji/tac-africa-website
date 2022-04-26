@@ -28,7 +28,7 @@ const NewAbout = () => {
   ]
 
 
-  const backgroundImg =  "url('/Rectangle 70.jpg')"
+  const backgroundImg = '/about us.jpg'
 
   return(
     <>
