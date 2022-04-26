@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from '../styles/component.styles/landingPage.module.scss'
 import {Button, Nav, Row, Col} from 'react-bootstrap'
 import Button_ from '../components/button'
+import Link from 'next/link'
 
 export default function LandingPage(){
 
@@ -26,9 +27,17 @@ export default function LandingPage(){
                             Matter Experts to curb technology aided
                             crime
                         </p>
-
-                            <Button_ variant="outline-primary" title="Learn More" />
-                            <Button_ title="Discover" />
+                            
+                            <Link href={'/about_us'}>
+                                <a>
+                                    <Button_ variant="outline-primary" title="Learn More" />
+                                </a>
+                            </Link>
+                            <Link href={'/all_labs'}>
+                                <a>
+                                    <Button_ title="Discover" />
+                                </a>
+                            </Link>
                     </div>
 
                 </div>

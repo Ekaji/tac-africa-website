@@ -2,71 +2,81 @@
 import { Container, Card, Row, Col } from 'react-bootstrap'
 import styles from '../styles/component.styles/joinUs.module.scss'
 import Button_ from '../components/button'
+import Link from 'next/link'
 
 const JoinUs = () => {
   return(
-    <Container fluid className={ styles.joinUs_main }>
-      <Container className={ 'my-auto'} >
-        <Row>
-          <Col md={6} className={ styles.joinUs_card__large_container } > 
-            <div className={ styles.joinUs_card__large } >
-              <Card >
-                <Card.Body>
-                  <Card.Text className='text-primary'>
-                    Want to join with us
-                  </Card.Text>
-                  <Card.Title className={ styles.card_large__title }  >Become a proud volunteer</Card.Title>
-                  <Card.Text className={ styles.card_large__text }>
-                  TAC AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to Technology for a Safer world was born out of an International Forum on Technologies, a high level meeting dedicated to Technology 
-                  </Card.Text>
-                  <Button_ variant="primary" title={'join us today'} />
-                </Card.Body>
-              </Card>
-            </div>
-          </Col>
-          <Col md={6} className={ styles.joinUs_card__small_container } >
-            <Row  >
-              <Col xs={6} >
-                <Card className={['mb-3', styles.joinUs_card__small].join(' ')} >
-                  <Card.Title className='text-light m-0'  as='h2' >55+</Card.Title>
-                  <Card.Text className={ styles.card_small__text } >
-                    community members 
-                  </Card.Text>
-                </Card>
-              </Col>
-
-              <Col xs={6} >
-                <Card className={['mb-3', styles.joinUs_card__small].join(' ')} >
-                    <Card.Title className='text-light m-0' as='h2' >17+</Card.Title>
-                    <Card.Text className={ styles.card_small__text } >
-                      African partners 
+    <div fluid className={ styles.joinUs_main } >
+      <div className={ styles.blur_background } style={{ width: '100vw', height: '100%'}}>
+        <Container className={ 'my-auto'} >
+          <Row>
+            <Col md={6} className={ styles.joinUs_card__large_container } > 
+              <div className={ styles.joinUs_card__large } >
+                <Card >
+                  <Card.Body>
+                    <Card.Text className='text-primary'>
+                      Want to join with us
                     </Card.Text>
-                </Card>
-              </Col>
+                    <Card.Title className={ styles.card_large__title }  >Become a proud volunteer</Card.Title>
+                    <Card.Text className={ styles.card_large__text }>
+                    TAC Africa volunteers are representative of our communities. We are always looking for more volunteers with diverse experiences, like people living in rural areas, people of color and of all races. Be rest assured that there are many ways to get involved as a volunteer at TAC Africa throughout the region, and our volunteer roles vary throughout the year.
+                    </Card.Text>
 
-              <Col xs={6} >
-                <Card className={['mt-3', styles.joinUs_card__small].join(' ')} >
-                  <Card.Title className='text-light m-0' as='h2' >23+</Card.Title>
-                  <Card.Text className={ styles.card_small__text } >
-                    Trainings and hackathons 
-                  </Card.Text>
-                </Card>
-              </Col>
+                      <Link href={'/volunteer'}>
+                        <a>
+                          <button className={ styles.block_button }>join us today</button> 
+                        </a>
+                      </Link>
 
-              <Col xs={6} >
-                <Card className={['mt-3', styles.joinUs_card__small].join(' ')} >
-                  <Card.Title className={['text-light m-0', styles.joinUs_card_small__title].join(' ') } as='h2' >8+</Card.Title>
-                  <Card.Text className={ styles.card_small__text } >
-                    SMEs incubated 
-                  </Card.Text>
+                    {/* <Button_ variant="primary" title={'join us today'} /> */}
+                  </Card.Body>
                 </Card>
-              </Col>
+              </div>
+            </Col>
+            <Col md={6} className={ styles.joinUs_card__small_container } >
+              <Row  className={ styles.card_small_main } >
+                <Col xs={6} >
+                  <Card className={['mb-3', styles.joinUs_card__small].join(' ')} >
+                    <Card.Title className='text-light m-0'  as='h2' >55+</Card.Title>
+                    <Card.Text className={ styles.card_small__text } >
+                      community members 
+                    </Card.Text>
+                  </Card>
+                </Col>
 
-            </Row>
-          </Col>
-        </Row>
-      </Container>
-    </Container>
+                <Col xs={6} >
+                  <Card className={['mb-3', styles.joinUs_card__small].join(' ')} >
+                      <Card.Title className='text-light m-0' as='h2' >17+</Card.Title>
+                      <Card.Text className={ styles.card_small__text } >
+                        African partners 
+                      </Card.Text>
+                  </Card>
+                </Col>
+
+                <Col xs={6} >
+                  <Card className={['mt-3', styles.joinUs_card__small].join(' ')} >
+                    <Card.Title className='text-light m-0' as='h2' >23+</Card.Title>
+                    <Card.Text className={ styles.card_small__text } >
+                      Trainings and hackathons 
+                    </Card.Text>
+                  </Card>
+                </Col>
+
+                <Col xs={6} >
+                  <Card className={['mt-3', styles.joinUs_card__small].join(' ')} >
+                    <Card.Title className={['text-light m-0', styles.joinUs_card_small__title].join(' ') } as='h2' >8+</Card.Title>
+                    <Card.Text className={ styles.card_small__text } >
+                      SMEs incubated 
+                    </Card.Text>
+                  </Card>
+                </Col>
+
+              </Row>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </div>
   )
 }
 

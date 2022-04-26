@@ -9,7 +9,7 @@ import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
 
 const Founder = () => {
 
-  const backgroundImg =  "/advisory board.png";
+  const backgroundImg =  "/founder banner.png ";
 
   return(
     <>
@@ -18,7 +18,7 @@ const Founder = () => {
         <div className={ styles.founder_container_inner }>
           <div className={ styles.founder_about }>
             <div className={ styles.founder_about_img }>
-                <img src='/jerry.jpg ' alt='founder' />
+                <img src='/Jerry-Akubo-21.png' alt='founder' />
             </div>
             <div className={ styles.founder_about_info }>
               <h1 className={ styles.founder_header_main }>CEO, President, TAC Africa</h1>
