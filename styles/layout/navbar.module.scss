@@ -108,8 +108,16 @@
   opacity: 0;
 }
 
+.menu__toggle {
+   display: none !important; //very important
+}
+
 //smaller screens
 @media (max-width: 992px) {
+
+  .menu__toggle {
+    display: inline-block !important; //very important
+ }
 
   .nav_label_text {
     text-transform: uppercase !important;
@@ -133,7 +141,7 @@
     height: 120vh;
     width: 100vw;
     z-index: 99;
-    background-color: black;
+    background-color: #22272a;
     overflow: auto;
 
     &__nav {
@@ -165,4 +173,44 @@
     // position: fixed;
     right: 0;
   }
+
+//   .menu__toggle,
+//   .menu__body {
+//     display: block;
+//     position: absolute;
+//     right: 10;
+//     // display: none !important;
+//   }
+// /* The trick,display the item when the menu label is on */
+//   .menu__toggle:checked ~ .menu__body {
+//     display: block !important;
+//   }
+// /* other styling */
+
+    .menu__toggle,
+    .menu__body {
+      display: none;
+    }
+
+    .menu__toggle {
+      margin-left: 2em;
+      margin-top: 1em;
+      position: fixed;
+      width: 200px;
+      height: 25px;
+      opacity: 0;
+      z-index: 140;
+    }
+
+    .menu__toggle__text {
+      z-index: -140 !important;
+    }
+
+    .menu__toggle:checked ~ .menu__body {
+      display: block;
+    }
+
+
+
   }
+  

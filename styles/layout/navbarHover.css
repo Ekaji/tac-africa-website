@@ -14,6 +14,15 @@
 		 display: block; 
 		 top:100%; transform: rotateX(0deg); }
 
-	/* .nav-item-target .dropdown-menu-target { transition: .3s !important; 
-		opacity:1 !important; visibility:visible !important; top:100%; transform: rotateX(0deg) !important; } */
-}
+
+		 /* toggle */
+		 .menu--toggle,
+		 .menu--body {
+			 display: none !important;
+		 }
+ /* The trick,display the item when the menu label is on */
+		 .menu--toggle:checked ~ .menu--body {
+			 display: block !important;
+		 }
+ /* other styling */
+		}

@@ -89,10 +89,27 @@ const router = useRouter()
                             
                             
                             <li className={["nav-item dropdown", dropdownTarget !== label ? 'show' : 'hide' ].join(' ')}  >
-                                <a className="nav-link dropdown-toggle" href="#" onClick={(e) => handleDropdown(e,  label)} tabIndex="0" data-bs-toggle="dropdown">
-                                    <span eventKey={i} className={getHref(content, currentPath ) ? ['text-primary', styles.nav_label_text ].join(' ') : styles.nav_label_text } >{ label }</span> 
-                                </a>
-                                <ul className={["dropdown-menu ", dropdownTarget == label && 'dropdown-menu-right fade-down show' ].join(' ')}>
+                                {/* here */}
+                                    <input id="menu" className={ styles.menu__toggle} type="checkbox" />
+                                    
+                                    <label htmlFor="menu" className={styles.menu__toggle__text} >
+
+                                    <a className="nav-link dropdown-toggle" href="#" tabIndex="0" data-bs-toggle="dropdown" 
+                                    // style={{width: '100px', margin: '0px !important'}}
+                                     >
+
+                                        <span eventKey={i} className={getHref(content, currentPath ) ? [
+                                        'text-primary', styles.nav_label_text ].join(' ') : styles.nav_label_text } >
+                                                {/* <label htmlFor="menu" className={styles.menu__toggle__text}> */}
+                                                    { label }
+                                                {/* </label> */}
+                                            </span> 
+                                    </a>
+                                    </label>
+                                    {/* <input id="menu" className={ styles.menu__toggle } type="checkbox" /> */}
+
+
+                                <ul className={["dropdown-menu ", dropdownTarget == label && 'dropdown-menu-right fade-down show', styles.menu__body ].join(' ')}>
                          {
                             content?.map(({href, name}, i) => ( //displays dropdown menu items
 
