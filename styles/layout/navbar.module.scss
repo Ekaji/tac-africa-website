@@ -115,6 +115,10 @@
 //smaller screens
 @media (max-width: 992px) {
 
+  .isHidden {
+    position: fixed !important;
+  }
+
   .menu__toggle {
     display: inline-block !important; //very important
  }

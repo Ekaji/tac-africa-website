@@ -72,7 +72,7 @@ const router = useRouter()
                 <HamburgerArrow 
                     barColor="#144388"
                     {...{ isActive, toggleButton}}
-                    className={ styles.hamburgerArrow }
+                    className={[ styles.hamburgerArrow, isActive && styles.isHidden ].join(' ')}
                     />
             </span>
 
