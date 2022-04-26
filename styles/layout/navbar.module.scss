@@ -177,20 +177,6 @@
     visibility: visible;
     right: 1;
   }
-
-//   .menu__toggle,
-//   .menu__body {
-//     display: block;
-//     position: absolute;
-//     right: 10;
-//     // display: none !important;
-//   }
-// /* The trick,display the item when the menu label is on */
-//   .menu__toggle:checked ~ .menu__body {
-//     display: block !important;
-//   }
-// /* other styling */
-
     .menu__toggle,
     .menu__body {
       display: none;
