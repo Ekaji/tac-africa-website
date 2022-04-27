@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-key */
 import styles from '../../../styles/layout/footer.module.scss'
-import Button_ from '../../button.jsx'
 import CustomDropdown from '../../../components/customDropdown.jsx'
 import Link from 'next/link'
 import { Row, Col } from 'react-bootstrap'
@@ -14,10 +13,11 @@ export default function Footer() {
     <div>
     <div className={styles.footer_main}>
         <div className="container-fluid">
+          <div className="container mt-md-5">
 
           <Row >
             <Col md={4} >
-              <div className='d-flex justify-content-md-center'>
+              <div className='d-flex'>
                 <div className={styles.footer_main__about }>
 
                   <div>
@@ -40,7 +40,7 @@ export default function Footer() {
             </Col>
             <Col md={2} >
               <div className="">
-                <div className={ [ styles.footer_main__quicklinks].join(' ') }>
+                <div className={ styles.footer_main__quicklinks }>
                   <h3 className={ styles.footer_header }>Quicklinks</h3>
                   <ul>
                     <CustomDropdown dropDownPosition={'end'} />
@@ -49,19 +49,96 @@ export default function Footer() {
               </div>
             </Col>
             <Col md={6}  >
-              <div className={["d-flex", styles.footer_justify].join(' ')}>
-                <div className={[ styles.footer_main__socials].join(' ')} >
+              {/* <div className={["d-flex", styles.footer_justify].join(' ')}> */}
+                <Row>
+                  <Col md={6} className={ styles.events__first} >
+                  <div className=''>
+                    <p className={styles.contact_text_medium}>drone show event photos</p>
+                    <p className={styles.contact_text_small}>12/07/22</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium}>drone show event photos</p>
+                    <p className={styles.contact_text_small}>12/07/22</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium }>drone show event photos</p>
+                    <p className={styles.contact_text_small}>12/07/22</p>
+                  </div>
+                  </Col>
+
+                  <Col md={6}>
+                {/* <div className={ styles.footer_main__socials } > */}
+                  <h3 className={ styles.footer_main__socials_header } >get in touch</h3>
+                {/* </div> */}
+                <div className=''>
+                    <p className={styles.contact_text_medium }>address: Abuja, Nigeria. 900112</p>
+                    <p className={styles.contact_text_small}>Abuja, Nigeria. 900112</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium }>phone: +234 706 224 7581</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium}>email: Secretariat@tacafrica.org</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+                </Col>
+
+                </Row>
+              {/* </div> */}
+              {/* <div className='row' style={{marginTop: '3em'}}> */}
+                {/* <div className='col-md-6'>
+                  <div className=''>
+                    <p className={styles.contact_text_medium}>drone show event photos</p>
+                    <p className={styles.contact_text_small}>12/07/22</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium}>drone show event photos</p>
+                    <p className={styles.contact_text_small}>12/07/22</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium }>drone show event photos</p>
+                    <p className={styles.contact_text_small}>12/07/22</p>
+                  </div>
+                </div> */}
+
+                {/* <div className='col-md-6'>
+                <div className={ styles.footer_main__socials } >
                   <h3 className={ styles.footer_main__socials_header } style={{textAlign: 'right'}}>get in touch</h3>
-                  <div>
-                    <a className="fab fa-facebook" href="https://web.facebook.com/tacafrica.org/"></a>
-                    <a className="fab fa-twitter" href="https://twitter.com/tacafrica"></a>
-                    <a className="fab fa-instagram" href="https://www.instagram.com/technologyagainstcrime/"></a>
-                    <a className="fab fa-linkedin" href="https://www.linkedin.com/company/29341224/"></a>
+                </div>
+                <div className=''>
+                    <p className={styles.contact_text_medium }>address: Abuja, Nigeria. 900112</p>
+                    <p className={styles.contact_text_small}>Abuja, Nigeria. 900112</p>
+                    <hr className={ styles.line_style } />
                   </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium }>phone: +234 706 224 7581</p>
+                    <hr className={ styles.line_style } />
                   </div>
-              </div>
+
+                  <div className=''>
+                    <p className={styles.contact_text_medium}>email: Secretariat@tacafrica.org</p>
+                    <hr className={ styles.line_style } />
+                  </div>
+                </div> */}
+
+              {/* </div> */}
             </Col>
           </Row>
+          </div>
+
 
         </div>
       </div>

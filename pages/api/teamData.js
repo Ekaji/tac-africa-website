@@ -11,7 +11,7 @@ export const data = [
        link: '/our_team/Abdul_Hakeem_Ajijola' //!only items you want click should contain link
      },
      {
-       image: '',
+       image: '/img/Professor B.K. Alese.jfif',
        name : 'Prof Boniface. K Alese',
        title : '',
        description: ' He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
@@ -25,7 +25,7 @@ export const data = [
        link: '/our_team/Prof_Gabi_Siboni'
      },
      {
-      image: '',
+      image: '/img/p.j ingram.jfif',
       name : 'Phillip .J Ingram',
       title : '',
       description: 'He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
@@ -39,7 +39,7 @@ export const data = [
   description : 'The Advisory Board is not yet another “think tank” but a group of experts that share in our vision for establishing a lead in using the benefits of Emerging Technology to make Africa region and the world Safer.',
   members : [
    { 
-     image: '',
+     image: '/img/Sanjana Rathi.png',
      name : 'Sanjana Rathi',
      title : 'Vice President, TAC Africa',
      description : '',

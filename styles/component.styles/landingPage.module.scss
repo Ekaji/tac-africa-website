@@ -1,9 +1,9 @@
 @import '../abstracts/variables';
 
 .top_container {
-    margin-top: 10vh;
-    height: 100vh;
-    min-height: 40em;
+    // margin-top: 10vh;
+    // height: 100vh;
+    // min-height: 40em;
 }
 
 .container_pd {
@@ -12,26 +12,28 @@
 
 //Header Top details that contains the site intro
 .tac_header_detail {
-    margin-top: 4em;
+    // margin-top: 4em;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding-top: 4em;
     padding-left: 2em;
+    text-transform: capitalize;
 
 
     &__items {
         h2 {
-            font-size: 3em;
+            font-size: 2.5em;
+            font-weight: 600;
             line-height: 1.27em;
-            max-width: 10em;
-            color: #17466C;
+            color: #144388;
         }
 
         p {
             font-size: 1.125em;
             line-height: 1.5em;
-            color: rgba(23, 70, 108, 0.85);
+            color: #1A4074D4;
             margin-top: 1em;
             max-width: 21em;
         }
@@ -94,7 +96,7 @@
     // }
 
     .container_pd {
-        margin-top: 8em;
+        // margin-top: 8em;
         padding: 0;
     }
     
@@ -104,7 +106,7 @@
 
         &__items {
             h2 {
-                font-size: 2.28em;
+                font-size: 2.5em;
             }
 
             button {
@@ -136,28 +138,36 @@
 }
 
 @media (max-width: $breakpoint-sm) {
+
+    .tac_header_detail {
+        margin: 0px 1em;
+        &__items { 
+            h2 {
+                margin-top: 5px;
+                font-size: 2em;
+            }
+            p {
+             margin: 0px;   
+            }
+        }
+    }
     .tac_header_background {
         background-color: $main-grey;
     }
     .tac_header_detail {
         position: relative;
         z-index: 9;
-        margin-top: -20vh;
-    }
-
-    .container_pd  {
-        margin-top: -15vh;
+        padding-top: 0px;
     }
 
     .header_icon {
+        margin-top: 0px !important;
     
         > div {
             z-index: -950 !important;
         }
     
-        .image {
-        height: 50vh !important;
-        }
+        height: 40vh !important;
     }
 
     .header_partners_icon {

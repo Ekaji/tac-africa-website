@@ -28,3 +28,9 @@
   height: 1px;
   color : gray;
 }
+
+@media (max-width: $breakpoint-sm) {
+  .aboutUs_nav_container, .hr {
+    display: none;
+ }
+}

@@ -18,6 +18,11 @@
   }
 }
 
+.volunteer_img {
+  overflow: hidden;
+  max-width: 30vw;
+}
+
 .volunteer_content_container {
 
   .volunteer_content_container_inner {
@@ -56,4 +61,14 @@
   align-items: center;
   padding-top: 1em;
   padding-bottom: 3em;
+}
+
+@media (max-width: $breakpoint-md) {
+  .volunteer_about_container_main {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+  .volunteer_img {
+    max-width: 90vw;
+  }
 }

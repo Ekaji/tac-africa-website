@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from '../styles/component.styles/landingPage.module.scss'
 import {Button, Nav, Row, Col} from 'react-bootstrap'
 import Button_ from '../components/button'
+import Link from 'next/link'
 
 export default function LandingPage(){
 
@@ -12,11 +13,11 @@ export default function LandingPage(){
     <section className="container-fluid">
     <div className={[ styles.top_container, styles.container_pd].join(' ')}>
         <Row className={ styles.tac_header_background}>
-            <Col md={5} styles={{paddingTop: '60px'}}>
+            <Col md={5} >
                 <div className={styles.tac_header_detail}>
                     <div className={styles.tac_header_detail__items}>
-                        <h2>Combating Crime in
-                            <em>Africa</em> with emerging
+                        <h2>{'Combating Crime in '}
+                            <em> Africa</em> with emerging
                             technology
                         </h2>
 
@@ -26,9 +27,17 @@ export default function LandingPage(){
                             Matter Experts to curb technology aided
                             crime
                         </p>
-
-                            <Button_ variant="outline-primary" title="Learn More" />
-                            <Button_ title="Discover" />
+                            
+                            <Link href={'/about_us'}>
+                                <a>
+                                    <Button_ variant="outline-primary" title="Learn More" />
+                                </a>
+                            </Link>
+                            <Link href={'/all_labs'}>
+                                <a>
+                                    <Button_ title="Discover" />
+                                </a>
+                            </Link>
                     </div>
 
                 </div>

@@ -59,17 +59,18 @@ export default function CustomDropdown({ dropDownPosition }) {
 
           <Dropdown drop={dropDownPosition} >
     
-                { content.length > 1 ? 
-                  <Dropdown.Toggle key={label} as={CustomToggle} id="dropdown-custom-components">
-                    { label }
+                { 
+                content.length > 1 ? 
+                  <Dropdown.Toggle key={label} as={CustomToggle} id="dropdown-custom-components" >
+                    <span style={{ textTransform: 'capitalize'}} >{ label }</span> 
                   </Dropdown.Toggle> 
 
                 :
 
-                  <Nav.Link key={label} as='span' eventKey='1'  >
+                  <Nav.Link key={label} as='span' eventKey='1' style={{ padding: '0px 0px 0px 20px !important' }}  >
                     <Link href={`/${content[0].href}`} >
                       <a>
-                      {label}                                  
+                      <span style={{ textTransform: 'capitalize'}} >{ label }</span> 
                       </a>
                     </Link>
                   </Nav.Link>

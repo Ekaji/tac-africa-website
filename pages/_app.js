@@ -1,9 +1,10 @@
 /* eslint-disable react/jsx-key */
+import '../styles/layout/hamburger.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/globals.scss'
 import '../styles/component.styles/contact.scss'
+import '../styles/layout/navbarHover.css'
 import Layout from '../components/layout/Layout'
-import '../styles/layout/navBarTest.css'
 
 
 function MyApp({ Component, pageProps }) {
