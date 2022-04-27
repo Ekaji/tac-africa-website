@@ -44,7 +44,7 @@ const All_labs = () => {
   ]
     
 
-  const backgroundImg =  "/advisory board.png";
+  const backgroundImg =  "/ser-2.png";
 
   return(
     <>
