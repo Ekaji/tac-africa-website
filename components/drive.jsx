@@ -28,24 +28,24 @@ const Drive = () => {
                 </div>
                 <div className={ styles.drive_content } >
                   <h2 className={ styles.drive_header_inner } >How we work</h2>
-                  <p className={ styles.drive_text } >TAC AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to Technology for a Safer world </p>
+                  <p className={ styles.drive_text } >We make them more technologically enabled. Besides this, we solve problems through policy advocacy, research, training, capacity building and volunteering. </p>
                 </div>
               </div>
             </div>
           </Col>
 
           <Col md={6} className={ styles.drive_details_container } >
-            <div className={ styles.drive_details } >
-              <p className={ styles.drive_details_text } >TAC AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to Technology for a Safer world was born out of an International Forum on Technologies, a high level meeting dedicated to Technology for a Safer world</p>
-            </div>
+            {/* <div className={ styles.drive_details } >
+              <p className={ styles.drive_details_text } ></p>
+            </div> */}
 
             <div className={ styles.drive_details }>
               <h2 className={ styles.drive_details_header } > years of experience</h2>
-              <p className={ styles.drive_details_text } >TAC AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to Technology for a Safer world was born out of an International Forum on Technologies, a high level meeting dedicated to Technology for a Safer world</p>
+              <p className={ styles.drive_details_text } >We have always been an independent, open to all private & public companies and organizations related to future security-oriented technologies ranging from Artificial Intelligence, Big data security, innovative Aerial solutions & predictive intelligence. In that light, we have:</p>
               <ul>
-                <li> TAC AFRICA was born out </li>
-                <li> TAC AFRICA was born out </li>
-                <li> TAC AFRICA was born out </li>
+                <li> Partnered up with United Nations Interregional Relations </li>
+                <li> Held our first virtual conference with member nations in 2020 </li>
+                {/* <li> TAC AFRICA was born out </li> */}
               </ul>
             </div>
           </Col>

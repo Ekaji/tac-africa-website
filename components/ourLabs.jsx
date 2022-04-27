@@ -38,7 +38,7 @@ const OurLabs = () => {
       title: 'satellite and remote sensing',
       image: 'satellite.jpg',
       text: 'Advanced satellite systems for locating, tracking and monitoring remote assets. Simple, flexible and affordable solutions.',
-      link: '/satellite_and_remote_sensing'
+      link: '/satellite_and_remote_sensing_lab'
     }
     
 

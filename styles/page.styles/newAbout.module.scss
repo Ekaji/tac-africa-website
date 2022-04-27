@@ -128,3 +128,12 @@
   }
 }
 
+@media (max-width: $breakpoint-md) {
+
+  .aboutUs_specialty_container {
+    margin: 2em auto;
+  
+    display: flex;
+    flex-direction: column;
+  }
+}

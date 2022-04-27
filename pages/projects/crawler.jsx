@@ -24,10 +24,16 @@ const Crawler = () => {
           Development of web crawlers that can automatically collect websites and virtual communities
           such as online forums. These crawlers would collect the seed URL, automatically
           parse through the hyperlink off the collected webpages. These crawlers will not only
-          gather webpages belonging to the forum{`’`}s domain or originating Internet Protocol address
+          gather webpages belonging to the forum’s domain or originating Internet Protocol address
           but also hyperlink to websites of hacker forums.</p>
+          <p>
+          The technical difficulty of parking the hacker forum that employs the anti-crawling mechanism
+          is a scope of research. Also, many of these forums intend to use devices to prevent
+          surveillance by law enforcement and to safeguard server resources from being abused by
+          rival hacker communities.</p>
+          </div>
             
-            <p>
+            {/* <p>
             The technical difficulty of parking the hacker forum that employs the anti-crawling mechanism
             is a scope of research. Also, many of these forums intend to use devices to prevent
             surveillance by law enforcement and to safeguard server resources from being abused by
@@ -56,7 +62,7 @@ const Crawler = () => {
             </ul>
             <p>
              A reliable information exchange network and feedback mechanism on AI for Law Enforcement in Africa between UNICRI and TAC Africa; and Actionable suggestions and follow-up priorities from participants was envisioned.
-          </p>
+          </p> */}
         </Container>
 
        

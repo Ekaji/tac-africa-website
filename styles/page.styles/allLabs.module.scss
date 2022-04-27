@@ -34,7 +34,7 @@
   overflow: hidden;
   border-radius: 4px;
   padding-bottom: 2em;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   .carousel_details {
@@ -79,6 +79,11 @@
     color: $light-grey;
     font-size: 14px;
   }
+}
+
+.carousel_container__text {
+  width: 70vw;
+  margin: 0 auto;
 }
 
 .image_container{

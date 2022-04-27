@@ -6,6 +6,12 @@
 
 }
 
+@media (max-width: $breakpoint-md){
+  .heroBanner_img{
+    height: 15vh ;
+  }
+}
+
 
 // .ourTeam_hero {
 //   display: flex;
