@@ -21,7 +21,7 @@ const NewAbout = () => {
       text: 'TAC NGO AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to “Technology for a Safer world. The first two'
     },
     {
-      imgUrl: 'Ellipse 3.png',
+      imgUrl: 'intelligence.png',
       title: 'Industry Expert',
       text: 'TAC NGO AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to “Technology for a Safer world. The first two'
     },
@@ -51,6 +51,7 @@ const NewAbout = () => {
                     <img className={ styles.aboutUs_specialty__image } src={ imgUrl } alt={title} />
                     <h3 className={ styles.aboutUs_specialty__title } >{ title }</h3>
                     <p className={ styles.aboutUs_specialty__text }>{ text }</p>
+                    <Button_ title={'learn more'} />
                   </div>
                 ))
               }

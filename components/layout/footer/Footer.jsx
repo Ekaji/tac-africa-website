@@ -16,9 +16,9 @@ export default function Footer() {
           <div className="container mt-md-5">
 
           <Row >
-            <Col md={4} >
+            <Col md={3} >
               <div className='d-flex'>
-                <div className={styles.footer_main__about }>
+                <div className={ styles.footer_main__about }>
 
                   <div>
                     <h3 className={ styles.footer_header } >ABOUT US</h3>
@@ -38,7 +38,7 @@ export default function Footer() {
 
               </div>
             </Col>
-            <Col md={2} >
+            <Col md={3} >
               <div className="">
                 <div className={ styles.footer_main__quicklinks }>
                   <h3 className={ styles.footer_header }>Quicklinks</h3>
@@ -51,7 +51,10 @@ export default function Footer() {
             <Col md={6}  >
               {/* <div className={["d-flex", styles.footer_justify].join(' ')}> */}
                 <Row>
-                  <Col md={6} className={ styles.events__first} >
+                  <Col md={6}  >
+                                    {/* <div className={ styles.footer_main__socials } > */}
+                  <h3 className={ styles.footer_main__socials_header } >blog</h3>
+                {/* </div> */}
                   <div className=''>
                     <p className={styles.contact_text_medium}>drone show event photos</p>
                     <p className={styles.contact_text_small}>12/07/22</p>
