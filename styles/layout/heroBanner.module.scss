@@ -1,14 +1,46 @@
 @import '../abstracts/variables';
 
-.heroBanner_img {
+
+.banner{
+ max-height: 45vh;
+}
+
+.banner_overlay{
+  background-color: rgba(5, 0, 32, 0.897);
+  position: absolute;
   height: 45vh;
+  width: 100vw;
+  top: 0;
+  margin-top: 5em;
+  right: 0;
+  
+}
+
+.heroBanner_img {
+  max-height: 45vh;
   object-fit: cover;
+
+}
+
+.banner_text{
+  display: flex;
+  height: 45vh;
+  align-items: center;
+  justify-content: center;
+
+  h2{
+    color: white;
+    font-family: 'jost',sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    
+  }
 
 }
 
 @media (max-width: $breakpoint-md){
   .heroBanner_img{
-    height: 15vh ;
+    height: 45vh ;
   }
 }
 

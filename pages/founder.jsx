@@ -13,7 +13,7 @@ const Founder = () => {
 
   return(
     <>
-      <HeroBanner activeLink={'THE FOUNDER'} text={'About us'} backgroundImg={ backgroundImg } />
+      <HeroBanner bannerOverlay activeLink={'THE FOUNDER'} text={'The founder'} backgroundImg={ backgroundImg } />
         <div className={ styles.founder_container }>
         <div className={ styles.founder_container_inner }>
           <div className={ styles.founder_about }>
