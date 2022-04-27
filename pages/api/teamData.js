@@ -11,7 +11,7 @@ export const data = [
        link: '/our_team/Abdul_Hakeem_Ajijola' //!only items you want click should contain link
      },
      {
-       image: '/img/Professor B.K Alese.jfif',
+       image: '/img/Professor B.K. Alese.jfif',
        name : 'Prof Boniface. K Alese',
        title : '',
        description: ' He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',

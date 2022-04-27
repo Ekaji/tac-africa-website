@@ -21,7 +21,7 @@ const Volunteer = () => {
           <Col md={7}  > 
             <div className={ styles.volunteer_about_container } >
               <h2 className={ styles.volunteer_header }>WAYS TO VOLUNTEER</h2>
-              <p className={['text-primary', styles.volunteer_text ].join(' ')}>Essentially, we are a non-governmental, bipartisan organization, connecting law enforcement, subject matter experts, civil society to solve issues that affect our society. We work on the transformation of our law enforcement and judiciary. We make them more technologically enabled.</p>
+              <p className={[ styles.volunteer_text ].join(' ')}>TAC Africa volunteers are representative of our communities. We are always looking for more volunteers with diverse experiences, like people living in rural areas, people of color and of all races. Be rest assured that there are many ways to get involved as a volunteer at TAC Africa throughout the region, and our volunteer roles vary throughout the year.</p>
             </div>
 
             <div className={ styles.volunteer_content_container } >
