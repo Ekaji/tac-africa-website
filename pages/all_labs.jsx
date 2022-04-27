@@ -49,7 +49,7 @@ const All_labs = () => {
   return(
     <>
 
-      <HeroBanner activeLink={'THE FOUNDER'} text={'About us'} backgroundImg={ backgroundImg } />
+      <HeroBanner activeLink={'THE FOUNDER'} bannerOverlay text={'About us'} backgroundImg={ backgroundImg } />
 
       <Container style={{paddingTop: '3em', paddingBottom: '5em'}} >
 

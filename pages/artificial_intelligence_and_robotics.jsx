@@ -14,23 +14,27 @@ const Artificial_Intelligence_and_Robotics = () => {
   return(
     <>
       <Container fluid className={ styles.aboutUs_container } >
-        <HeroBanner text={'Artificial Intelligence & Robotics'} activeLink={'our lab'} backgroundImg={ backgroundImg } />
+        <HeroBanner text={'Artificial Intelligence & Robotics'} bannerOverlay activeLink={'our lab'} backgroundImg={ backgroundImg } />
 
         <Container className={ styles.background_container }  >
           <div>
-          <h1 className={ styles.background_header_main } >Artificial Intelligence & Robotics</h1>
-          <h2 className={ styles.background_header } >A Phenomenal Stratedy </h2> 
+          {/* <h1 className={ styles.background_header_main } >Artificial Intelligence & Robotics</h1> */}
+          {/* <h2 className={ styles.background_header } >A Phenomenal Stratedy </h2>  */}
           <p className={ styles.background_text }>
-            The changing nature of crime has long been an important aspect and challenge for the law enforcement agencies to fight against the above phenomenon. This is evermore the case in this modern era characterized by data, the Internet and new technologies. As a result, law enforcement agencies world-wide are increasingly being tasked with combating a mix of both entirely new forms of crime and traditional crimes that are carried out in new and innovative ways.</p>
+          Machine learning is a type of artificial intelligence that allows software applications to become more accurate at predicting outcomes without being explicitly programmed to do so:</p>
+
+          <p>
+          Machine learning is a type of artificial intelligence that allows software applications to become more accurate at predicting outcomes without being explicitly programmed to do so
+          </p>
+          </div>
             
-            <p>
+            {/* <p>
              At the same time, artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems. Due to the increased capacity to analyse large amounts of data, AI may be a powerful tool to enhance the effectiveness of law enforcement agencies’ daily operations, as well as optimizing public resources through, for instance, crime hotspot analytics, forecasting where and what type of crimes are likely to occur.
              </p>
 
             <p>
              The United Nations Interregional Crime and Justice Research Institute (UNICRI), through its Centre for Artificial Intelligence and Robotics, and Technology Against Crime (TAC) Africa have partnered in order to explore the challenges that African law enforcement agencies may face and to better understand how AI-related technologies can provide assistance.
              </p>
-             </div>
 
             <h2 className={ styles.background_header } >Steps Taken In The Right Direction</h2>
             <p>
@@ -49,7 +53,7 @@ const Artificial_Intelligence_and_Robotics = () => {
             </ul>
             <p>
              A reliable information exchange network and feedback mechanism on AI for Law Enforcement in Africa between UNICRI and TAC Africa; and Actionable suggestions and follow-up priorities from participants was envisioned.
-          </p>
+          </p> */}
         </Container>
 
        
