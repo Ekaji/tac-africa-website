@@ -20,6 +20,7 @@
 
   .drive_cards_container_inner {
     display: flex;
+    margin-bottom: 1em;
   }
   .drive_card_image {
     
@@ -32,10 +33,11 @@
   }
 
   .drive_content {
-    width: 35%;
+    // width: 35%;
+    margin-right: 1em ;
 
     .drive_header_inner {
-      font-size: 16px;
+      font-size: 20px;
       text-align: left;
       font-weight: 600;
       color: $sweet-blue;
@@ -55,6 +57,7 @@
 .drive_details_container {
 
   .drive_details {
+    padding-right: 3em;
 
     .drive_details_header {
       text-transform: capitalize;

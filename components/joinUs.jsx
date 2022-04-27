@@ -13,23 +13,25 @@ const JoinUs = () => {
             <Col md={6} className={ styles.joinUs_card__large_container } > 
               <div className={ styles.joinUs_card__large } >
                 <Card >
+                    <div style={{margin : '0px 1.5em'}}>
                   <Card.Body>
-                    <Card.Text className='text-primary'>
-                      Want to join with us
-                    </Card.Text>
-                    <Card.Title className={ styles.card_large__title }  >Become a proud volunteer</Card.Title>
-                    <Card.Text className={ styles.card_large__text }>
-                    TAC Africa volunteers are representative of our communities. We are always looking for more volunteers with diverse experiences, like people living in rural areas, people of color and of all races. Be rest assured that there are many ways to get involved as a volunteer at TAC Africa throughout the region, and our volunteer roles vary throughout the year.
-                    </Card.Text>
+                      <Card.Text className='text-primary'>
+                        Want to join with us?
+                      </Card.Text>
+                      <Card.Title className={ styles.card_large__title }  >Become a proud volunteer!</Card.Title>
+                      <Card.Text className={ styles.card_large__text }>
+                      TAC Africa volunteers are representative of our communities. We are always looking for more volunteers with diverse experiences, like people living in rural areas, people of color and of all races.
+                      </Card.Text>
 
-                      <Link href={'/volunteer'}>
-                        <a>
-                          <button className={ styles.block_button }>join us today</button> 
-                        </a>
-                      </Link>
+                        <Link href={'/volunteer'}>
+                          <a>
+                            <button className={ styles.block_button }>join us today</button> 
+                          </a>
+                        </Link>
 
-                    {/* <Button_ variant="primary" title={'join us today'} /> */}
-                  </Card.Body>
+                      {/* <Button_ variant="primary" title={'join us today'} /> */}
+                    </Card.Body>
+                    </div>
                 </Card>
               </div>
             </Col>
