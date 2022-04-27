@@ -28,21 +28,21 @@ export const data = [
         ],
         type: 'dropdown button'
     },
-    {
-        label: 'projects',
-        content : [
-            {href: '/projects/policing_the_cyber_space', name: 'Policing the Cyberspace' },
-            {href: '/projects/innovation_in_policing', name: 'Innovation in Policing' },
-            {href: '/projects/drone_alliance_africa', name: 'Drone Alliance Africa' },
-            {href: '/artificial_intelligence_and_robotics', name: 'Artificial Intelligence' },
-            {href: '/projects/afri_agric_tech_project', name: 'AfriAgriTech project' },
-            {href: '/projects/crawler', name: 'Crawler' },
-            {href: '/volunteer', name: 'Volunteer Management' },
-            {href: '/projects/cyber_peace_dialouge_2020', name: 'CyberPeace Dialogue 2020' },
-            {href: '/projects/research_on_cyber_security', name: 'Research on Cyber Security' }       
-        ],
-        type: 'dropdown button'
-    },
+    // {
+    //     label: 'projects',
+    //     content : [
+    //         {href: '/projects/policing_the_cyber_space', name: 'Policing the Cyberspace' },
+    //         {href: '/projects/innovation_in_policing', name: 'Innovation in Policing' },
+    //         {href: '/projects/drone_alliance_africa', name: 'Drone Alliance Africa' },
+    //         {href: '/artificial_intelligence_and_robotics', name: 'Artificial Intelligence' },
+    //         {href: '/projects/afri_agric_tech_project', name: 'AfriAgriTech project' },
+    //         {href: '/projects/crawler', name: 'Crawler' },
+    //         {href: '/volunteer', name: 'Volunteer Management' },
+    //         {href: '/projects/cyber_peace_dialouge_2020', name: 'CyberPeace Dialogue 2020' },
+    //         {href: '/projects/research_on_cyber_security', name: 'Research on Cyber Security' }       
+    //     ],
+    //     type: 'dropdown button'
+    // },
     {
         label: 'contact',
         content: [
