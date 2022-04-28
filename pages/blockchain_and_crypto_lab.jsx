@@ -16,42 +16,81 @@ const BlockchainAndCryptoLab = () => {
   return(
     <>
       <Container fluid className={ styles.aboutUs_container } >
-        <HeroBanner text={'Blockchain And Crypto Lab'} activeLink={'our lab'} backgroundImg={ backgroundImg } />
+        <HeroBanner text={'Blockchain And Crypto Lab'} bannerOverlay activeLink={'our lab'} backgroundImg={ backgroundImg } />
 
         <Container className={ styles.background_container }  >
           <div>
           <h1 className={ styles.background_header_main } >Blockchain And Crypto Lab</h1>
-          <h2 className={ styles.background_header } >A Phenomenal Strategy </h2> 
+          {/* <h2 className={ styles.background_header } >A Phenomenal Strategy </h2>  */}
           <p className={ styles.background_text }>
           With the growing number of individuals using the internet for business transaction, meeting, learning, gaming etc. The need to have a shared database cannot be re-overemphasis. At TAC Africa we adopted Block chain & E- payment as one of our focus area to enable us and our partners research and develop a blueprint in the following:</p>
-            
-            {/* <p>
-             At the same time, artificial intelligence (AI) and related technologies offer unique means to support law enforcement in solving such problems. Due to the increased capacity to analyse large amounts of data, AI may be a powerful tool to enhance the effectiveness of law enforcement agencies’ daily operations, as well as optimizing public resources through, for instance, crime hotspot analytics, forecasting where and what type of crimes are likely to occur.
-             </p>
+          </div>
+        </Container>
+        
 
-            <p>
-             The United Nations Interregional Crime and Justice Research Institute (UNICRI), through its Centre for Artificial Intelligence and Robotics, and Technology Against Crime (TAC) Africa have partnered in order to explore the challenges that African law enforcement agencies may face and to better understand how AI-related technologies can provide assistance.
-             </p> */}
-             </div>
+        <div className={ styles.moreDetails_container__main } >
+          <div className={ styles.moreDetails_container__mask }>
 
-            {/* <h2 className={ styles.background_header } >Steps Taken In The Right Direction</h2>
-            <p>
-            Through this virtual technical workshop, UNICRI and TAC Africa, in collaboration with key representatives from African countries, seek to explore, new and emerging threats associated with AI and crime, as well as the role or possible role of AI in crime prevention in Africa and the state of AI-readiness of law enforcement communities in Africa. In doing so UNICRI and TAC Africa will endeavour to identify local priorities and concerns in this regard.
-            </p>
+
+            <Container>
+              <Row className={ styles.moreDetails_container }>
+                <Col md={6}>
+                  <div className={ styles.moreDetails_container__inner } >
+                    <h2 className={ styles.moreDetails__header }>initiative</h2>
+                    <ul>
+                      <li> <span>&#x2022;</span> Blockchain Regulation and Legal Issues</li>
+                      <li> <span>&#x2022;</span> Blockchain Against Corruption</li>
+                      <li> <span>&#x2022;</span> Practical Use of Blockchain Tokenomics</li>
+                      <li> <span>&#x2022;</span> Crypto Currency Forensics & Investigation Methodology</li>
+                      <li> <span>&#x2022;</span> Blockchain Education And Research</li>
+                    </ul>
+                  </div>
+                </Col>
+
+                <Col md={6}>
+                  <div className={ styles.moreDetails_container__inner } >
+                    <h2 className={ styles.moreDetails__header }>stakeholders</h2>
+                    <ul>
+                      <li> <span>&#x2022;</span> A&D Forensics </li>
+                      <li> <span>&#x2022;</span> Blockchain Council </li>
+                      <li> <span>&#x2022;</span> African Blockchain User Group</li>
+                      <li> <span>&#x2022;</span> Cryptocurrency user council</li>
+                      <li> <span>&#x2022;</span> Blockchain Awareness Hub</li>
+                      <li> <span>&#x2022;</span> Cryptocurrency Learning Infrastructure</li>
+                    </ul>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
             
-            <p>
-            Additionally, the workshop will seek to build a local community in the region in terms of AI and crime prevention. This network will also serve to facilitate engagement of representatives from the region in the Third INTERPOL-UNICRI Global Meeting on AI for Law Enforcement to be held virtually in November. The Global Meeting will have a specific regional component, which will include Africa, Latin America, Central Asia, and South and South East Asia. </p>
-            
-            <p>
-            As the meeting was held virtually, there was no limit on participation, although in the interests of fostering an active discussion a smaller group is to be preferred. The number of participants were 200+. In addition to UNICRI and TAC Africa, participants from the law enforcement community in Nigeria and neighboring countries, as well as: </p>
-            <ul>
-             <li>Relevant regional organizations;</li> 
-             <li>Local civil society organizations;</li> 
-             <li>Academia; and Industry.</li> 
-            </ul>
-            <p>
-             A reliable information exchange network and feedback mechanism on AI for Law Enforcement in Africa between UNICRI and TAC Africa; and Actionable suggestions and follow-up priorities from participants was envisioned.
-          </p> */}
+
+          </div>
+        </div>
+
+        <Container className={ styles.ongoingProject_container } >
+
+            <h2 className={ styles.ongoingProject_header } >ongoing<span className='text-primary'> projects</span></h2>
+            <Row className={ styles.ongoingProject_container_inner } >
+              <Col md={4} className={ styles.ongoingProject_container_coll } >
+                <div className={ styles.ongoingProject_border }>
+                  <div className={ styles.ongoingProject_card } >AI for crime prevention</div>
+                </div>
+              </Col>
+
+              <Col md={4} className={ styles.ongoingProject_container_coll } >
+                <div className={ styles.ongoingProject_border }>
+                  <div className={ styles.ongoingProject_card } >AI for cyber crime prevention and archival</div>
+                </div>
+              </Col>
+
+              <Col md={4} className={ styles.ongoingProject_container_coll } >
+                <div className={ styles.ongoingProject_border } >
+                  <div className={ styles.ongoingProject_card } >Deep dark web crawler</div>
+                </div>
+              </Col>
+
+            </Row>
+
         </Container>
 
        
