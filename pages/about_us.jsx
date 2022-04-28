@@ -13,17 +13,17 @@ const NewAbout = () => {
     {
       imgUrl: 'icons8-combo-chart-100 (1).png',
       title: 'Big Data Expert',
-      text: 'TAC NGO AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to “Technology for a Safer world. The first two'
+      text: 'With our team of AI experts & Big Data consultants, we help companies move into the AI and machine learning-powered age.'
     },
     {
       imgUrl: 'icons8-google-web-search-500.png',
       title: 'Research & Development',
-      text: 'TAC NGO AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to “Technology for a Safer world. The first two'
+      text: 'We constantly study to innovate and introduce new products and services or to improve our existing services'
     },
     {
       imgUrl: 'intelligence.png',
-      title: 'Industry Expert',
-      text: 'TAC NGO AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to “Technology for a Safer world. The first two'
+      title: 'Data Exchange & Inspection',
+      text: 'Our professionals and digital consultants specializes in inspection and testing of digital products and infrastructures.'
     },
   ]
 
@@ -38,7 +38,9 @@ const NewAbout = () => {
         <Container className={ styles.background_container }  >
           <h2 className={ styles.background_header }>our background </h2> 
           <p className={ styles.background_text }>
-            TAC NGO AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to “Technology for a Safer world. The first two editions were held in Lyon, in April 2013 and April 2016 respectively under the patronage of the Ministry of Interior and INTERPOL. Essentially, we are a non-governmental, bipartisan organisation, connecting law enforcement, subject matter experts, civil society to solve issues that affect our society. We work on the transformation of our law enforcement and judiciary. We make them more technologically enabled. Besides this, we solve problems through policy advocacy, research, training and capacity building and volunteering.
+            TAC NGO AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to “Technology for a Safer world. The first two editions were held in Lyon, in April 2013 and April 2016 respectively under the patronage of the Ministry of Interior and INTERPOL.</p>
+            
+            <p> Essentially, we are a non-governmental, bipartisan organisation, connecting law enforcement, subject matter experts, civil society to solve issues that affect our society. We work on the transformation of our law enforcement and judiciary. We make them more technologically enabled. Besides this, we solve problems through policy advocacy, research, training and capacity building and volunteering.
           </p>
         </Container>
 
