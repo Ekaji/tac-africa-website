@@ -13,35 +13,33 @@ const OurLabs = () => {
     {
       title: 'Cyber Security & Cyber Defense',  //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
       image: '/cyber defence.jpg',
-      text: 'Leading Cloud-Delivered Endpoint Protection Platform. Powered by Artificial Intelligence. Independently Tested and ...',
+      text: 'The emergence of the internet has no doubt enhance the way we live, work, socialize and transact business to a great extent but cyber criminals are taking un-due advantage...',
       link: '/cyber_security_and_cyber_defense',
     },
     {
       title: 'Artificial Intelligence And Robotics',
       image: '/ai and robotics.jpg',
-      text: 'Major technological disruptions, like artificial intelligence and machine learning, are their way to the industrial robotics industry.',
+      text: 'AI & Robotics is an emerging technology that is gradually making traditional complex task easier through the use of Artificial Intelligence-controlled Robots (AI) AI – algorithm in the actual world and allows it to interact with materials in real time',
       link: '/artificial_intelligence_and_robotics',
     },
     {
       title: 'Blockchain And Payment Gateways',
       image: 'piles-coins-with-plant-front-graph.jpg',
-      text: 'Major technological disruptions, like artificial intelligence and machine learning, are their way to the industrial robotics industry.',
+      text: 'With the growing number of individuals using the internet for business transaction, meeting, learning, gaming etc. The need to have a shared database cannot be overemphasized.',
       link: '/blockchain_and_crypto_lab',
     },
     {
       title: 'Drone & Counter Drone',
       image: 'Blog_Drones.jpg',
-      text: 'Learn advanced methods involved in sending new signals, communicating with GPS satellites for easy navigation.',
+      text: 'The future of aviation is gradually being powered by unmanned Aerial Vehicles if the good guys don’t get involve on time the bad guys would..',
       link: '/drone_and_counter_drone',
     },
-    {
-      title: 'satellite and remote sensing',
-      image: 'satellite.jpg',
-      text: 'Advanced satellite systems for locating, tracking and monitoring remote assets. Simple, flexible and affordable solutions.',
-      link: '/satellite_and_remote_sensing_lab'
-    }
-    
-
+    // {
+    //   title: 'satellite and remote sensing',
+    //   image: 'satellite.jpg',
+    //   text: 'Advanced satellite systems for locating, tracking and monitoring remote assets. Simple, flexible and affordable solutions.',
+    //   link: '/satellite_and_remote_sensing_lab'
+    // }
   ]
 
 
