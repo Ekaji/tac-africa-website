@@ -1,7 +1,8 @@
 @import '../abstracts/variables';
 
 .carousel_container {
-  background-color: $lighter-grey;
+  // background-color: $lighter-grey;
+  margin-top: 4em;
   &__title {
     color: $main-blue;
   }

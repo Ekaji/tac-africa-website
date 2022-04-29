@@ -6,6 +6,7 @@ import styles from '../styles/page.styles/newAbout.module.scss'
 import Button_ from '../components/button.jsx'
 import Link from 'next/link'
 import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
+import Drive from '../components/drive.jsx'
 
 const NewAbout = () => {
 
@@ -62,6 +63,7 @@ const NewAbout = () => {
         </Container>
 
         <Container className={ styles.volunteer } >
+        <Drive />
         <Row>
           <Col md={4} >
             <h3 className={ styles.volunteer__header__1 } >become a volunteer </h3>

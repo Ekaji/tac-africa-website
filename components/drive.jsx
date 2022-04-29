@@ -8,7 +8,7 @@ const Drive = () => {
     <Container >
       <div className={ styles.drive_container_main } >
 
-        <h2 className={ styles.drive_header }>about out <span className='text-primary '>drive</span></h2>
+        <h2 className={ styles.drive_header }>about our <span className='text-primary '>drive</span></h2>
         <Row>
           <Col  md={6} >
             <div className={ styles.drive_cards_container_outer } >
