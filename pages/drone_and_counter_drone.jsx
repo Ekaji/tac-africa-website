@@ -15,7 +15,7 @@ const Drone_And_Counter_Drone = () => {
   return(
     <>
       <Container fluid className={ styles.aboutUs_container } >
-        <HeroBanner text={'Cyber Security And Cyber Defense'} bannerOverlay activeLink={'our lab'} backgroundImg={ backgroundImg } />
+        <HeroBanner text={'Drone And Counter Drone'} bannerOverlay activeLink={'our lab'} backgroundImg={ backgroundImg } />
 
         <Container className={ styles.background_container }  >
           <div>

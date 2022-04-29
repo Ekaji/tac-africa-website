@@ -22,7 +22,7 @@ const Cyber_Security_And_Cyber_Defense = () => {
           <h1 className={ styles.background_header_main } >Cyber Security And Cyber Defense</h1>
           {/* <h2 className={ styles.background_header } >A Phenomenal Strategy </h2>  */}
           <p className={ styles.background_text }>
-          The emergence of the internet as in no doubt enhance the way we live, work, socialize and transact  business to a great extent but cyber criminals are taking un-due advantage of the opportunity created by the internet to lunch attack on netizens through the deployment of ransom ware, stalker wares, virus etc. As one of our cardinal focus area; we are poised to help law enforcement agents on:</p>
+          The emergence of the internet has no doubt enhance the way we live, work, socialize and transact  business to a great extent but cyber criminals are taking un-due advantage of the opportunity created by the internet to lunch attack on netizens through the deployment of ransom ware, stalker wares, virus etc. As one of our cardinal focus area; we are poised to help law enforcement agents on:</p>
              </div>
         </Container>
 
