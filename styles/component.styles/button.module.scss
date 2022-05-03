@@ -1,6 +1,9 @@
+@import '../abstracts/variables';
+
 .button_default {
   margin-right: 1em;
   text-transform: capitalize;
+    font-size: 0.8rem ;
 }
 
 .button_pill {
@@ -8,4 +11,16 @@
   width: 7em;
   padding-top: 7px;
   padding-bottom: 7px;
+}
+
+@media (min-width: $breakpoint-xl) {
+  .button_default {
+    font-size: 0.8rem *3 ;
+
+  }
+  .button_large {
+    width: 8em;
+    padding-top: 7px *2;
+    padding-bottom: 7px *2;
+  }
 }
