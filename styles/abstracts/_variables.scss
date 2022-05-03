@@ -15,8 +15,13 @@ $code-font-stack: 'Courier New',
 'Monaco',
 monospace !default;
 
-
-
+$base-font-size-h1 : 2.5rem;
+$base-font-size-h2 : 1rem ;
+$base-font-size-h2-md : 1.5rem ;
+$base-font-size-h2-lg : 2rem ;
+$base-font-size-p : 1rem ;
+$base-font-size-p-md : 0.875rem;
+$base-font-size-p-lg : 1.125rem;
 
 
 /// @type Color
@@ -45,10 +50,21 @@ $main-white: #FFFFFF !default; //Grey
 $main-yellow: #FFC34E !default; //Yellow
 
 /// @type Break-Points
+//! original mq
 $base-url: '../assets/' !default;
-$breakpoint-xxsm: 371px;
-$breakpoint-xsm: 455px;
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px
+// $breakpoint-xxsm: 371px;
+// $breakpoint-xsm: 455px;
+// $breakpoint-sm: 576px;
+// $breakpoint-md: 768px;
+// $breakpoint-lg: 992px;
+// $breakpoint-xl: 1200px;
+
+// new media queries
+$breakpoint-xsm: 371px; // 768px
+$breakpoint-sm: 48em; // 768px
+$breakpoint-md: 64em; // 1024px
+$breakpoint-lg: 85.375em; // 1366px
+$breakpoint-xl: 120em; // 1920px
+$breakpoint-xxl: 160em; // 2560px
+
+

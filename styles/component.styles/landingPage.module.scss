@@ -1,37 +1,27 @@
 @import '../abstracts/variables';
 
-.top_container {
-    // margin-top: 10vh;
-    // height: 100vh;
-    // min-height: 40em;
-}
-
-.container_pd {
-    padding: 0 1.2rem;
-}
-
 //Header Top details that contains the site intro
 .tac_header_detail {
-    // margin-top: 4em;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 4em;
-    padding-left: 2em;
+    padding-top: 2em;
+    padding-left: 1em;
+    margin-right: 2rem;
+
     text-transform: capitalize;
 
 
     &__items {
-        h2 {
-            font-size: 2.5em;
+        h1 {
+            font-size: 2.5rem;
             font-weight: 600;
             line-height: 1.27em;
             color: #144388;
         }
 
         p {
-            font-size: 1.125em;
             line-height: 1.5em;
             color: #1A4074D4;
             margin-top: 1em;
@@ -39,7 +29,7 @@
         }
 
         button {
-            margin-top: 2em;
+            margin-top: 1em;
             margin-bottom: 2em;
 
         }
@@ -51,13 +41,13 @@
 }
 
 .header_icon {
-    margin: 50px auto 0;
+    margin: 50px auto 1em;
     width: 100%;
     background: #E8F0F6;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
     padding: 0 3rem;
-    height: calc(100vh - 20vh);
+    height: 30vh;
     display: flex;
     align-items: flex-end;
 
@@ -77,9 +67,6 @@
     height: 20vh;
     width: 100%;
     display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: space-around;
 
     &__item {
         display: inline-flex;
@@ -90,34 +77,29 @@
 }
 
 //Media queries
-@media (max-width: $breakpoint-md) {
-    // .header_icon {
-    //     display: none;
-    // }
-
-    .container_pd {
-        // margin-top: 8em;
+@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+    .top_container {
         padding: 0;
     }
     
 
     .tac_header_detail {
-        padding-left: initial;
+        padding-left: 2rem;
+        padding-right: 2rem;
 
         &__items {
-            h2 {
-                font-size: 2.5em;
+            h1 {
+                font-size: $base-font-size-h1 ;
+            }
+
+            p {
+                font-size: $base-font-size-p-lg *1.5 !important;
             }
 
             button {
-                font-size: 1.1em;
+                font-size: 1.2em;
             }
         }
-    }
-
-    .top_container {
-        height: initial;
-        min-height: initial;
     }
 
     .header_partners_icon {
@@ -131,22 +113,35 @@
         height: 100%;
         min-height: 2em;
         margin-top: .5em;
+        margin-bottom: 5em;
         &__item {
             justify-content: space-between;
         }
     }
+    .header_icon {
+    
+        height: 40vh;
+    }
 }
 
-@media (max-width: $breakpoint-sm) {
+ @media (min-width: $breakpoint-md)  {
+    .header_icon {
+    
+        height: 80vh !important;
+    }
+ }
+
+@media (max-width: $breakpoint-xsm)  {
 
     .tac_header_detail {
-        margin: 0px 1em;
+        margin: 0px 0.5rem;
         &__items { 
-            h2 {
+            h1 {
                 margin-top: 5px;
                 font-size: 2em;
             }
-            p {
+            p { 
+                font-size: 1rem ;
              margin: 0px;   
             }
         }
@@ -166,12 +161,9 @@
         > div {
             z-index: -950 !important;
         }
-    
-        height: 40vh !important;
     }
 
     .header_partners_icon {
-        // height: 20vh;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -187,3 +179,39 @@
     }
 }
 
+
+@media (min-width: $breakpoint-xl) {
+    .tac_header_detail {
+        margin: 0 2em;
+        &__items { 
+            h1 {
+                margin-top: 5px;
+                font-size: 2em *3;
+            }
+            p {
+                font-size: $base-font-size-p-lg *3 ;
+            }
+        }
+    }
+    .header_icon {
+    
+        height: 85vh !important;
+    }
+}
+
+@media (min-width: $breakpoint-xxl) {
+    .tac_header_detail {
+        &__items { 
+            h1 {
+                margin-top: 5px;
+                font-size: 2em *4 !important;
+            }
+            p {
+                font-size: $base-font-size-p-lg *3 !important ;
+            }
+        }
+    }
+    .header_icon {
+        height: 85vh !important;
+    }
+}

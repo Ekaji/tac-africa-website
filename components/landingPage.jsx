@@ -13,13 +13,13 @@ export default function LandingPage(){
     <section className="container-fluid">
     <div className={[ styles.top_container, styles.container_pd].join(' ')}>
         <Row className={ styles.tac_header_background}>
-            <Col md={5} >
+            <Col lg={5} >
                 <div className={styles.tac_header_detail}>
                     <div className={styles.tac_header_detail__items}>
-                        <h2>{'Combating Crime in '}
+                        <h1>{'Combating Crime in '}
                             <em> Africa</em> with emerging
                             technology
-                        </h2>
+                        </h1>
 
                         <p>
                             An NGO Obliged to bringing together Law
@@ -44,7 +44,7 @@ export default function LandingPage(){
 
             </Col>
 
-            <Col  xs={{order: 'first'}} md={{span: 7, order: 'last'}} className={styles.header_icon__container} >
+            <Col  xs={{order: 'first'}} lg={{span: 7, order: 'last'}} className={styles.header_icon__container} >
                 <Col md={10} className={styles.header_icon} >
                         <Image  src="/tac-icon.svg"
                                 layout='fill'
