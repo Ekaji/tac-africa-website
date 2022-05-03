@@ -18,54 +18,58 @@ const Artificial_Intelligence_and_Robotics = () => {
 
         <Container className={ styles.background_container }  >
           <div>
-          <h1 className={ styles.background_header_main } >Artificial Intelligence & Robotics</h1>
+          <h1 className={ styles.background_header_main } >Laying the Foundation</h1>
           {/* <h2 className={ styles.background_header } >A Phenomenal Stratedy </h2>  */}
           <p className={ styles.background_text }>
           AI & Robotics is an emerging technology that is gradually making traditional complex task easier through the use of Artificial Intelligence-controlled Robots (AI) AI – algorithm in the actual world and allows it to interact with materials in real time (AI) aid robots in seeing, walking, speaking, smelling and moving in progressive human like manners.</p>
 
-          <p>
-          As one of our pillars in TAC Africa, we are actively involved in:
-          </p>
           </div>
             
         </Container>
         <div className={ styles.moreDetails_container__main } >
-          <div className={ styles.moreDetails_container__mask }>
+
+        <div className={ styles.moreDetails_container__intro } > 
+          <h2 className={ styles.moreDetails_container__intro__header }>Our work in this space</h2>
+          <p>As one of our pillars in TAC Africa, we are actively involved in the space</p>
+        </div>
 
           <Container>
               <Row className={ styles.moreDetails_container }>
-                <Col md={6}>
-                  <div className={ styles.moreDetails_container__inner } >
-                    <h2 className={ styles.moreDetails__header }>initiative</h2>
-                    <ul>
-                  <li> <span>&#x2022;</span> Ethical AI </li>
-                  <li> <span>&#x2022;</span> AI for Justice </li>
-                  <li> <span>&#x2022;</span> AI for Social Good</li>
-                  <li> <span>&#x2022;</span> Policy and Strategy on Artificial Intelligence</li>
-                  <li> <span>&#x2022;</span> Research and Innovation in Policing</li>
+                <Col md={5} className={ styles.moreDetails_container__outer }  >
+                  {/* <div className={ styles.moreDetails_container__inner } > */}
+                    <div className={ styles.moreDetails_header_background }>
+                      <h2 className={ styles.moreDetails__header }>initiative</h2>
+                    </div>
+                    <ul className={ styles.moreDetails__items } >
+                  <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Ethical AI </li>
+                  <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> AI for Justice </li>
+                  <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> AI for Social Good</li>
+                  <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Policy and Strategy on Artificial Intelligence</li>
+                  <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Research and Innovation in Policing</li>
                 </ul>
-                  </div>
+                  {/* </div> */}
                 </Col>
 
-                <Col md={6}>
-                  <div className={ styles.moreDetails_container__inner } >
-                    <h2 className={ styles.moreDetails__header }>stakeholders</h2>
-                    <ul>
-                  <li> <span>&#x2022;</span> United Nations Interregional Crime and Justice Research Institute </li>
-                  <li> <span>&#x2022;</span> Africa Cyber Defense Forum (Kenya) </li>
-                  <li> <span>&#x2022;</span> Cyber Peace Foundation (India) </li>
-                  <li> <span>&#x2022;</span> Nigeria Flying Labs (Nigeria) </li>
-                  <li> <span>&#x2022;</span> Garuda Robotics (Singapore) </li>
-                </ul>
+                <Col md={5} className={ styles.moreDetails_container__outer }>
+                  {/* <div className={ styles.moreDetails_container__inner } > */}
+                  <div className={ styles.moreDetails_header_background }>
+                    <h2 className={ styles.moreDetails__header } >stakeholders</h2>
                   </div>
+                    <ul className={ styles.moreDetails__items } >
+                  <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> UNICRI  </li>
+                  <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Africa Cyber Defense Forum (Kenya) </li>
+                  <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Cyber Peace Foundation (India) </li>
+                  <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Nigeria Flying Labs (Nigeria) </li>
+                  <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Garuda Robotics (Singapore) </li>
+                </ul>
+                  {/* </div> */}
                 </Col>
               </Row>
             </Container>
 
-          </div>
         </div>
 
-        <Container className={ styles.ongoingProject_container } >
+        {/* <Container className={ styles.ongoingProject_container } >
 
             <h2 className={ styles.ongoingProject_header } >ongoing<span className='text-primary'> projects</span></h2>
             <Row className={ styles.ongoingProject_container_inner } >
@@ -90,7 +94,7 @@ const Artificial_Intelligence_and_Robotics = () => {
 
             </Row>
 
-        </Container>
+        </Container> */}
 
        
       </Container>
