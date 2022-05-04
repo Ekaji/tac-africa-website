@@ -2,14 +2,13 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 
-import { Accordion, Container, Form, Row, Col} from 'react-bootstrap'
+import { Accordion,Button, Container, Form, Row, Col} from 'react-bootstrap'
 import styles from '../styles/page.styles/newAbout.module.scss'
 import Button_ from '../components/button.jsx'
 import Link from 'next/link'
 import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
 
 const BlockchainAndCryptoLab = () => {
-
 
   const backgroundImg =  "/Cyber-Security and defense.png"
 
@@ -29,69 +28,69 @@ const BlockchainAndCryptoLab = () => {
         
 
         <div className={ styles.moreDetails_container__main } >
-          <div className={ styles.moreDetails_container__mask }>
+
+        <div className={ styles.moreDetails_container__intro } > 
+          <h2 className={ styles.moreDetails_container__intro__header }>Our work in this space</h2>
+          <p>As one of our pillars in TAC Africa, we are actively involved in the space</p>
+        </div>
 
 
+        <div className={ styles.moreDetails } >
             <Container>
               <Row className={ styles.moreDetails_container }>
-                <Col md={6}>
-                  <div className={ styles.moreDetails_container__inner } >
+                <Col md={5} className={ styles.moreDetails_container__outer } >
+                  <div className={ styles.moreDetails_header_background }>
                     <h2 className={ styles.moreDetails__header }>initiative</h2>
-                    <ul>
-                      <li> <span>&#x2022;</span> Blockchain Regulation and Legal Issues</li>
-                      <li> <span>&#x2022;</span> Blockchain Against Corruption</li>
-                      <li> <span>&#x2022;</span> Practical Use of Blockchain Tokenomics</li>
-                      <li> <span>&#x2022;</span> Crypto Currency Forensics & Investigation Methodology</li>
-                      <li> <span>&#x2022;</span> Blockchain Education And Research</li>
-                    </ul>
                   </div>
+                    <ul className={ styles.moreDetails__items } >
+                      <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Blockchain Regulation and Legal Issues</li>
+                      <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Blockchain Against Corruption</li>
+                      <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Practical Use of Blockchain Tokenomics</li>
+                      <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Crypto Currency Forensics & Investigation Methodology</li>
+                      <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Blockchain Education And Research</li>
+                    </ul>
                 </Col>
 
-                <Col md={6}>
-                  <div className={ styles.moreDetails_container__inner } >
+                <Col md={5} className={ styles.moreDetails_container__outer }>
+                  <div className={ styles.moreDetails_header_background } >
                     <h2 className={ styles.moreDetails__header }>stakeholders</h2>
-                    <ul>
-                      <li> <span>&#x2022;</span> A&D Forensics </li>
-                      <li> <span>&#x2022;</span> Blockchain Council </li>
-                      <li> <span>&#x2022;</span> African Blockchain User Group</li>
-                      <li> <span>&#x2022;</span> Cryptocurrency user council</li>
-                      <li> <span>&#x2022;</span> Blockchain Awareness Hub</li>
-                      <li> <span>&#x2022;</span> Cryptocurrency Learning Infrastructure</li>
+                    </div>
+                    <ul className={ styles.moreDetails__items }>
+                      <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> A&D Forensics </li>
+                      <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Blockchain Council </li>
+                      <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> African Blockchain User Group</li>
+                      <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Cryptocurrency user council</li>
+                      <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Blockchain Awareness Hub</li>
+                      <li> <span className={ styles.moreDetails__checkmark }>&#x2713;</span> Cryptocurrency Learning Infrastructure</li>
                     </ul>
-                  </div>
                 </Col>
               </Row>
             </Container>
+          </div>
             
 
-          </div>
         </div>
 
-        <Container className={ styles.ongoingProject_container } >
 
-            <h2 className={ styles.ongoingProject_header } >ongoing<span className='text-primary'> projects</span></h2>
-            <Row className={ styles.ongoingProject_container_inner } >
-              <Col md={4} className={ styles.ongoingProject_container_coll } >
-                <div className={ styles.ongoingProject_border }>
-                  <div className={ styles.ongoingProject_card } >AI for crime prevention</div>
-                </div>
-              </Col>
-
-              <Col md={4} className={ styles.ongoingProject_container_coll } >
-                <div className={ styles.ongoingProject_border }>
-                  <div className={ styles.ongoingProject_card } >AI for cyber crime prevention and archival</div>
-                </div>
-              </Col>
-
-              <Col md={4} className={ styles.ongoingProject_container_coll } >
-                <div className={ styles.ongoingProject_border } >
-                  <div className={ styles.ongoingProject_card } >Deep dark web crawler</div>
-                </div>
-              </Col>
-
-            </Row>
-
+        <Container className={ styles.getInvolved_container } >
+          <h2 className={ styles.getInvolved_header } >Get Involved</h2>
+          <p className={ styles.getInvolved_text } >TAC Africa is open for collaborations, funding and volunteers to make them reach a more mature stage. Help us to make them become a reality!</p>
+          <Button className={ styles.getInvolved_button } > <span className={ styles.button_text }> {'Join us today!'} </span> </Button >
         </Container>
+
+        <div className={ styles.ongoingProject_container } >
+          <h2 className={ styles.ongoingProject_header } >Ongoing Projects <span className='text-primary'>In The Field</span></h2>
+          <p className={ styles.ongoingProject_text } >As one of our pillars in TAC Africa, we are actively involved in the space.</p>
+          <div className={ styles.ongoingProject_buttons_container } >
+
+              <Button className={ styles.ongoingProject_buttons1 } > <span className={ styles.button_text }> {'AI For Social Good'} </span> </Button >
+
+              <Button className={ styles.ongoingProject_buttons2 } > <span className={ styles.button_text }> {'AI Cyber Criminal Detection And Archival'} </span> </Button >
+
+              <Button className={ styles.ongoingProject_buttons3 } > <span className={ styles.button_text }> {'Deep Dark Web Crawler Project'} </span> </Button >
+            
+          </div>
+        </div>
 
        
       </Container>

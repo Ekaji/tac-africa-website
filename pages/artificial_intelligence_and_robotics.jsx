@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 
-import { Accordion, Container, Form, Row, Col} from 'react-bootstrap'
+import { Accordion,Button, Container, Form, Row, Col} from 'react-bootstrap'
 import styles from '../styles/page.styles/newAbout.module.scss'
 import Button_ from '../components/button.jsx'
 import Link from 'next/link'
@@ -22,10 +22,10 @@ const Artificial_Intelligence_and_Robotics = () => {
           {/* <h2 className={ styles.background_header } >A Phenomenal Stratedy </h2>  */}
           <p className={ styles.background_text }>
           AI & Robotics is an emerging technology that is gradually making traditional complex task easier through the use of Artificial Intelligence-controlled Robots (AI) AI – algorithm in the actual world and allows it to interact with materials in real time (AI) aid robots in seeing, walking, speaking, smelling and moving in progressive human like manners.</p>
-
-          </div>
-            
+          </div> 
         </Container>
+
+
         <div className={ styles.moreDetails_container__main } >
 
         <div className={ styles.moreDetails_container__intro } > 
@@ -33,10 +33,10 @@ const Artificial_Intelligence_and_Robotics = () => {
           <p>As one of our pillars in TAC Africa, we are actively involved in the space</p>
         </div>
 
+        <div className={ styles.moreDetails } >
           <Container>
-              <Row className={ styles.moreDetails_container }>
+              <Row className={ styles.moreDetails_container } >
                 <Col md={5} className={ styles.moreDetails_container__outer }  >
-                  {/* <div className={ styles.moreDetails_container__inner } > */}
                     <div className={ styles.moreDetails_header_background }>
                       <h2 className={ styles.moreDetails__header }>initiative</h2>
                     </div>
@@ -66,35 +66,32 @@ const Artificial_Intelligence_and_Robotics = () => {
                 </Col>
               </Row>
             </Container>
+        </div>
+
 
         </div>
 
-        {/* <Container className={ styles.ongoingProject_container } >
 
-            <h2 className={ styles.ongoingProject_header } >ongoing<span className='text-primary'> projects</span></h2>
-            <Row className={ styles.ongoingProject_container_inner } >
-              <Col md={4} className={ styles.ongoingProject_container_coll } >
-                <div className={ styles.ongoingProject_border }>
-                  <div className={ styles.ongoingProject_card } > AI for Crime Prevention </div>
-                </div>
-              </Col>
-
-              <Col md={4} className={ styles.ongoingProject_container_coll } >
-                <div className={ styles.ongoingProject_border }>
-                  <div className={ styles.ongoingProject_card } > AI for Cyber crime detection and archival</div>
-                </div>
-              </Col>
-
-              <Col md={4} className={ styles.ongoingProject_container_coll } >
-                <div className={ styles.ongoingProject_border } >
-                  <div className={ styles.ongoingProject_card } > Deep dark web crawler</div>
-                </div>
-              </Col>
+        <Container className={ styles.getInvolved_container } >
+          <h2 className={ styles.getInvolved_header } >Get Involved</h2>
+          <p className={ styles.getInvolved_text } >TAC Africa is open for collaborations, funding and volunteers to make them reach a more mature stage. Help us to make them become a reality!</p>
+          <Button className={ styles.getInvolved_button } > <span className={ styles.button_text }> {'Join us today!'} </span> </Button >
+        </Container>
 
 
-            </Row>
+        <div className={ styles.ongoingProject_container } >
+          <h2 className={ styles.ongoingProject_header } >Ongoing Projects <span className='text-primary'>In The Field</span></h2>
+          <p className={ styles.ongoingProject_text } >As one of our pillars in TAC Africa, we are actively involved in the space.</p>
+          <div className={ styles.ongoingProject_buttons_container } >
 
-        </Container> */}
+              <Button className={ styles.ongoingProject_buttons1 } > <span className={ styles.button_text }> {'AI For Social Good'} </span> </Button >
+
+              <Button className={ styles.ongoingProject_buttons2 } > <span className={ styles.button_text }> {'AI Cyber Criminal Detection And Archival'} </span> </Button >
+
+              <Button className={ styles.ongoingProject_buttons3 } > <span className={ styles.button_text }> {'Deep Dark Web Crawler Project'} </span> </Button >
+            
+          </div>
+        </div>
 
        
       </Container>
