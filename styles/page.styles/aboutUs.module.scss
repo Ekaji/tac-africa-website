@@ -7,7 +7,7 @@
 
 .background_container {
   // margin-top: 4em;
-  width: 70vw;
+  // width: 70vw;
   margin-bottom: 5em;
   min-height: 20vh;
   background-color: #fafaff;
@@ -258,6 +258,7 @@
 }
 
 @media (min-width: $breakpoint-xsm) {
+
 
   .background_header_main{
     margin: 4rem 0 2rem;
