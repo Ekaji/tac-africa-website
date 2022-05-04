@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-key */
 
 import { Accordion, Container, Form, Row, Col} from 'react-bootstrap'
-import styles from '../styles/page.styles/newAbout.module.scss'
+import styles from '../styles/page.styles/aboutUs.module.scss'
 import Button_ from '../components/button.jsx'
 import Link from 'next/link'
 import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
