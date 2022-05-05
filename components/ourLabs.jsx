@@ -104,7 +104,7 @@ const OurLabs = () => {
                 >
             { data.map((edge, i) => (
                 // <div style={{marginRight: '0.5rem'}}>
-                  <div key={i} className={[, styles.carousel_component_inner].join(' ')}  >
+                  <div key={i} className={ styles.carousel_component_inner }  >
                       <div className={ styles.carousel_image }>
                         <img className={ styles.carousel_image } src={ edge?.image } alt={ edge.image } />
                         <div className={ styles.carousel_mask } >

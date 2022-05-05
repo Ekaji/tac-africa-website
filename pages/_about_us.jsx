@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import styles from '../styles/page.styles/aboutUs.module.scss'
-import Image from 'next/image'
 
 export default function AboutUs() {
   return(

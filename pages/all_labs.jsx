@@ -53,7 +53,7 @@ const All_labs = () => {
 
       <Container style={{paddingTop: '3em', paddingBottom: '5em'}} >
 
-<div className={ [' ', styles.carousel_header__component].join(' ')} >
+<div className={ styles.carousel_header__component } >
   <p className={ styles.carousel_container__text } >Below are a selection of projects that we have partnered with and fully support their community development goals. Featured Projects. Blockchain & Payment Gateways</p>
 </div>
 
@@ -61,7 +61,7 @@ const All_labs = () => {
 
         { data.map((edge, i) => (
             <div className={"col-md-4"}>
-            <div key={i} className={[, styles.carousel_component_inner].join(' ')}  >
+            <div key={i} className={ styles.carousel_component_inner }  >
                 <div className={ styles.carousel_image }>
                     <img className={ styles.carousel_image } src={ edge?.image } alt={ edge.image } />
                     <div className={ styles.carousel_mask } >
@@ -83,14 +83,6 @@ const All_labs = () => {
         )) }
         
     </div>
-
-    {/* <div className={[styles.image_container]} >
-                <img className={ styles.card_img } src={"/TAC_LOGO.PNG"} alt=""/>
-                <img className={ styles.card_img } src={"/TAC_LOGO.PNG"} alt=""/>
-                <img className={ styles.card_img } src={"/TAC_LOGO.PNG"} alt=""/>
-                <img className={ styles.card_img } src={"/TAC_LOGO.PNG"} alt=""/>
-                <img className={ styles.card_img } src={"/TAC_LOGO.PNG"} alt=""/>
-            </div> */}
 
 </Container>
         

@@ -113,7 +113,7 @@
 }
 
 //smaller screens
-@media (max-width: 992px) {
+@media (max-width: $breakpoint-md) {
 
   .isHidden {
     position: fixed !important;
@@ -121,6 +121,24 @@
 
   .menu__toggle {
     display: inline-block !important; //very important
+ }
+
+ .menu_burger {
+   margin-top: 40px;
+ }
+
+ .navbar_collapse {
+  height: 100vh !important;
+  }
+
+ .nav_link__button_donate {
+   display: flex;
+   justify-content: center;
+   margin-top : 20rem;
+ }
+
+ .nav_link_a {
+   margin-left: 2rem;
  }
 
   .nav_label_text {

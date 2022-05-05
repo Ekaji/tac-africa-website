@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 
-import Image from 'next/image';
 import styles from '../styles/component.styles/landingPage.module.scss'
 import {Button, Nav, Row, Col} from 'react-bootstrap'
 import Button_ from '../components/button'
@@ -46,9 +45,9 @@ export default function LandingPage(){
 
             <Col  xs={{order: 'first'}} lg={{span: 7, order: 'last'}} className={styles.header_icon__container} >
                 <Col md={10} className={styles.header_icon} >
-                        <Image  src="/tac-icon.svg"
+                        <img  src="/tac-icon.svg"
                                 layout='fill'
-                                className={'image'}
+                                className={styles.image}
                                 alt="Technology Against Crime ideology" />
                 </Col>
             </Col>

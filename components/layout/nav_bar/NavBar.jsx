@@ -8,14 +8,13 @@ import Button_ from '../../button.jsx'
 import { useRouter } from 'next/router'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Link from 'next/link'
-import Image from 'next/image'
 import { data } from '../../../pages/api/navLinks.js'
 import DonateButton from '../../../components/donateButton'
-import { HamburgerArrow } from 'react-animated-burgers'
 
 
 export default function NavBar(){
 
+    // used for setting the styles of navbar labels with active links
     const [currentPath, setCurrentPath] = useState('')
 
     useEffect(() => {
@@ -42,13 +41,16 @@ export default function NavBar(){
     }
 
 
-    const [isActive, setIsActive] = useState(false)
-
-    const toggleButton = useCallback(
-      () => setIsActive(prevState => !prevState),
-      [],
-    )
-
+    const [menuState, setMenuState] = useState(false)
+    
+        const toggleButton = useCallback(
+          () => {
+              setMenuState(menuState => !menuState)
+          },
+          [],
+        )
+    
+  
 const router = useRouter()
   return(
     <div className={ styles.nav_container }  >
@@ -64,16 +66,18 @@ const router = useRouter()
             </Navbar.Brand>
 
             
-            <span className={ styles.toggle_container } onClick={ toggleButton } >
+            <span className={ styles.toggle_container } 
+            onClick={ toggleButton } 
+            >
                 <Navbar.Toggle 
                     aria-controls='responsive-navbar-nav'
                     className={ styles.navbar_toggle }
                     />
-                <HamburgerArrow 
-                    barColor="#144388"
-                    {...{ isActive, toggleButton}}
-                    className={[ styles.hamburgerArrow, isActive && styles.isHidden ].join(' ')}
-                    />
+                    <button className={['hamburger hamburger--collapse', styles.menu_burger, menuState && 'is-active'].join(' ')} onClick={ toggleButton } type="button">
+                        <span className="hamburger-box">
+                            <span className="hamburger-inner"></span>
+                        </span>
+                    </button>
             </span>
 
             <Navbar.Collapse id='responsive-navbar-nav' className={['justify-content-end' , styles.navbar_collapse].join(' ')} >
@@ -85,10 +89,10 @@ const router = useRouter()
                     <>
                         { content.length > 1 ?  ( //displays dropdown menu items
 
-                        <ul className="navbar-nav">
+                        <ul className={["navbar-nav", styles.nav_link_a ].join(' ') }>
                             
                             
-                            <li className={["nav-item dropdown", dropdownTarget !== label ? 'show' : 'hide' ].join(' ')}  >
+                            <li className={["nav-item dropdown" ].join(' ')}  >
                                 {/* here */}
                                     <input id="menu" className={ styles.menu__toggle} type="checkbox" />
                                     
@@ -131,22 +135,26 @@ const router = useRouter()
                         </ul>
                         ) :
                         label == 'blog' ? ( //displays button
-                            <Nav.Item key={i} className={ styles.nav_link__button } onClick={ toggleButton }>
-                                <Button_ title={ label } pill variant={details.variant}  />
+                            <Nav.Item key={i} className={ styles.nav_link__button } onClick={ toggleButton }  >
+                                <div  className={ styles.nav_link_a } >
+                                    <Button_ title={ label } pill variant={details.variant}  />
+                                </div>
                             </Nav.Item>  
                         )
                         : 
                         label == 'donate' ? (
-                            <Nav.Item key={i} className={ styles.nav_link__button } >
-                                <DonateButton title={ label } pill variant={details.variant}  />
+                            <Nav.Item key={i} className={ [styles.nav_link__button ].join(' ')}  >
+                                <div  className={ [ styles.nav_link_a, styles.nav_link__button_donate ].join(' ')} >
+                                    <DonateButton title={ label } pill variant={details.variant} />
+                                </div>
                             </Nav.Item>  
                         )
                         :
                         
                         ( // displays navlink without dropdown
                             <Nav.Link key={i} as='span' eventKey='1' className={[ styles.nav_link ].join(' ')} onClick={ toggleButton } >
-                                <Link href={`/${content[0].href}`}>
-                                    <a className={ router.pathname == `/${content[0].href}` ? 'text-primary' : styles.nav_text_label }  >
+                                <Link href={`${content[0].href}`}>
+                                    <a className={ [ styles.nav_link_a, router.pathname == `/${content[0].href}` ? 'text-primary' : styles.nav_text_label].join(' ')} >
                                     { label }                                   
                                     </a>
                                 </Link>

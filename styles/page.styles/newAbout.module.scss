@@ -355,13 +355,26 @@
     font-size: $base-font-size-p *1.5;
   }
 
+  .ongoingProject_buttons2 {
+    width: 60vw;
+    margin: 1rem auto;
+  }
+
 }
 
 @media (min-width: $breakpoint-lg) {
-
+  .ongoingProject_buttons2 {
+    width: 35vw;
+    margin: 1rem auto;
+  }
 }
 
 @media (min-width: $breakpoint-xl) {
+  .ongoingProject_buttons2,
+  .ongoingProject_buttons3 {
+    width: 35vw;
+    margin: 1rem auto;
+  }
 
 }
 
