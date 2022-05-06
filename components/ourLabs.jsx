@@ -13,7 +13,7 @@ const OurLabs = () => {
     {
       title: 'Cyber Security & Cyber Defense',  //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
       image: '/cyber defence.jpg',
-      text: 'The emergence of the internet has no doubt enhance the way we live, work, socialize and transact business to a great extent but cyber criminals are taking un-due advantage...',
+      text: 'The emergence of the internet has no doubt enhanced the way we live, work, socialize and transact business to a great extent but cyber criminals are taking un-due advantage...',
       link: '/cyber_security_and_cyber_defense',
     },
     {
@@ -87,7 +87,7 @@ const OurLabs = () => {
 
       <div className={ styles.carousel_container__main } style={{paddingTop: '3em', paddingBottom: '5em'}} >
 
-        <div className={ ['d-flex justify-content-between text-uppercase ', styles.carousel_header__component].join(' ')} >
+        <div className={ ['d-flex justify-content-between text-capitalize', styles.carousel_header__component].join(' ')} >
           <h2 className={ styles.carousel_container__title } > Our <span className='text-primary ' >Labs</span></h2>
           <Link href={'/all_labs'}>
             <a>

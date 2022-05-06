@@ -112,8 +112,16 @@
    display: none !important; //very important
 }
 
-//smaller screens
-@media (max-width: $breakpoint-md) {
+@media (max-width: $breakpoint-sm) and (min-width: $breakpoint-xsm ) {
+
+  .nav_link__button_blog {
+    margin-left: 2em;
+    margin-bottom: 23rem ;
+  }
+
+  .nav_link__button_donate {
+    margin-left: 2.5rem !important;
+  }
 
   .isHidden {
     position: fixed !important;
@@ -125,17 +133,12 @@
 
  .menu_burger {
    margin-top: 40px;
+   margin-left: 20px;
  }
 
  .navbar_collapse {
   height: 100vh !important;
   }
-
- .nav_link__button_donate {
-   display: flex;
-   justify-content: center;
-   margin-top : 20rem;
- }
 
  .nav_link_a {
    margin-left: 2rem;
@@ -147,24 +150,137 @@
     font-weight: 600;
     margin-left: 2em !important;
   }
-  .nav_link__button {
-    margin-left: 2em;
-  }
+
   .nav_text_label{
     text-transform: uppercase;
   }
   .navbar_collapse {
-    // position: absolute;
     position: fixed;
     padding-top: 12vh;
-    padding-right: 30vw;
     top: 0;
     right: 0;
     height: 120vh;
-    width: 110vw;
+    width: 100vw;
     z-index: 99;
     background-color: #22272a;
-    // overflow: auto;
+    overflow-x: hidden !important;
+
+    &__nav {
+      display: flex;
+      justify-content: center;
+      align-content: flex-end;
+      width: 100vw;
+    }
+  }
+  .nav_link {
+    text-align: start;
+    margin-left: 2em;
+  }
+  
+  .nav_text_label {
+    color: white;
+  }
+  
+  .nav_label_text {
+    color: white;
+  }
+  
+  .nav_text {
+    color: white;
+  }
+
+  .toggle_container {
+    visibility: visible;
+    right: 1;
+  }
+    .menu__toggle,
+    .menu__body {
+      display: none;
+    }
+
+    .menu__toggle {
+      margin-left: 2em;
+      margin-top: 1em;
+      position: fixed;
+      width: 200px;
+      height: 25px;
+      opacity: 0;
+      z-index: 140;
+    }
+
+    .menu__toggle__text {
+      z-index: -140 !important;
+    }
+
+    .menu__toggle:checked ~ .menu__body {
+      display: block;
+    }
+}
+
+
+
+//smaller screens
+@media (max-width: $breakpoint-md) and (min-width: $breakpoint-sm ) {
+
+  .isHidden {
+    position: fixed !important;
+  }
+
+  .menu__toggle {
+    display: inline-block !important; //very important
+ }
+
+ .menu_burger {
+   margin-top: 40px;
+   margin-left: 20px;
+ }
+
+ .navbar_collapse {
+  height: 100vh !important;
+  }
+
+  .nav_link__button_donate {
+    margin-left: 5rem !important;
+  }
+
+    
+//     .nav_link__button_donate {
+//    margin-top : 30rem;
+//    padding-left: 7.5rem !important;
+//    display: flex;
+//    justify-content: center;
+//    margin-right: 1rem;
+//    width: 10vw;
+//  }
+
+ .nav_link_a {
+   margin-left: 2rem;
+ }
+
+  .nav_label_text {
+    text-transform: uppercase !important;
+    color: $main-blue;
+    font-weight: 600;
+    margin-left: 2em !important;
+  }
+  .nav_link__button_blog {
+    margin-left: 2em;
+    margin-bottom: 30rem !important;
+
+  }
+
+  .nav_text_label{
+    text-transform: uppercase;
+  }
+  .navbar_collapse {
+    position: fixed;
+    padding-top: 12vh;
+    top: 0;
+    right: 0;
+    height: 120vh;
+    width: 100vw;
+    z-index: 99;
+    background-color: #22272a;
     overflow-x: hidden !important;
 
     &__nav {
@@ -218,7 +334,17 @@
       display: block;
     }
 
+  }
 
+  @media (max-width: $breakpoint-lg) { 
+
+  }
+
+  @media (max-width: $breakpoint-xl) { 
+
+  }
+
+  @media (max-width: $breakpoint-xxl) { 
 
   }
   

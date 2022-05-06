@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="container mt-md-5">
 
           <Row >
-            <Col md={3} >
+            <Col md={4} >
               <div className='d-flex'>
                 <div className={ styles.footer_main__about }>
 
@@ -38,7 +38,7 @@ export default function Footer() {
 
               </div>
             </Col>
-            <Col md={3} >
+            <Col md={4} >
               <div className="">
                 <div className={ styles.footer_main__quicklinks }>
                   <h3 className={ styles.footer_header }>Quicklinks</h3>
@@ -48,38 +48,36 @@ export default function Footer() {
                 </div>
               </div>
             </Col>
-            <Col md={6}  >
+            <Col md={4}  >
               {/* <div className={["d-flex", styles.footer_justify].join(' ')}> */}
                 <Row>
-                  <Col md={6}  >
-                                    {/* <div className={ styles.footer_main__socials } > */}
-                  <h3 className={ styles.footer_main__socials_header } >blog</h3>
-                {/* </div> */}
-                  <div className=''>
-                    <p className={styles.contact_text_medium}>drone show event photos</p>
-                    <p className={styles.contact_text_small}>12/07/22</p>
-                    <hr className={ styles.line_style } />
-                  </div>
+                  {/* <Col md={6}  >
+                    <h3 className={ styles.footer_main__socials_header } >blog</h3>
+                    <div className=''>
+                      <p className={styles.contact_text_medium}>drone show event photos</p>
+                      <p className={styles.contact_text_small}>12/07/22</p>
+                      <hr className={ styles.line_style } />
+                    </div>
 
-                  <div className=''>
-                    <p className={styles.contact_text_medium}>drone show event photos</p>
-                    <p className={styles.contact_text_small}>12/07/22</p>
-                    <hr className={ styles.line_style } />
-                  </div>
+                    <div className=''>
+                      <p className={styles.contact_text_medium}>drone show event photos</p>
+                      <p className={styles.contact_text_small}>12/07/22</p>
+                      <hr className={ styles.line_style } />
+                    </div>
 
-                  <div className=''>
-                    <p className={styles.contact_text_medium }>drone show event photos</p>
-                    <p className={styles.contact_text_small}>12/07/22</p>
-                  </div>
-                  </Col>
+                    <div className=''>
+                      <p className={styles.contact_text_medium }>drone show event photos</p>
+                      <p className={styles.contact_text_small}>12/07/22</p>
+                    </div>
+                  </Col> */}
 
-                  <Col md={6}>
+                  <Col md={10}>
                 {/* <div className={ styles.footer_main__socials } > */}
                   <h3 className={ styles.footer_main__socials_header } >get in touch</h3>
                 {/* </div> */}
                 <div className=''>
-                    <p className={styles.contact_text_medium }>address: Abuja, Nigeria. 900112</p>
-                    <p className={styles.contact_text_small}>Abuja, Nigeria. 900112</p>
+                    <p className={styles.contact_text_medium }>address: Plot 239 Mafemi Crescent, Besides Daily Trust Newspapers, Utako District, Abuja, Nigeria. 900112</p>
+                    {/* <p className={styles.contact_text_small}>Abuja, Nigeria. 900112</p> */}
                     <hr className={ styles.line_style } />
                   </div>
 
@@ -89,7 +87,7 @@ export default function Footer() {
                   </div>
 
                   <div className=''>
-                    <p className={styles.contact_text_medium}>email: Secretariat@tacafrica.org</p>
+                    <p className={styles.contact_text_medium}>email: secretariat@tacafrica.org</p>
                     <hr className={ styles.line_style } />
                   </div>
                 </Col>

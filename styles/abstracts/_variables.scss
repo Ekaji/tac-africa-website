@@ -38,7 +38,8 @@ $dark-blue: #0B3658 !default; //Dark-Blue
 ///Grey
 /// @type Color
 $main-grey: #E8F0F6 !default; //Grey
-$light-grey: #C1C1C1 !default; //Light-Grey
+// $light-grey: #C1C1C1 !default; //Light-Grey
+$light-grey: #787878 !default; //Light-Grey
 $lighter-grey: #F2F6FA !default; //Lighter-Grey 
 
 ///White
@@ -60,7 +61,7 @@ $base-url: '../assets/' !default;
 // $breakpoint-xl: 1200px;
 
 // new media queries
-$breakpoint-xsm: 371px; // 768px
+$breakpoint-xsm: 341px; // 768px
 $breakpoint-sm: 48em; // 768px
 $breakpoint-md: 64em; // 1024px
 $breakpoint-lg: 85.375em; // 1366px

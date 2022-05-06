@@ -19,9 +19,9 @@ const JoinUs = () => {
                         Want to join with us?
                       </Card.Text>
                       <Card.Title className={ styles.card_large__title }  >Become a proud volunteer!</Card.Title>
-                      <Card.Text className={ styles.card_large__text }>
+                      <p className={ styles.card_large__text }>
                       TAC Africa volunteers are representative of our communities. We are always looking for more volunteers with diverse experiences, like people living in rural areas, people of color and of all races.
-                      </Card.Text>
+                      </p>
 
                         <Link href={'/volunteer'}>
                           <a>

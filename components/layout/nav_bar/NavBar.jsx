@@ -135,7 +135,7 @@ const router = useRouter()
                         </ul>
                         ) :
                         label == 'blog' ? ( //displays button
-                            <Nav.Item key={i} className={ styles.nav_link__button } onClick={ toggleButton }  >
+                            <Nav.Item key={i} className={ styles.nav_link__button_blog } onClick={ toggleButton }  >
                                 <div  className={ styles.nav_link_a } >
                                     <Button_ title={ label } pill variant={details.variant}  />
                                 </div>
@@ -143,9 +143,9 @@ const router = useRouter()
                         )
                         : 
                         label == 'donate' ? (
-                            <Nav.Item key={i} className={ [styles.nav_link__button ].join(' ')}  >
+                            <Nav.Item key={i} className={ [styles.nav_link__button ] }  >
                                 <div  className={ [ styles.nav_link_a, styles.nav_link__button_donate ].join(' ')} >
-                                    <DonateButton title={ label } pill variant={details.variant} />
+                                    <DonateButton wide title={ label } pill variant={details.variant} />
                                 </div>
                             </Nav.Item>  
                         )
@@ -153,7 +153,7 @@ const router = useRouter()
                         
                         ( // displays navlink without dropdown
                             <Nav.Link key={i} as='span' eventKey='1' className={[ styles.nav_link ].join(' ')} onClick={ toggleButton } >
-                                <Link href={`${content[0].href}`}>
+                                <Link href={`/${content[0].href}`}>
                                     <a className={ [ styles.nav_link_a, router.pathname == `/${content[0].href}` ? 'text-primary' : styles.nav_text_label].join(' ')} >
                                     { label }                                   
                                     </a>

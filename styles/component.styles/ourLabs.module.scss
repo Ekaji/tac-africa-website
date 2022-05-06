@@ -45,7 +45,7 @@
   .carousel_details {
     width: 80%;
     margin : 0em auto;
-    height:20vh;
+    height:22vh;
   }
 
   .carousel_image {
@@ -76,8 +76,8 @@
 
 
   .carousel_title {
-    margin: 2em auto;
-    font-size: 14px !important;
+    margin: 2em auto 1em;
+    font-size: $base-font-size-h2;
     color: $sweet-blue;
     font-weight: 900;
   }

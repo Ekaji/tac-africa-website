@@ -22,7 +22,7 @@ const Founder = () => {
             </div>
             <div className={ styles.founder_about_info }>
               <h1 className={ styles.founder_header_main }>CEO, President, TAC Africa</h1>
-              <h2 className={ styles.founder_header } >Dr. Jerry Abubo</h2>
+              <h2 className={ styles.founder_header } >Dr. Jerry Akubo</h2>
               <p>Jerry Innocent Akubo, National Technical Consultant, INTERPOL National Central Bureau, Abuja and also the CEO/Founder TAC NGO Africa. Actively engaged in Law Enforcement Technology Advisory domain for over two (2) decades now.</p>
 
               <p>Jerry Innocent Akubo is an International Security Consultant who is often found sharing his insights at global INTERPOL events on demystifying remote sensing apparatus, security assessment of Emerging technology platforms and initiatives.</p>

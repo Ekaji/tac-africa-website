@@ -54,7 +54,7 @@ const All_labs = () => {
       <Container style={{paddingTop: '3em', paddingBottom: '5em'}} >
 
 <div className={ styles.carousel_header__component } >
-  <p className={ styles.carousel_container__text } >Below are a selection of projects that we have partnered with and fully support their community development goals. Featured Projects. Blockchain & Payment Gateways</p>
+  <p className={ styles.carousel_container__text } >Explore core areas and activities TAC Africa is actively engaged in</p>
 </div>
 
     <div className={["row text-center", styles.card_container].join(' ')}>

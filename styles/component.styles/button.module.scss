@@ -20,8 +20,14 @@
   font-size: $base-font-size-p-md;
 }
 
-.button_wide {
-  min-width: 40rem !important;
+
+
+@media (max-width: $breakpoint-md) {
+  .button_wide {
+    width: 80vw !important;
+    margin: 0 auto;
+  }
+
 }
 
 @media (min-width: $breakpoint-xl) {
