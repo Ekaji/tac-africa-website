@@ -3,6 +3,7 @@
 
 import { Accordion, Container, Form, Row, Col} from 'react-bootstrap'
 import styles from '../styles/page.styles/allLabs.module.scss'
+// import styles from '../styles/component.styles/ourLabs.module.scss'
 import Button_ from '../components/button.jsx'
 import Link from 'next/link'
 import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
@@ -25,13 +26,13 @@ const All_labs = () => {
     },
     {
       title: 'Blockchain And Payment Gateways',
-      image: 'piles-coins-with-plant-front-graph.jpg',
+      image: '/piles-coins-with-plant-front-graph.jpg',
       text: 'With the growing number of individuals using the internet for business transaction, meeting, learning, gaming etc. The need to have a shared database cannot be overemphasized.',
       link: '/blockchain_and_crypto_lab',
     },
     {
       title: 'Drone & Counter Drone',
-      image: 'Blog_Drones.jpg',
+      image: '/Blog_Drones.jpg',
       text: 'The future of aviation is gradually being powered by unmanned Aerial Vehicles if the good guys don’t get involve on time the bad guys would..',
       link: '/drone_and_counter_drone',
     },
@@ -51,7 +52,7 @@ const All_labs = () => {
 
       <HeroBanner activeLink={'THE FOUNDER'} bannerOverlay text={'All Labs'} backgroundImg={ backgroundImg } />
 
-      <Container style={{paddingTop: '3em', paddingBottom: '5em'}} >
+      <Container fluid style={{paddingTop: '3em', paddingBottom: '5em'}} >
 
 <div className={ styles.carousel_header__component } >
   <p className={ styles.carousel_container__text } >Explore core areas and activities TAC Africa is actively engaged in</p>
@@ -60,8 +61,8 @@ const All_labs = () => {
     <div className={["row text-center", styles.card_container].join(' ')}>
 
         { data.map((edge, i) => (
-            <div className={"col-md-4"}>
-            <div key={i} className={ styles.carousel_component_inner }  >
+            <div key={i} className={" col-sm-12 col-lg-4 mb-4"}>
+            <div key={edge.title} className={ styles.carousel_component_inner }  >
                 <div className={ styles.carousel_image }>
                     <img className={ styles.carousel_image } src={ edge?.image } alt={ edge.image } />
                     <div className={ styles.carousel_mask } >

@@ -4,14 +4,14 @@ export const data = [
     description : 'The Advisory Board is not yet another “think tank” but a group of experts that share in our vision for establishing a lead in using the benefits of Emerging Technology to make Africa region and the world Safer.',
     members : [
      { 
-       image: '',
+       image: '/img/Abdul-Hakeem-Ajijola.png',
        name : 'Abdul-Hakeem Ajĳola',
        title : '',
        description : 'He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
        link: '/our_team/Abdul_Hakeem_Ajijola' //!only items you want click should contain link
      },
      {
-       image: '/img/Professor B.K. Alese.jfif',
+       image: '/img/Professor B.K. Alese.png',
        name : 'Prof Boniface. K Alese',
        title : '',
        description: ' He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
@@ -25,7 +25,7 @@ export const data = [
        link: '/our_team/Prof_Gabi_Siboni'
      },
      {
-      image: '/img/p.j ingram.jfif',
+      image: '/img/philip .j ingram.png',
       name : 'Phillip .J Ingram',
       title : '',
       description: 'He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
@@ -94,7 +94,7 @@ export const data = [
        description: 'Sacramento, California – USA'
      },
      {
-      image: '',
+      image: '/img/brooke-tapsall.png',
       name : 'Ms. Brooke Taspall',
       title : 'CEO/Founder, Drone Alert',
       description: ''
@@ -118,35 +118,35 @@ export const data = [
    description : 'The Secretariat will maintain an overview of ongoing virtual platform discuss between the co-creation programmes and circulates the results or information as and at when due.',
    members : [
     {
-      image: '',
+      image: '/img/mr mark.png',
       name : 'Mark Saiki',
       title : 'managing director',
       description: '',
       location: 'Abuja – Nigeria'
     },
      {
-       image: '	/img/ibrahim ali.png',
+       image: '	/img/ibro.png',
        name : 'Ibrahim Ali',
        title : 'UAV training manager',
        description: '',
        location: 'Abuja – Nigeria'
      },
      {
-      image: '/img/paul.jpg',
+      image: '/img/paul.png',
       name : 'Paul omole',
       title : 'UAV operations manager',
       description: '',
       location: 'Abuja – Nigeria'
     },
      {
-       image: '/img/sunday1.jpg',
+       image: '/img/sunday.png',
        name : 'Akubo Sunday',
        title : 'AI and Robotics Consultant',
        description: '',
        location: 'Abuja – Nigeria'
      },
         {
-       image: '',
+       image: '/img/ella.png',
        name : 'Emmanuella Omoh',
        title : '3D Mapping and Integration Specialist',
        description: '',
@@ -160,7 +160,7 @@ export const data = [
        location: 'Abuja – Nigeria'
      },
      {
-      image: '',
+      image: '/img/habib.png',
       name : 'Habeeb',
       title : 'Sensory Maintenance Officer',
       description: '',
@@ -168,7 +168,7 @@ export const data = [
     },
 
      {
-       image: '',
+       image: '/img/isoma.png',
        name : 'Favour Isioma',
        title : 'Sensory Maintenance Officer',
        description: '',

@@ -1,12 +1,11 @@
 /* eslint-disable react/jsx-key */
 import { Container, Card, Row, Col } from 'react-bootstrap'
 import styles from '../styles/component.styles/joinUs.module.scss'
-import Button_ from '../components/button'
 import Link from 'next/link'
 
 const JoinUs = () => {
   return(
-    <div fluid className={ styles.joinUs_main } >
+    <div className={ styles.joinUs_main } >
       <div className={ styles.blur_background } style={{ width: '100vw', height: '100%'}}>
         <Container className={ 'my-auto'} >
           <Row>
@@ -28,8 +27,6 @@ const JoinUs = () => {
                             <button className={ styles.block_button }>join us today</button> 
                           </a>
                         </Link>
-
-                      {/* <Button_ variant="primary" title={'join us today'} /> */}
                     </Card.Body>
                     </div>
                 </Card>
