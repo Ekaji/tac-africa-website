@@ -27,11 +27,11 @@ export default function OurTeam() {
     )
   }
 
-  const backgroundImg = "/Rectangle 70.jpg"
+  const backgroundImg = "/ser-1.png"
   
   return(
     <Container fluid className={ styles.ourTeam_container_main }>
-      <HeroBanner activeLink={'meet our team'}  backgroundImg={backgroundImg} />
+      <HeroBanner activeLink={'meet our team'} text={'meet our team'} bannerOverlay backgroundImg={backgroundImg} />
       <Container>
 
       <div className={ styles.ourTeam_container } >

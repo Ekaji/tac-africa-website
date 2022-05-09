@@ -32,7 +32,7 @@ const JoinUs = () => {
                   </Card>
                 </div>
               </Col>
-              <Col lg={3} md={6}  className={ styles.joinUs_card__small_container } >
+              <Col lg={4} md={6} xxl={3}  className={ styles.joinUs_card__small_container } >
                 <Row  className={ styles.card_small_main } >
                   <Col xs={6} >
                     <Card className={['mb-3', styles.joinUs_card__small].join(' ')} >
