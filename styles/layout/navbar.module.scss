@@ -243,16 +243,6 @@
     margin-left: 5rem !important;
   }
 
-    
-//     .nav_link__button_donate {
-//    margin-top : 30rem;
-//    padding-left: 7.5rem !important;
-//    display: flex;
-//    justify-content: center;
-//    margin-right: 1rem;
-//    width: 10vw;
-//  }
-
  .nav_link_a {
    margin-left: 2rem;
  }
@@ -340,8 +330,14 @@
 
   }
 
-  @media (max-width: $breakpoint-xl) { 
-
+  @media (min-width: $breakpoint-xl) { 
+    .navbar_collapse {
+      height: 12vh;
+    }
+    .nav_label_text,
+    .nav_link_a {
+      font-size: $base-font-size-h2 *2;
+    }
   }
 
   @media (max-width: $breakpoint-xxl) { 

@@ -12,8 +12,8 @@ export const data = [
             {href: '/about_us', name: 'About Us'},
             {href: '/founder', name: 'Founder'},
             {href: '/our_team', name: 'Our Team'},
-            {href: '/partners_and_supporters', name: 'partners and supporters'},
-            {href: '/gallery', name: 'Gallery'}
+            // {href: '/partners_and_supporters', name: 'partners and supporters'},
+            // {href: '/gallery', name: 'Gallery'}
         ], 
         type: 'dropdown button' 
     },

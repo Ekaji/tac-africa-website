@@ -12,17 +12,17 @@ const NewAbout = () => {
 
   const data =  [
     {
-      imgUrl: 'icons8-combo-chart-100 (1).png',
+      imgUrl: '/icons8-combo-chart-100 (1).png',
       title: 'Big Data Expert',
       text: 'With our team of AI experts & Big Data consultants, we help companies move into the AI and machine learning-powered age.'
     },
     {
-      imgUrl: 'icons8-google-web-search-500.png',
+      imgUrl: '/icons8-google-web-search-500.png',
       title: 'Research & Development',
       text: 'We constantly study to innovate and introduce new products and services or to improve our existing services'
     },
     {
-      imgUrl: 'intelligence.png',
+      imgUrl: '/intelligence.png',
       title: 'Data Exchange & Inspection',
       text: 'Our professionals and digital consultants specializes in inspection and testing of digital products and infrastructures.'
     },
@@ -95,13 +95,13 @@ const NewAbout = () => {
                   </span>
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                   commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                  est laborum.
+                  est laborum. */}
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion >
@@ -114,13 +114,13 @@ const NewAbout = () => {
                   </span>
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                   commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                  est laborum.
+                  est laborum. */}
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion >
@@ -133,13 +133,13 @@ const NewAbout = () => {
                   </span>
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                   commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                  est laborum.
+                  est laborum. */}
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion >

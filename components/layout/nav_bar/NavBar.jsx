@@ -65,7 +65,6 @@ const router = useRouter()
                 </Link>
             </Navbar.Brand>
 
-            
             <span className={ styles.toggle_container } 
             onClick={ toggleButton } 
             >
@@ -104,9 +103,7 @@ const router = useRouter()
 
                                         <span eventKey={i} className={getHref(content, currentPath ) ? [
                                         'text-primary', styles.nav_label_text ].join(' ') : styles.nav_label_text } >
-                                                {/* <label htmlFor="menu" className={styles.menu__toggle__text}> */}
                                                     { label }
-                                                {/* </label> */}
                                             </span> 
                                     </a>
                                     </label>

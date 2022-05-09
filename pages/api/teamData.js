@@ -17,13 +17,13 @@ export const data = [
        description: ' He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
        link: '/our_team/Prof_Boniface_K_Alese'
      },
-     {
-       image: '',
-       name : 'Prof. Gabi Siboni',
-       title : 'President/CEO',
-       description: ' He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
-       link: '/our_team/Prof_Gabi_Siboni'
-     },
+    //  {
+    //    image: '',
+    //    name : 'Prof. Gabi Siboni',
+    //    title : 'President/CEO',
+    //    description: ' He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
+    //    link: '/our_team/Prof_Gabi_Siboni'
+    //  },
      {
       image: '/img/philip .j ingram.png',
       name : 'Phillip .J Ingram',
@@ -44,24 +44,24 @@ export const data = [
      title : 'Vice President, TAC Africa',
      description : '',
    },
-   {
-     image: '',
-     name : 'Adedeji Owonibi',
-     title : 'Executive Director, TAC Africa',
-     description: ' He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
-   },
-   {
-     image: '',
-     name : 'Dr. Linus Enobi',
-     title : 'Executive Director, TAC Africa',
-     description: ' He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
-   },
-   {
-    image: '',
-    name : 'Dr. Ojo',
-    title : 'Executive Director, TAC Africa',
-    description: 'Executive Director, TAC Africa',
-  },
+  //  {
+  //    image: '',
+  //    name : 'Adedeji Owonibi',
+  //    title : 'Executive Director, TAC Africa',
+  //    description: ' He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
+  //  },
+  //  {
+  //    image: '',
+  //    name : 'Dr. Linus Enobi',
+  //    title : 'Executive Director, TAC Africa',
+  //    description: ' He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
+  //  },
+  //  {
+  //   image: '',
+  //   name : 'Dr. Ojo',
+  //   title : 'Executive Director, TAC Africa',
+  //   description: 'Executive Director, TAC Africa',
+  // },
   ],
  
 },
@@ -174,55 +174,55 @@ export const data = [
        description: '',
        location: 'Abuja – Nigeria'
      },
-     {
-      image: '',
-      name : 'Jahswill Emmanuel',
-      title : 'UI/UX Designer & 3D Animator',
-      description: '',
-      location: 'Abuja – Nigeria'
-    },
-    {
-      image: '',
-      name : 'Sylvernus Akubo',
-      title : 'Senior Developer/Programmer',
-      description: '',
-      location: 'Abuja – Nigeria'
-    },
-    {
-      image: '',
-      name : 'Jahswill Emmanuel',
-      title : 'UI/UX Designer & 3D Animator',
-      description: '',
-      location: 'Abuja – Nigeria'
-    },
-    {
-      image: '',
-      name : 'Abdulazeez Ocheja',
-      title : 'Senior UAV Pilot',
-      description: '',
-      location: 'Abuja – Nigeria'
-    },
-    {
-      image: '',
-      name : 'Ekaji Onah',
-      title : 'web developer/Programmer',
-      description: '',
-      location: 'Abuja – Nigeria'
-    },
-    {
-      image: '',
-      name : 'Bright Lawrence',
-      title : 'Internal Auditor',
-      description: '',
-      location: 'Abuja – Nigeria'
-    },
-    {
-      image: '',
-      name : 'Kind Akubo',
-      title : 'Cryptocurrency Theft Investigator',
-      description: '',
-      location: 'Abuja – Nigeria'
-    },
+    //  {
+    //   image: '',
+    //   name : 'Jahswill Emmanuel',
+    //   title : 'UI/UX Designer & 3D Animator',
+    //   description: '',
+    //   location: 'Abuja – Nigeria'
+    // },
+    // {
+    //   image: '',
+    //   name : 'Sylvernus Akubo',
+    //   title : 'Senior Developer/Programmer',
+    //   description: '',
+    //   location: 'Abuja – Nigeria'
+    // },
+    // {
+    //   image: '',
+    //   name : 'Jahswill Emmanuel',
+    //   title : 'UI/UX Designer & 3D Animator',
+    //   description: '',
+    //   location: 'Abuja – Nigeria'
+    // },
+    // {
+    //   image: '',
+    //   name : 'Abdulazeez Ocheja',
+    //   title : 'Senior UAV Pilot',
+    //   description: '',
+    //   location: 'Abuja – Nigeria'
+    // },
+    // {
+    //   image: '',
+    //   name : 'Ekaji Onah',
+    //   title : 'web developer/Programmer',
+    //   description: '',
+    //   location: 'Abuja – Nigeria'
+    // },
+    // {
+    //   image: '',
+    //   name : 'Bright Lawrence',
+    //   title : 'Internal Auditor',
+    //   description: '',
+    //   location: 'Abuja – Nigeria'
+    // },
+    // {
+    //   image: '',
+    //   name : 'Kind Akubo',
+    //   title : 'Cryptocurrency Theft Investigator',
+    //   description: '',
+    //   location: 'Abuja – Nigeria'
+    // },
     {
       image: '', //necessary for styling, used to render empty cards 
     },
