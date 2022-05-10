@@ -6,7 +6,6 @@
 }
 
 .background_container {
-  // margin-top: 4em;
   width: 70vw;
   margin-bottom: 5em;
   min-height: 20vh;
@@ -287,6 +286,9 @@
     width: 90vw;
     margin: 1rem auto;
   }
+  .background_container {
+    width: 90vw;
+  }
 }
 
 @media (min-width: $breakpoint-sm) {
@@ -345,19 +347,27 @@
     margin: 1rem auto;
     border-radius: 23px;
   }
-  .ongoingProject_buttons2 {
-    width: 35rem;
-    margin: 1rem auto;
-    border-radius: 23px;
-  }
+  // .ongoingProject_buttons2 {
+  //   width: 35rem;
+  //   margin: 1rem auto;
+  //   border-radius: 23px;
+  // }
 
   .button_text {
     font-size: $base-font-size-p *1.5;
   }
 
-  .ongoingProject_buttons2 {
+  // .ongoingProject_buttons2 {
+  //   width: 60vw;
+  //   margin: 1rem auto;
+  // }
+
+  .ongoingProject_buttons1,
+  .ongoingProject_buttons2,
+  .ongoingProject_buttons3 {
     width: 60vw;
     margin: 1rem auto;
+    border-radius: 23px;
   }
 
 }

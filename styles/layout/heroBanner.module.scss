@@ -12,8 +12,7 @@
   width: 100vw;
   top: 0;
   margin-top: 5em;
-  right: 0;
-  
+  right: 0; 
 }
 
 .heroBanner_img {
@@ -64,12 +63,34 @@
   }
 
 @media (min-width: $breakpoint-lg) {
+  .banner_overlay{
+    height: 35.5vh;
+    margin-top: 7em;
+  }
 
 }
 
 @media (min-width: $breakpoint-xl) {
-  
+  .banner_overlay{
+    height: 35.5vh;
+    margin-top: 7em;
+  }
 
+  
+}
+
+@media (min-width: $breakpoint-xxl) {
+  .banner_overlay{
+    height: 35vh;
+    margin-top: 7.5em;
+  }  
+}
+
+@media (min-width: $breakpoint-mxl) {
+  .banner_overlay{
+    height: 35vh;
+    margin-top: 8.8em;
+  }  
 }
 
 

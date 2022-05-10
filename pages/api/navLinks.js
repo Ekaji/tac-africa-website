@@ -24,7 +24,7 @@ export const data = [
             {href: '/cyber_security_and_cyber_defense', name: 'Cyber Security And Cyber Defense'},
             {href: '/artificial_intelligence_and_robotics', name: 'AI And Robotics Lab'},
             {href: '/blockchain_and_crypto_lab', name: 'Blockchain And Crypto Lab'},
-            {href: '/satellite_and_remote_sensing_lab', name: 'Satellite And Remote Sensing Lab'}
+            // {href: '/satellite_and_remote_sensing_lab', name: 'Satellite And Remote Sensing Lab'}
         ],
         type: 'dropdown button'
     },
