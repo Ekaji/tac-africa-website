@@ -31,7 +31,7 @@ const Video = () => {
             <p className={ styles.videoComp_text }>prides itself as well-established industry leader in drone and counter drone systems, with its headquarters in FCT Abuja Nigeria and an international office in. Lagos, Nigeria. We are at the forefront of the security industry and are proud to provide quality Emerging Technology and Security Services & Solutions tailored to meet our clients’ needs across various industries</p>
           </div>
           <div  >
-            <h2 className={ styles.videoComp_header_inner } >Nuturing the future of UAVs</h2>
+            {/* <h2 className={ styles.videoComp_header_inner } >Nuturing the future of UAVs</h2> */}
             <p className={ styles.videoComp_text }></p>
           </div>
 

@@ -25,7 +25,7 @@
   .background_header {
     text-transform: uppercase;
     font-weight: 600;
-    color: #144388;
+    color: $sweet-blue;
     font-size: 30px;
     margin-bottom: 1em;
   }
@@ -99,7 +99,7 @@
   .volunteer__header__1 {
     font-size: 16px;
     text-transform: capitalize;
-    color: #144388;
+    color: $sweet-blue;
     font-weight: 600;
     margin-bottom: 0.5em;
   }
@@ -107,7 +107,7 @@
   .volunteer__header__2  { 
     text-transform: uppercase;
     font-weight: 600;
-    color: #144388;
+    color: $sweet-blue;
     margin-bottom: 1em;
   }
   
@@ -136,7 +136,7 @@
       font-weight: 600;
       font-size: 28px;
       word-spacing: 0.1em;
-      color: #144388;
+      color: $sweet-blue;
     }
   
     &__text {
@@ -228,7 +228,7 @@
 
     .getInvolved_header {
         font-size: $base-font-size-h2 *2.5;
-        color: #144388;
+        color: $sweet-blue;
         font-weight: 600;
     }
     .getInvolved_text {
@@ -251,7 +251,7 @@
   }
    
   .ongoingProject_header {
-    color: #144388;
+    color: $sweet-blue;
     font-size: 2.5rem;
     font-weight: 600;
   }

@@ -34,7 +34,7 @@ const NewAbout = () => {
   return(
     <>
       <Container fluid className={ styles.aboutUs_container } >
-        <HeroBanner text={'About us'} backgroundImg={ backgroundImg } />
+        <HeroBanner text={'About us'} bannerOverlay activeLink={'About us'}  backgroundImg={ backgroundImg } />
 
         <Container className={ styles.background_container }  >
           <h2 className={ styles.background_header }>our background </h2> 
