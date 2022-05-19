@@ -42,7 +42,7 @@ function CreatePost() {
           query: { returnUrl: router.asPath }
       });
     }
-  },[ ])
+  },)
 
 
   return ( 
