@@ -97,7 +97,7 @@
 
   .carousel_component_inner {
     max-width: 40vw !important;
-
+    
   
     .carousel_details {
       // width: 40vw;
@@ -217,4 +217,18 @@
       width: 100%;
     }
   }
+}
+
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 2.0),
+  only screen and (   min--moz-device-pixel-ratio: 2.0),
+  only screen and (     -o-min-device-pixel-ratio: 2.0/1),
+  only screen and (        min-device-pixel-ratio: 2.0),
+  only screen and (                min-resolution: 227dpi),
+  only screen and (                min-resolution: 2.0dppx) { 
+    /* Retina styles here */
+    // .card_container {
+    //   background-color: blue;
+    // }
+
 }

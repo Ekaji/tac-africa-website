@@ -15,16 +15,23 @@ export default function LandingPage(){
             <Col lg={5} >
                 <div className={styles.tac_header_detail}>
                     <div className={styles.tac_header_detail__items}>
-                        <h1>{'Combating Crime in '}
+                        {/* <h1>{'Combating Crime in '}
                             <em> Africa</em> with emerging
                             technology
+                        </h1> */}
+                        {/* FOSTERING INNOVATION FOR FUTURE SECURITY CHALLENGES */}
+                        <h1>
+                            fostering innovation for future security challenges
                         </h1>
 
+                        <h2>
+                            <span className={styles.bullet_heading} style={{margin: '0em 0.5em 0em 0em'}}><em>prevent</em></span>
+                            <span className={styles.bullet_heading} style={{margin: '0em 0.5em 0em 0em'}}><em>detect</em></span>
+                            <span className={styles.bullet_heading} style={{margin: '0em 0.5em 0em 0em'}}><em>investigate</em></span>
+                        </h2>
+
                         <p>
-                            An NGO Obliged to bringing together Law
-                            Enforcement Agents, Academia and Subject
-                            Matter Experts to curb technology aided
-                            crime
+                        Law enforcement officials today are facing a challenging and demanding operating environment. As society is increasingly connected and the world becoming borderless, technologies can help law enforcement to prevent, detect and investigate more efficiently, but at the same time, they also open up possibilities for criminals.
                         </p>
                             
                             <Link href={'/about_us'}>

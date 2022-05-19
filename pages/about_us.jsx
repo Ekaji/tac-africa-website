@@ -43,6 +43,16 @@ const NewAbout = () => {
             
             <p> Essentially, we are a non-governmental, bipartisan organisation, connecting law enforcement, subject matter experts, civil society to solve issues that affect our society. We work on the transformation of our law enforcement and judiciary. We make them more technologically enabled. Besides this, we solve problems through policy advocacy, research, training and capacity building and volunteering.
           </p>
+          <p>
+          Law enforcement officials today are facing a challenging and demanding operating environment. As society is increasingly connected and the world becoming borderless, technologies can help law enforcement to prevent, detect and investigate more efficiently, but at the same time, they also open up possibilities for criminals.
+          <p>
+          Technology Against Crime believes that its vision of a safer continent is possible through a multi-stake holder approach to innovation in policing.
+          </p>
+          Autonomous cars, Artificial Intelligence, robotics, drones and crypto-currencies in the dark web; these are becoming part of today’s reality, which intensifies the challenges of securing our cities, major events, borders and cyberspace.
+          </p>
+          <p>
+          Welcome to TAC, where we leverage new technologies to shape the future of policing. Learn, share and experience the technological possibilities and state-of-the-art policing solution in action.
+          </p>
         </Container>
 
         <Container fluid className={ styles.aboutUs_specialty_container_main } >

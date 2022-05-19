@@ -79,10 +79,10 @@ export default function CustomDropdown({ dropDownPosition }) {
                 <Dropdown.Menu as={CustomMenu}>
                 {
                     content?.map(({href, name}, i) => (
-                        <NavDropdown.Item key={name} as='div' href={href} eventKey={i}>
+                        <NavDropdown.Item key={name} as='div' href={href} eventKey={i} style={{color: 'black !important'}} >
                                 <Link href={href} >
-                                    <a >
-                                    {name}
+                                    <a  >
+                                    <span className={ styles.item_color }>{name}</span>
                                     </a>
                                 </Link> 
                           <Dropdown.Divider  className={i === content.length -1 && styles.dropdown_divider} />

@@ -3,7 +3,6 @@
 
 import { Accordion, Container, Form, Row, Col} from 'react-bootstrap'
 import styles from '../styles/page.styles/allLabs.module.scss'
-// import styles from '../styles/component.styles/ourLabs.module.scss'
 import Button_ from '../components/button.jsx'
 import Link from 'next/link'
 import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
@@ -50,12 +49,24 @@ const All_labs = () => {
   return(
     <>
 
-      <HeroBanner activeLink={'THE FOUNDER'} bannerOverlay text={'All Labs'} backgroundImg={ backgroundImg } />
+      <HeroBanner activeLink={'discover'} bannerOverlay text={'All Labs'} backgroundImg={ backgroundImg } />
 
       <Container fluid style={{paddingTop: '3em', paddingBottom: '5em'}} >
 
-<div className={ styles.carousel_header__component } >
-  <p className={ styles.carousel_container__text } >Explore core areas and activities TAC Africa is actively engaged in</p>
+<div className={[ styles.carousel_header__component, styles.container__wider ].join(' ')} >
+  {/* <p className={ styles.carousel_container__text } >Explore core areas and activities TAC Africa is actively engaged in</p> */}
+    <p>
+    Today’s crime are increasingly complex. They are interconnected and global, and they take place on both physical and virtual levels. More than ever, there is need for multilateral police cooperation to address the security challenges facing the continent.
+    </p>
+    <p>
+    TAC’s role is to enable Law Enforcement Agencies to work together to fight these evolving challenges and make the continent a safer place.
+    </p>
+    <p>
+    We provide secure access to training, capacity building, oversea travels including operational and forensic support and analysis services through partnership, collaboration and Technology Exchanges for LEA’s.
+    </p>
+    <p>
+    All these Law Enforcement capabilities are delivered globally and support three global programs against the issues that we consider to be the most pressing today; counter-terrorism, cyber-crime, and organized and emerging crime.
+    </p>
 </div>
 
     <div className={["row text-center", styles.card_container].join(' ')}>

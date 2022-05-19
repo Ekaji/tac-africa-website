@@ -11,7 +11,7 @@ const HeroBanner = ({ backgroundImg, text, activeLink, bannerOverlay }) => {
       {/* <div className={ styles.ourTeam_hero }  > */}
       {
         bannerOverlay ?
-      <div className={ styles.banner} >
+      <div className={ styles.banner } >
         
         <img src={backgroundImg} alt='ai and robotics' style={{width: '100%'}} className={ styles.heroBanner_img }/>
 

@@ -23,9 +23,9 @@
 
         p {
             line-height: 1.5em;
-            color: #1A4074D4;
+            color: $sweet-blue;
             margin-top: 1em;
-            max-width: 21em;
+            // max-width: 21em;
         }
 
         button {
@@ -34,6 +34,11 @@
 
         }
     }
+}
+
+.bullet_heading {
+    color: $sweet-blue;
+    font-weight: 600;
 }
 
 .header_icon__container{

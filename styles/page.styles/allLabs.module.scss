@@ -12,6 +12,11 @@
   }
 }
 
+.container__wider {
+  width: 80vw;
+  margin: 0 auto;
+}
+
 .our_labs_head {
   display: inline-flex;
   justify-content: space-between;
@@ -189,6 +194,10 @@
   .card_container {
     width: 80vw;
     margin: 0 auto;
+  }
+
+  .container__wider {
+    font-size: $base-font-size-p *2;
   }
   
   .carousel_container__title {

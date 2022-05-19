@@ -2,14 +2,13 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import LandingPage from '../components/landingPage.jsx'
-// import Welcome from '../components/welcome.jsx'
 import OurLabs from '../components/ourLabs.jsx'
-// import Drive from '../components/drive.jsx'
 import LatestProjects from '../components/latestProjects.jsx'
 import JoinUs from '../components/joinUs.jsx'
-// import VideoPlayer from '../components/videoPlayer/video'
+import OngoingProjects from '../components/ongoing_projects.jsx'
+import { CommunityHub } from '../components/comunityHub.jsx'
 
-const VideoPlayer = dynamic(() => import('../components/videoPlayer/video.jsx'), { ssr: false })
+// const VideoPlayer = dynamic(() => import('../components/videoPlayer/video.jsx'), { ssr: false })
 
 
 export default function Home() {
@@ -22,7 +21,8 @@ export default function Home() {
       </Head>
       <LandingPage />
       <OurLabs />
-      <VideoPlayer />
+      <OngoingProjects />
+      {/* <CommunityHub /> */}
       <JoinUs />
     </div>
   )

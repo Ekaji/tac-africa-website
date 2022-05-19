@@ -134,7 +134,11 @@ const router = useRouter()
                         label == 'blog' ? ( //displays button
                             <Nav.Item key={i} className={ styles.nav_link__button_blog } onClick={ toggleButton }  >
                                 <div  className={ styles.nav_link_a } >
-                                    <Button_ title={ label } pill variant={details.variant}  />
+                                    <Link href='/blog'>
+                                        <a>
+                                          <Button_ title={ label } pill variant={details.variant}  />
+                                        </a>
+                                    </Link>
                                 </div>
                             </Nav.Item>  
                         )
