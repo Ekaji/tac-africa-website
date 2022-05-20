@@ -28,11 +28,17 @@ export default function Dashboard() {
 
   const handleSignOut = () => {
     supabase.auth.signOut();
-    router.reload(window.location.pathname);
   }
 
 
-  console.log(user)
+  // useEffect(() => {
+  //   if (!user) {
+  //         router.push({
+  //         pathname: '/dashboard/',
+  //         query: { returnUrl: router.asPath }
+  //     });
+  //   }
+  // }, [user, router])
 
   if (loading) return <p className="text-2xl">Loading ...</p>
   if (!posts?.length) {
@@ -40,7 +46,7 @@ export default function Dashboard() {
        <>
        { user && <>
         <h1>logged in as : {user}</h1>
-          <Button onClick={handleSignOut }> signOut </Button>
+          <Button onClick={ handleSignOut }> signOut </Button>
        </> }
         <p className="text-2xl" style={{paddingTop: '10vh'}}>No posts...</p>
         <Create_posts />
