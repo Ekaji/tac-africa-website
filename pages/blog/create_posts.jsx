@@ -48,8 +48,9 @@ function CreatePost() {
   return ( 
   
   <>
-{ 
-  user && (
+{/* { 
+  user &&
+   ( */}
         <div>  
         <h1 className="text-3xl font-semibold tracking-wide mt-6">Create new post</h1>
         <input
@@ -69,8 +70,8 @@ function CreatePost() {
           onClick={createNewPost}
         >Create Post</button>
       </div>
-  )
-}
+  {/* ) */}
+{/* } */}
 
   </>
 

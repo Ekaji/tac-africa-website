@@ -13,24 +13,43 @@ export default function LandingPage(){
     <div className={[ styles.top_container, styles.container_pd].join(' ')}>
         <Row className={ styles.tac_header_background}>
             <Col lg={5} >
-                <div className={styles.tac_header_detail}>
-                    <div className={styles.tac_header_detail__items}>
-                        {/* <h1>{'Combating Crime in '}
-                            <em> Africa</em> with emerging
-                            technology
-                        </h1> */}
-                        {/* FOSTERING INNOVATION FOR FUTURE SECURITY CHALLENGES */}
-                        <h1>
+                <div className={
+                    // styles.tac_header_detail, 
+                   ' h-full flex items-center justify-center pt-8 pl-4 mr-8 capitalize'
+                    }>
+                    <div className={
+                        // styles.tac_header_detail__items
+                        ''
+                        }>
+                        <h1 className= 'text-4xl font-semibold leading-10 text-sweet_blue md:text-5xl lg:text-4md 2xl:text-9xl  '>
                             fostering innovation for future security challenges
                         </h1>
 
-                        <h2>
-                            <span className={styles.bullet_heading} style={{margin: '0em 0.5em 0em 0em'}}><em>prevent</em></span>
-                            <span className={styles.bullet_heading} style={{margin: '0em 0.5em 0em 0em'}}><em>detect</em></span>
-                            <span className={styles.bullet_heading} style={{margin: '0em 0.5em 0em 0em'}}><em>investigate</em></span>
+                        <h2 className='flex space-x-4 mt-4'>
+                            <div 
+                                className={
+                                    // styles.bullet_heading
+                                    'font-semibold mt-0 mb-2 text-2xl md:text-3xl 2xl:text-5xl text-sweet_blue border-b-4 border-main_yellow'
+                                } 
+                                // style={{margin: '0em 0.5em 0em 0em'}} 
+                                >prevent</div>
+                            <div 
+                                className={
+                                    // styles.bullet_heading
+                                    'font-semibold mt-0 mb-2  text-2xl  md:text-3xl 2xl:text-5xl text-sweet_blue border-b-4 border-main_yellow'
+                                } 
+                                // style={{margin: '0em 0.5em 0em 0em'}}
+                                >detect</div>
+                            <div 
+                                className={
+                                    // styles.bullet_heading
+                                    'font-semibold mt-0 mb-2 text-2xl  md:text-3xl 2xl:text-5xl text-sweet_blue border-b-4 border-main_yellow'
+                                } 
+                                // style={{margin: '0em 0.5em 0em 0em'}}
+                                >investigate</div>
                         </h2>
 
-                        <p>
+                        <p className='leading-6 mt-4  text-sweet_blue md:text-2xl xl:text-base 2xl:text-5xl '>
                         Law enforcement officials today are facing a challenging and demanding operating environment. As society is increasingly connected and the world becoming borderless, technologies can help law enforcement to prevent, detect and investigate more efficiently, but at the same time, they also open up possibilities for criminals.
                         </p>
                             
