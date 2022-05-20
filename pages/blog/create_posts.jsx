@@ -28,7 +28,7 @@ function CreatePost() {
           { title, content, user_id: user.id, user_email: user.email }
       ])
       .single()
-    router.push(`/posts/${data.id}`)
+    router.push(`/blog/${data.id}`)
   }
 
   const user = supabase?.auth?.currentUser?.email;
