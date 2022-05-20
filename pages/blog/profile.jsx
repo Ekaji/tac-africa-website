@@ -37,7 +37,7 @@ export default function AuthProfile() {
   useEffect(() => {
     if (loggedIn) {
             router.push({
-          pathname: '/dashboard/',
+          pathname: '/blog/create_posts',
           query: { returnUrl: router.asPath }
       });
     }
