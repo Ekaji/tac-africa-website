@@ -9,23 +9,31 @@ import Link from 'next/link'
 export default function LandingPage(){
 
   return(
-    <section className="container-fluid">
-    <div className={[ styles.top_container, styles.container_pd].join(' ')}>
-        <Row className={ styles.tac_header_background}>
-            <Col lg={5} >
+    <section className="w-full">
+    <div className='lg:h-screen'>
+        <div className='flex flex-col lg:flex-row-reverse  lg:h-90vh' >
+
+        <div   className='flex-col  lg:w-7/12  bg-main_grey' >
+                <div className={['relative h-30vh w-full lg:h-90vh xl:px-5 bg-gray-200 flex items-end overflow-hidden object-cover'].join(' ')} >
+                <span style={{boxSizing:'border-box',display:'block',overflow:'hidden',width:'initial',height:'initial',background:'none',opacity:'1',border:'0',margin:'0',padding:'0',position:'absolute',top:'0',left:'0',bottom:'0',right:'0'}}><img alt="Technology Against Crime ideology" src="/tac-icon.svg" decoding="async" data-nimg="fill" className="image" style={{position:'absolute',top:'0',left:'0',bottom:'0',right:'0',boxSizing:'border-box',padding:'0',border:'none',margin:'auto',display:'block',width:'0',height:'0',minWidth:'100%',maxWidth:'100%',minHeight:'100%',maxHeight:'100%'}} sizes="100vw" srcSet="/tac-icon.svg 640w, /tac-icon.svg 750w, /tac-icon.svg 828w, /tac-icon.svg 1080w, /tac-icon.svg 1200w, /tac-icon.svg 1920w, /tac-icon.svg 2048w, /tac-icon.svg 3840w" /><noscript><img alt="Technology Against Crime ideology" sizes="100vw" srcSet="/tac-icon.svg 640w, /tac-icon.svg 750w, /tac-icon.svg 828w, /tac-icon.svg 1080w, /tac-icon.svg 1200w, /tac-icon.svg 1920w, /tac-icon.svg 2048w, /tac-icon.svg 3840w" src="/tac-icon.svg" decoding="async" data-nimg="fill" style={{position:'absolute',top:'0',left:'0',bottom:'0',right:'0',boxSizing:'border-box',padding:'0',border:'none',margin:'auto',display:'block',width:'0',height:'0',minWidth:'100%',maxWidth:'100%',minHeight:'100%',maxHeight:'100%',}} className="image" loading="lazy"/></noscript></span>
+                        
+                </div>
+            </div>
+            
+            <div className='flex-col lg:w-5/12'  >
                 <div className={
                     // styles.tac_header_detail, 
-                   ' h-full flex items-center justify-center pt-8 pl-4 mr-8 capitalize'
+                   ' h-full flex items-center justify-center pt-8 pl-4 mr-8 capitalize 2xl:mx-5'
                     }>
                     <div className={
                         // styles.tac_header_detail__items
                         ''
                         }>
-                        <h1 className= 'text-4xl font-semibold leading-10 text-sweet_blue md:text-5xl lg:text-4md 2xl:text-9xl  '>
+                        <h1 className= 'text-4xl font-semibold leading-10 text-sweet_blue md:text-5xl lg:text-4md 2xl:text-8xl  '>
                             fostering innovation for future security challenges
                         </h1>
 
-                        <h2 className='flex space-x-4 mt-4'>
+                        <h2 className='flex space-x-4 mt-4 2xl:mt-8 '>
                             <div 
                                 className={
                                     // styles.bullet_heading
@@ -49,52 +57,37 @@ export default function LandingPage(){
                                 >investigate</div>
                         </h2>
 
-                        <p className='leading-6 mt-4  text-sweet_blue md:text-2xl xl:text-base 2xl:text-5xl '>
+                        <p className=' mt-4 2xl:mt-8  text-sweet_blue md:text-2xl xl:text-base 2xl:text-4xl 2xl:leading-11 xl:mb-12  '>
                         Law enforcement officials today are facing a challenging and demanding operating environment. As society is increasingly connected and the world becoming borderless, technologies can help law enforcement to prevent, detect and investigate more efficiently, but at the same time, they also open up possibilities for criminals.
                         </p>
                             
                             <Link href={'/about_us'}>
                                 <a>
-                                    <Button_ variant="outline-primary" title="Learn More" />
+                                    <span className='xl:mt-8'>
+                                        <Button_ variant="outline-primary" title="Learn More" />
+                                    </span>
                                 </a>
                             </Link>
                             <Link href={'/all_labs'}>
                                 <a>
-                                    <Button_ title="Discover" />
+                                    <span className='xl:mt-8'>
+                                        <Button_ title="Discover" />
+                                    </span>
                                 </a>
                             </Link>
                     </div>
 
                 </div>
 
-            </Col>
+            </div>
 
-            <Col  xs={{order: 'first'}} lg={{span: 7, order: 'last'}} className={styles.header_icon__container} >
+            {/* <Col  xs={{order: 'first'}} lg={{span: 7, order: 'last'}} className={styles.header_icon__container} >
                 <Col md={10} className={styles.header_icon} >
                 <span style={{boxSizing:'border-box',display:'block',overflow:'hidden',width:'initial',height:'initial',background:'none',opacity:'1',border:'0',margin:'0',padding:'0',position:'absolute',top:'0',left:'0',bottom:'0',right:'0'}}><img alt="Technology Against Crime ideology" src="/tac-icon.svg" decoding="async" data-nimg="fill" className="image" style={{position:'absolute',top:'0',left:'0',bottom:'0',right:'0',boxSizing:'border-box',padding:'0',border:'none',margin:'auto',display:'block',width:'0',height:'0',minWidth:'100%',maxWidth:'100%',minHeight:'100%',maxHeight:'100%'}} sizes="100vw" srcSet="/tac-icon.svg 640w, /tac-icon.svg 750w, /tac-icon.svg 828w, /tac-icon.svg 1080w, /tac-icon.svg 1200w, /tac-icon.svg 1920w, /tac-icon.svg 2048w, /tac-icon.svg 3840w" /><noscript><img alt="Technology Against Crime ideology" sizes="100vw" srcSet="/tac-icon.svg 640w, /tac-icon.svg 750w, /tac-icon.svg 828w, /tac-icon.svg 1080w, /tac-icon.svg 1200w, /tac-icon.svg 1920w, /tac-icon.svg 2048w, /tac-icon.svg 3840w" src="/tac-icon.svg" decoding="async" data-nimg="fill" style={{position:'absolute',top:'0',left:'0',bottom:'0',right:'0',boxSizing:'border-box',padding:'0',border:'none',margin:'auto',display:'block',width:'0',height:'0',minWidth:'100%',maxWidth:'100%',minHeight:'100%',maxHeight:'100%',}} className="image" loading="lazy"/></noscript></span>
-                        {/* <img  src="/tac-icon.svg"
-                                layout='fill'
-                                className={styles.image}
-                                alt="Technology Against Crime ideology" /> */}
+                        
                 </Col>
-            </Col>
-        </Row>
-
-        {/* <Row className={['mt-md-5 mb-md-5', styles.header_partners_icon].join(' ')}>
-            <div className={styles.header_partners_icon__item}>
-                <Image width='150' height='50' className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/CyberPeaceFoundation.png"
-                    alt="Technology Against Crime ideology" />
-                <Image width='150' height='50' className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/greyHareMedia.png" alt="Technology Against Crime ideology" />
-            </div>
-
-            <div className={styles.header_partners_icon__item}>
-                <Image width='150' height='50' className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/instituteOfDroneTechnologyAustralia.png"
-                    alt="Technology Against Crime ideology"  />
-                <Image width='150' height='50' className="Image-fluid" style={{maxWidth: '100%', height: 'auto'}} src="/logoDroneAlert.png" 
-                    alt="Technology Against Crime ideology" />
-            </div>
-
-        </Row> */}
+            </Col> */}
+        </div>
 
     </div>
 </section>

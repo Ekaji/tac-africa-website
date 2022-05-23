@@ -16,10 +16,11 @@ export default function NavBar(){
 
     // used for setting the styles of navbar labels with active links
     const [currentPath, setCurrentPath] = useState('')
+    const router = useRouter()
 
     useEffect(() => {
         setCurrentPath(() => router.asPath)
-    })
+    }, [router])
 
 
     const getHref = (hrefArray, pathName) => {
@@ -51,7 +52,6 @@ export default function NavBar(){
         )
     
   
-const router = useRouter()
   return(
     <div className={ styles.nav_container }  >
         <Navbar collapseOnSelect className={styles.nav_inner__container} style={{padding: '0px', }} expand="lg">

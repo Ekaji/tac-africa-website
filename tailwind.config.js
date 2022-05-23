@@ -22,7 +22,16 @@ module.exports = {
       },
       fontSize: { 
         '4md': ['2.5rem', '2.7rem']
-      }
+      },
+      lineHeight: {
+        '11': '3rem',
+        '12': '3.5rem',
+      },
+      height: {
+        '30vh': '30vh',
+        '70vh': '70vh',
+        '90vh': '90vh',
+      },
     }
   },
   plugins: [],
