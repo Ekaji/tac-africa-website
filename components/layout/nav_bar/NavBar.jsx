@@ -6,7 +6,6 @@ import { Badge, Dropdown, Navbar, Nav, NavDropdown, Container} from 'react-boots
 import styles from '../../../styles/layout/navbar.module.scss'
 import Button_ from '../../button.jsx'
 import { useRouter } from 'next/router'
-import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Link from 'next/link'
 import { data } from '../../../pages/api/navLinks.js'
 import DonateButton from '../../../components/donateButton'
@@ -53,56 +52,66 @@ export default function NavBar(){
     
   
   return(
-    <div className={ styles.nav_container }  >
-        <Navbar collapseOnSelect className={styles.nav_inner__container} style={{padding: '0px', }} expand="lg">
+    <div className={ 
+        // styles.nav_container
+        '-mt-8 top-0 w-full z-40'
+        }  >
+        <Navbar collapseOnSelect className='p-0'  expand="lg">
             
-        <Container fluid  className={styles.background_blur }  >
+        <Container fluid  className={
+            // styles.background_blur 
+            'bg-white m-0 p-0'
+            }  >
             <Navbar.Brand >
                 <Link href={'/'} >
                   <a>
-                    <img src='/TAC_LOGO.webp' alt='logo' style={{maxWidth: '70px', marginLeft: '19px', marginTop: '25px'}} />
+                    <img src='/TAC_LOGO.webp' alt='logo' className='ml-4 mt-6 w-16'/>
                   </a>
                 </Link>
             </Navbar.Brand>
 
-            <span className={ styles.toggle_container } 
+            <span className='visible md:hidden' style={{zIndex: '100'}}
             onClick={ toggleButton } 
             >
                 <Navbar.Toggle 
                     aria-controls='responsive-navbar-nav'
-                    className={ styles.navbar_toggle }
+                    className='top-0 left-0 absolute z-10 w-full h-full opacity-0'
                     />
-                    <button className={['hamburger hamburger--collapse', styles.menu_burger, menuState && 'is-active'].join(' ')} onClick={ toggleButton } type="button">
+                    <button className={['hamburger hamburger--collapse mt-10 ml-5', menuState && 'is-active'].join(' ')} onClick={ toggleButton } type="button">
                         <span className="hamburger-box">
                             <span className="hamburger-inner"></span>
                         </span>
                     </button>
             </span>
 
-            <Navbar.Collapse id='responsive-navbar-nav' className={['justify-content-end' , styles.navbar_collapse].join(' ')} >
+            <Navbar.Collapse id='responsive-navbar-nav' className={['justify-end -mb-10 text-base shadow-none mr-0'].join(' ')} >
                 
-            <Nav className={['my-2 my-lg-0', styles.navbar_collapse__nav]}  >
+            <Nav className={['my-2 my-lg-0 font-semibold'].join(' ')}  >
                 
 
             {data?.map(({label, content, type, details}, i) => (
                     <>
                         { content.length > 1 ?  ( //displays dropdown menu items
 
-                        <ul className={["navbar-nav", styles.nav_link_a ].join(' ') }>
+                        <ul className={["navbar-nav ml-8" ].join(' ') }>
                             
                             
                             <li className={["nav-item dropdown" ].join(' ')}  >
-                                {/* here */}
                                     <input id="menu" className={ styles.menu__toggle} type="checkbox" />
                                     
                                     <label htmlFor="menu" className={styles.menu__toggle__text} >
 
                                     <a className="nav-link dropdown-toggle" href="#" tabIndex="0" data-bs-toggle="dropdown" 
-                                    // style={{width: '100px', margin: '0px !important'}}
                                      >
 
                                         <span eventKey={i} className={getHref(content, currentPath ) ? [
-                                        'text-primary', styles.nav_label_text ].join(' ') : styles.nav_label_text } >
+                                        'text-primary', 
+                                        // styles.nav_label_text 
+                                        'uppercase font-semibold'
+                                        ].join(' ') : 
+                                        // styles.nav_label_text 
+                                        'uppercase font-semibold'
+                                        } >
                                                     { label }
                                             </span> 
                                     </a>
