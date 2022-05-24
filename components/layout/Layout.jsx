@@ -3,6 +3,7 @@ import NavBar from '../layout/nav_bar/NavBar'
 import Footer from '../layout/footer/Footer'
 import { useState } from 'react'
 import { ModalContext } from '../../context/modalContext.js'
+import Nav_Bar from './nav_bar/newNavBar'
 
 export default function Layout({children}) {
 
@@ -10,7 +11,7 @@ export default function Layout({children}) {
 
   return(
     <ModalContext.Provider value={[modalState, setModalState]} >
-      <NavBar />
+      <Nav_Bar />
         <div style={{minHeight: '90vh'}} >
           {children}
         </div>
