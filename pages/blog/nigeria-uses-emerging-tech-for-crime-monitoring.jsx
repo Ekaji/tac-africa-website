@@ -5,7 +5,7 @@ const Page = () => {
     <div className="container w-full md:max-w-3xl mx-auto pt-20">
         <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style={{fontFamily: "Georgia,serif"}}>
             <div className="font-sans">
-                <h1 className="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Interpol Provides EFCC With App To Track Terrorism Financing</h1>
+                <h1 className="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Nigeria uses drone and emerging tech for crime monitoring: Jerry Akubo, Technology Against Crime Initiative</h1>
                 <p className="text-sm md:text-base font-normal text-gray-600">08/07/2019 </p>
             </div>
             <div className="py-6 ">

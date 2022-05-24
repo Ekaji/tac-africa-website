@@ -14,6 +14,7 @@ const Page = () => {
 
               The system will help to detect and interdict stolen and illicit funds by criminals.
               The application comprises a database to be supervised by the National Central Bureau, NCB, which is an interface between Interpol and national law enforcement agencies of countries through i24/7 Gemini Project global communications system.
+
               The application will be managed by its Information and Communications Technology Department.
 
               A statement on Tuesday, April 30, 2019, by the Acting Head of Media and Publicity, Mr. Tony Orilade, said the Acting Chairman of the Commission, Ibrahim Magu, witnessed the demonstration of the new application at the EFCC’s headquarters in Abuja.
