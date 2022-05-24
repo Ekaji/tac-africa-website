@@ -21,21 +21,23 @@ const Founder = () => {
                 <img src='/Jerry-Akubo-21.png' alt='founder' />
             </div>
             <div className={ styles.founder_about_info }>
-              <h1 className={ styles.founder_header_main }>CEO, President, TAC Africa</h1>
-              <h2 className={ styles.founder_header } >Dr. Jerry Akubo</h2>
-              <p>Jerry Innocent Akubo, National Technical Consultant, INTERPOL National Central Bureau, Abuja and also the CEO/Founder TAC NGO Africa. Actively engaged in Law Enforcement Technology Advisory domain for over two (2) decades now.</p>
+              <h2 className={ styles.founder_header } >Dr. Jerry Akubo, CEH,CCI,MCITP,</h2>
+              <h2 className={ styles.founder_header } >CEO</h2>
+              <h1 className={ styles.founder_header_main }> Technology Against Crime Initiative, Africa (TAC Africa)</h1>
+              <p>Dr. Jerry Akubo founded TAC Africa as a futurist oriented, Law Enforcement Centric NGO, borne out of an International Forum on Technologies – a high level meeting dedicated to Technologies for a Safer World, co-organized by INTERPOL and the Ministry of Interior in Lyon, France in 2013.  The NGO was officially registered in Abuja, Nigeria in 2016.  Prior to this, he worked over a decade and half as the National Technical Officer for INTERPOL NCB Abuja under the auspices of the Nigeria Police Force.</p>
 
-              <p>Jerry Innocent Akubo is an International Security Consultant who is often found sharing his insights at global INTERPOL events on demystifying remote sensing apparatus, security assessment of Emerging technology platforms and initiatives.</p>
+              <p>Dr. Akubo has been recognized by the INTERPOL Global Complex for Innovation and the Directorate of Innovation Center, Singapore for his exemplary service, partnership and contributions having actively attended and participated in over eight (8) INTERPOL General Assemblies and Eight (8) INTERPOL World Congress in a roll amongst other high level technical meetings and presentation he organized on extending INTERPOL Secured Communications Network to authorized Law Enforcement Agencies across the African Region.
+</p>
 
             </div>
 
           </div>
           <div className={ styles.founder_details }>
-              <p>Jerry Innocent Akubo, National Technical Consultant, INTERPOL National Central Bureau, Abuja and also the CEO/Founder TAC NGO Africa. Actively engaged in Law Enforcement Technology Advisory domain for over two (2) decades now – in the following areas:- Project deployment officer – OASIS Africa Project deployed by INTERPOL to all the Saharan African Border. National Technical Consultant – In-Charge of Expanding INTERPOL I-24/7 databases to relevant Law Enforcement Agencies within Nigeria.
+              <p>He is a frequent speaker on Emerging Technologies and the maximal utilization of INTERPOL tools by Law Enforcement Agencies within the African Region while pushing a number of research and developmental projects to improve the technical know-how and easy accessibility of tools and technologies for Law Enforcement Agents especially the front line officers. 
               </p>
 
               <p>
-               Established a Digital Resource Center for the Research & Planning Department of the NPF Established an Intelligence Support System (ISS) for the Criminal Intelligence within the Police Force: Focal point – INTERPOL Cybercrime Expert Group Focal Point – INTERPOL Drone Expert Forum Focal Point – Computer Forensic Institute Country Representative/Authorized Training Partner – Institute for Drone Technology, Australia. Jerry Innocent Akubo is an International Security Consultant who is often found sharing his insights at global INTERPOL events on demystifying remote sensing apparatus, security assessment of Emerging technology platforms and initiatives geared towards encouraging the use of technology Against Crime.
+              Dr. Akubo is an evangelist on the use of Innovative Aerial Surveillance, remote sensing and emerging technology to tackle most unique set of challenges the African region is facing including on the one side. Transnational Organized Cyber Crime and on the other, battling insurgents and terrorist group often domiciled in very remote & inaccessible locations.
               </p>
 
           </div>
@@ -47,3 +49,9 @@ const Founder = () => {
 }
 
 export default Founder;
+
+
+
+
+
+
