@@ -11,9 +11,7 @@ function Profile(props) {
     const loggedIn = props?.supabaseClient?.auth?.currentUser?.role;
 
   
-  if (loggedIn == 'authenticated')  props.setLoggedIn(!false);
-
-  console.log(loggedIn)
+  if (loggedIn == 'authenticated')  props.setLoggedIn(true);
 
 
     const { user } = Auth.useUser();
@@ -39,11 +37,11 @@ export default function AuthProfile() {
   useEffect(() => {
     if (loggedIn) {
             router.push({
-          pathname: '/blog',
+          pathname: '/blog/create_posts',
           query: { returnUrl: router.asPath }
       });
     }
-  },[ loggedIn])
+  },[ loggedIn, router])
 
 
     return (
