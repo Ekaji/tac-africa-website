@@ -20,6 +20,7 @@ module.exports = {
         'lighter_grey': '#F2F6FA', //Lighter_Grey 
         'main_white': '#FFFFFF', //Grey
         'main_yellow': '#FFC34E', //Yellow
+        'see_tru': 'rgba(5, 0, 32, 0.697), rgba(5, 0, 32, 0.697)'
       },
       fontSize: { 
         '4md': ['2.5rem', '2.7rem']
@@ -30,6 +31,7 @@ module.exports = {
       },
       height: {
         '30vh': '30vh',
+        '40vh': '40vh',
         '70vh': '70vh',
         '90vh': '90vh',
       },

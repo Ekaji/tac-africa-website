@@ -10,7 +10,7 @@ import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
 
 const BlockchainAndCryptoLab = () => {
 
-  const backgroundImg =  "/Cyber-Security and defense.png"
+  const backgroundImg =  "/Cyber-Security_and_defense.png"
 
   return(
     <>

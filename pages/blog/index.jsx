@@ -47,7 +47,7 @@ export default function Home() {
   // };
   return (
     <div style={{paddingTop: '5vh'}} >
-      <h1 className="text-3xl text-center font-semibold tracking-wide mt-6 mb-2 capitalize ">welcome to our Blog</h1>
+      <h1 className="text-3xl text-center font-semibold tracking-wide mt-6 mb-2 capitalize ">Welcome to our Blog</h1>
       {
         posts.map(post => (
           <Link key={post.id} >
@@ -97,7 +97,7 @@ export default function Home() {
                             <span
                                 className="inline-block p-2 mb-2 text-xs font-medium tracking-widest text-red-800 bg-red-200 rounded">News
                             </span>
-                            <h1 className="mb-2 text-lg font-medium text-gray-900">nigeria uses emerging tech for crime monitoring</h1>
+                            <h1 className="mb-2 text-lg font-medium text-gray-900">Nigeria uses emerging tech for crime monitoring</h1>
                             <p className="mb-2 text-sm tracking-wide text-gray-700">If Nigeria does not adopt these technologies at the earliest, then the bad guys will outpace us, says Jerry Innocent Akubo</p>
                             <div className="flex items-center ">
                                 <Link href='/blog/nigeria-uses-emerging-tech-for-crime-monitoring'>
@@ -123,7 +123,7 @@ export default function Home() {
                             <span
                                 className="inline-block p-2 mb-2 text-xs font-medium tracking-widest text-green-800 bg-green-200 rounded">News
                             </span>
-                            <h1 className="mb-2 text-lg font-medium text-gray-900">tac boosts african security with venture fund in partnership with silicon valley based gsd ventures</h1>
+                            <h1 className="mb-2 text-lg font-medium text-gray-900">TAC boosts african security with venture fund in partnership with silicon valley based gsd ventures</h1>
                             <p className="mb-1 text-sm tracking-wide text-gray-700">TAC Africa and GSD Venture Studios have joined together to assemble a fund to stimulate growth </p>
                             <div className="flex items-center ">
                                 <Link href='/blog/tac-boosts-african-security-with-venture-fund-in-partnership-with-silicon-valley-based-gsd-ventures'>

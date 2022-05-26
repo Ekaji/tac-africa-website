@@ -1,34 +1,33 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
-import styles from '../../../styles/layout/heroBanner.module.scss'
-import MiniNav from './miniNav'
+import MiniNav from './miniNav';
 
-const HeroBanner = ({ backgroundImg, text, activeLink, bannerOverlay }) => {
-
-
-  return(
+const HeroBanner = ({
+  backgroundImg,
+  text,
+  activeLink,
+}) => {
+  return (
     <>
-      {/* <div className={ styles.ourTeam_hero }  > */}
-      {
-        bannerOverlay ?
-      <div className={ styles.banner } >
-        
-        <img src={backgroundImg} alt='ai and robotics' style={{width: '100%'}} className={ styles.heroBanner_img }/>
-
-        <div className={ styles.banner_overlay } >
-          <div className={ styles.banner_text } >
-              <h2> {text} </h2>
-          </div>
+      <div
+        className={
+          'h-40vh relative bg-fixed bg-center bg-cover bg-no-repeat'
+        }
+        style={{
+          backgroundImage: `linear-gradient(rgba(5, 0, 32, 0.697), rgba(5, 0, 32, 0.697)), url(${backgroundImg})`,
+        }}
+      >
+        <div className="flex items-center justify-center h-full">
+          <h2 className="text-white font-bold capitalize">
+            {' '}
+            {text}{' '}
+          </h2>
         </div>
-
       </div>
-        :
-        <img src={backgroundImg} alt='ai and robotics' style={{width: '100%'}} className={ styles.heroBanner_img }/>
-      }
-      {/* </div> */}
-      <MiniNav activeLink={activeLink}   />
-    </>
-  )
-}
 
-export default HeroBanner
+      <MiniNav activeLink={activeLink} />
+    </>
+  );
+};
+
+export default HeroBanner;
