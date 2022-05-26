@@ -167,6 +167,32 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <div className="p-4 md:w-1/3">
+                    <div className="border-2 border-gray-200 rounded-lg">
+                        <img className="object-cover object-center w-full lg:h-48 md:h-36"
+                            src="/blog/interpol.jpg" alt="blog" />
+                        <div className="p-6">
+                            <span
+                                className="inline-block p-2 mb-2 text-xs font-medium tracking-widest text-green-800 bg-green-200 rounded">News
+                            </span>
+                            <h1 className="mb-2 text-lg font-medium text-gray-900">suspected head of cybercrime gang arrested in nigeria</h1>
+                            <p className="mb-1 text-sm tracking-wide text-gray-700">The cybercrime unit of the Nigeria Police Force arrested a 37-year-old Nigerian man in an international operation spanning four continents coordinated and facilitated by the recently created Africa operations desk</p>
+                            <div className="flex items-center ">
+                                <Link href='/blog/suspected-head-of-cybercrime-gang-arrested-in-nigeria'>
+                                    <a className="inline-flex items-center text-indigo-500 cursor-pointer md:mb-2 lg:mb-0">Read
+                                        More
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mt-1" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokWidth="2"
+                                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                        </svg>
+                                    </a>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
