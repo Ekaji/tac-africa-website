@@ -14,6 +14,8 @@ const DropDownButton = ({
 
   const [isShown, setIsShown] = useState(false);
 
+  console.log(content[1])
+
   return (
     <li
       key={i}
