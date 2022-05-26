@@ -1,15 +1,14 @@
 /* eslint-disable react/jsx-key */
 import { Container } from 'react-bootstrap'
 import Link from 'next/link'
-import styles from '../../../styles/layout/miniNav.module.scss'
 
 
 const MiniNav = ({activeLink}) => {
   return (
     <Container fluid  >
       <Container >
-      <div className={ styles.aboutUs_nav_container }> 
-        <div className={ styles.aboutUs_nav }>
+      <div className='hidden md:block' > 
+        <div className='flex justify-between uppercase text-xs mt-8'>
           <div>
             <span>
               <Link href='/'>
@@ -45,7 +44,7 @@ const MiniNav = ({activeLink}) => {
         </div>
       </div>
       </Container >
-      <hr className={styles.hr} />
+      <hr className='w-full h-px text-gray-600 mb-16' />
     </Container >
 
   )
