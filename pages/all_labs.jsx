@@ -13,13 +13,13 @@ const All_labs = () => {
   const data =  [
     {
       title: 'Cyber Security & Cyber Defense',  //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
-      image: '/cyber defence.jpg',
+      image: '/cyber_defence.jpg',
       text: 'The emergence of the internet has no doubt enhance the way we live, work, socialize and transact business to a great extent but cyber criminals are taking un-due advantage...',
       link: '/cyber_security_and_cyber_defense',
     },
     {
       title: 'Artificial Intelligence And Robotics',
-      image: '/ai and robotics.jpg',
+      image: '/ai_and_robotics.jpg',
       text: 'AI & Robotics is an emerging technology that is gradually making traditional complex task easier through the use of Artificial Intelligence-controlled Robots (AI) AI – algorithm in the actual world and allows it to interact with materials in real time',
       link: '/artificial_intelligence_and_robotics',
     },
