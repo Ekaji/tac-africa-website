@@ -1,185 +1,82 @@
 /* eslint-disable react/jsx-key */
-// /* eslint-disable @next/next/no-img-element */
-// /* eslint-disable react/jsx-key */
-import { useEffect, useState, useCallback } from 'react'
-import { Badge, Dropdown, Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
-import styles from '../../../styles/layout/navbar.module.scss'
-import Button_ from '../../button.jsx'
-import { useRouter } from 'next/router'
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import { data } from '../../../pages/api/navLinks.js'
-import DonateButton from '../../../components/donateButton'
+import { useState, useCallback} from 'react'
+import DropDownButton from '../../dropdownButton.jsx'
 
+const NavBar = ( ) => {
 
-export default function NavBar(){
-
-    // used for setting the styles of navbar labels with active links
-    const [currentPath, setCurrentPath] = useState('')
-    const router = useRouter()
-
-    useEffect(() => {
-        setCurrentPath(() => router.asPath)
-    }, [router])
-
-
-    const getHref = (hrefArray, pathName) => {
-        const hrefs = hrefArray?.map(href =>  href.href)
-            if (hrefs?.includes(pathName)) {
-                return true
-            } else {
-                return false
-            }
-    }
-
-    const [dropdownTarget, setDropDownTarget] = useState(null)
-    const handleDropdown = (e, label) => {
-        if (dropdownTarget !== null) {
-            setDropDownTarget(null)
-        }
-        e.preventDefault()
-        setDropDownTarget(label)
-    }
-
-
-    const [menuState, setMenuState] = useState(false)
+  const [menuState, setMenuState] = useState(false)
     
-        const toggleButton = useCallback(
-          () => {
-              setMenuState(menuState => !menuState)
-          },
-          [],
-        )
-    
-  
+  const toggleButton = useCallback(
+    () => {
+        setMenuState(menuState => !menuState)
+    },
+    [],
+  )
+
+
   return(
-    <div className={ 
-        // styles.nav_container
-        '-mt-8 top-0 w-full z-40'
-        }  >
-        <Navbar collapseOnSelect className='p-0'  expand="lg">
-            
-        <Container fluid  className={
-            // styles.background_blur 
-            'bg-white m-0 p-0'
-            }  >
-            <Navbar.Brand >
-                <Link href={'/'} >
-                  <a>
-                    <img src='/TAC_LOGO.webp' alt='logo' className='ml-4 mt-6 w-16'/>
-                  </a>
-                </Link>
-            </Navbar.Brand>
+    
+        <nav className={`bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 ${menuState && 'h-screen'} md:h-full`}>
+          <div className="xl:px-12 flex flex-wrap justify-between items-center mx-auto">
+            <Link href={'/'} >
+              <a>
+                <img src="/TAC_LOGO.webp" className="mr-3 h-16 " alt="tac Logo" />
+              </a>
+            </Link>
+            <button onClick={ toggleButton } data-collapse-toggle="mobile-menu" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
+              <span className='visible md:hidden' style={{zIndex: '100'}} onClick={ toggleButton } >              
+                <button className={['hamburger hamburger--collapse ', menuState && 'is-active'].join(' ')} onClick={ toggleButton } type="button">
+                    <span className="hamburger-box">
+                        <span className="hamburger-inner"></span>
+                    </span>
+                </button>
+              </span>
+            </button>
 
-            <span className='visible md:hidden' style={{zIndex: '100'}}
-            onClick={ toggleButton } 
-            >
-                <Navbar.Toggle 
-                    aria-controls='responsive-navbar-nav'
-                    className='top-0 left-0 absolute z-10 w-full h-full opacity-0'
-                    />
-                    <button className={['hamburger hamburger--collapse mt-10 ml-5', menuState && 'is-active'].join(' ')} onClick={ toggleButton } type="button">
-                        <span className="hamburger-box">
-                            <span className="hamburger-inner"></span>
-                        </span>
-                    </button>
-            </span>
-
-            <Navbar.Collapse id='responsive-navbar-nav' className={['justify-end -mb-10 text-base shadow-none mr-0'].join(' ')} >
-                
-            <Nav className={['my-2 my-lg-0 font-semibold'].join(' ')}  >
-                
-
+            <div  className={`${menuState == true ? '' : 'hidden'}  md:isvisible w-full md:block md:w-auto`} id="mobile-menu">
+              <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             {data?.map(({label, content, type, details}, i) => (
-                    <>
-                        { content.length > 1 ?  ( //displays dropdown menu items
+              <>
+                { content.length > 1 ?  (
+                <>
+                  <DropDownButton label={label} content={content} />
+                </>) //dropdown
+                 : 
+                 label == 'blog' ?
+                 (
+                  <Link href='/blog'>
+                    <a>
+                      <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{label}</button>
+                    </a>
+                  </Link>
+                 ) 
+                 : 
+                 label == 'donate' ? 
+                 (
+                  <button type="button" className="mt-96 md:mt-0 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">{label}</button> 
+                 )
+                  :
 
-                        <ul className={["navbar-nav ml-8" ].join(' ') }>
-                            
-                            
-                            <li className={["nav-item dropdown" ].join(' ')}  >
-                                    <input id="menu" className={ styles.menu__toggle} type="checkbox" />
-                                    
-                                    <label htmlFor="menu" className={styles.menu__toggle__text} >
-
-                                    <a className="nav-link dropdown-toggle" href="#" tabIndex="0" data-bs-toggle="dropdown" 
-                                     >
-
-                                        <span eventKey={i} className={getHref(content, currentPath ) ? [
-                                        'text-primary', 
-                                        // styles.nav_label_text 
-                                        'uppercase font-semibold'
-                                        ].join(' ') : 
-                                        // styles.nav_label_text 
-                                        'uppercase font-semibold'
-                                        } >
-                                                    { label }
-                                            </span> 
-                                    </a>
-                                    </label>
-                                    {/* <input id="menu" className={ styles.menu__toggle } type="checkbox" /> */}
-
-
-                                <ul className={["dropdown-menu ", dropdownTarget == label && 'dropdown-menu-right fade-down show', styles.menu__body ].join(' ')}>
-                         {
-                            content?.map(({href, name}, i) => ( //displays dropdown menu items
-
-                                <Nav.Link key={i} as='li'  href={href} onClick={() => setDropDownTarget(null)} className={
-                                    router.pathname == content.href ? [ styles.nav_dropdown_link_text].join(' ') : styles.nav_text
-                                    } >
-                                    <Link href={href} >
-                                        <a className="dropdown-item" onClick={ toggleButton } >
-                                        {name}
-                                        </a>
-                                    </Link> 
-                                    <Dropdown.Divider  className={[ i !== content.length -1 ? styles.dropdown_divider : styles.dropdown_divider_last].join(' ')} />
-                                </Nav.Link>
-                                ) 
-                            )
-                        }
-                                </ul>
-                            </li>
-                        </ul>
-                        ) :
-                        label == 'blog' ? ( //displays button
-                            <Nav.Item key={i} className={ styles.nav_link__button_blog } onClick={ toggleButton }  >
-                                <div  className={ styles.nav_link_a } >
-                                    <Link href='/blog'>
-                                        <a>
-                                          <Button_ title={ label } pill variant={details.variant}  />
-                                        </a>
-                                    </Link>
-                                </div>
-                            </Nav.Item>  
-                        )
-                        : 
-                        label == 'donate' ? (
-                            <Nav.Item key={i} className={ [styles.nav_link__button ] }  >
-                                <div  className={ [ styles.nav_link_a, styles.nav_link__button_donate ].join(' ')} >
-                                    <DonateButton wide title={ label } pill variant={details.variant} />
-                                </div>
-                            </Nav.Item>  
-                        )
-                        :
-                        
-                        ( // displays navlink without dropdown
-                            <Nav.Link key={i} as='span' eventKey='1' className={[ styles.nav_link ].join(' ')} onClick={ toggleButton } >
-                                <Link href={`/${content[0].href}`}>
-                                    <a className={ [ styles.nav_link_a, router.pathname == `/${content[0].href}` ? 'text-primary' : styles.nav_text_label].join(' ')} >
-                                    { label }                                   
-                                    </a>
-                                </Link>
-                            </Nav.Link>
-                        )
-                        
-                    } 
-                    </>
-                ))}
-
-            </Nav>
-            </Navbar.Collapse>
-        </Container>
-        </Navbar>
-    </div>
+                  (<li>
+                    <a href="#" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{label}</a>
+                  </li>)
+                 
+                 }
+              </>
+            ) 
+            
+          ) 
+        }
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
 
   )
 }
+
+export default NavBar
