@@ -42,7 +42,7 @@ const NavBar = ( ) => {
               <>
                 { content.length > 1 ?  (
                 <>
-                  <DropDownButton label={label} content={content} />
+                  <DropDownButton label={label} content={content} setMenuState={setMenuState} menuState={menuState} />
                 </>) //dropdown
                  : 
                  label == 'blog' ?
