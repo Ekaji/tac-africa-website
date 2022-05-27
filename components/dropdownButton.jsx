@@ -10,11 +10,8 @@ const DropDownButton = ({
   content,
   i,
 }) => {
-  const router = useRouter();
 
   const [isShown, setIsShown] = useState(false);
-
-  console.log(content[1])
 
   return (
     <li
@@ -25,7 +22,7 @@ const DropDownButton = ({
     >
       <button
         id="dropdownButton"
-        className=" hover:bg-blue-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        className=" hover:bg-blue-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm 2xl:text-lg px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="button"
       >
         {label}{' '}
@@ -62,7 +59,7 @@ const DropDownButton = ({
                       setIsShown(!isShown);
                       setMenuState(!menuState);
                     }}
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white "
+                    className="block px-4 py-2 2xl:text-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white "
                   >
                     {name}
                   </a>

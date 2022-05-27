@@ -26,8 +26,8 @@ const Header = ({ mobile, desk }) => {
 
 const Founder = () => {
   const backgroundImg = '/founder_banner.png';
-  const desk = 'hidden md:block mx-auto w-screen w-5/6';
-  const mobile = 'block md:hidden w-screen mt-4 px-3';
+  const desk = 'hidden lg:block mx-auto w-screen w-5/6';
+  const mobile = 'block lg:hidden w-screen mt-4 px-3';
 
   return (
     <>
@@ -41,7 +41,7 @@ const Founder = () => {
         <div className="md:m-8 container">
           <Header desk={desk} />
 
-          <div className="flex flex-col md:flex-row mt-12 w-full">
+          <div className="flex flex-col lg:flex-row mt-12 w-full">
             <div className="w-screen ">
               <img
                 className="object-fit md:mt-12"
@@ -52,7 +52,7 @@ const Founder = () => {
 
             <Header mobile={mobile} />
 
-            <div className="mt-8 px-6">
+            <div className="mt-8 px-6 lg:text-lg">
               <p>
                 Dr. Jerry Akubo founded TAC Africa as a futurist
                 oriented, Law Enforcement Centric NGO, borne out of an
@@ -80,7 +80,7 @@ const Founder = () => {
               </p>
             </div>
           </div>
-          <div className="my-12 px-6">
+          <div className="my-12 px-6 lg:text-lg">
             <p>
               He is a frequent speaker on Emerging Technologies and
               the maximal utilization of INTERPOL tools by Law

@@ -15,6 +15,7 @@ const CustomToggle = forwardRef(
   (props, ref) => (
     <a
       href=""
+      style={{ color: 'white'}} 
       ref={ref}
       onClick={e => {
         e.preventDefault();
@@ -62,7 +63,7 @@ export default function CustomDropdown({ dropDownPosition }) {
                 { 
                 content.length > 1 ? 
                   <Dropdown.Toggle key={label} as={CustomToggle} id="dropdown-custom-components" >
-                    <span style={{ textTransform: 'capitalize'}} >{ label }</span> 
+                    <span style={{ textTransform: 'capitalize', color: 'white'}} >{ label }</span> 
                   </Dropdown.Toggle> 
 
                 :
@@ -70,7 +71,7 @@ export default function CustomDropdown({ dropDownPosition }) {
                   <Nav.Link key={label} as='span' eventKey='1' style={{ padding: '0px 0px 0px 20px !important' }}  >
                     <Link href={`/${content[0].href}`} >
                       <a>
-                      <span style={{ textTransform: 'capitalize'}} >{ label }</span> 
+                      <span style={{ textTransform: 'capitalize', color: 'white'}} >{ label }</span> 
                       </a>
                     </Link>
                   </Nav.Link>
