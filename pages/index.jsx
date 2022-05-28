@@ -4,6 +4,7 @@ import LandingPage from '../components/landingPage.jsx'
 import OurLabs from '../components/ourLabs.jsx'
 import JoinUs from '../components/joinUs.jsx'
 import OngoingProjects from '../components/ongoing_projects.jsx'
+import CardSlider from '../components/cardSlider.jsx'
 
 
 export default function Home() {
@@ -15,7 +16,8 @@ export default function Home() {
         <link rel="icon" href="/TAC_LOGO.png" />
       </Head>
       <LandingPage />
-      <OurLabs />
+      {/* <OurLabs /> */}
+      <CardSlider />
       <OngoingProjects />
       <JoinUs />
     </div>

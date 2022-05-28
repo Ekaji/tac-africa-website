@@ -18,7 +18,6 @@ const DropDownButton = ({
       key={i}
       onMouseOver={() => setIsShown(true)}
       onMouseLeave={() => setIsShown(false)}
-      // onClick={() => {setIsShown(!isShown); setMenuState(!menuState)}}
     >
       <button
         id="dropdownButton"

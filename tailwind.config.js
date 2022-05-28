@@ -20,7 +20,9 @@ module.exports = {
         'lighter_grey': '#F2F6FA', //Lighter_Grey 
         'main_white': '#FFFFFF', //Grey
         'main_yellow': '#FFC34E', //Yellow
-        'see_tru': 'rgba(5, 0, 32, 0.697), rgba(5, 0, 32, 0.697)'
+        'primary': '#0275d8',
+        'see_tru': 'rgba(5, 0, 32, 0.697), rgba(5, 0, 32, 0.697)',
+        'overlay': 'rgba(5, 0, 32, 0.697)'
       },
       fontSize: { 
         '4md': ['2.5rem', '2.7rem']
@@ -37,7 +39,12 @@ module.exports = {
       },
     }
   },
+  corePlugins: {
+    aspectRatio: false,
+  },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
 ]
 }
