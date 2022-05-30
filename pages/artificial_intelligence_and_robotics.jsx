@@ -14,7 +14,7 @@ const Artificial_Intelligence_and_Robotics = () => {
   return(
     <>
       <Container fluid className={ styles.aboutUs_container } >
-        <HeroBanner text={'Artificial Intelligence & Robotics'} bannerOverlay activeLink={'our lab'} backgroundImg={ backgroundImg } />
+        <HeroBanner text={'Artificial Intelligence & Robotics'} activeLink={'our lab'} backgroundImg={ backgroundImg } />
 
         <Container className={ styles.background_container }  >
           <div>

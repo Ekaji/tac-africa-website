@@ -13,7 +13,7 @@ const OngoingProjects = () => {
     <div className={ styles.video_component__container }>
       <div className={ styles.intro_component }>
         <h2 className={ styles.mediaComp_header } >Ongoing Projects</h2>
-        <p className={ styles.mediaComp_text } >TAC Africa through her collaborations and partnerships curate, develop projects to help organization and industries benefit from emerging technology</p>
+        <p className='text-sm lg:text-lg' >TAC Africa through her collaborations and partnerships curate, develop projects to help organization and industries benefit from emerging technology</p>
       </div>
       <div className={['row', styles.mediaComp_container_main ].join(' ')}>
         
@@ -23,7 +23,7 @@ const OngoingProjects = () => {
         <div className={['col-lg-6', styles.mediaComp_container_details ].join(' ') }>
           <div>
             <h2 className={ styles.mediaComp_header_inner } >Institute For Remotely Piloted Aircraft Systems (IRPAS)</h2>
-            <p className={ styles.mediaComp_text }>prides itself as well-established industry leader in drone and counter drone systems, with its headquarters in FCT Abuja Nigeria and an international office in. Lagos, Nigeria. We are at the forefront of the security industry and are proud to provide quality Emerging Technology and Security Services & Solutions tailored to meet our clients’ needs across various industries</p>
+            <p className='text-xs lg:text-base'>prides itself as well-established industry leader in drone and counter drone systems, with its headquarters in FCT Abuja Nigeria and an international office in. Lagos, Nigeria. We are at the forefront of the security industry and are proud to provide quality Emerging Technology and Security Services & Solutions tailored to meet our clients’ needs across various industries</p>
           </div>
           <div  >
             {/* <h2 className={ styles.mediaComp_header_inner } >Nuturing the future of UAVs</h2> */}
@@ -36,7 +36,7 @@ const OngoingProjects = () => {
         {/* TAC Community Hub */}
         <Col  xs={{order: 'first'}}  > 
           <h2 className={ styles.mediaComp_header_inner } >TAC Community Hub</h2>
-          <p>
+          <p className='text-xs lg:text-base'>
           TAC Community hub is a cutting edge hub for sports, Research and development activities. It is located in the suburb of Abuja. The community hub compliments the TAC Headquarters in the Federal Capital Territory, Abuja Nigeria.
           </p>
           <div>
