@@ -32,7 +32,7 @@ const OngoingProjects = () => {
 
         </div>
 
-        <div className={ [' col-lg-6', styles.mediaComp_container ].join(' ') }>
+        <div className={ [' col-lg-6 md:mt-10', styles.mediaComp_container ].join(' ') }>
         {/* TAC Community Hub */}
         <Col  xs={{order: 'first'}}  > 
           <h2 className={ styles.mediaComp_header_inner } >TAC Community Hub</h2>
@@ -48,8 +48,10 @@ const OngoingProjects = () => {
           </div>
         </Col>
         </div>
-        <div className={['col-lg-6', styles.mediaComp_container_details ].join(' ') }>
-    .
+        <div className={['col-lg-6 md:mt-5', styles.mediaComp_container_details ].join(' ') }>
+        <div className={ ['aspect-w-16 aspect-h-9 ', styles.mediaComp_container ].join(' ') }>
+          <img src='/community/1.jpg' alt='community hub' />
+        </div>
         </div>
 
       </div>
