@@ -41,7 +41,7 @@ const OngoingProjects = () => {
           TAC Community hub is a cutting edge hub for sports, Research and development activities. It is located in the suburb of Abuja. The community hub compliments the TAC Headquarters in the Federal Capital Territory, Abuja Nigeria.
           </p>
           <div>
-            <Link href={'/tac_communityHub'}>
+            <Link href={'/tac_community_hub'}>
               <a>
                 <Button_ title={'read more'} />
               </a>
