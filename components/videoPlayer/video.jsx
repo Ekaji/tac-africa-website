@@ -7,7 +7,7 @@ import { Player, BigPlayButton } from 'video-react';
 
 const VideoComp = props => {
   return (
-    <Player src="/video/TAC_video.mp4" >
+    <Player poster="/vid_thumbnail.png" src="/video/TAC_video.mp4" >
       <BigPlayButton position="center" />
     </Player>
   );

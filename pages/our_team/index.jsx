@@ -6,7 +6,6 @@ import { Container, Col, Row, Card } from 'react-bootstrap'
 import styles from '../../styles/page.styles/ourTeam.module.scss'
 import { ConditionalLinks } from '../../components/conditionalLinks'
 import HeroBanner from '../../components/layout/nav_bar/heroBanner'
-import Test from '../test'
 
 
 export default function OurTeam() {
@@ -27,7 +26,7 @@ export default function OurTeam() {
     )
   }
 
-  const backgroundImg = "/ser-1.png"
+  const backgroundImg = "/team/our_team.jpg"
   
   return(
     <Container fluid className={ styles.ourTeam_container_main }>

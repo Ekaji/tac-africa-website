@@ -29,7 +29,7 @@ const NewAbout = () => {
   ]
 
 
-  const backgroundImg = '/about_us.jpg'
+  const backgroundImg = '/team/about_us1.jpg'
 
   return(
     <>

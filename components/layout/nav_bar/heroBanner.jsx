@@ -2,11 +2,7 @@
 /* eslint-disable react/jsx-key */
 import MiniNav from './miniNav';
 
-const HeroBanner = ({
-  backgroundImg,
-  text,
-  activeLink,
-}) => {
+const HeroBanner = ({ backgroundImg, text, activeLink }) => {
   return (
     <>
       <div
@@ -19,8 +15,7 @@ const HeroBanner = ({
       >
         <div className="flex items-center justify-center h-full">
           <h2 className="text-white font-bold capitalize">
-            {' '}
-            {text}{' '}
+            {text}
           </h2>
         </div>
       </div>

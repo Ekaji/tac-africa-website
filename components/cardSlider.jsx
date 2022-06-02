@@ -41,8 +41,8 @@ const CardSlider = () => {
 
   return (
     <div className="w-full">
-      <div className="my-0 mx-auto pt-12 pb-20 w-10/12">
-        <div className="flex justify-between capitalize py-4">
+      <div className="pt-12 pb-20 mx-auto my-0 ">
+        <div className="flex justify-between w-10/12 py-4 mx-auto capitalize">
           <h2 className="text-sweet_blue font-semibold pt-1.5">
             {' '}
             Our <span className="text-primary ">Labs</span>
@@ -60,17 +60,17 @@ const CardSlider = () => {
         </div>
         <>
           {/* carousel */}
-          <div className=" px-4 flex-grow w-full py-4 sm:py-16 mx-auto  ">
-            <div className="lg:mx-auto w-full  px-">
-              <div className=" my-8">
+          <div className="flex-grow w-full px-3 py-4 mx-auto sm:py-16">
+            <div className="w-full lg:mx-auto px-">
+              <div className="my-8 ">
                 <div
                   id="scrollContainer"
-                  className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start pb-6 mb-8"
+                  className="flex flex-no-wrap items-start pb-6 mb-8 overflow-x-scroll scrolling-touch"
                 >
                   {data.map((edge, i) => (
                     <div
                       key={i}
-                      className="flex-none w-11/12 md:w-2/4 lg:w-1/3 mr-8 md:mr-4 md:pb-4 border rounded-lg overflow-hidden"
+                      className="flex-none w-11/12 mr-8 overflow-hidden border rounded-lg md:w-2/4 lg:w-1/3 md:mr-4 md:pb-4"
                     >
                       <Link href={edge.link}>
                         <a className="space-y-4">
@@ -85,20 +85,20 @@ const CardSlider = () => {
                             <div
                               className={`w-full h-full flex justify-center align-center hover:bg-overlay group `}
                             >
-                              <div className=' hidden group-hover:block my-auto'>
+                              <div className='hidden my-auto group-hover:block'>
 
                               <Button_ title={'Learn More'} variant={'outline-light' } style={{border: '2px solid white'}} />
                               </div>
                             </div>
                           </div>
                           <div className="px-4 py-2">
-                            <div className="text-lg leading-6 font-medium text-center">
-                              <h3 className="font-semibold lg:font-bold text-sweet_blue text-base  mt-4 mb-8">
+                            <div className="text-lg font-medium leading-6 text-center">
+                              <h3 className="mt-4 mb-8 text-base font-semibold lg:font-bold text-sweet_blue">
                                 {edge?.title}
                               </h3>
                             </div>
                             <div className="text-sm line-clamp-3 ">
-                              <p className="text-light_grey text-center">
+                              <p className="text-center text-light_grey">
                                 {edge?.text}
                               </p>
                             </div>
