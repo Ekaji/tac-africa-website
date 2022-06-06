@@ -16,7 +16,7 @@ const NavBar = () => {
     <nav
       className={`bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 ${
         menuState && 'h-screen'
-      } md:h-full`}
+      } lg:h-full`}
     >
       <div className="xl:px-12 flex flex-wrap justify-between items-center mx-auto">
         <Link href={'/'}>
@@ -32,12 +32,12 @@ const NavBar = () => {
           onClick={toggleButton}
           data-collapse-toggle="mobile-menu"
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="mobile-menu"
           aria-expanded="false"
         >
           <span
-            className="visible md:hidden"
+            className="visible lg:hidden"
             style={{ zIndex: '100' }}
             onClick={toggleButton}
           >
@@ -59,10 +59,10 @@ const NavBar = () => {
         <div
           className={`${
             menuState == true ? '' : 'hidden'
-          }  md:isvisible w-full md:block md:w-auto`}
+          }  md:isvisible w-full lg:block lg:w-auto`}//md:w-auto
           id="mobile-menu"
         >
-          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <ul className="flex flex-col mt-4 lg:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             {data?.map(({ label, content, type, details }, i) => (
               <>
                 {content.length > 1 ? (
@@ -88,7 +88,7 @@ const NavBar = () => {
                 ) : label == 'donate' ? (
                   <button
                     type="button"
-                    className="capitalize mt-80 md:mt-0 py-2.5 px-5 mr-2 mb-2 text-sm 2xl:text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    className="capitalize mt-80 lg:mt-0 py-2.5 px-5 mr-2 mb-2 text-sm 2xl:text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                   >
                     {label}
                   </button>

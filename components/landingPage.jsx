@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
-import Button_ from '../components/button';
 import Link from 'next/link';
 
 export default function LandingPage() {

@@ -41,7 +41,7 @@ const CardSlider = () => {
 
   return (
     <div className="w-full">
-      <div className="pt-12 pb-20 mx-auto my-0 ">
+      <div className="pt-12 pb-20 mx-auto my-0 xl:px-12">
         <div className="flex justify-between w-10/12 py-4 mx-auto capitalize">
           <h2 className="text-sweet_blue font-semibold pt-1.5">
             {' '}
