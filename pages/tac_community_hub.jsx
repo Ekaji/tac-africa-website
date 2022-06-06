@@ -4,7 +4,7 @@ const TacCommunityHub = () => {
   return (
     <>
       <div
-      className="h-[48rem] lg:h-96 flex mb-20 justify-center items-center bg-center bg-cover bg-no-repeat w-full"
+      className="h-30vh  lg:h-96 flex mb-20 justify-center items-center bg-center bg-cover bg-no-repeat w-full"
       style={{
         backgroundImage:" url('/community/community.jpg')"
       }}

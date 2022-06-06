@@ -15,8 +15,8 @@ const Volunteer = () => {
           "linear-gradient(rgba(5, 0, 32, 0.697), rgba(5, 0, 32, 0.697)), url('/team/volunteer.jpg')",
       }}
     >
-      <div className="w-10/12 flex flex-col lg:flex-row space-y-4 lg:space-x-8 lg:space-y-0 ">
-        <div className="p-4 h-96 md:h-72  mx-auto max-w-xl bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 ">
+      <div className="w-10/12 flex flex-col lg:flex-row space-y-4 lg:space-x-8 lg:space-y-0 justify-center ">
+        <div className="p-4 h-96 md:h-72 xl:mr-0  max-w-xl bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 ">
           <h5 className="text-primary ">Want to join with us?</h5>
           <a href="#">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -49,7 +49,7 @@ const Volunteer = () => {
           </a>
         </div>
 
-        <div className="w-full mx-auto grid grid-cols-2 gap-4 lg:px-6 md:max-w-xl">
+        <div className="w-full xl:ml-0  grid grid-cols-2 gap-4 lg:px-0 md:max-w-xl">
           <div
             className="rounded-md h-32 text-white text-center pt-8"
             style={{ ...smallCardStyles }}
