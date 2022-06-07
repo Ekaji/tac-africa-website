@@ -11,7 +11,7 @@ export const data = [
        link: '/our_team/Abdul_Hakeem_Ajijola' //!only items you want click should contain link
      },
      {
-       image: '/img/Professor B.K. Alese.png',
+       image: '/img/Professor_B.K._Alese.png',
        name : 'Prof Boniface. K Alese',
        title : '',
        description: ' He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',
@@ -25,7 +25,7 @@ export const data = [
     //    link: '/our_team/Prof_Gabi_Siboni'
     //  },
      {
-      image: '/img/philip .j ingram.png',
+      image: '/img/philip_j_ingram.png',
       name : 'Phillip .J Ingram',
       title : '',
       description: 'He is a global Cybersecurity resource is ranked #1 IFSEC 2020 Global Cybersecurity...',

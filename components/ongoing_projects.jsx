@@ -29,19 +29,27 @@ const OngoingProjects = () => {
                 (IRPAS)
               </h2>
               <p className="text-xs  lg:text-base 2xl:text-xl">
-                prides itself as well-established industry leader in
+                {/* prides itself as well-established industry leader in
                 drone and counter drone systems, with its headquarters
                 in FCT Abuja Nigeria and an international office in.
                 Lagos, Nigeria. We are at the forefront of the
                 security industry and are proud to provide quality
                 Emerging Technology and Security Services & Solutions
                 tailored to meet our clients’ needs across various
-                industries
+                industries */}
+                Institute for Remotely Piloted Aircraft System was
+                conceived to address the growing demand for digital
+                transformation. Our goal is to be the first Remotely
+                Piloted Aircraft training and assessment organization
+                in Nigeria. Our mission is to ensure that the training
+                and licensing of professional RPAS Pilot In Nigeria is
+                conducted with the highest standard to meet global
+                standard practice.
               </p>
             </div>
 
             <div>
-              <Link href={'/'}>
+              <Link href={'/irpas'}>
                 <a>
                   <button
                     type="button"
@@ -90,6 +98,49 @@ const OngoingProjects = () => {
           <div className="lg:ml-4 lg:w-6/12 mx-auto">
             <div className="lg:aspect-w-16 lg:aspect-h-9 rounded-sm overflow-hidden">
               <img src="/community/5.jpg" alt="community hub" />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row mt-10">
+          <div className="w-full lg:mr-4 lg:w-6/12 rounded-sm overflow-hidden ">
+          <div className="lg:aspect-w-14 lg:aspect-h-9 rounded-sm overflow-hidden object-cover">
+              <img src="smart_policing.png" alt="smart policing" />
+            </div>
+          </div>
+          <div className="lg:w-5/12 mx-auto lg:my-auto">
+            <div>
+              <h2 className="text-sweet_blue font-bold text-xl my-3">
+                Smart Policing Concept
+              </h2>
+              <p className="text-xs  lg:text-base 2xl:text-xl">
+                Innovation is not just about the latest {`gadget-it's`} about finding new ways to do things better.
+                innovation can take the form of new concepts, new methods or new tools but innovation tends to work best when all this forms come
+                together to enable police and law enforcement agencies to have greater insight and impact than ever before. the innovation that are
+                shaping the future of law enforcement begin with emerging technologies that support new concept of operations, enabling the
+                interventions, and relationships that keep society safe.
+              </p>
+            </div>
+
+            <div>
+              <a
+                href='/pdf/smart_policing_concept.pdf' download
+                className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Download Brochure
+                <svg
+                  className="ml-2 -mr-1 w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
