@@ -1,11 +1,9 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable @next/next/no-img-element */
-import Button_ from '../components/button';
 import Link from 'next/link';
 import { useState } from 'react';
 
 const CardSlider = () => {
-
   const data = [
     {
       title: 'Cyber Security & Cyber Defense', //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
@@ -49,12 +47,12 @@ const CardSlider = () => {
           </h2>
           <Link href={'/all_labs'}>
             <a>
-              <Button_
-                title={
-                  <span className="font-semibold">ALL LABS</span>
-                }
-                variant={'outline-primary'}
-              />
+              <button
+                type="button"
+                className="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
+              >
+                ALL LABS
+              </button>
             </a>
           </Link>
         </div>
@@ -74,9 +72,7 @@ const CardSlider = () => {
                     >
                       <Link href={edge.link}>
                         <a className="space-y-4">
-                          <div
-                            className="aspect-w-16 aspect-h-9 "
-                          >
+                          <div className="aspect-w-16 aspect-h-9 ">
                             <img
                               className="object-cover shadow-md hover:shadow-xl "
                               src={edge?.image}
@@ -85,9 +81,13 @@ const CardSlider = () => {
                             <div
                               className={`w-full h-full flex justify-center align-center hover:bg-overlay group `}
                             >
-                              <div className='hidden my-auto group-hover:block'>
-
-                              <Button_ title={'Learn More'} variant={'outline-light' } style={{border: '2px solid white'}} />
+                              <div className="hidden my-auto group-hover:block">
+                                <button
+                                  type="button"
+                                  className="text-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
+                                >
+                                  {'Learn More'}
+                                </button>
                               </div>
                             </div>
                           </div>

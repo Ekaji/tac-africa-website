@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 const DropDownButton = ({
+  isFooter,
   setMenuState,
   menuState,
   label,
@@ -25,7 +26,7 @@ const DropDownButton = ({
         type="button"
       >
         {label}{' '}
-        <svg
+        { !isFooter && <svg
           className="w-4 h-4 ml-2"
           fill="none"
           stroke="currentColor"
@@ -38,15 +39,15 @@ const DropDownButton = ({
             strokeWidth="2"
             d="M19 9l-7 7-7-7"
           ></path>
-        </svg>
+        </svg>}
       </button>
       {/* <!-- Dropdown menu --> */}
       {isShown && (
         <div
           id="dropdownMenu"
-          className="z-10 absolute bg-white  divide-gray-100 rounded shadow  dark:bg-gray-700"
+          className={` ${isFooter ? "inline-block " : "block "  }  bg-white z-10 absolute divide-gray-100 rounded shadow dark:bg-gray-700 `}
         >
-          <ul className="py-1 text-sm divide-y text-gray-700 dark:text-gray-200 px-2">
+          <ul className={` ${content[0].name ? "py-1 px-2" : undefined } text-sm divide-y text-gray-700 dark:text-gray-200`}>
             {content.map(({ name, href }, i) => (
               <li
                 onMouseEnter={() => setIsShown(true)}
@@ -58,9 +59,9 @@ const DropDownButton = ({
                       setIsShown(!isShown);
                       setMenuState(!menuState);
                     }}
-                    className="capitalize block px-4 py-2 2xl:text-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white "
+                    className={`capitalize block ${content[0].name ? "px-4 py-2" : undefined } 2xl:text-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white `}
                   >
-                    {name}
+                    { name }
                   </a>
                 </Link>
               </li>

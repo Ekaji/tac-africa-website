@@ -1,11 +1,16 @@
 /* eslint-disable react/jsx-key */
-import CustomDropdown from '../../../components/customDropdown.jsx'
+import { useState, useCallback } from 'react'
 import Link from 'next/link'
-
-
+import DropDownButton from '../../dropdownButton.jsx'
+import { data } from '../../../pages/api/navLinks';
 
 export default function Footer() {
 
+  const [menuState, setMenuState] = useState(false);
+
+  const toggleButton = useCallback(() => {
+    setMenuState((menuState) => !menuState);
+  }, []);
 
   return(
     <div>
@@ -41,7 +46,18 @@ export default function Footer() {
                 <div className=''>
                   <h3 className='font-bold text-xl text-white uppercase' >Quicklinks</h3>
                   <ul>
-                    <CustomDropdown dropDownPosition={'end'} />
+                  {data?.map(({ label, content, type, details }, i) => (
+                    label != 'donate' ? ( 
+                    <DropDownButton 
+                      label={ <> {content.length > 1 && <> &#x2BC8; </>}  {label}</> }
+                      content={content}
+                      setMenuState={setMenuState}
+                      menuState={menuState}
+                      isFooter
+                      />) : undefined
+                      
+                  ) )}
+
                   </ul>
                 </div>
               </div>

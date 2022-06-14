@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ConditionalLinks } from '../components/conditionalLinks';
 import axios from 'axios';
 
@@ -7,41 +7,51 @@ const initialValue = {
   email: '',
   first_name: '',
   last_name: '',
-  subscribed: null,
-  phone: '',
+  is_subscribed: 0,
+  phone_number: '',
 };
 
 const FormModal = ({ PDF, modalShow, setModalShow }) => {
   const [values, setValues] = useState(initialValue);
   const [checkBoxState, setCheckBoxState] = useState(false);
 
+
+
+
+  useEffect(() => {
+    
+      if (checkBoxState ) {
+        setValues({
+          ...values,
+          ["is_subscribed"]: 1,
+        })
+      }  else {
+        setValues({
+          ...values,
+          ["is_subscribed"]: 0,
+        })
+      }
+  }, [ checkBoxState ])
+
+
+  console.log(values.is_subscribed)
+
   
 
   const handleInputChange = (propertyName) => (e) => {
     e.preventDefault();
-
-    if (propertyName == "subscribed") {
-      setValues({
-        ...values,
-        [propertyName]: checkBoxState ? 1 : 0,
-      });
-
-      setCheckBoxState(!checkBoxState);
-    }
     setValues({
       ...values,
       [propertyName]: e.target.value,
     });
   };
 
-  console.log(checkBoxState)
-
   const formDataChecker = () => {
     if (
       values.email &&
       values.first_name &&
       values.last_name &&
-      values.phone
+      values.phone_number
     ) {
       return true;
     }
@@ -57,12 +67,13 @@ const FormModal = ({ PDF, modalShow, setModalShow }) => {
           'https://survey.tacafrica.org/api/visitors',
           values
         );
-        // console.log(response.status)
       } catch (err) {
         console.log(err);
       }
     }
   };
+
+  console.log({values})
 
   console.log(formDataChecker());
 
@@ -171,8 +182,8 @@ const FormModal = ({ PDF, modalShow, setModalShow }) => {
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
                     required=""
-                    value={values.phone}
-                    onChange={handleInputChange('phone')}
+                    value={values.phone_number}
+                    onChange={handleInputChange('phone_number')}
                   />
                   <label
                     htmlFor="phone"
@@ -186,9 +197,9 @@ const FormModal = ({ PDF, modalShow, setModalShow }) => {
               <div className="flex items-center mb-4">
                 <input
                   id="checkbox-2"
-                  onChange={handleInputChange('subscribed')}
+                  onChange={ () => setCheckBoxState(!checkBoxState)}
                   type="checkbox"
-                  value={values.subscribed}
+                  value={values.is_subscribed}
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label

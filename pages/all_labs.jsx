@@ -1,107 +1,145 @@
- /* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 
-import { Accordion, Container, Form, Row, Col} from 'react-bootstrap'
-import styles from '../styles/page.styles/allLabs.module.scss'
-import Button_ from '../components/button.jsx'
-import Link from 'next/link'
-import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
-import "react-multi-carousel/lib/styles.css";
+import Link from 'next/link';
+import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx';
+import 'react-multi-carousel/lib/styles.css';
+
+const data = [
+  {
+    title: 'Cyber Security & Cyber Defense', //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
+    image: '/cyber_defence.jpg',
+    text: 'The emergence of the internet has no doubt enhance the way we live, work, socialize and transact business to a great extent but cyber criminals are taking un-due advantage...',
+    link: '/cyber_security_and_cyber_defense',
+  },
+  {
+    title: 'Artificial Intelligence And Robotics',
+    image: '/ai_and_robotics.jpg',
+    text: 'AI & Robotics is an emerging technology that is gradually making traditional complex task easier through the use of Artificial Intelligence-controlled Robots (AI) AI – algorithm in the actual world and allows it to interact with materials in real time',
+    link: '/artificial_intelligence_and_robotics',
+  },
+  {
+    title: 'Blockchain And Payment Gateways',
+    image: '/piles-coins-with-plant-front-graph.jpg',
+    text: 'With the growing number of individuals using the internet for business transaction, meeting, learning, gaming etc. The need to have a shared database cannot be overemphasized.',
+    link: '/blockchain_and_crypto_lab',
+  },
+  {
+    title: 'Drone & Counter Drone',
+    image: '/Blog_Drones.jpg',
+    text: 'The future of aviation is gradually being powered by unmanned Aerial Vehicles if the good guys don’t get involve on time the bad guys would..',
+    link: '/drone_and_counter_drone',
+  },
+  // {
+  //   title: 'satellite and remote sensing',
+  //   image: 'satellite.jpg',
+  //   text: 'Advanced satellite systems for locating, tracking and monitoring remote assets. Simple, flexible and affordable solutions.',
+  //   link: '/satellite_and_remote_sensing_lab'
+  // }
+];
 
 const All_labs = () => {
+  const backgroundImg = '/team/labs.jpg';
 
-  const data =  [
-    {
-      title: 'Cyber Security & Cyber Defense',  //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
-      image: '/cyber_defence.jpg',
-      text: 'The emergence of the internet has no doubt enhance the way we live, work, socialize and transact business to a great extent but cyber criminals are taking un-due advantage...',
-      link: '/cyber_security_and_cyber_defense',
-    },
-    {
-      title: 'Artificial Intelligence And Robotics',
-      image: '/ai_and_robotics.jpg',
-      text: 'AI & Robotics is an emerging technology that is gradually making traditional complex task easier through the use of Artificial Intelligence-controlled Robots (AI) AI – algorithm in the actual world and allows it to interact with materials in real time',
-      link: '/artificial_intelligence_and_robotics',
-    },
-    {
-      title: 'Blockchain And Payment Gateways',
-      image: '/piles-coins-with-plant-front-graph.jpg',
-      text: 'With the growing number of individuals using the internet for business transaction, meeting, learning, gaming etc. The need to have a shared database cannot be overemphasized.',
-      link: '/blockchain_and_crypto_lab',
-    },
-    {
-      title: 'Drone & Counter Drone',
-      image: '/Blog_Drones.jpg',
-      text: 'The future of aviation is gradually being powered by unmanned Aerial Vehicles if the good guys don’t get involve on time the bad guys would..',
-      link: '/drone_and_counter_drone',
-    },
-    // {
-    //   title: 'satellite and remote sensing',
-    //   image: 'satellite.jpg',
-    //   text: 'Advanced satellite systems for locating, tracking and monitoring remote assets. Simple, flexible and affordable solutions.',
-    //   link: '/satellite_and_remote_sensing_lab'
-    // }
-  ]
-    
-
-  const backgroundImg =  "/team/labs.jpg";
-
-  return(
+  return (
     <>
+      <HeroBanner
+        activeLink={'discover'}
+        bannerOverlay
+        text={'All Labs'}
+        backgroundImg={backgroundImg}
+      />
 
-      <HeroBanner activeLink={'discover'} bannerOverlay text={'All Labs'} backgroundImg={ backgroundImg } />
+      <div className="pt-12 pb-20 ">
+        <div className="py-5 w-[80vw] my-0 mx-auto text-lg">
+          <p>
+            Today’s crime are increasingly complex. They are
+            interconnected and global, and they take place on both
+            physical and virtual levels. More than ever, there is need
+            for multilateral police cooperation to address the
+            security challenges facing the continent.
+          </p>
+          <p>
+            TAC’s role is to enable Law Enforcement Agencies to work
+            together to fight these evolving challenges and make the
+            continent a safer place.
+          </p>
+          <p>
+            We provide secure access to training, capacity building,
+            oversea travels including operational and forensic support
+            and analysis services through partnership, collaboration
+            and Technology Exchanges for LEA’s.
+          </p>
+          <p>
+            All these Law Enforcement capabilities are delivered
+            globally and support three global programs against the
+            issues that we consider to be the most pressing today;
+            counter-terrorism, cyber-crime, and organized and emerging
+            crime.
+          </p>
+        </div>
 
-      <Container fluid style={{paddingTop: '3em', paddingBottom: '5em'}} >
+        <div className="text-center w-[80vw] my-0 mx-auto">
+          {/* <Carousel /> */}
 
-<div className={[ styles.carousel_header__component, styles.container__wider ].join(' ')} >
-  {/* <p className={ styles.carousel_container__text } >Explore core areas and activities TAC Africa is actively engaged in</p> */}
-    <p>
-    Today’s crime are increasingly complex. They are interconnected and global, and they take place on both physical and virtual levels. More than ever, there is need for multilateral police cooperation to address the security challenges facing the continent.
-    </p>
-    <p>
-    TAC’s role is to enable Law Enforcement Agencies to work together to fight these evolving challenges and make the continent a safer place.
-    </p>
-    <p>
-    We provide secure access to training, capacity building, oversea travels including operational and forensic support and analysis services through partnership, collaboration and Technology Exchanges for LEA’s.
-    </p>
-    <p>
-    All these Law Enforcement capabilities are delivered globally and support three global programs against the issues that we consider to be the most pressing today; counter-terrorism, cyber-crime, and organized and emerging crime.
-    </p>
-</div>
-
-    <div className={["row text-center", styles.card_container].join(' ')}>
-
-        { data.map((edge, i) => (
-            <div key={i} className={" col-sm-12 col-lg-4 mb-4"}>
-            <div key={edge.title} className={ styles.carousel_component_inner }  >
-                <div className={ styles.carousel_image }>
-                    <img className={ styles.carousel_image } src={ edge?.image } alt={ edge.image } />
-                    <div className={ styles.carousel_mask } >
-                    <div className={ styles.carousel_button__container } >
-                        <Link href={edge.link}>
-                        <a>
-                            <Button_ title={'Learn More'} variant={'outline-light' } style={{border: '2px solid white'}} />
+          <div className="flex-grow w-full md:px-3 py-4 mx-auto sm:py-16">
+            <div className="w-full lg:mx-auto px-">
+              <div className="my-8 ">
+                <div
+                  id="scrollContainer"
+                  className="flex flex-wrap justify-between items-start pb-6 mb-8 scrolling-touch"
+                >
+                  {data.map((edge, i) => (
+                    <div
+                      key={i}
+                      className="flex-none w-11/12 mr-8 overflow-hidden border rounded-lg md:w-[45%] lg:w-[30%] mx-auto md:mr-4 md:pb-4 mb-8"
+                    >
+                      <Link href={edge.link}>
+                        <a className="space-y-4">
+                          <div className="aspect-w-16 aspect-h-9 ">
+                            <img
+                              className="object-cover shadow-md hover:shadow-xl "
+                              src={edge?.image}
+                              alt={edge.image}
+                            />
+                            <div
+                              className={`w-full h-full flex justify-center align-center hover:bg-overlay group `}
+                            >
+                              <div className="hidden my-auto group-hover:block">
+                                <button
+                                  type="button"
+                                  className="text-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
+                                >
+                                  {'Learn More'}
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="px-4 py-2">
+                            <div className="flex text-lg font-medium leading-6 lg:h-11 text-center">
+                              <h3 className=" text-base font-semibold  m-auto lg:font-bold text-sweet_blue">
+                                {edge?.title}
+                              </h3>
+                            </div>
+                            <div className="text-sm line-clamp-3 mt-4">
+                              <p className="text-center text-light_grey">
+                                {edge?.text}
+                              </p>
+                            </div>
+                          </div>
                         </a>
-                        </Link>
+                      </Link>
                     </div>
-                    </div>
+                  ))}
+                  {/*  */}
                 </div>
-                <div className={ styles.carousel_details } >
-                    <h2 className={ styles.carousel_title } >{ edge?.title }</h2>
-                    <p className={ styles.carousel_text } >{ edge?.text }</p>
-                </div>
+              </div>
             </div>
-            </div>
-        )) }
-        
-    </div>
-
-</Container>
-        
-            
-
+          </div>
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default All_labs;
