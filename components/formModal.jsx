@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-key */
 import { useState, useEffect } from 'react';
-import { ConditionalLinks } from '../components/conditionalLinks';
 import axios from 'axios';
 
 const initialValue = {
@@ -15,9 +14,6 @@ const FormModal = ({ PDF, modalShow, setModalShow }) => {
   const [values, setValues] = useState(initialValue);
   const [checkBoxState, setCheckBoxState] = useState(false);
 
-
-
-
   useEffect(() => {
     
       if (checkBoxState ) {
@@ -31,10 +27,7 @@ const FormModal = ({ PDF, modalShow, setModalShow }) => {
           ["is_subscribed"]: 0,
         })
       }
-  }, [ checkBoxState ])
-
-
-  console.log(values.is_subscribed)
+  }, [checkBoxState])
 
   
 
@@ -58,24 +51,35 @@ const FormModal = ({ PDF, modalShow, setModalShow }) => {
     return false;
   };
 
-  let response;
+  const [downloadSpinner, setDownloadSpinner] = useState(false)
 
-  const handleSubmit = async () => {
+  let  response;
+
+  useEffect(() => {
+    if(response) setDownloadSpinner(false)
+  }, [response] )
+
+
+  const handleSubmit = () => {
     if (formDataChecker()) {
-      try {
-        response = await axios.post(
-          'https://survey.tacafrica.org/api/visitors',
-          values
-        );
-      } catch (err) {
-        console.log(err);
-      }
+      setDownloadSpinner(true);
+      axios.post(
+        'https://cdn.tacafrica.org/api/visitors',values
+      )
+      .then( res => {
+        response = res.data
+        if (response.error == false && typeof window !== "undefined") {
+              window.location.href = PDF
+
+          // const newWindow = window.open(PDF, '_blank', 'noopener,noreferrer')
+          // if (newWindow) {
+          //   newWindow.opener = null
+          // } 
+
+        }
+      })
     }
   };
-
-  console.log({values})
-
-  console.log(formDataChecker());
 
   return (
     <div className="">
@@ -210,27 +214,14 @@ const FormModal = ({ PDF, modalShow, setModalShow }) => {
                 </label>
               </div>
 
-              <ConditionalLinks
-                condition={formDataChecker()}
-                wrapper={(children) => (
-                  <a
-                    href={PDF}
-                    download //adds the download attribute when user data has been filled correctly
-                  >
-                    <>{children}</>
-                  </a>
-                )}
-              >
                 <button
                   // type="submit"
                   className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   onClick={handleSubmit}
                 >
-                  Submit
+                  Submit { downloadSpinner ?  (<i className={` ml-2 fa fa-spinner fa-spin`} />) : undefined } 
                 </button>
-              </ConditionalLinks>
             </div>
-            {/* </form> */}
           </div>
         </div>
       </div>

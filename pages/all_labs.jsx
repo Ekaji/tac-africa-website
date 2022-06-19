@@ -8,34 +8,34 @@ import 'react-multi-carousel/lib/styles.css';
 const data = [
   {
     title: 'Cyber Security & Cyber Defense', //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
-    image: '/cyber_defence.jpg',
+    image: '/projects/cyber_security.jpeg',
     text: 'The emergence of the internet has no doubt enhance the way we live, work, socialize and transact business to a great extent but cyber criminals are taking un-due advantage...',
     link: '/cyber_security_and_cyber_defense',
   },
   {
     title: 'Artificial Intelligence And Robotics',
-    image: '/ai_and_robotics.jpg',
+    image: '/projects/ai_and_robotics.jpg',
     text: 'AI & Robotics is an emerging technology that is gradually making traditional complex task easier through the use of Artificial Intelligence-controlled Robots (AI) AI – algorithm in the actual world and allows it to interact with materials in real time',
     link: '/artificial_intelligence_and_robotics',
   },
   {
-    title: 'Blockchain And Payment Gateways',
-    image: '/piles-coins-with-plant-front-graph.jpg',
+    title: 'Blockchain And Cryptocurrency',
+    image: '/projects/blockchain.jpeg',
     text: 'With the growing number of individuals using the internet for business transaction, meeting, learning, gaming etc. The need to have a shared database cannot be overemphasized.',
     link: '/blockchain_and_crypto_lab',
   },
   {
     title: 'Drone & Counter Drone',
-    image: '/Blog_Drones.jpg',
+    image: '/projects/drone.jpeg',
     text: 'The future of aviation is gradually being powered by unmanned Aerial Vehicles if the good guys don’t get involve on time the bad guys would..',
     link: '/drone_and_counter_drone',
   },
-  // {
-  //   title: 'satellite and remote sensing',
-  //   image: 'satellite.jpg',
-  //   text: 'Advanced satellite systems for locating, tracking and monitoring remote assets. Simple, flexible and affordable solutions.',
-  //   link: '/satellite_and_remote_sensing_lab'
-  // }
+  {
+    title: 'Technology For Social Good',
+    image: '/community/5.jpg',
+    text: '.',
+    link: '/satellite_and_remote_sensing_lab'
+  }
 ];
 
 const All_labs = () => {
@@ -83,16 +83,16 @@ const All_labs = () => {
           {/* <Carousel /> */}
 
           <div className="flex-grow w-full md:px-3 py-4 mx-auto sm:py-16">
-            <div className="w-full lg:mx-auto px-">
+            <div className="w-full lg:mx-auto ">
               <div className="my-8 ">
                 <div
                   id="scrollContainer"
-                  className="flex flex-wrap justify-between items-start pb-6 mb-8 scrolling-touch"
+                  className="flex flex-wrap items-stretch justify-between pb-6 mb-8 scrolling-touch"
                 >
                   {data.map((edge, i) => (
                     <div
                       key={i}
-                      className="flex-none w-11/12 mr-8 overflow-hidden border rounded-lg md:w-[45%] lg:w-[30%] mx-auto md:mr-4 md:pb-4 mb-8"
+                      className="w-full overflow-hidden border rounded-lg md:w-[45%] lg:w-[30%] md:pb-4 mb-8"
                     >
                       <Link href={edge.link}>
                         <a className="space-y-4">

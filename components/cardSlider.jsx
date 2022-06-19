@@ -7,34 +7,34 @@ const CardSlider = () => {
   const data = [
     {
       title: 'Cyber Security & Cyber Defense', //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
-      image: '/cyber_defence.jpg',
+      image: '/projects/cyber_security.jpeg',
       text: 'The emergence of the internet has no doubt enhanced the way we live, work, socialize and transact business to a great extent but cyber criminals are taking un-due advantage...',
       link: '/cyber_security_and_cyber_defense',
     },
     {
       title: 'Drone & Counter Drone',
-      image: 'Blog_Drones.jpg',
+      image: '/projects/drone.jpeg',
       text: 'The future of aviation is gradually being powered by unmanned Aerial Vehicles if the good guys don’t get involve on time the bad guys would..',
       link: '/drone_and_counter_drone',
     },
     {
-      title: 'Blockchain And Payment Gateways',
-      image: 'piles-coins-with-plant-front-graph.jpg',
+      title: 'Blockchain And Cryptocurrency',
+      image: '/projects/blockchain.jpeg',
       text: 'With the growing number of individuals using the internet for business transaction, meeting, learning, gaming etc. The need to have a shared database cannot be overemphasized.',
       link: '/blockchain_and_crypto_lab',
     },
     {
       title: 'Artificial Intelligence And Robotics',
-      image: '/ai_and_robotics.jpg',
+      image: '/projects/ai_and_robotics.jpg',
       text: 'AI & Robotics is an emerging technology that is gradually making traditional complex task easier through the use of Artificial Intelligence-controlled Robots (AI) AI – algorithm in the actual world and allows it to interact with materials in real time',
       link: '/artificial_intelligence_and_robotics',
     },
-    // {
-    //   title: 'satellite and remote sensing',
-    //   image: 'satellite.jpg',
-    //   text: 'Advanced satellite systems for locating, tracking and monitoring remote assets. Simple, flexible and affordable solutions.',
-    //   link: '/satellite_and_remote_sensing_lab'
-    // }
+    {
+      title: 'Technology For Social Good',
+      image: '/community/5.jpg',
+      text: 'We work on independent multi-disciplinary academic research and teach open and issue-oriented debate and evidence-based policymaking around new technologies like Cybersecurity, Artificial Intelligence',
+      link: '/satellite_and_remote_sensing_lab'
+    }
   ];
 
   return (
@@ -63,7 +63,7 @@ const CardSlider = () => {
               <div className="my-8 ">
                 <div
                   id="scrollContainer"
-                  className="flex flex-no-wrap items-start pb-6 mb-8 overflow-x-scroll scrolling-touch"
+                  className="flex flex-no-wrap items-stretch pb-6 mb-8 overflow-x-scroll scrolling-touch"
                 >
                   {data.map((edge, i) => (
                     <div

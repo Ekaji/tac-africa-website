@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { data } from '../../../pages/api/navLinks.js';
@@ -18,13 +17,17 @@ const NavBar = () => {
         menuState && 'h-screen'
       } lg:h-full`}
     >
-      <div className="xl:px-12 flex flex-wrap justify-between items-center mx-auto">
-        <Link href={'/'}>
-          <a>
+      <div
+        key={data.label}
+        className="xl:px-12 flex flex-wrap justify-between items-center mx-auto"
+      >
+        <Link key={data.label} href={'/'}>
+          <a key={data.label}>
             <img
               src="/TAC_LOGO.webp"
               className="mr-3 h-16 "
               alt="tac Logo"
+              key={data.label}
             />
           </a>
         </Link>
@@ -35,11 +38,13 @@ const NavBar = () => {
           className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="mobile-menu"
           aria-expanded="false"
+          key={data.label}
         >
           <span
             className="visible lg:hidden"
             style={{ zIndex: '100' }}
             onClick={toggleButton}
+            key={data.label}
           >
             <button
               className={[
@@ -48,9 +53,13 @@ const NavBar = () => {
               ].join(' ')}
               onClick={toggleButton}
               type="button"
+              key={data.label}
             >
-              <span className="hamburger-box">
-                <span className="hamburger-inner"></span>
+              <span key={data.label} className="hamburger-box">
+                <span
+                  key={data.label}
+                  className="hamburger-inner"
+                ></span>
               </span>
             </button>
           </span>
@@ -59,10 +68,14 @@ const NavBar = () => {
         <div
           className={`${
             menuState == true ? '' : 'hidden'
-          }  md:isvisible w-full lg:block lg:w-auto`}//md:w-auto
+          }  md:isvisible w-full lg:block lg:w-auto`} //md:w-auto
           id="mobile-menu"
+          key={data.label}
         >
-          <ul className="flex flex-col mt-4 lg:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <ul
+            className="flex flex-col mt-4 lg:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
+            key={data.label}
+          >
             {data?.map(({ label, content, type, details }, i) => (
               <>
                 {content.length > 1 ? (
@@ -76,10 +89,11 @@ const NavBar = () => {
                   </> //dropdown
                 ) : label == 'blog' ? (
                   <Link href="/blog">
-                    <a>
+                    <a key={data.label}>
                       <button
                         type="button"
                         className="capitalize text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm 2xl:text-lg px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        key={data.label}
                       >
                         {label}
                       </button>

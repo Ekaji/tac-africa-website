@@ -9,7 +9,7 @@ import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
 
 const Artificial_Intelligence_and_Robotics = () => {
 
-  const backgroundImg =  '/rover.png'
+  const backgroundImg =  '/projects/ai_and_robotics.jpg'
 
   return(
     <>

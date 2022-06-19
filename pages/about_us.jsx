@@ -1,12 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 
-import { Accordion, Container, Form, Row, Col} from 'react-bootstrap'
 import styles from '../styles/page.styles/aboutUs.module.scss'
-import Button_ from '../components/button.jsx'
-import Link from 'next/link'
 import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
-import Drive from '../components/drive.jsx'
 
 const NewAbout = () => {
 
@@ -33,11 +29,11 @@ const NewAbout = () => {
 
   return(
     <>
-      <Container fluid className={ styles.aboutUs_container } >
+      <div className={ styles.aboutUs_container } >
         <HeroBanner text={'About us'} bannerOverlay activeLink={'About us'}  backgroundImg={ backgroundImg } />
 
-        <Container className={ styles.background_container }  >
-          <h2 className={ styles.background_header }>our background </h2> 
+        <div className='w-[80vw] mx-auto'  >
+          <h2 className='text-sweet_blue font-semibold pt-1.5' >Our Background </h2> 
           <p className={ styles.background_text }>
             TAC NGO AFRICA was born out of an International Forum on Technologies, a high level meeting dedicated to “Technology for a Safer world. The first two editions were held in Lyon France, in April 2013 and April 2016 respectively under the patronage of the Ministry of Interior and INTERPOL.</p>
             
@@ -53,9 +49,9 @@ const NewAbout = () => {
           <p>
           Welcome to TAC, where we leverage new technologies to shape the future of policing. Learn, share and experience the technological possibilities and state-of-the-art policing solution in action.
           </p>
-        </Container>
+        </div>
 
-        <Container fluid className={ styles.aboutUs_specialty_container_main } >
+        {/* <Container fluid className={ styles.aboutUs_specialty_container_main } >
           <div className={ styles.aboutUs_specialty_mask } >
             <Container className={ styles.aboutUs_specialty_container } >
               {
@@ -105,13 +101,13 @@ const NewAbout = () => {
                   </span>
                 </Accordion.Header>
                 <Accordion.Body>
-                  {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                   commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                  est laborum. */}
+                  est laborum.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion >
@@ -124,13 +120,13 @@ const NewAbout = () => {
                   </span>
                 </Accordion.Header>
                 <Accordion.Body>
-                  {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                   commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                  est laborum. */}
+                  est laborum.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion >
@@ -143,13 +139,13 @@ const NewAbout = () => {
                   </span>
                 </Accordion.Header>
                 <Accordion.Body>
-                  {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                   commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                  est laborum. */}
+                  est laborum.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion >
@@ -186,10 +182,10 @@ const NewAbout = () => {
             </Form>
           </div>
         </Container>
-
+ */}
 
     {/* </div> */}
-    </Container>
+    </div>
     </>
 
   )

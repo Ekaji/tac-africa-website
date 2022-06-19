@@ -16,13 +16,13 @@ export default function OurTeam() {
       <div>
         <h2 className={styles.splitPhrase}>
           {firstWord + '  '}
-          <span className="text-primary">{secondWord || ''}</span>
+          <span className="text-primary">{secondWord || undefined }</span>
         </h2>
       </div>
     );
   };
 
-  const backgroundImg = '/team/our_team.jpg';
+  const backgroundImg = '/team/about_us1.jpg';
 
   return (
     <Container fluid className={styles.ourTeam_container_main}>

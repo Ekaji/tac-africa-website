@@ -10,7 +10,7 @@ import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
 const Cyber_Security_And_Cyber_Defense = () => {
 
 
-  const backgroundImg =  "/Cyber-Security_and_defense.png"
+  const backgroundImg =  "/projects/cyber_security.jpeg"
 
   return(
     <>

@@ -14,7 +14,7 @@ const OngoingProjects = () => {
   const pdfs =  {
     smart_policing: "/pdf/smart_policing_concept.pdf",
     underground_economy: "/pdf/The_Underground_Economy.pdf",
-    drone_compendium: "/pdf/Drone_Compendium_For_TAC_Africa_compressed.pdf"
+    drone_compendium: "/pdf/Crypto_Brochure_Revamp.pdf"
 
   }
 
@@ -230,7 +230,7 @@ const OngoingProjects = () => {
             <div className="lg:w-5/12 mx-auto lg:my-auto">
               <div>
                 <h2 className="text-sweet_blue font-bold text-xl my-3">
-                  Smart Policing Concept
+                  The Drone Book
                 </h2>
                 <p className="text-xs  lg:text-base 2xl:text-xl">
                   The past decade has seen the adoption of drones as a tool in the armory of the police and other law enforcement agencies.

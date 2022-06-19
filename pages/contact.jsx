@@ -2,18 +2,19 @@
 import { faPhone, faLocationDot, faPaperPlane, faGlobeAfrica } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button_ from '../components/button.jsx'
+// fa-facebook
 
 export default function Contact() {
   
   return(
     <div>
-      <section className="ftco-section">
+      <section className=" p-[10rem]">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10 col-md-12">
-              <div className="wrapper">
-                <div className="row no-gutters">
-                  <div className="col-md-7 d-flex align-items-stretch">
+          <div className="flex justify-center">
+            <div className="flex flex-col lg:w-10/12 md:w-full ">
+              <div className=" w-full shadow-lg shadow-gray-500/50">
+                <div className="flex flex-wrap -mr-4 -ml-4 no-gutters">
+                  <div className="relative w-full pr-4 pl-4 flex items-stretch" style={{flex: '0 0 58.33333%',  maxWidth: '58.33333%'}}>
                     <div className="contact-wrap w-100 p-md-5 p-4">
                       <h3 className="mb-4">Get in touch</h3>
                       <div id="form-message-warning" className="mb-4"></div> 
@@ -21,7 +22,7 @@ export default function Contact() {
                         Your message was sent, thank you!
                       </div>
                       <form method="POST" id="contactForm" name="contactForm">
-                        <div className="row">
+                        <div className="flex flex-wrap -mr-4 -ml-4">
                           <div className="col-md-6">
                             <div className="form-group">
                               <input type="text" className="form-control" name="name" id="name" placeholder="Name" />

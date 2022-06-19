@@ -6,6 +6,8 @@ import '../styles/component.styles/contact.scss'
 import '../styles/layout/navbarHover.css'
 import Layout from '../components/layout/Layout'
 import dynamic from 'next/dynamic'
+import 'font-awesome/css/font-awesome.min.css'
+
 const flowbite = dynamic(() => import('flowbite'), { ssr: false })
 
 

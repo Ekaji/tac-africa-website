@@ -10,12 +10,13 @@ const HeroBanner = ({ backgroundImg, text, activeLink }) => {
           'h-40vh relative bg-fixed bg-center bg-cover bg-no-repeat'
         }
         style={{
-          backgroundImage: `linear-gradient(rgba(5, 0, 32, 0.697), rgba(5, 0, 32, 0.697)), url(${backgroundImg})`,
+          // linear-gradient(rgba(5, 0, 32, 0.697), rgba(5, 0, 32, 0.697)), 
+          backgroundImage: `url(${backgroundImg})`,
         }}
       >
         <div className="flex items-center justify-center h-full">
           <h2 className="text-white font-bold capitalize">
-            {text}
+            {/* {text} */}
           </h2>
         </div>
       </div>
