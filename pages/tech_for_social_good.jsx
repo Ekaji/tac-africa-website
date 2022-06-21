@@ -4,109 +4,176 @@ import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx';
 
 const TechForSocialGood = () => {
   const backgroundImg = '/community/5.jpg';
+
   return (
     <>
-      <HeroBanner
-        text={'Drone And Counter Drone'}
-        bannerOverlay
-        activeLink={'Technology for social Good'}
-        backgroundImg={backgroundImg}
-      />
-      <div className="bg-gray-100 font-sans leading-normal tracking-normal">
-        <div className="container w-full md:max-w-3xl mx-auto pt-20">
-          <div
-            className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal"
-            style={{ fontFamily: 'Georgia,serif' }}
-          >
-            <div className="font-sans">
-              <h1 className="font-bold font-sans break-normal pt-6 pb-2 text-primary text-3xl md:text-4xl">
-                Technology for social Good
-              </h1>
-              <p className="text-sm md:text-base font-bold text-primary">What we Do</p>
+      <div className="w-full flex flex-col justify-center ">
+        <HeroBanner
+          text={'Drone And Counter Drone'}
+          bannerOverlay
+          activeLink={'Technology for social Good'}
+          backgroundImg={backgroundImg}
+        />
+
+        <div className=" flex flex-col items-center">
+          <div className="w-[80vw]  ">
+            <h1 className="font-bold text-primary text-lg mb-12">
+              Technology for social Good
+            </h1>
+            {/* <h2 className={ styles.background_header } >A Phenomenal Stratedy </h2>  */}
+            <p className="text-base">
+              {' '}
+              Technology for social good can provide mechanism for
+              people to access or use technology in an open, cost
+              efficient, and sustainable way. We believe that
+              technology does not have intrinsic value; its value lies
+              in its application, which social, political and economic
+              power structures dictate
+            </p>
+          </div>
+        </div>
+
+        <div className="">
+          <div className="text-center">
+            <h2 className="text-primary font-semibold text-4xl mb-2 mt-14">
+              Our work in this space
+            </h2>
+            <p className="text-base ">
+              As one of our pillars in TAC Africa, we are actively
+              involved in the space
+            </p>
+          </div>
+
+          <div className="my-28">
+            <div className="flex flex-col items-center">
+              <div className="flex flex-row flex-wrap items-stretch justify-between  mb-20 w-[80vw] space-y-12 md:space-y-0">
+                <div className="overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-0 w-full md:w-5/12 rounded-lg">
+                  <div className="capitalize w-full text-center bg-primary ">
+                    <h2 className="text-2xl font-semibold text-white py-2">
+                      initiative
+                    </h2>
+                  </div>
+                  <ul className="leading-10 pl-4">
+                    <li>
+                      {' '}
+                      <span className="text-sweet_blue font-semibold mr-2">
+                        &#x2713;
+                      </span>{' '}
+                      Sporting activities
+                    </li>
+                    <li>
+                      {' '}
+                      <span className="text-sweet_blue font-semibold mr-2">
+                        &#x2713;
+                      </span>{' '}
+                      Technology clubs
+                    </li>
+                    <li>
+                      {' '}
+                      <span className="text-sweet_blue font-semibold mr-2">
+                        &#x2713;
+                      </span>{' '}
+                      Mentoring and Coaching services
+                    </li>
+                    <li>
+                      {' '}
+                      <span className="text-sweet_blue font-semibold mr-2">
+                        &#x2713;
+                      </span>{' '}
+                      Relaxation and Events{' '}
+                    </li>
+                    <li>
+                      {' '}
+                      <span className="text-sweet_blue font-semibold mr-2">
+                        &#x2713;
+                      </span>{' '}
+                      Office on the go{' '}
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="overflow-hidden shadow-[0_15px_30px_-5px_rgba(0,0,0,0.3)] p-0 w-full md:w-5/12 rounded-lg">
+                  <div className="capitalize w-full text-center bg-primary rounded-t-lg">
+                    <h2 className="text-2xl font-semibold text-white py-2">
+                      stakeholders
+                    </h2>
+                  </div>
+                  <ul className="leading-10 pl-4">
+                    <li>
+                      {' '}
+                      <span className="text-sweet_blue font-semibold mr-2">
+                        &#x2713;
+                      </span>{' '}
+                      Open air Gym
+                    </li>
+                    <li>
+                      {' '}
+                      <span className="text-sweet_blue font-semibold mr-2">
+                        &#x2713;
+                      </span>{' '}
+                      Nigeria Flying Labs{' '}
+                    </li>
+                    <li>
+                      {' '}
+                      <span className="text-sweet_blue font-semibold mr-2">
+                        &#x2713;
+                      </span>{' '}
+                      Garuda Robotics{' '}
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className="py-6 font-sans">
-              {`
-               We work on independent multi-disciplinary
-              academic research and teach open and issue-oriented
-              debate and evidence-based policymaking around new
-              technologies like Cybersecurity, Artificial
-              Intelligence, Drones, and Counter- Drone Industry.
-              `}
-              <br />
-              {`
-              How
-              we work TAC Africa focuses on the study of and
-              engagement with Africa, with our focus on how technology
-              is being used against crime and for social good, We
-              promote the visibility of Africa as a hub for technology
-              and advocate for the use of technology to solve the
-              issues that affect the society TAC promotes
-              collaborative partnership and knowledge sharing between
-              like-minded institutions, NGOs and private companies,
-              and counterparts in Africa. 
-              `}
-              <br />
-              {`
-              Years of Experience
-              Technology Against Crime Africa was incorporated on 23rd
-              February 2016 with CAC/IT/No.84975 TAC aims to liaise
-              and promote synergy with relevant academic research
-              associations ok issues relating to avoiding being
-              victims of crime To use modern technology and equipment
-              to sensitize individuals groups on ways to prevent being
-              victims and also educate them on ways to seek justice.
-              Our Background TAC is a Non-governmental Organization
-              connecting law enforcement, subject matter experts, and
-              civil society to solve technological issues that affect
-              society. 
-              `}
-              <br />
-              {`
-              We cooperate between the security sectors and
-              various public enterprises, constant private-public
-              dialogue, and awareness campaigns, and curate technology
-              for social good. We consist of an Advisory board,
-              management team, various member country representatives,
-              A legal team, finance, and administration, project
-              consultants, and human resource management. How we
-              Integrate TAC Africa is committed to becoming a
-              world-leading icon on this domain of utilizing emerging
-              technologies, trainings and capacity building I-Big Data
-              Expertise TAC Africa has come up with various means they
-              tackle cybersecurity through various expertise such as
-              skill development and awareness in cybersecurity in
-              Africa, West Africa cybercrime startup culture and the
-              African youth, law enforcement and legal landscape.
-              `}
-              <br />
-              {`
-              iI-Research and Development Cybercriminals in Africa use
-              social engineering tactics to steal money and carryout
-              other criminal activities online.TAC Africa and UNICRI
-              in collaboration with key representatives from African
-              countries seek to explore new and emerging threats
-              associated with crimes as well as the possible role of
-              Artificial Intelligence (AI) in crime prevention.
-              iII-Industry Experts TAC Africa intends to use an
-              anti-crawling mechanism to prevent surveillance by law
-              enforcement and to safeguard servers resources from
-              being abused by rival hackers community Ways to
-              Volunteer -Explore creative recruitment of trained
-              persons -Provide excellent induction and training on
-              cybersecurity etc -Support campaigns , attend events etc
-              -Participating in fundraising -Acknowledge contribution
-              Dr. Jerry Akubo is the founder and also CEO of TAC NGO
-              Africa.
-              `}
-              <br />
-              {`
-              He's a National Technical Consultant, INTERPOL
-              National Central Burea Abuja. Actively engaged in law
-              Enforcement Technology Advisory for over two decades and
-              also the Country representative/Authorized Training
-              Partner for Institute for Drone Technology, Australia.
-              `}
-            </div>
+          </div>
+        </div>
+
+        <div className="mt-20 mb-20 mx-auto flex flex-col items-center justify-center">
+          <h2 className="text-sweet_blue text-4xl font-semibold">
+            Ongoing Projects
+            <span className="text-primary ml-2">In The Field</span>
+          </h2>
+          <p className="text-base">
+            As one of our pillars in TAC Africa, we are actively
+            involved in the space.
+          </p>
+          <div className="mx-auto flex flex-col">
+            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+              {' '}
+              <span className="text-lg">
+                {' '}
+                {'Lawn Tennis Tournament'}{' '}
+              </span>{' '}
+            </button>
+
+            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+              {' '}
+              <span className="text-lg">
+                {' '}
+                {'Chess Tournament'}{' '}
+              </span>{' '}
+            </button>
+            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+              {' '}
+              <span className="text-lg">
+                {' '}
+                {'Taekwondo Training'}{' '}
+              </span>{' '}
+            </button>
+
+            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+              {' '}
+              <span className="text-lg">
+                {' '}
+                {'Swimming Competition'}{' '}
+              </span>{' '}
+            </button>
+            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+              {' '}
+              <span className="text-lg">
+                {' '}
+                {'Scrabble and Word games'}{' '}
+              </span>{' '}
+            </button>
           </div>
         </div>
       </div>

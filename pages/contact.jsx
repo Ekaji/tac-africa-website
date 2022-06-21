@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import { faPhone, faLocationDot, faPaperPlane, faGlobeAfrica } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Button_ from '../components/button.jsx'
+// import Button_ from '../components/button.jsx'
 // fa-facebook
 
 export default function Contact() {
@@ -14,7 +14,7 @@ export default function Contact() {
             <div className="flex flex-col lg:w-10/12 md:w-full ">
               <div className=" w-full shadow-lg shadow-gray-500/50">
                 <div className="flex flex-wrap -mr-4 -ml-4 no-gutters">
-                  <div className="relative w-full pr-4 pl-4 flex items-stretch" style={{flex: '0 0 58.33333%',  maxWidth: '58.33333%'}}>
+                  <div className="relative w-full pr-4 pl-4 flex items-stretch md:max-w-[58.33333%]" >
                     <div className="contact-wrap w-100 p-md-5 p-4">
                       <h3 className="mb-4">Get in touch</h3>
                       <div id="form-message-warning" className="mb-4"></div> 
@@ -45,7 +45,7 @@ export default function Contact() {
                           </div>
                           <div className="col-md-12">
                             <div className="form-group">
-                              <Button_ type="submit" title={"Send Message"} variant={'outline-primary'}  />
+                              {/* <Button_ type="submit" title={"Send Message"} variant={'outline-primary'}  /> */}
                               <div className="submitting"></div>
                             </div>
                           </div>
