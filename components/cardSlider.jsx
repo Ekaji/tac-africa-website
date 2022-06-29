@@ -40,12 +40,12 @@ const CardSlider = () => {
   return (
     <div className="w-full">
       <div className="pt-12 pb-20 mx-auto my-0 xl:px-12">
-        <div className="flex justify-between w-10/12 py-4 mx-auto capitalize">
-          <h2 className="text-sweet_blue font-semibold pt-1.5">
+        <div className="flex justify-Center items-center  py-4 mx-auto capitalize">
+          <h2 className="text-sweet_blue mx-auto pt-1.5 font-bold text-6xl">
             {' '}
-            Our <span className="text-primary ">Labs</span>
+            Our <span className="text-primary font-bold text-6xl ">Labs</span>
           </h2>
-          <Link href={'/all_labs'}>
+          {/* <Link href={'/all_labs'}>
             <a>
               <button
                 type="button"
@@ -54,7 +54,7 @@ const CardSlider = () => {
                 ALL LABS
               </button>
             </a>
-          </Link>
+          </Link> */}
         </div>
         <>
           {/* carousel */}
@@ -113,6 +113,18 @@ const CardSlider = () => {
             </div>
           </div>
         </>
+
+        <Link href={'/all_labs'}>
+            <a>
+              <button
+                type="button"
+                className="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
+              >
+                ALL LABS
+              </button>
+            </a>
+          </Link>
+
       </div>
     </div>
   );

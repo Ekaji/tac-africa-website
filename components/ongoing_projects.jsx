@@ -7,18 +7,19 @@ import FormModal from './formModal';
 import { useState } from 'react'
 
 
-
 const OngoingProjects = () => {
   
   const [ modalShow, setModalShow] = useState(false)
   const pdfs =  {
     smart_policing: "/pdf/smart_policing_concept.pdf",
     underground_economy: "/pdf/The_Underground_Economy.pdf",
-    drone_compendium: "/pdf/Crypto_Brochure_Revamp.pdf"
-
+    drone_compendium: "/pdf/Crypto_Brochure_Revamp.pdf",
+    blockchain_and_crypto: "/pdf/Cryptocurrency_Brochure_Volume_1.pdf"
   }
 
   const [ PDF, setPDF ] = useState('')
+  const videoSrc = '/video/TAC_video.mp4'
+  const videoThumbnail = '/vid_thumbnail.png'
 
 
   return (
@@ -27,8 +28,8 @@ const OngoingProjects = () => {
     
       <div className="w-10/12 mx-auto">
         <div className="mx-auto w-10/12 text-center mb-12 lg:w-7/12">
-          <h2 className="text-sweet_blue font-bold">
-            Ongoing <span className="text-primary"> Projects </span>{' '}
+          <h2 className="text-sweet_blue mx-auto pt-1.5 font-bold text-6xl text-center mb-12">
+            Ongoing <span className="text-primary font-bold text-6xl"> Projects </span>{' '}
           </h2>
           <p className="text-sm lg:text-lg">
             TAC Africa through her collaborations and partnerships
@@ -39,7 +40,7 @@ const OngoingProjects = () => {
         <div className="flex flex-col">
           <div className="flex flex-col lg:flex-row ">
             <div className="w-full lg:mr-4 lg:w-6/12 rounded-sm overflow-hidden ">
-              <VideoComp />
+              <VideoComp videoSrc={videoSrc} videoThumbnail={videoThumbnail} />
             </div>
             <div className="lg:w-5/12 mx-auto lg:my-auto">
               <div>
@@ -156,7 +157,7 @@ const OngoingProjects = () => {
                   }
                 }
                 >
-                  Download Brochure
+                  Download Guide
                   <svg
                     className="ml-2 -mr-1 w-4 h-4"
                     fill="currentColor"
@@ -196,7 +197,7 @@ const OngoingProjects = () => {
                   }
                 }
                 >
-                  Download Brochure
+                  Download Guide
                   <svg
                     className="ml-2 -mr-1 w-4 h-4"
                     fill="currentColor"
@@ -250,7 +251,7 @@ const OngoingProjects = () => {
                   }
                 }
                 >
-                  Download Brochure
+                  Download Guide
                   <svg
                     className="ml-2 -mr-1 w-4 h-4"
                     fill="currentColor"
@@ -268,7 +269,56 @@ const OngoingProjects = () => {
             </div>
           </div>
 
-        </div>
+          <div className="flex flex-col-reverse lg:flex-row mt-10">
+            <div className="flex flex-col lg:w-6/12 lg:flex-row md:mt-10">
+              <div className="mr-4 lg:my-auto">
+                <h2 className="text-sweet_blue font-bold text-xl my-3">
+                  BLOCKCHAIN AND CRYPTOCURRENCY
+                </h2>
+                <p className="text-xs lg:text-base 2xl:text-xl ">
+                  {` 
+                    Decentralized finance leverages key principles of the Ethereum blockchain to
+                    increase financial security and transparency, unlock liquidity and growth opportunities,
+                    and support an integrated and standardized economic system.
+                    Programmability. Highly programmable smart contracts automate execution and
+                    enable the creation of new financial instruments and digital assets.`}
+                </p>
+                <div>
+                <a
+                  className="inline-flex items-center cursor-pointer py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  onClick={() => {
+                    setModalShow(!modalShow);
+                    setPDF(pdfs.blockchain_and_crypto)
+                  }
+                }
+                >
+                  Download Guide
+                  <svg
+                    className="ml-2 -mr-1 w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              </div>
+            </div>
+
+            <div className="lg:ml-4 lg:w-6/12 mx-auto">
+              <div className="lg:aspect-w-16 lg:aspect-h-9 rounded-sm overflow-hidden">
+                <img src="/community/blockchain_And_crypto.png" alt="community hub" />
+              </div>
+            </div>
+
+            </div>
+
+      </div>
       </div>
     </>
   );

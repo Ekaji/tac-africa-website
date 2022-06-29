@@ -61,7 +61,7 @@ export const data = [
 
     },
     {
-        label: 'donate',
+        label: 'gallery',
         content: [
             {href: 'donate'}
         ],

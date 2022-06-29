@@ -33,7 +33,7 @@ const data = [
   {
     title: 'Technology For Social Good',
     image: '/community/5.jpg',
-    text: '.',
+    text: 'Technology for social good can provide mechanism for people to access or use technology in an open, cost efficient, and sustainable way. We believe that technology does not have intrinsic value; its value lies in its application, which social, political and economic power structures dictate',
     link: '/satellite_and_remote_sensing_lab'
   }
 ];
@@ -87,20 +87,20 @@ const All_labs = () => {
               <div className="my-8 ">
                 <div
                   id="scrollContainer"
-                  className="flex flex-wrap items-stretch justify-between pb-6 mb-8 scrolling-touch"
+                  className="flex flex-wrap items-stretch  pb-6 mb-8 scrolling-touch"
                 >
                   {data.map((edge, i) => (
                     <div
                       key={i}
-                      className="w-full overflow-hidden border rounded-lg md:w-[45%] lg:w-[30%] md:pb-4 mb-8"
+                      className={`w-full overflow-hidden mr-3 border rounded-lg md:w-[45%] lg:w-[30%] md:pb-4 mb-8`}
                     >
-                      <Link href={edge.link}>
+                      <Link href={edge?.link || '/'}>
                         <a className="space-y-4">
                           <div className="aspect-w-16 aspect-h-9 ">
                             <img
                               className="object-cover shadow-md hover:shadow-xl "
                               src={edge?.image}
-                              alt={edge.image}
+                              alt={edge?.image}
                             />
                             <div
                               className={`w-full h-full flex justify-center align-center hover:bg-overlay group `}
