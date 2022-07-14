@@ -19,6 +19,7 @@ const MailChimpFormContainer = props => {
           />
         )}
       />
+
     </div>
   )
 }

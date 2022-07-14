@@ -20,10 +20,8 @@ const OngoingProjects = () => {
 
   const [ modalShow, setModalShow] = useState(false)
   const [ PDF, setPDF ] = useState('')
-
   const videoSrc = '/video/TAC_video.mp4'
   const videoThumbnail = '/vid_thumbnail.png'
-
 
   return (
     <>
@@ -278,6 +276,7 @@ const OngoingProjects = () => {
               <div className="mr-4 lg:my-auto">
                 <h2 className="text-sweet_blue font-bold text-xl my-3">
                   Blockchain And Cryptocurrency
+
                 </h2>
                 <p className="text-xs lg:text-base 2xl:text-xl ">
                   {` 

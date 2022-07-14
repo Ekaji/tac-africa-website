@@ -150,9 +150,10 @@ const CardSlider = ({text3, text2, text1}) => {
               </button>
             </a>
           </Link>
-      </div>
+
 
       </div>
+    </div>
     </div>
   );
 };
