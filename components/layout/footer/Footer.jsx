@@ -25,9 +25,7 @@ export default function Footer() {
                         ABOUT US
                       </h3>
                       <p className="">
-                        TAC An NGO Obliged to bringing together Law
-                        Enforcement Agents, Academia and Subject
-                        Matter Experts to curb technology aided crime
+                      TAC Africa is wholly committed to developing the Africa’s Economic and Security space through Digital Specialized Skills and Capacity building for Academia, Law Enforcement Agencies, Government Organizations and individuals by serving as catalyst through which Emerging Technological Solutions could be thought in a structured and easy to learn methodology
                       </p>
                     </div>
 
@@ -78,7 +76,7 @@ export default function Footer() {
                     </h3>
                     <div className="">
                       <p className="text-sm mb-1 text-white">
-                        TAC HQ: Plot 239 Mafemi Crescent, Besides
+                        TAC HQ: Plot 239 P.O.W Mafemi Crescent, Besides
                         Daily Trust Newspapers, Utako District, Abuja,
                         Nigeria. 900112
                       </p>
@@ -87,7 +85,7 @@ export default function Footer() {
 
                     <div className="">
                       <p className="text-sm mb-1 text-white">
-                        TAC Community Hub: No.1 Sleelseed Crescent,
+                        TAC Community Hub: No.1 Sleekseed Crescent,
                         Chikakore District, Kubwa, Abuja
                       </p>
                       <hr className="w-4/5" />

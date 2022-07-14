@@ -7,7 +7,7 @@ const HeroBanner = ({ backgroundImg, text, activeLink }) => {
     <>
       <div
         className={
-          'h-40vh relative bg-fixed bg-center bg-cover bg-no-repeat'
+          'h-40vh  bg-fixed bg-center bg-cover bg-no-repeat'
         }
         style={{
           // linear-gradient(rgba(5, 0, 32, 0.697), rgba(5, 0, 32, 0.697)), 

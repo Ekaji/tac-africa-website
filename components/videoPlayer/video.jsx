@@ -3,11 +3,11 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import { Player, BigPlayButton } from 'video-react';
-// import styles from '../../styles/video.styles/video.module.scss'
 
 const VideoComp = props => {
+
   return (
-    <Player poster="/vid_thumbnail.png" src="/video/TAC_video.mp4" >
+    <Player poster={props.videoThumbnail} src={props.videoSrc} >
       <BigPlayButton position="center" />
     </Player>
   );

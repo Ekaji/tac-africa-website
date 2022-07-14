@@ -54,7 +54,7 @@ const Volunteer = () => {
             className="rounded-md h-32 text-white text-center pt-8"
             style={{ ...smallCardStyles }}
           >
-            <h5 className="text-light m-0">55+</h5>
+            <h5 className="text-light m-0">280+</h5>
             <p className="">community members</p>
           </div>
           <div
@@ -73,10 +73,14 @@ const Volunteer = () => {
           </div>
           <div
             className="rounded-md h-32  text-white text-center pt-8"
-            style={{ ...smallCardStyles }}
+            
           >
-            <h5 className="text-light m-0">23+</h5>
-            <p className="">Trainings and hackathons</p>
+            <h5 className="text-light m-0">
+              {/* 23+ */}
+              </h5>
+            <p className="">
+              {/* Trainings and hackathons */}
+              </p>
           </div>
         </div>
       </div>

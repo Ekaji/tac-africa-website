@@ -1,9 +1,10 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import { useState } from 'react';
+import Carousel from 'react-multi-carousel';
+// import 'react-multi-carousel/lib/styles.css';
 
-const CardSlider = () => {
+const CardSlider = ({text3, text2, text1}) => {
   const data = [
     {
       title: 'Cyber Security & Cyber Defense', //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
@@ -14,7 +15,7 @@ const CardSlider = () => {
     {
       title: 'Drone & Counter Drone',
       image: '/projects/drone.jpeg',
-      text: 'The future of aviation is gradually being powered by unmanned Aerial Vehicles if the good guys don’t get involve on time the bad guys would..',
+      text: 'The future of aviation is gradually being powered by unmanned Aerial Vehicles if the good guys don’t get involve on time the bad guys would.',
       link: '/drone_and_counter_drone',
     },
     {
@@ -37,82 +38,120 @@ const CardSlider = () => {
     }
   ];
 
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1536 },
+      items: 4,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    laptop: {
+      breakpoint: { max: 1536, min: 768 },
+      items: 3,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 768, min: 640 },
+      items: 2,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 640, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
+
+
   return (
     <div className="w-full">
       <div className="pt-12 pb-20 mx-auto my-0 xl:px-12">
-        <div className="flex justify-between w-10/12 py-4 mx-auto capitalize">
-          <h2 className="text-sweet_blue font-semibold pt-1.5">
+        <div className="flex justify-Center items-center  py-4 mx-auto capitalize">
+          <h2 className="text-sweet_blue mx-auto pt-1.5 font-bold text-6xl text-center">
             {' '}
-            Our <span className="text-primary ">Labs</span>
+            { text1 ? text1 : 'Our'} <span className="text-primary font-bold text-6xl ">{text2}</span>
           </h2>
-          <Link href={'/all_labs'}>
-            <a>
+      
+        </div>
+        <div className='pl-4 pb-8 '>
+         <Carousel
+      swipeable={true}
+      draggable={true}
+      showDots={true}
+      responsive={responsive}
+      ssr={true} // means to render carousel on server-side.
+      infinite={true}
+      autoPlay={true}
+      autoPlaySpeed={5000}
+      keyBoardControl={true}
+      customTransition="all .5"
+      transitionDuration={500}
+      containerClass="carousel-container "
+      // removeArrowOnDeviceType={['tablet', 'mobile']}
+      renderButtonGroupOutside={true}
+      renderDotsOutside={true}
+      // deviceType={props.deviceType}
+      dotListClass="relative pt-2  z-50"
+      itemClass="carousel-item-padding-40-px flex flex-no-wrap items-stretch "
+    >
+                  {data.map((edge, i) => (
+
+                      <div
+                        key={i}
+                        className="flex-none w-11/12 mr-8 overflow-hidden  border rounded-lg md:mr-4 md:pb-4 "
+                      >
+                        <Link href={edge.link}>
+                          <a className="space-y-4">
+                            <div className="aspect-w-16 aspect-h-9 ">
+                              <img
+                                className="object-cover shadow-md hover:shadow-xl "
+                                src={edge?.image}
+                                alt={edge.image}
+                              />
+                              <div
+                                className={`w-full h-full flex justify-center align-center hover:bg-overlay group `}
+                              >
+                                <div className="hidden my-auto group-hover:block">
+                                  <button
+                                    type="button"
+                                    className="text-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
+                                  >
+                                    {'Learn More'}
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="px-4 py-2">
+                              <div className="text-lg font-medium leading-6 text-center">
+                                <h3 className=" max-h-10 text-base font-semibold lg:font-bold text-sweet_blue">
+                                  {edge?.title + " " + text3 }
+                                </h3>
+                              </div>
+                              <div className="text-sm line-clamp-3">
+                                <p className="text-center max-h-fit text-light_grey">
+                                  {edge?.text}
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
+                      </div>
+                  ))}
+        </Carousel>
+        </div>
+
+      <div className='flex justify-center' >
+        <Link href={'/all_labs'}>
+            <a className=''>
               <button
                 type="button"
-                className="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
+                className="text-blue-700  w-40  hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
               >
                 ALL LABS
               </button>
             </a>
           </Link>
-        </div>
-        <>
-          {/* carousel */}
-          <div className="flex-grow w-full px-3 py-4 mx-auto sm:py-16">
-            <div className="w-full lg:mx-auto px-">
-              <div className="my-8 ">
-                <div
-                  id="scrollContainer"
-                  className="flex flex-no-wrap items-stretch pb-6 mb-8 overflow-x-scroll scrolling-touch"
-                >
-                  {data.map((edge, i) => (
-                    <div
-                      key={i}
-                      className="flex-none w-11/12 mr-8 overflow-hidden border rounded-lg md:w-2/4 lg:w-1/3 md:mr-4 md:pb-4"
-                    >
-                      <Link href={edge.link}>
-                        <a className="space-y-4">
-                          <div className="aspect-w-16 aspect-h-9 ">
-                            <img
-                              className="object-cover shadow-md hover:shadow-xl "
-                              src={edge?.image}
-                              alt={edge.image}
-                            />
-                            <div
-                              className={`w-full h-full flex justify-center align-center hover:bg-overlay group `}
-                            >
-                              <div className="hidden my-auto group-hover:block">
-                                <button
-                                  type="button"
-                                  className="text-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
-                                >
-                                  {'Learn More'}
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="px-4 py-2">
-                            <div className="text-lg font-medium leading-6 text-center">
-                              <h3 className="mt-4 mb-8 text-base font-semibold lg:font-bold text-sweet_blue">
-                                {edge?.title}
-                              </h3>
-                            </div>
-                            <div className="text-sm line-clamp-3 ">
-                              <p className="text-center text-light_grey">
-                                {edge?.text}
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </Link>
-                    </div>
-                  ))}
-                  {/*  */}
-                </div>
-              </div>
-            </div>
-          </div>
-        </>
+      </div>
+
       </div>
     </div>
   );
