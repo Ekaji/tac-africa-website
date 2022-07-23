@@ -14,7 +14,7 @@ const OngoingProjects = () => {
   const pdfs =  {
     smart_policing: "/pdf/smart_policing_concept.pdf",
     underground_economy: "/pdf/The_Underground_Economy.pdf",
-    drone_compendium: "/pdf/Crypto_Brochure_Revamp.pdf",
+    drone_compendium: "/pdf/Drone_Compendium_For_TAC_Africa_compressed.pdf",
     blockchain_and_crypto: "/pdf/Cryptocurrency_Brochure_Volume_1.pdf"
   }
 

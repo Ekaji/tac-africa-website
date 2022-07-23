@@ -34,7 +34,7 @@ const CardSlider = ({text3, text2, text1}) => {
       title: 'Technology For Social Good',
       image: '/community/5.jpg',
       text: 'We work on independent multi-disciplinary academic research and teach open and issue-oriented debate and evidence-based policymaking around new technologies like Cybersecurity, Artificial Intelligence',
-      link: '/satellite_and_remote_sensing_lab'
+      link: '/tech_for_social_good'
     }
   ];
 

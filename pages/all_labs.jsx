@@ -34,7 +34,7 @@ const data = [
     title: 'Technology For Social Good',
     image: '/community/5.jpg',
     text: 'Technology for social good can provide mechanism for people to access or use technology in an open, cost efficient, and sustainable way. We believe that technology does not have intrinsic value; its value lies in its application, which social, political and economic power structures dictate',
-    link: '/satellite_and_remote_sensing_lab'
+    link: '/tech_for_social_good'
   }
 ];
 

@@ -48,6 +48,32 @@ const PDFcomp = ({ children, pdfs }) => {
 export default function LatestNews({ text2 }) {
   const data = [
     {
+      title: 'Nelson Mandela Day & International Chess Day',
+      media: {
+        type: 'image',
+        url: '/projects/mandela_and_chess_day.jpeg',
+      },
+      text: [
+        `The TAC Community Hub will be open for two purposes -
+      (1) commemorate one of the greatest leaders Nelson Mandela. And re-echo the hopes in his quotes 'It always seem impossible until it is done'.
+      (2) Mark the international Chess Day and reiterate the assertion for everyone to learn chess owning that - "The best Chess Player was once a beginner" See less`,
+      ],
+      textLink: 'https://fb.me/e/4Vxtf3yId',
+      blogLink: 'https://fb.me/e/4Vxtf3yId',
+    },
+    {
+      title: 'A clarion call for Drone Pilots',
+      media: {
+        type: 'image',
+        url: '/partnership/call_for_drone_pilots.png',
+      },
+      text: [
+        `Are you a drone pilot/instructor, are you open to expansion and strategic collaboration in the area of drone and counter drone? Kindly reach out to for a quick chat by filling the form at`,
+      ],
+      textLink: 'https://bit.ly/3uMSXQG',
+      blogLink: 'https://bit.ly/3uMSXQG',
+    },
+    {
       title:
         'Bilic Partners With TAC Africa on the use of technology Against Crime',
       media: {
@@ -55,7 +81,8 @@ export default function LatestNews({ text2 }) {
         url: '/partnership/blic_tac.jpg',
       },
       text: "To bloster blockchain and cryptocurrency investigation capabilities, we're pleased to announce a strategic partnership with bilic.io on multiple fronts",
-      blogLink: '/blog/Bilic_Partners_With_TAC_africa_on_the_use_of_technology_against_crime',
+      blogLink:
+        '/blog/Bilic_Partners_With_TAC_africa_on_the_use_of_technology_against_crime',
     },
     {
       title: 'TAC Africa Prevent | Detect | Investigate', //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
@@ -117,11 +144,11 @@ export default function LatestNews({ text2 }) {
       <div className={` pt-12 pb-20 mx-auto my-0 xl:px-12`}>
         <div className="flex justify-Center items-center  py-4 mx-auto capitalize">
           <h2 className="text-sweet_blue mx-auto pt-1.5 font-bold text-6xl">
-            {' '}
-            Latest{' '}
+            {'News And '}
+            {/* Latest{' '} */}
             <span className="text-primary font-bold text-6xl ">
-              {' '}
-              {text2}
+              {'Events '}
+              {/* {text2} */}
             </span>
           </h2>
         </div>
@@ -163,16 +190,16 @@ export default function LatestNews({ text2 }) {
                         alt={edge?.media.url}
                       />
                     </PDFcomp>
-                  ) :  (
+                  ) : (
                     <Link href={edge.blogLink}>
-                      <a>
-                      <img
+                      <a target="_blank" rel="noreferrer">
+                        <img
                           className="object-cover shadow-md hover:shadow-xl "
                           src={edge?.media.url}
                           alt={edge?.media.url}
                         />
                       </a>
-                    </Link>       
+                    </Link>
                   )}
 
                   <div
@@ -190,29 +217,38 @@ export default function LatestNews({ text2 }) {
                   {/* } */}
                 </div>
                 <ConditionalLinks //adds an optional <Link href={...}> tag around cards with a link
-                          condition={edge.blogLink}
-                          wrapper={(children) => (
-                            <Link
-                              href={edge.blogLink}
-                              key={i}
-                              className='m-0 p-0'
-                            >
-                              <a>{children}</a>
-                            </Link>
-                          )}
+                  condition={edge.blogLink}
+                  wrapper={(children) => (
+                    <Link
+                      href={edge.blogLink}
+                      key={i}
+                      className="m-0 p-0"
+                    >
+                      <a target="_blank" rel="noreferrer">
+                        {children}
+                      </a>
+                    </Link>
+                  )}
+                >
+                  <div className="px-4 py-2">
+                    <div className="text-lg font-medium leading-6 text-center">
+                      <h3 className="mt-4 mb-8 text-base font-semibold lg:font-bold text-sweet_blue">
+                        {edge?.title}
+                      </h3>
+                    </div>
+                    <div className="text-sm line-clamp-5 ">
+                      <p className="text-center text-light_grey">
+                        {edge?.text}
+                        <a
+                          href={edge?.textLink}
+                          target="_blank"
+                          rel="noreferrer"
                         >
-                <div className="px-4 py-2">
-                  <div className="text-lg font-medium leading-6 text-center">
-                    <h3 className="mt-4 mb-8 text-base font-semibold lg:font-bold text-sweet_blue">
-                      {edge?.title}
-                    </h3>
+                          {' ' + edge?.textLink}
+                        </a>
+                      </p>
+                    </div>
                   </div>
-                  <div className="text-sm line-clamp-3 ">
-                    <p className="text-center text-light_grey">
-                      {edge?.text}
-                    </p>
-                  </div>
-                </div>
                 </ConditionalLinks>
               </div>
             ))}

@@ -110,26 +110,31 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center my-6">
           {/* facebook */}
           <Link href={'https://m.facebook.com/pg/TACinAfrica/posts'}>
             <a target="_blank" rel="noreferrer">
-              <i className="mx-2 fa fa-brands fa-facebook" />
+              <i className="mx-4 fa fa-brands fa-facebook fa-2x text-white" />
             </a>
           </Link>
           <Link href={'https://www.instagram.com/tac.africa'}>
             <a target="_blank" rel="noreferrer">
-              <i className="mx-2 fa fa-brands fa-instagram" />
+              <i className="mx-4 fa fa-brands fa-instagram fa-2x text-white" />
             </a>
           </Link>
           <Link href={'https://ng.linkedin.com/company/tacafrica'}>
             <a target="_blank" rel="noreferrer">
-              <i className="mx-2 fa fa-brands fa-linkedin" />
+              <i className="mx-4 fa fa-brands fa-linkedin fa-2x text-white" />
             </a>
           </Link>
           <Link href={'https://twitter.com/Tacafrica2'}>
             <a target="_blank" rel="noreferrer">
-              <i className="mx-2 fa fa-brands fa-twitter" />
+              <i className="mx-4 fa fa-brands fa-twitter fa-2x text-white " />
+            </a>
+          </Link>
+          <Link href={'https://www.youtube.com/channel/UCsOPBwlkXfJspo22MJcC8NA'}>
+            <a target="_blank" rel="noreferrer">
+              <i className="mx-2 fa fa-brands fa-youtube fa-2x text-white " />
             </a>
           </Link>
         </div>

@@ -7,13 +7,30 @@ export default function LandingPage() {
     <section className="w-full">
       <div className="lg:h-screen">
         <div className="flex flex-col lg:flex-row-reverse  lg:h-90vh">
-          <div className="flex-col  lg:w-7/12  bg-main_grey xl:px-8">
+          <div className="flex-col  lg:w-7/12  bg-main_grey 
+          "
+          // xl:px-8
+          >
             <div
-              className={[
-                'relative h-30vh w-full lg:h-90vh bg-main_grey flex items-end overflow-hidden object-cover',
-              ].join(' ')}
+              className='relative h-30vh w-full lg:h-90vh bg-main_grey flex items-end overflow-hidden object-cover img_landing-container'
             >
-              <span
+              <img alt="Technology Against Crime ideology"
+                  src="/team/about_us.jpg"
+                  className=""
+                  style={{width: '100%', height: '100%'}} />
+              <img alt="Technology Against Crime ideology"
+                  src="/projects/cyber_security.jpeg"
+                  className=""
+                  style={{width: '100%', height: '100%'}} />
+              <img alt="Technology Against Crime ideology"
+                  src="/projects/drone.jpeg"
+                  className=""
+                  style={{width: '100%', height: '100%'}} />
+              <img alt="Technology Against Crime ideology"
+                  src="/tac-icon.svg"
+                  className=""
+                  style={{width: '100%', height: '100%'}} />
+              {/* <span
                 style={{
                   boxSizing: 'border-box',
                   display: 'block',
@@ -89,7 +106,7 @@ export default function LandingPage() {
                     loading="lazy"
                   />
                 </noscript>
-              </span>
+              </span> */}
             </div>
           </div>
 
