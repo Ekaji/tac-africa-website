@@ -29,6 +29,7 @@
     "react-mailchimp-subscribe": "^2.1.3",
     "react-markdown": "^8.0.3",
     "react-multi-carousel": "^2.8.0",
+    "react-plock": "^2.0.0",
     "react-scroll-into-view": "^1.12.0",
     "react-simplemde-editor": "^5.0.2",
     "sass": "^1.49.9",

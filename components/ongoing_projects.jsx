@@ -12,10 +12,10 @@ const OngoingProjects = () => {
 
 
   const pdfs =  {
-    smart_policing: "/pdf/smart_policing_concept.pdf",
-    underground_economy: "/pdf/The_Underground_Economy.pdf",
-    drone_compendium: "/pdf/Drone_Compendium_For_TAC_Africa_compressed.pdf",
-    blockchain_and_crypto: "/pdf/Cryptocurrency_Brochure_Volume_1.pdf"
+    smart_policing: "https://www.dropbox.com/s/28ma51r9y0vc1pi/smart_policing_concept.pdf?dl=1",
+    underground_economy: "https://www.dropbox.com/s/y4vilgjbrw8pk1n/The_Underground_Economy.pdf?dl=1",
+    drone_compendium: "https://www.dropbox.com/s/acbrvnvz2ivjhiv/Drone_Compendium_For_TAC_Africa_compressed.pdf?dl=1",
+    blockchain_and_crypto: "https://www.dropbox.com/s/sxe1q3q3s4ndx7t/Cryptocurrency_Brochure_Volume_1_1.pdf?dl=1"
   }
 
   const [ modalShow, setModalShow] = useState(false)
@@ -119,7 +119,7 @@ const OngoingProjects = () => {
 
             <div className="lg:ml-4 lg:w-6/12 mx-auto">
               <div className="lg:aspect-w-16 lg:aspect-h-9 rounded-sm overflow-hidden">
-                <img src="/community/5.jpg" alt="community hub" />
+                <img src="/community/5.JPG" alt="community hub" />
               </div>
             </div>
           </div>

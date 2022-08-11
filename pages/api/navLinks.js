@@ -12,8 +12,6 @@ export const data = [
             {href: '/about_us', name: 'About Us'},
             {href: '/founder', name: 'Founder'},
             {href: '/our_team', name: 'Our Team'},
-            // {href: '/partners_and_supporters', name: 'partners and supporters'},
-            // {href: '/gallery', name: 'Gallery'}
         ], 
         type: 'dropdown button' 
     },
@@ -25,25 +23,9 @@ export const data = [
             {href: '/artificial_intelligence_and_robotics', name: 'AI And Robotics Lab'},
             {href: '/blockchain_and_crypto_lab', name: 'Blockchain And Crypto Lab'},
             {href: '/tech_for_social_good', name: 'Technology for social good'}
-            // {href: '/satellite_and_remote_sensing_lab', name: 'Satellite And Remote Sensing Lab'}
         ],
         type: 'dropdown button'
     },
-    // {
-    //     label: 'projects',
-    //     content : [
-    //         {href: '/projects/policing_the_cyber_space', name: 'Policing the Cyberspace' },
-    //         {href: '/projects/innovation_in_policing', name: 'Innovation in Policing' },
-    //         {href: '/projects/drone_alliance_africa', name: 'Drone Alliance Africa' },
-    //         {href: '/artificial_intelligence_and_robotics', name: 'Artificial Intelligence' },
-    //         {href: '/projects/afri_agric_tech_project', name: 'AfriAgriTech project' },
-    //         {href: '/projects/crawler', name: 'Crawler' },
-    //         {href: '/volunteer', name: 'Volunteer Management' },
-    //         {href: '/projects/cyber_peace_dialouge_2020', name: 'CyberPeace Dialogue 2020' },
-    //         {href: '/projects/research_on_cyber_security', name: 'Research on Cyber Security' }       
-    //     ],
-    //     type: 'dropdown button'
-    // },
     {
         label: 'contact',
         content: [
@@ -61,9 +43,9 @@ export const data = [
 
     },
     {
-        label: 'gallery',
+        label: 'Events',
         content: [
-            {href: 'donate'}
+            {href: 'tac_events'}
         ],
         type: 'button',
         details: {variant: 'outline-primary'}

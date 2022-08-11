@@ -48,6 +48,17 @@ const PDFcomp = ({ children, pdfs }) => {
 export default function LatestNews({ text2 }) {
   const data = [
     {
+      title: 'INTERPOL World 2019 calendar',
+      media: {
+        type: 'image',
+        url: 'https://res.cloudinary.com/tacafrica/image/upload/v1659974217/my_folder/misc/Screenshot_from_2022-08-08_16-55-43_tdlxlo.png',
+        // downloadLink: 'https://www.dropbox.com/s/ishkxssh81qriz6/INTERPOL%20World%202019%20calendar.pdf?dl=1'
+      },
+      text: ['INTERPOL World 2019 calendar'],
+      blogLink: 'https://www.dropbox.com/s/ishkxssh81qriz6/INTERPOL%20World%202019%20calendar.pdf?dl=1',
+      textLink: '',
+    },
+    {
       title: 'Nelson Mandela Day & International Chess Day',
       media: {
         type: 'image',
@@ -109,7 +120,7 @@ export default function LatestNews({ text2 }) {
       media: {
         type: 'pdf',
         url: '/projects/IDB.PNG',
-        downloadLink: '/pdf/CUAS_Interpol_Low_Final.pdf',
+        downloadLink: 'https://www.dropbox.com/s/eat9xrfokrylp01/CUAS_Interpol_Low_Final_1.pdf?dl=1',
       },
       text: 'The Drone Incursion Exercise and the findings of this report represent cooperation between INTERPOL, the nNorwegian Police and TEKDIR AS. The report aims to illustrate the preparatory phases, primary challenges, and tangible outcomes from the pre-test and testing phases of the drone incursion exercise to guide INTERPOL member countries in gaining insight and understanding when testing C-UAS technologies and systems..',
       link: '/blockchain_and_crypto_lab',
@@ -244,7 +255,7 @@ export default function LatestNews({ text2 }) {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          {' ' + edge?.textLink}
+                          {' ' + edge?.textLink || null }
                         </a>
                       </p>
                     </div>

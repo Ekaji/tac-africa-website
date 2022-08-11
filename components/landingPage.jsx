@@ -16,19 +16,19 @@ export default function LandingPage() {
             >
               <img alt="Technology Against Crime ideology"
                   src="/team/about_us.jpg"
-                  className=""
+                  className="object-cover"
                   style={{width: '100%', height: '100%'}} />
               <img alt="Technology Against Crime ideology"
                   src="/projects/cyber_security.jpeg"
-                  className=""
+                  className="object-cover"
                   style={{width: '100%', height: '100%'}} />
               <img alt="Technology Against Crime ideology"
                   src="/projects/drone.jpeg"
-                  className=""
+                  className="object-cover"
                   style={{width: '100%', height: '100%'}} />
               <img alt="Technology Against Crime ideology"
-                  src="/tac-icon.svg"
-                  className=""
+                  src="/team/our_team.jpg"
+                  className="object-cover"
                   style={{width: '100%', height: '100%'}} />
               {/* <span
                 style={{
