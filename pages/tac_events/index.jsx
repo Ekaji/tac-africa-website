@@ -6,49 +6,67 @@ import { useState } from "react"
 const Events = () => {
     const data = [
         {
-            event: "Nelson Mandela and Chess day",
+            event: "World Humanitarian Day 2022",
+            date: "",
+            image: "/projects/humanitarian_day.png",
+            link: "tac_events/World_Humanitarian_Day"
+        },
+        {
+            event: "International Day of remembrance and tribute to the victims of Terrorism  2022",
+            date: "",
+            image: "/projects/victims_of_terror.png",
+            link: "tac_events/International_Day_of_remembrance_and_tribute_to_the_victims_of_Terrorism2022"
+        },
+        {
+            event: "International Youth Day 2022",
+            date: "",
+            image: "/projects/int_youth_day2022.png",
+            link: "tac_events/international_youth_day2022"
+        },
+        {
+            event: "Nelson Mandela and Chess Day 2022",
             date: "",
             image: "/projects/mandela_and_chess_day.jpeg",
             link: "tac_events/mandella_and_chess_day_2022"
         },
         {
-            event: "Friendship day",
+            event: "Friendship Day 2022",
             date: "",
             image: "/projects/friendship2022.jpg",
             link: "tac_events/international_day_of_friendship2022"
         },
         {
-            event: "International Day in Support of Victims of Torture",
+            event: "International Day In Support Of Victims Of Torture 2022",
             date: "",
             image: "/projects/day_against_tourture.jpg",
             link: "tac_events/international_day_in_support_of_victims_torture2022"
         },
         {
-            event: "Youth skill day",
+            event: "Youth Skill Day 2022",
             date: "",
             image: "/projects/youth_skill_day.png",
             link: "tac_events/youth_skill_day2022"
         },
         {
-            event: "Tennis championship",
+            event: "Tennis Championship 2022",
             date: "",
             image: "/projects/tennis_championship.png",
-            link: "tac_events/youth_skill_day2022"
-        }
+            link: "tac_events/tennis_championship2022"
+        },
+
     ]
 
     const tabList = [
-        {   tabName: 'Previous',
+        {   tabName: 'International',
             animation: 'translate-x-[-100%]'
         },
-        {   tabName: 'Ongoing',
+        {   tabName: 'Local',
             animation: 'translate-x-[0%]'
         },
         {   
-            tabName: 'Upcoming',
+            tabName: 'UN',
             animation: 'translate-x-[100%]'
-        },
-        
+        },    
     ]
 
     const [animate, setAnimate] = useState(tabList[0].animation)

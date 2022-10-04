@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
+import Skeleton from 'react-loading-skeleton';
 import {Plock} from 'react-plock';
+import React, {useState, useEffect } from 'react';
 
 const data = [
     {
@@ -48,6 +50,20 @@ const data = [
 
 export default function Gallery() {
 
+
+    const [imageLoad, setImageLoad] = useState(false)
+
+    const handleImageLoaded = () => {
+        console.log(imageLoad)
+        return setImageLoad(true)
+    }
+
+    useEffect(() => {
+        handleImageLoaded()
+    },[imageLoad] )
+
+
+
     return (
         <div className='mx-auto px-4'>
             <div className='mb-12'>
@@ -56,12 +72,11 @@ export default function Gallery() {
                     data.map(({
                         href
                     }, i) => (
-                        <img key={i}
-                            style={
-                                {width: '100%'}
-                            }
-                            src={href}
-                            alt={'Nelson Mandella and International chess day'}/>
+                        <>
+                    <img key={i} className={`${imageLoad ? '': 'hidden'}`} style={{ width: '100%' }} onLoad={handleImageLoaded} src={href} alt={'International Youth Day 2022'} />
+                    { !imageLoad && <Skeleton height={240} />}
+                        </>
+                            // alt={'Nelson Mandella and International chess day'}
                     ))
                 } </Plock>
             </div>

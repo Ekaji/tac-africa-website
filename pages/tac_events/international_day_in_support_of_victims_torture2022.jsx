@@ -25,12 +25,14 @@ export default function Gallery() {
                     data.map(({
                         href
                     }, i) => (
+                        <>
                         <img key={i}
                             style={
                                 {width: '100%'}
                             }
                             src={href}
                             alt={'International Day in Support of Victims of Torture'}/>
+                            </>
                     ))
                 } </Plock>
             </div>

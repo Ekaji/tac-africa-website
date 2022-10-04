@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
+import Skeleton from 'react-loading-skeleton';
 import {Plock} from 'react-plock';
+import React, {useState, useEffect } from 'react';
+
 
 const data = [
     {
@@ -49,26 +52,37 @@ const data = [
     },
 ]
 
-
 export default function Gallery() {
+
+    const [imageLoad, setImageLoad] = useState(false)
+
+    const handleImageLoaded = () => {
+        console.log(imageLoad)
+        return setImageLoad(true)
+    }
+
+    useEffect(() => {
+        handleImageLoaded()
+    },[imageLoad] )
+
 
     return (
         <div className='mx-auto px-4'>
             <div className='mb-12'>
-                <h2 className="text-sweet_blue mx-auto pt-1.5 pl-6 my-6 font-bold text-3xl">International Day of Friendship 2022</h2>
+            <h2 className="text-sweet_blue mx-auto pt-1.5 pl-6 my-6 font-bold text-3xl">International Day of Friendship 2022</h2>
                 <Plock> {
                     data.map(({
                         href
                     }, i) => (
-                        <img key={i}
-                            style={
-                                {width: '100%'}
-                            }
-                            src={href}
-                            alt={'International Day of Friendship 2022'}/>
+                        <> 
+                        <img key={i} className={`${imageLoad ? '': 'hidden'}`} style={{ width: '100%' }} onLoad={handleImageLoaded} src={href} alt={'International Day of Friendship 2022'} />
+                    { !imageLoad && <Skeleton height={240} />}
+                        </>
+                            
                     ))
                 } </Plock>
             </div>
         </div>
     )
 }
+

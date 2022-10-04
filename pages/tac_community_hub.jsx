@@ -15,7 +15,7 @@ const TacCommunityHub = () => {
       }}
     >
       </div>
-      <FormModal PDF={'/pdf/TAC_COmmunity_Hub_Brochure.pdf'} modalShow={modalShow} setModalShow={setModalShow} />
+      <FormModal PDF={'https://www.dropbox.com/s/m9yvazne5o27wwv/TAC_COmmunity_Hub_Brochure.pdf?dl=1'} modalShow={modalShow} setModalShow={setModalShow} />
       <div className="w-10/12 2xl:w-8/12 mx-auto font-semibold mb-12 ">
         <div>
           <div className='mb-4'>

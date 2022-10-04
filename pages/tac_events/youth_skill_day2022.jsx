@@ -20,12 +20,14 @@ export default function Gallery() {
                     data.map(({
                         href
                     }, i) => (
-                        <img key={i}
-                            style={
-                                {width: '100%'}
-                            }
-                            src={href}
-                            alt={'Youth skill day'}/>
+                        <>
+                                <img key={i}
+                                    style={
+                                        {width: '100%'}
+                                    }
+                                    src={href}
+                                    alt={'Youth skill day'}/>
+                        </>
                     ))
                 } </Plock>
             </div>

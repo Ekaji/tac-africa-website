@@ -48,6 +48,16 @@ const PDFcomp = ({ children, pdfs }) => {
 export default function LatestNews({ text2 }) {
   const data = [
     {
+      title: 'Project 774 - www.remotelocations.io -Stay abreast with the latest developments-',
+      media: {
+        type: 'image',
+        url: '/logo.png',
+      },
+      text: ['Project 774 - www.remotelocations.io -Stay abreast with the latest developments-'],
+      blogLink: '/blog/Project774-www.remotelocations.io-Stay-abreast-with-the-latest-developments',
+      textLink: 'https://remotelocations.io',
+    },
+    {
       title: 'INTERPOL World 2019 calendar',
       media: {
         type: 'image',
@@ -106,7 +116,7 @@ export default function LatestNews({ text2 }) {
       link: '/cyber_security_and_cyber_defense',
     },
     {
-      title: 'IDES2022 ',
+      title: 'IDEAS2022 ',
       media: {
         type: 'video',
         url: '/video/1656000831010.mp4',
@@ -205,7 +215,7 @@ export default function LatestNews({ text2 }) {
                     <Link href={edge.blogLink}>
                       <a target="_blank" rel="noreferrer">
                         <img
-                          className="object-cover shadow-md hover:shadow-xl "
+                          className="object-cover shadow-md hover:shadow-xl h-[220px] w-full"
                           src={edge?.media.url}
                           alt={edge?.media.url}
                         />

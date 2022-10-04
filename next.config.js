@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
   trailingSlash: true,
+  concurrentFeatures: true,
+  images: {
+    domains: ['res.cloudinary.com'],
+    loader: 'imgix',
+    path: '/',
+  }
 }
 
-module.exports = nextConfig
+// module.exports 
+// = nextConfig

@@ -25,17 +25,19 @@ export default function Gallery() {
     return (
         <div className='mx-auto px-4'>
             <div className='mb-12'>
-                <h2 className="text-sweet_blue mx-auto pt-1.5 pl-6 my-6 font-bold text-3xl">Youth skill day</h2>
+                <h2 className="text-sweet_blue mx-auto pt-1.5 pl-6 my-6 font-bold text-3xl">Tennis championship 2022</h2>
                 <Plock> {
                     data.map(({
                         href
                     }, i) => (
+                        <>
                         <img key={i}
                             style={
                                 {width: '100%'}
                             }
                             src={href}
                             alt={'Youth skill day'}/>
+                            </>
                     ))
                 } </Plock>
             </div>

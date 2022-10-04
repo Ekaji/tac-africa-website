@@ -9,7 +9,7 @@ const Volunteer = () => {
 
   return (
     <div
-      className="h-[48rem] lg:h-96 flex  justify-center items-center bg-center bg-cover bg-no-repeat mt-20 w-full"
+      className="h-[48rem] lg:h-96 flex  justify-center items-center bg-center bg-cover bg-no-repeat mt-0 w-full"
       style={{
         backgroundImage:
           "linear-gradient(rgba(5, 0, 32, 0.697), rgba(5, 0, 32, 0.697)), url('/team/volunteer.jpg')",

@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useState } from 'react';
+import FormModal from './formModal';
 
 const DropDownButton = ({
   isFooter,
@@ -10,16 +10,23 @@ const DropDownButton = ({
   label,
   content,
   i,
+  type
 }) => {
 
   const [isShown, setIsShown] = useState(false);
 
+  const [ modalShow, setModalShow] = useState(false)
+  const [ PDF, setPDF ] = useState('')
+
   return (
+  <>
+      <FormModal key={PDF} PDF={PDF} setPDF={setPDF} modalShow={modalShow} setModalShow={setModalShow} />
     <li
       key={i}
       onMouseOver={() => setIsShown(true)}
       onMouseLeave={() => setIsShown(false)}
     >
+
       <button
         id="dropdownButton"
         className="capitalize hover:bg-blue-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm 2xl:text-lg px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -53,23 +60,46 @@ const DropDownButton = ({
                 onMouseEnter={() => setIsShown(true)}
                 onMouseLeave={() => setIsShown(false)}
               >
-                <Link href={href}>
-                  <a
-                    onClick={() => {
-                      setIsShown(!isShown);
-                      setMenuState(!menuState);
-                    }}
-                    className={`capitalize block ${content[0].name ? "px-4 py-2" : undefined } 2xl:text-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white `}
-                  >
-                    { name }
-                  </a>
-                </Link>
+                {
+                  type == 'download' ?  
+                  (
+                    // <Link href={href}>
+                    <a
+                      onClick={() => {
+                        setIsShown(!isShown);
+                        setMenuState(!menuState);
+                        setModalShow(!modalShow);
+                        setPDF(href)
+                      }}
+                      className={`capitalize block ${content[0].name ? "px-4 py-2" : undefined } text-primary cursor-pointer 2xl:text-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white `}
+                    >
+                      { name }
+                    </a>
+                  // </Link>
+                  )
+                  :
+                  (
+                    <Link href={href}>
+                      <a
+                        onClick={() => {
+                          setIsShown(!isShown);
+                          setMenuState(!menuState);
+                        }}
+                        className={`capitalize block ${content[0].name ? "px-4 py-2" : undefined } 2xl:text-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white `}
+                      >
+                        { name }
+                      </a>
+                    </Link>
+                  ) 
+                }
               </li>
             ))}
           </ul>
         </div>
       )}
     </li>
+  </>
+
   );
 };
 

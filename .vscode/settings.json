@@ -1,5 +1,10 @@
 {
   "cSpell.words": [
+    "Cloudinary",
+    "isvisible",
     "Mailchimp"
+  ],
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "main"
   ]
 }

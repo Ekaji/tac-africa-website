@@ -30,83 +30,7 @@ export default function LandingPage() {
                   src="/team/our_team.jpg"
                   className="object-cover"
                   style={{width: '100%', height: '100%'}} />
-              {/* <span
-                style={{
-                  boxSizing: 'border-box',
-                  display: 'block',
-                  overflow: 'hidden',
-                  width: 'initial',
-                  height: 'initial',
-                  background: 'none',
-                  opacity: '1',
-                  border: '0',
-                  margin: '0',
-                  padding: '0',
-                  position: 'absolute',
-                  top: '0',
-                  left: '0',
-                  bottom: '0',
-                  right: '0',
-                }}
-              >
-                <img
-                  alt="Technology Against Crime ideology"
-                  src="/tac-icon.svg"
-                  decoding="async"
-                  data-nimg="fill"
-                  className="image"
-                  style={{
-                    position: 'absolute',
-                    top: '0',
-                    left: '0',
-                    bottom: '0',
-                    right: '0',
-                    boxSizing: 'border-box',
-                    padding: '0',
-                    border: 'none',
-                    margin: 'auto',
-                    display: 'block',
-                    width: '0',
-                    height: '0',
-                    minWidth: '100%',
-                    maxWidth: '100%',
-                    minHeight: '100%',
-                    maxHeight: '100%',
-                  }}
-                  sizes="100vw"
-                  srcSet="/tac-icon.svg 640w, /tac-icon.svg 750w, /tac-icon.svg 828w, /tac-icon.svg 1080w, /tac-icon.svg 1200w, /tac-icon.svg 1920w, /tac-icon.svg 2048w, /tac-icon.svg 3840w"
-                />
-                <noscript>
-                  <img
-                    alt="Technology Against Crime ideology"
-                    sizes="100vw"
-                    srcSet="/tac-icon.svg 640w, /tac-icon.svg 750w, /tac-icon.svg 828w, /tac-icon.svg 1080w, /tac-icon.svg 1200w, /tac-icon.svg 1920w, /tac-icon.svg 2048w, /tac-icon.svg 3840w"
-                    src="/tac-icon.svg"
-                    decoding="async"
-                    data-nimg="fill"
-                    style={{
-                      position: 'absolute',
-                      top: '0',
-                      left: '0',
-                      bottom: '0',
-                      right: '0',
-                      boxSizing: 'border-box',
-                      padding: '0',
-                      border: 'none',
-                      margin: 'auto',
-                      display: 'block',
-                      width: '0',
-                      height: '0',
-                      minWidth: '100%',
-                      maxWidth: '100%',
-                      minHeight: '100%',
-                      maxHeight: '100%',
-                    }}
-                    className="image"
-                    loading="lazy"
-                  />
-                </noscript>
-              </span> */}
+             
             </div>
           </div>
 
@@ -123,7 +47,7 @@ export default function LandingPage() {
                   ''
                 }
               >
-                <h1 className="text-4xl font-semibold leading-10 capitalize text-sweet_blue md:text-5xl lg:text-4md 2xl:text-6xl  ">
+                <h1 className="text-4xl font-semibold leading-10 capitalize text-sweet_blue 2xl:text-6xl  ">
                   fostering innovation for future security challenges
                 </h1>
 
@@ -131,7 +55,7 @@ export default function LandingPage() {
                   <div
                     className={
                       // styles.bullet_heading
-                      'font-semibold mt-0 mb-2 text-2xl md:text-3xl 2xl:text-4xl text-sweet_blue border-b-4 border-main_yellow'
+                      'font-semibold mt-0 mb-2 text-2xl 2xl:text-4xl text-sweet_blue border-b-4 border-main_yellow'
                     }
                     // style={{margin: '0em 0.5em 0em 0em'}}
                   >
@@ -140,7 +64,7 @@ export default function LandingPage() {
                   <div
                     className={
                       // styles.bullet_heading
-                      'font-semibold mt-0 mb-2  text-2xl  md:text-3xl 2xl:text-4xl text-sweet_blue border-b-4 border-main_yellow'
+                      'font-semibold mt-0 mb-2  text-2xl  2xl:text-4xl text-sweet_blue border-b-4 border-main_yellow'
                     }
                     // style={{margin: '0em 0.5em 0em 0em'}}
                   >
@@ -149,7 +73,7 @@ export default function LandingPage() {
                   <div
                     className={
                       // styles.bullet_heading
-                      'font-semibold mt-0 mb-2 text-2xl  md:text-3xl 2xl:text-4xl text-sweet_blue border-b-4 border-main_yellow'
+                      'font-semibold mt-0 mb-2 text-2xl  2xl:text-4xl text-sweet_blue border-b-4 border-main_yellow'
                     }
                     // style={{margin: '0em 0.5em 0em 0em'}}
                   >
@@ -157,7 +81,7 @@ export default function LandingPage() {
                   </div>
                 </h2>
 
-                <p className=" mt-4 2xl:mt-8  text-sweet_blue md:text-2xl xl:text-base 2xl:text-3xl 2xl:leading-11 xl:mb-12  ">
+                <p className=" mt-4 2xl:mt-8  text-sweet_blue xl:text-base 2xl:text-3xl 2xl:leading-11 xl:mb-12  ">
                   Law enforcement officials today are facing a
                   challenging and demanding operating environment. As
                   society is increasingly connected and the world

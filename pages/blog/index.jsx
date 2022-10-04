@@ -10,6 +10,13 @@ import { useRouter } from 'next/router'
 
 const data = [
     {
+        title : 'Project 774 - www.remotelocations.io -Stay abreast with the latest developments- ',
+        excerpt: 'Motto :- Digital Transformation to Remote Locations - a priority for National development in the 21st Century',
+        link: '/blog/Project774-www.remotelocations.io-Stay-abreast-with-the-latest-developments',
+        image: '/logo.png',
+        category: 'News'
+    },
+    {
         title: 'Interpol Provides EFCC With App To Track Terrorism Financing',
         excerpt: 'The International Criminal Police Organisation, (Interpol) has provided the Economic and Financial Crimes Commission...',
         link: '/blog/Interpol-Provides-EFCC-With-App-To-Track-Terrorism-Financing',

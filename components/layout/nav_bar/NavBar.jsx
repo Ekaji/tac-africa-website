@@ -13,13 +13,14 @@ const NavBar = () => {
 
   return (
     <nav
+    
       className={`bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 ${
         menuState && 'h-screen'
       } lg:h-full`}
     >
       <div
         key={data.label}
-        className="xl:px-12 flex flex-wrap justify-between items-center mx-auto"
+        className="xl:px-4 flex flex-wrap justify-between items-center mx-auto"
       >
         <Link key={data.label} href={'/'}>
           <a key={data.label}>
@@ -46,7 +47,7 @@ const NavBar = () => {
             onClick={toggleButton}
             key={data.label}
           >
-            <button
+            <div
               className={[
                 'hamburger hamburger--collapse ',
                 menuState && 'is-active',
@@ -61,32 +62,34 @@ const NavBar = () => {
                   className="hamburger-inner"
                 ></span>
               </span>
-            </button>
+            </div>
           </span>
         </button>
 
         <div
           className={`${
             menuState == true ? '' : 'hidden'
-          }  md:isvisible w-full lg:block lg:w-auto`} //md:w-auto
+          }  w-full lg:block lg:w-auto`} //md:w-auto
           id="mobile-menu"
           key={data.label}
         >
           <ul
-            className="flex flex-col mt-4 lg:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
+            className="flex flex-col mt-4 lg:flex-row md:space-x-6 lg:space-x-2 md:mt-0 md:text-sm md:font-medium"
             key={data.label}
           >
             {data?.map(({ label, content, type, details }, i) => (
               <>
                 {content.length > 1 ? (
-                  <>
+                  <div key={label}>
                     <DropDownButton
                       label={label}
+                      key={label}
                       content={content}
+                      type={type}
                       setMenuState={setMenuState}
                       menuState={menuState}
                     />
-                  </> //dropdown
+                  </div > //dropdown
                 ) : label == 'blog' ? (
                   <Link href="/blog">
                     <a key={data.label}>
@@ -99,12 +102,12 @@ const NavBar = () => {
                       </button>
                     </a>
                   </Link>
-                ) : label == 'Events' ? (
+                ) : label == 'News & Events' ? (
                   <Link href='/tac_events'>
                     <a key={data.label}>
                     <button            
                       type="button"
-                      className="capitalize mt-80 lg:mt-0 py-2.5 px-5 mr-2 mb-2 text-sm 2xl:text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                      className="capitalize mt-80 lg:mt-0 py-2.5 px-4 mr-2 mb-2 text-sm 2xl:text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                       key={data.label}
                     >
                       {label}
