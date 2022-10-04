@@ -29,10 +29,10 @@ export const data = [
     {
         label: 'projects',
         content: [
-            {href: '/', name: 'Institute For Remotely Piloted Aircraft Systems'},
-            {href: '/', name: 'TAC Community Hub'},
-            {href: '/', name: 'Project 774'},
-            {href: '/', name: 'School Of HardKnocks'},
+            {href: '/irpas', name: 'Institute For Remotely Piloted Aircraft Systems'},
+            {href: '/tac_community_hub/', name: 'TAC Community Hub'},
+            {href: '/tac_community_hub/', name: 'Project 774'},
+            {href: 'https://www.schoolofhardknocks.com.ng/', name: 'School Of HardKnocks'},
         ],
         type: 'dropdown button'
     },

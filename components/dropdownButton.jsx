@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import FormModal from './formModal';
+import { ConditionalLinks } from './conditionalLinks';
 
 const DropDownButton = ({
   isFooter,
@@ -20,12 +21,19 @@ const DropDownButton = ({
 
   return (
   <>
-      <FormModal key={PDF} PDF={PDF} setPDF={setPDF} modalShow={modalShow} setModalShow={setModalShow} />
-    <li
-      key={i}
-      onMouseOver={() => setIsShown(true)}
-      onMouseLeave={() => setIsShown(false)}
-    >
+      <FormModal 
+          key={PDF}
+          PDF={PDF}
+          setPDF={setPDF}
+          modalShow={modalShow}
+          setModalShow={setModalShow}
+        />
+        
+        <li
+          key={i}
+          onMouseOver={() => setIsShown(true)}
+          onMouseLeave={() => setIsShown(false)}
+        >
 
       <button
         id="dropdownButton"
@@ -63,33 +71,51 @@ const DropDownButton = ({
                 {
                   type == 'download' ?  
                   (
-                    // <Link href={href}>
-                    <a
-                      onClick={() => {
-                        setIsShown(!isShown);
-                        setMenuState(!menuState);
-                        setModalShow(!modalShow);
-                        setPDF(href)
-                      }}
-                      className={`capitalize block ${content[0].name ? "px-4 py-2" : undefined } text-primary cursor-pointer 2xl:text-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white `}
-                    >
-                      { name }
-                    </a>
-                  // </Link>
-                  )
+                    
+                        <a
+                          onClick={() => {
+                            setIsShown(!isShown);
+                            setMenuState(!menuState);
+                            setModalShow(!modalShow);
+                            setPDF(href)
+                          }}
+                          className={`capitalize block ${content[0].name ? "px-4 py-2" : undefined } text-primary cursor-pointer 2xl:text-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white `}
+                        >
+                          { name }
+                        </a>
+                  ) 
                   :
                   (
+
+                    href.includes('http') ? //open website on new page
+                    (
                     <Link href={href}>
                       <a
                         onClick={() => {
                           setIsShown(!isShown);
                           setMenuState(!menuState);
                         }}
+                        target='_blank'
                         className={`capitalize block ${content[0].name ? "px-4 py-2" : undefined } 2xl:text-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white `}
                       >
                         { name }
                       </a>
                     </Link>
+                    ) : 
+                    (
+                      <Link href={href}>
+                      <a
+                        onClick={() => {
+                          setIsShown(!isShown);
+                          setMenuState(!menuState);
+                        }}
+                        target='_blank'
+                        className={`capitalize block ${content[0].name ? "px-4 py-2" : undefined } 2xl:text-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white `}
+                      >
+                        { name }
+                      </a>
+                    </Link>
+                    )
                   ) 
                 }
               </li>
