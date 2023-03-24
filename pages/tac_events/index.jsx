@@ -2,9 +2,22 @@
 /* eslint-disable react/jsx-key */
 import Link from "next/link"
 import { useState } from "react"
+import LatestNews from "../../components/latestNews"
 
 const Events = () => {
     const data = [
+        {
+            event: "UN International Day of ZERO WASTE ",
+            date: "Mar 24 2023",
+            image: "https://res.cloudinary.com/tacafrica/image/upload/v1679668747/mr_tidy/WhatsApp_Image_2023-03-24_at_3.14.16_PM_hap5oi.jpg",
+            link: "tac_events/UN_Intl_Day_of_ZERO_WASTE"
+        }, 
+        {
+            event: "TAC Events - 1st October 2022",
+            date: "",
+            image: "/projects/oct12022.png",
+            link: "https://www.icloud.com/sharedalbum/#B0f532ODWGV71e"
+        }, 
         {
             event: "World Humanitarian Day 2022",
             date: "",
@@ -77,30 +90,13 @@ const Events = () => {
 
     return(
         <>
+        <LatestNews />
             <h2 className="text-sweet_blue mx-auto pt-1.5 font-bold text-4xl text-center my-12">
             Events
             </h2>
         <div className="mx-auto w-11/12"
         >
-            {/*  */}
-        <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
-            <ul className="flex flex-wrap reverse -mb-px text-sm font-medium justify-center md:w-fit mx-0.5">
-                <span className="flex justify-center  ">
-                    {
-                        tabList.map(({ tabName }, i) => (
-                        <li className="mr-2 text-right " key={i} role="presentation" >
-                        <span key={i} onClick={() => handleActiveTab(i)} className="inline-block p-4 rounded-t-lg cursor-pointer">{tabName }</span>
-                        </li>
-                        ))
-                    }
-                </span>
-                <span className={`border-b-2 border-primary w-[33%] transition-transform ease-linear ${animate} `}></span>
-            </ul>
-        </div>
-{/*  */}
-
-
-                
+          
                 {
                     data.map(({ event, date, image, link}, i ) => (
                         <div className="text-4xl">
@@ -108,7 +104,7 @@ const Events = () => {
                                 <a>
                                     <span className="flex justify-between border-b">
                                         <p className="my-4 md:my-auto">{event}</p>
-                                        <img src={image} alt={image} className='w-[200px] h-[100px] m-4 hidden md:inline ' />
+                                        <img src={image} alt={image} className='w-[200px] h-[100px] m-4 hidden md:inline object-fill' />
                                     </span>
                                 </a>
                             </Link>

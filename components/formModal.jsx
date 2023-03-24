@@ -70,12 +70,6 @@ const FormModal = ({ PDF, modalShow, setModalShow }) => {
         response = res.data
         if (response.error == false && typeof window !== "undefined") {
               window.location.href = PDF
-
-          // const newWindow = window.open(PDF, '_blank', 'noopener,noreferrer')
-          // if (newWindow) {
-          //   newWindow.opener = null
-          // } 
-
         }
       })
     }

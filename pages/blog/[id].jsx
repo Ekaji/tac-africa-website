@@ -2,13 +2,13 @@
 /* eslint-disable react/jsx-key */
 // pages/posts/[id].js
 import { useRouter } from 'next/router'
-import ReactMarkdown from 'react-markdown'
+// import ReactMarkdown from 'react-markdown'
 import { supabase } from '../../util/supabase'
 
 export default function Post({ post }) {
   return(
     <>
-    hello
+     hello
     </>
   )
 //   const router = useRouter()

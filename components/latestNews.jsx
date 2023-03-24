@@ -8,45 +8,72 @@ import Carousel from 'react-multi-carousel';
 // import 'react-multi-carousel/lib/styles.css';
 import { ConditionalLinks } from '../components/conditionalLinks';
 
-const PDFcomp = ({ children, pdfs }) => {
+
+
+export default function LatestNews({ text2 }) {
+
+
   const [modalShow, setModalShow] = useState(false);
   const [PDF, setPDF] = useState('');
 
-  return (
-    <>
-      <FormModal
-        PDF={PDF}
-        setPDF={setPDF}
-        modalShow={modalShow}
-        setModalShow={setModalShow}
-      />
-      <a
-        className="inline-flex items-center cursor-pointer text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        onClick={() => {
-          setModalShow(!modalShow);
-          setPDF(pdfs);
-        }}
-      >
-        {children}
-        <svg
-          className="ml-2 -mr-1 w-4 h-4"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-            clipRule="evenodd"
-          ></path>
-        </svg>
-      </a>
-    </>
-  );
-};
 
-export default function LatestNews({ text2 }) {
+  const PDFcomp = ({ children, pdfs }) => {
+  
+  
+    return (
+      <>
+        <FormModal
+          PDF={PDF}
+          setPDF={setPDF}
+          modalShow={modalShow}
+          setModalShow={setModalShow}
+        />
+        <a
+          className="inline-flex items-center cursor-pointer text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          onClick={() => {
+            setModalShow(!modalShow);
+            setPDF(pdfs);
+          }}
+        >
+          {children}
+          <svg
+            className="ml-2 -mr-1 w-4 h-4"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            ></path>
+          </svg>
+        </a>
+      </>
+    );
+  };
+
   const data = [
+    {
+      title: 'UN International day of ZERO WASTE',
+      media: {
+        type: 'image',
+        url: 'https://res.cloudinary.com/tacafrica/image/upload/v1679668747/mr_tidy/WhatsApp_Image_2023-03-24_at_3.14.16_PM_hap5oi.jpg',
+      },
+      text: ['Cleanliness of the railway tracks is an important aspect which can enhance the image of the railway service as well as affect its functionality in the long run.'],
+      blogLink: 'tac_events/UN_Intl_Day_of_ZERO_WASTE/',
+      textLink: '',
+    },
+    {
+      title: 'TAC Africa Launches The Kids Drone Academy To Mark Nigeria’s 62nd Independence Day.',
+      media: {
+        type: 'pdf',
+        url: '/projects/oct1_2022.png',
+        downloadLink: 'https://www.dropbox.com/s/xac1qwrr2c62r5f/TAC%20Weekly%20report.pdf?dl=1',
+      },
+      text:'TAC Africa is Nigeria’s leading Technology driven Anti Crime Non Govern-mental Organization, and currently a fast-acting remedy to recommending solutions to Nigeria’s Insecurity challenges by leveraging on new smart technologies to shape the future of Africa’s Security Architecture and Network.',
+      link: 'https://www.dropbox.com/s/xac1qwrr2c62r5f/TAC%20Weekly%20report.pdf?dl=0',
+    },
     {
       title: 'Project 774 - www.remotelocations.io -Stay abreast with the latest developments-',
       media: {
@@ -109,7 +136,7 @@ export default function LatestNews({ text2 }) {
       title: 'TAC Africa Prevent | Detect | Investigate', //https://www.pexels.com/photo/close-up-view-of-a-golden-coin-315788/
       media: {
         type: 'video',
-        url: '/video/TAC_AFRICA_MAIN_COMP.mp4',
+        url: 'https://res.cloudinary.com/tacafrica/video/upload/v1657884248/my_folder/video/pr5raqf7azao3idzlrfk.mp4',
         thumbnail: '',
       },
       text: 'Law enforcement officials today are facing a challenging and demanding operating environment. As society is increasingly connected and the world becoming Borderers',
@@ -119,7 +146,7 @@ export default function LatestNews({ text2 }) {
       title: 'IDEAS2022 ',
       media: {
         type: 'video',
-        url: '/video/1656000831010.mp4',
+        url: 'https://res.cloudinary.com/tacafrica/video/upload/v1657884128/my_folder/video/ivkan3f03xncsxohfr3t.mp4',
         thumbnail: '',
       },
       text: 'IDES2022 -  Here are some of the highlights from INTERPOL Drone Expert Summit, organized by UAS Norway in great partnership with INTERPOL and the Norwegian Police. 350 participants fromlaw enforcement 👮 & public safety, from 50 nations🌐 gathered in Oslo for three days this week',
@@ -162,6 +189,14 @@ export default function LatestNews({ text2 }) {
 
   return (
     <div className="w-full">
+
+      <FormModal
+          PDF={PDF}
+          setPDF={setPDF}
+          modalShow={modalShow}
+          setModalShow={setModalShow}
+        />
+
       <div className={` pt-12 pb-20 mx-auto my-0 xl:px-12`}>
         <div className="flex justify-Center items-center  py-4 mx-auto capitalize">
           <h2 className="text-sweet_blue mx-auto pt-1.5 font-bold text-6xl">
@@ -191,26 +226,32 @@ export default function LatestNews({ text2 }) {
             renderButtonGroupOutside={true}
             renderDotsOutside={true}
             // deviceType={props.deviceType}
-            dotListClass="relative pt-2  z-50"
-            itemClass="carousel-item-padding-40-px flex flex-no-wrap items-stretch "
+            dotListClass="relative pt-2 z-50"
+            itemClass="carousel-item-padding-40-px flex flex-no-wrap items-stretch bg-grey- "
           >
             {data.map((edge, i) => (
               <div
                 key={i}
                 id={i.toString() + 'latestNews'}
-                className={`   flex-none w-11/12 mr-8 overflow-hidden border  rounded-lg md:mr-4 md:pb-4`}
+                className={`flex-none w-11/12 mr-8 overflow-hidden border rounded-lg md:mr-4 md:pb-4`}
               >
                 <div className=" ">
                   {edge.media.type == 'video' ? (
                     <VideoComp videoSrc={edge.media.url} />
                   ) : edge.media.type == 'pdf' ? (
-                    <PDFcomp pdfs={edge.media.downloadLink}>
-                      <img
-                        className="object-cover shadow-md hover:shadow-xl "
-                        src={edge?.media.url}
-                        alt={edge?.media.url}
-                      />
-                    </PDFcomp>
+                    <a
+                    className="cursor-pointer"
+                    onClick={() => {
+                      setModalShow(!modalShow);
+                      setPDF(edge.media.downloadLink);
+                    }}
+                  > 
+                    <img
+                      className="object-cover shadow-md hover:shadow-xl "
+                      src={edge?.media.url}
+                      alt={edge?.media.url}
+                    />
+                  </a>
                   ) : (
                     <Link href={edge.blogLink}>
                       <a target="_blank" rel="noreferrer">

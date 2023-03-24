@@ -10,6 +10,13 @@ import { useRouter } from 'next/router'
 
 const data = [
     {
+        title: 'Indiscriminate Dumping of Refuse along Railway Tracks: A case Study of the Kubwa-Chikakore Railway tracks',
+        excerpt: 'Cleanliness of the railway tracks is an important aspect which can enhance the image of the railway service',
+        link: '/blog/Indiscriminate_Dumping_of_Refuse_along_Railway_Tracks:_A_case_Study_of_the_Kubwa-Chikakore_Railway_tracks',
+        image: 'https://res.cloudinary.com/tacafrica/image/upload/v1679325020/IMG_9738_bryfni.jpg',
+        category: 'News'
+    },
+    {
         title : 'Project 774 - www.remotelocations.io -Stay abreast with the latest developments- ',
         excerpt: 'Motto :- Digital Transformation to Remote Locations - a priority for National development in the 21st Century',
         link: '/blog/Project774-www.remotelocations.io-Stay-abreast-with-the-latest-developments',
@@ -51,6 +58,7 @@ const data = [
         image: '/blog/interpol.jpg',
         category: 'News'
     },
+
 ]
 
 
@@ -62,7 +70,7 @@ export default function Home() {
     <div style={{paddingTop: '5vh'}} >
       <h1 className="text-3xl text-center font-semibold tracking-wide mt-6 mb-2 capitalize ">Welcome to our Blog</h1>
      <section>
-            <div className="m-4 flex flex-wrap items-stretch grow">
+            <div className="m-4 flex flex-wrap items-stretch gro w">
                 {
                     data.map((post, i) => (
                 <div key={i} className="p-4 md:w-6/12 lg:w-1/3 flex ">

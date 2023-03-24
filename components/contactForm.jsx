@@ -6,47 +6,9 @@ import {
   faGlobeAfrica,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import Link from "next/link";
 
-export default function Contact( { status, message, onValidated } ) {
-
-  console.log(status)
-
-  const [ inputValue, setInputValue ] = useState({
-    first_name: '',
-    last_name: '',
-    email: '',
-    subject: '',
-    message: '',
-    isSubscribed: false
-  })
-
-  const handleInputChange = (key, e) => {
-    // e.preventDefault()
-    setInputValue( {...inputValue, [key ] : e.target.value } )
-
-  }
-
-  const handleChecked = (key, e) => {
-    setInputValue( {...inputValue, [key ] : e.target.checked } )
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
-    inputValue.first_name &&
-    inputValue.last_name &&
-    inputValue.email &&
-    inputValue.email.indexOf('@') > -1 &&
-    onValidated({
-      EMAIL: inputValue.email,
-      MERGE1: inputValue.first_name,
-      MERGE2: inputValue.last_name, 
-    });
-
-
-  }
+export default function Contact( ) {
 
 
   return (
@@ -59,31 +21,32 @@ export default function Contact( { status, message, onValidated } ) {
                 <div className="flex flex-wrap -mr-4 -ml-4 no-gutters">
                   <div className="relative w-full pr-4 pl-4 flex items-stretch lg:max-w-[58.33333%]">
                     <div className="bg-white w-full p-md-5 p-4">
-                      <h3 className="mb-4 text-3xl font-semibold">
-                        Get in touch
-                      </h3>
-                      {/* <div id="form-message-warning" className="mb-4"></div> 
-                      <div id="form-message-success" className="mb-4">
-                        Your message was sent, thank you!
-                      </div> */}
+                      <div className="flex justify-between mb-3">
+                        <h3 id='contact' className="mb-4 text-2xl font-semibold">
+                          Get in touch
+                        </h3>
+                          <Link href={'/pdf/get in touch.pdf'} >
+                            <a
+                              className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 "
+                            >
+                              Download Form
+                            </a>
+                          </Link>
+                      </div>
                       <form
-                        // method="POST"
-                        id="contactForm"
-                        name="contactForm"
                         className="mc__form"
-                        onSubmit={(e) => handleSubmit(e)}
+                        action="https://api.web3forms.com/submit" method="POST" 
                       >
+                        <input type="hidden" name="access_key" value="46af3412-e39b-45b9-8a58-d74ce05bbfac" />
                         <div className="flex flex-wrap -mr-4 -ml-4 p-0 m-0 ">
                           <div className="flex md:flex-col w-6/12 mb-4 pr-1 m-0">
                             {/* <div className="mb-4 w-4/12 "> */}
                             <input
-                              type="text"
                               className="h-12 w-full  text-black text-sm rounded-sm shadow-none bg-white border border-[rgba(0,0,0,0.1)]"
+                              type="text"
                               name="first_name"
-                              id="name"
-                              value={inputValue.first_name}
-                              onChange={(e) => handleInputChange('first_name', e)}
-                              placeholder="first_name"
+                              placeholder="First Name"
+                              required
                             />
                             {/* </div> */}
                           </div>
@@ -91,13 +54,11 @@ export default function Contact( { status, message, onValidated } ) {
                           <div className="flex md:flex-col w-6/12 mb-4 pr-1 m-0">
                             {/* <div className="mb-4 w-4/12 "> */}
                             <input
-                              type="text"
                               className="h-12 w-full  text-black text-sm rounded-sm shadow-none bg-white border border-[rgba(0,0,0,0.1)]"
+                              type="text"
                               name="last_name"
-                              id="name"
-                              value={inputValue.last_name}
-                              onChange={(e) => handleInputChange('last_name', e)}
-                              placeholder="last_name"
+                              placeholder="Last Name"
+                              required
                             />
                             {/* </div> */}
                           </div>
@@ -105,13 +66,11 @@ export default function Contact( { status, message, onValidated } ) {
                           <div className="flex md:flex-col w-full  mb-4 m-0">
                             {/* <div className="mb-4 w-full "> */}
                             <input
-                              type="email"
                               className="h-12 w-full text-black text-sm rounded-sm shadow-none bg-white border border-[rgba(0,0,0,0.1)]"
+                              type="email"
                               name="email"
-                              id="email"
-                              value={inputValue.email}
-                              onChange={(e) => handleInputChange( 'email', e)}
                               placeholder="Email"
+                              required
                             />
                             {/* </div> */}
                           </div>
@@ -121,52 +80,38 @@ export default function Contact( { status, message, onValidated } ) {
                                 type="text"
                                 className="h-12 w-full text-black text-sm rounded-sm shadow-none bg-white border border-[rgba(0,0,0,0.1)]"
                                 name="subject"
-                                id="subject"
-                                value={inputValue.subject}
-                              onChange={(e) => handleInputChange('subject', e)}
                               placeholder="Subject"
+                              required
                               />
                             </div>
                           </div>
                           <div className="flex md:flex-col w-full p-0 m-0">
                             <div className="mb-4">
                               <textarea
-                                name="message"
                                 className="h-48 w-full text-black text-sm rounded-sm shadow-none bg-white border border-[rgba(0,0,0,0.1)]"
-                                id="message"
                                 cols="30"
-                                value={inputValue.message}
-                                onChange={(e) => handleInputChange('message', e)}
                                 rows="7"
+                                name="message"
                                 placeholder="Message"
+                                required
                               ></textarea>
                             </div>
                           </div>
 
-                          <div>
-                          <div className="flex items-center">
-                              <input value={inputValue.isSubscribed} id="checked-checkbox" type="checkbox"
-                              name='isSubscribed'
-                                      onChange={(e) => handleChecked( 'isSubscribed', e)}
-                               className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                              <label forHtml="checked-checkbox" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">subscribe to our news letter</label>
-                          </div>
-                          </div>
-                          
                           <div className="flex md:flex-col w-full p-0 m-0">
                             <div className="mb-4">
                               <button
                                 type="submit"
                                 value="submit"
-                                className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 "
                               >
                                 Send Message 
-                                { status == 'sending' && (<i className={` ml-2 fa fa-spinner fa-spin`} />) } 
-                                { status == 'error' && (<i className={` ml-2 fa fa-close`} />) } 
-                                { status == 'success' && (<i className={` ml-2 fa fa-check-circle text-white `} aria-hidden="true" />) }
                               </button>
                               <div className="float-left w-full hidden text-base font-bold py-2 px-0"></div>
+
                             </div>
+
+                            
                           </div>
                         </div>
                       </form>

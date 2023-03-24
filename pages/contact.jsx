@@ -9,7 +9,7 @@ const MailChimpFormContainer = props => {
 
   return(
     <div className='mc__form-container'>
-      <MailchimpSubscribe 
+      {/* <MailchimpSubscribe 
         url={postURL}
         render={({subscribe, status, message}) => (
           <Contact
@@ -18,7 +18,8 @@ const MailChimpFormContainer = props => {
             onValidated={formData => subscribe(formData)}     
           />
         )}
-      />
+      /> */}
+        <Contact />
 
     </div>
   )

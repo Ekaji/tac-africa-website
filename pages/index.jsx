@@ -7,12 +7,11 @@ import LandingPage from '../components/landingPage.jsx'
 import Volunteer from '../components/volunteer.jsx'
 import OngoingProjects from '../components/ongoing_projects.jsx'
 import CardSlider from '../components/cardSlider.jsx'
-import VideoIntro from '../components/videoIntro.jsx'
 import LatestNews from '../components/latestNews'
 import Map from '../components/map'
+import Publications from '../components/publications.jsx'
 
 export default function Home() {
-  const [showModal, setShowModal] = useState(true)
   return (
     <div >
         <Head>
@@ -21,10 +20,10 @@ export default function Home() {
           <link rel="icon" href="/TAC_LOGO.png" />
         </Head>
         <LandingPage />
-        {/* <VideoIntro /> */}
         <LatestNews text2={'News'} />
         <CardSlider  text2='Labs' text3={""} />
         <OngoingProjects />
+        <Publications />
         <Map />
         <Volunteer />
     </div>
