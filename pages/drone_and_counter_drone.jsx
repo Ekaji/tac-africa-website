@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
-
+import Link from 'next/link.js'
 import HeroBanner from '../components/layout/nav_bar/heroBanner.jsx'
 
 const Drone_And_Counter_Drone = () => {
@@ -93,9 +93,14 @@ const Drone_And_Counter_Drone = () => {
           </p>
           <div className="mx-auto flex flex-col">
 
-              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" > <span className='text-lg'> {'Open Innovation Platform'} </span> </button >
+              {/* <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" > <span className='text-lg'> {'Open Innovation Platform'} </span> </button > */}
 
-              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" > <span className='text-lg'> {'Institute for Remotely Piloted Aircraft Systems (I-RPAS) Nigeria'} </span> </button >
+            <Link href='/DroneSafetyDay'>
+              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" > <span className='text-lg'> {'Drone Safety Day'} </span> </button >
+            </Link>
+            {/* <Link href='/drone_safty_initiative'>
+              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" > <span className='text-lg'> {'Drone Safety Alliance'} </span> </button >
+            </Link> */}
             
           </div>
         </div>
