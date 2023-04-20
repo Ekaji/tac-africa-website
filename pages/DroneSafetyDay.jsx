@@ -1,9 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
+import Head from 'next/head'
 import React from 'react'
 
 export default function DroneSafetyDay() {
     return (
+        <>
+            <Head>
+                <title>Drone Safety Day: Promoting Safe and Responsible Drone Flying</title>
+                <meta name="description" content="Technology against crime"/>
+                <link rel="icon" href="/TAC_LOGO.webp"/>
+            </Head>
         <div className="container w-full md:max-w-3xl mx-auto pt-20 ">
             <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal pb-40">
                 <div className="font-sans">
@@ -15,9 +22,16 @@ export default function DroneSafetyDay() {
                     alt="Drone Safety Day"
                     />
                 {/* https://res.cloudinary.com/tacafrica/image/upload/v1681895627/logos/WhatsApp_Image_2023-04-14_at_12.50.03_PM_dh5tha.jpg */}
-                <div className=" font-sans">Drones have become an increasingly popular gadget for recreational and commercial purposes. These unmanned aerial vehicles offer exciting possibilities for photography, videography, delivery, search and rescue operations, and more. However, with the increased use of drones comes the need for drone safety. The Federal Aviation Administration (FAA) recognizes the importance of safe drone operations, and thus, every year, it hosts Drone Safety Day (DSD).<h2 className="text-xl mt-4 md:text-2xl font-bold text-deep_blue">Purpose of Drone Safety Day</h2>DSD is an annual campaign designed to raise awareness and educate the drone community on the importance of flying safely. The event aims to highlight the societal, economic, and safety benefits of safe drone operations. Businesses, schools, organizations, and individuals can use this opportunity to share their experiences and kick off new safety initiatives. Drone enthusiasts can share their passion for flying with their local community through local and nationwide events.<h2 className="text-xl mt-4 md:text-2xl font-bold text-deep_blue">Safety Message</h2>The right way to fly a drone is the safe way, whether flying for recreation or business purposes. The FAA encourages all drone operators to follow these guidelines:
-                    <br className="mb-4"/>
-                    <ol className="space-y-4">
+                    <div className=" font-sans mt-10">Drones have become an increasingly popular gadget for recreational and commercial purposes. These unmanned aerial vehicles offer exciting possibilities for photography, videography, delivery, search and rescue operations, and more. However, with the increased use of drones comes the need for drone safety. The Federal Aviation Administration (FAA) recognizes the importance of safe drone operations, and thus, every year, it hosts Drone Safety Day (DSD).
+                    <h2 className="text-xl mt-4 md:text-2xl font-bold text-blue-900">Purpose of Drone Safety Day</h2>
+                        DSD is an annual campaign designed to raise awareness and educate the drone community on the importance of flying safely. The event aims to highlight the societal, economic, and safety benefits of safe drone operations. Businesses, schools, organizations, and individuals can use this opportunity to share their experiences and kick off new safety initiatives. Drone enthusiasts can share their passion for flying with their local community through local and nationwide events.
+                        <h2 className="text-xl mt-4 md:text-2xl font-bold text-blue-900 mb-2">Safety Message</h2>
+                        <b className=' '>
+                            The right way to fly a drone is the safe way, whether flying for recreation or business purposes.
+                            The FAA encourages all drone operators to follow these guidelines:
+                        </b>
+                        {/* <br className="mb-4"/> */}
+                    <ol className="mt-4 space-y-4">
                         <li>
                             <b className="mt-2 text-deep_blue">Register your drone:</b>
                             All drones not flown for recreational purposes must be registered, regardless of weight. Drones flown recreationally must be registered if they weigh more than 250 grams. You can register your drone through the FAA DroneZone.</li>
@@ -38,9 +52,12 @@ export default function DroneSafetyDay() {
                             </b>
                             {`Recreational flyers only need to pass TRUST once, prior to flying. It's the law, and you may take the free online test through any of the FAA approved test administrators.`}</li>
                     </ol>
-                    <h2 className="text-xl md:text-2xl font-bold text-deep_blue">Focus Areas</h2>The event highlights five focus areas:
-                    <br className="mb-4"/>
-                    <ol className="space-y-4">
+                    <h2 className="text-xl md:text-3xl font-bold text-deep_blue">Focus Areas</h2>
+                    <b className='mb-2'>  
+                    The event highlights five focus areas:
+                    </b>
+                    {/* <br className=""/> */}
+                    <ol className="mt-4 space-y-4">
                         <li>
                             <b className="mt-2 text-deep_blue">
                                 Education –
@@ -76,5 +93,6 @@ export default function DroneSafetyDay() {
                     />
             </div>
         </div>
+        </>
     )
 }
