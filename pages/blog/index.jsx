@@ -10,6 +10,13 @@ import { useRouter } from 'next/router'
 
 const data = [
     {
+        title: 'Drone Safety Day 2023',
+        excerpt: 'Drones have become an increasingly popular gadget for recreational and commercial purposes. ',
+        link: '/tac_events/DroneSafetyDay',
+        image: 'https://res.cloudinary.com/tacafrica/image/upload/v1682950714/drone_safety_day/IMG_1556_vh0q4l.jpg',
+        category: 'Event'
+    },
+    {
         title: 'Indiscriminate Dumping of Refuse along Railway Tracks: A case Study of the Kubwa-Chikakore Railway tracks',
         excerpt: 'Cleanliness of the railway tracks is an important aspect which can enhance the image of the railway service',
         link: '/blog/Indiscriminate_Dumping_of_Refuse_along_Railway_Tracks:_A_case_Study_of_the_Kubwa-Chikakore_Railway_tracks',

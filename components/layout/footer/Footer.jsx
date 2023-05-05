@@ -83,7 +83,7 @@ export default function Footer() {
                       <hr className="w-4/5" />
                     </div>
 
-                    <div className="">
+                    {/* <div className="">
                       <p className="text-sm mb-1 text-white">
                         TAC Community Hub: No.1 Sleekseed Crescent,
                         Chikakore District, Kubwa, Abuja
@@ -96,14 +96,40 @@ export default function Footer() {
                         phone: +2349088559002  +2349088559001
                       </p>
                       <hr className="w-4/5" />
+                    </div> */}
+
+
+                    <div className="">
+                      <p className="text-sm mb-1 text-white space-x-4 ">
+                        phone:
+                      <a className='text-white' href='tel:+2349088559001 '> +2349088559001</a>
+                      <a className='text-white' href='tel:+2349088559002'> +2349088559002</a>
+                      </p>
+                      <hr className="w-4/5" />
+                    </div>
+
+                    <div className="">
+                      <p className="text-sm mb-1 text-white space-x-4 ">
+                        Whatsapp:
+                        <a className='text-white' href="https://wa.me/+2349088559003" target="_blank"  rel="noreferrer"> +2349088559003</a>
+                      </p>
+                      <hr className="w-4/5" />
+                    </div>
+
+                    <div className="">
+                      <p className="text-sm mb-1 text-white space-x-4 ">
+                        <a className='text-white' href="https://www.youtube.com/@School-of-Hardknocks-NG" target="_blank"  rel="noreferrer"> Youtube</a>
+                      </p>
+                      <hr className="w-4/5" />
                     </div>
 
                     <div className="">
                       <p className="text-sm mb-1 text-white">
-                        email: secretariat@tacafrica.org
+                        <a className='text-white' href="mailto:secretariat@tacafrica.org" target="_blank"  rel="noreferrer"> email: secretariat@tacafrica.org</a>                   
                       </p>
                       <hr className="w-4/5" />
                     </div>
+
                   </div>
                 </div>
               </div>

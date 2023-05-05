@@ -46,80 +46,30 @@ export default function OurTeam() {
               <div
                 className={[styles.card_container__outer].join(' ')}
               >
-                {members.map(
-                  ({ image, name, title, description, link }, i) => (
-                    <div
-                      className={styles.card_container__inner_main}
-                    >
-                      <Card
-                        key={i}
-                        className={[
-                          '',
-                          styles.card_container__inner,
-                        ].join(' ')}
-                      >
-                        <ConditionalLinks //adds an optional <Link href={...}> tag around cards with a link
-                          condition={link}
-                          wrapper={(children) => (
-                            <Link
-                              href={link}
-                              key={name}
-                              className={styles.conditionalLinks}
-                            >
-                              <a>{children}</a>
-                            </Link>
-                          )}
-                        >
-                          <img
-                            src={
-                              image || '/person-placeholder-image.png'
-                            }
-                            alt={image}
-                            className={[
-                              !image
-                                ? styles.card_placeholder_image
-                                : styles.card_image,
-                              !name && styles.Card_hidden,
-                            ].join(' ')}
-                          />
-
-                          <Card.Title
-                            className={[styles.card_title].join(' ')}
-                          >
-                            {name}
-                          </Card.Title>
-
+                {
+                    <div className='  mx-auto'>
+                      <div className="container mx-auto space-y-2 lg:space-y-0 lg:gap-16 lg:grid lg:grid-cols-3">
                           {
-                            // NAME == 'Advisory Board' &&
-                            NAME == 'Advisory Board' ? (
-                              <>
-                                <div
-                                  className={[
-                                    NAME == 'Advisory Board' &&
-                                      styles.card_container__inner__colored__text__d,
-                                  ].join(' ')}
-                                >
-                                  {description}
-                                </div>
-                              </>
-                            ) : (
-                              <>
-                                <div
-                                  className={[
-                                    styles.card_container__inner__colored__text,
-                                  ].join(' ')}
-                                >
-                                  {title}
-                                </div>
-                              </>
-                            )
-                          }
-                        </ConditionalLinks>
-                      </Card>
+                            members.map(({name, image, alt, description}) => (
+                              <div className="w-full rounded shadow-2xl">
+                              <img src={image}
+                                  alt={alt}
+                                  className='object-cover w-full h-[400px]'
+                              />
+                                  <div className=' bg-white p-4'>
+                                      <h3 className='mb-2 font-semibold text-main_blueleading'>{name}</h3>
+                                      <p className='text-sm text-gray-700'>
+                                      {description}
+                                      </p>
+                                  </div>
+                          </div>
+                            )  )
+                          }                               
+                      </div>
                     </div>
-                  )
-                )}
+                }
               </div>
+              
             </>
           ))}
         </div>

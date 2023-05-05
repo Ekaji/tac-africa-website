@@ -7,6 +7,12 @@ import LatestNews from "../../components/latestNews"
 const Events = () => {
     const data = [
         {
+            event: "Drone Safety Day ",
+            date: "April 29 2023",
+            image: "https://res.cloudinary.com/tacafrica/image/upload/v1682950714/drone_safety_day/IMG_1556_vh0q4l.jpg",
+            link: "DroneSafetyDay"
+        },
+        {
             event: "UN International Day of ZERO WASTE ",
             date: "Mar 24 2023",
             image: "https://res.cloudinary.com/tacafrica/image/upload/v1679668747/mr_tidy/WhatsApp_Image_2023-03-24_at_3.14.16_PM_hap5oi.jpg",

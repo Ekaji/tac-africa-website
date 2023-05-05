@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import {
   faPhone,
@@ -142,25 +143,38 @@ export default function Contact( ) {
                           <FontAwesomeIcon icon={faPhone} />
                         </div>
                         <div className=" pl-3">
-                          <p className="text-white text-sm">
+                          <span className="text-white text-sm">
                             <span className="text-lg font-semibold">
                               Phone:
                             </span>{' '}
-                            <a
-                              className="text-white"
-                              href="tel://1234567920"
-                            >
-                              +234 706 224 7581
-                            </a>
+                              <a className="text-white" href='tel:+2349088559001 '>+2349088559001</a> 
+                              <br />
+                              <a className="text-white" href='tel:+2349088559002'>+2349088559002</a>
+                          </span>
+                        </div>
+                        
+                      </div>
+
+                      <div className="w-full mb-6 flex items-start">
+                        <div className=" px-2 py-2 w -1 text-xl rounded-full bg-[rgba(255,255,255,0.1)] flex items-center justify-center">
+                          <img className='w-8' src="/whatsapp.png" title="whatsapp icons" alt='whatsapp'/>
+                        </div>
+                        <div className=" pl-3">
+                          <p className="text-white text-sm">
+                            <span className="text-lg font-semibold">
+                              Whatsapp:
+                            </span>{' '}
+                            <a className='text-white' href="https://wa.me/+2349088559003" target="_blank"  rel="noreferrer"> +2349088559003</a> 
                           </p>
                         </div>
                       </div>
+
                       <div className="w-full mb-6 flex items-start">
                         <div className=" px-4 py-3 w-1 text-xl rounded-full bg-[rgba(255,255,255,0.1)] flex items-center justify-center">
                           <FontAwesomeIcon icon={faPaperPlane} />
                         </div>
                         <div className=" text-white pl-3">
-                          <p className="text-white text-sm">
+                          <span className="text-white text-sm">
                             <span className="text-lg font-semibold">
                               Email:
                             </span>{' '}
@@ -170,9 +184,10 @@ export default function Contact( ) {
                             >
                               secretariat@tacafrica.org
                             </a>
-                          </p>
+                          </span>
                         </div>
                       </div>
+
                       <div className="w-full mb-6 flex items-start">
                         <div className="px-4 py-3 w-1 text-xl rounded-full bg-[rgba(255,255,255,0.1)] flex items-center justify-center">
                           <FontAwesomeIcon icon={faGlobeAfrica} />
